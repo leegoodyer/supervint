@@ -157,6 +157,10 @@ section{max-width:var(--max); margin:0 auto; padding:5rem 2rem;}
 .footer-links{display:flex; gap:1.4rem;}
 .footer-links a:hover{color:var(--ink);}
 
+/* pricing coming-soon state */
+.btn-coming-soon{cursor:default; opacity:0.6; pointer-events:none;}
+.pricing-note{text-align:center; font-size:0.82rem; color:#9ca3af; margin-top:1.4rem;}
+
 /* prose (privacy / terms pages) */
 .prose{max-width:720px; margin:0 auto; padding:4rem 2rem 6rem;}
 .prose h1{font-size:1.9rem; margin-bottom:0.4rem;}

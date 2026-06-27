@@ -124,7 +124,7 @@ export default function Home() {
           <div className="price-card">
             <h3>Free</h3>
             <p className="price-num">£0<span>forever</span></p>
-            <a href="#" className="btn btn-ghost price-cta">Get started</a>
+            <span className="btn btn-ghost price-cta btn-coming-soon">Coming soon</span>
             <ul>
               <li>1 active search</li>
               <li>Desktop alerts</li>
@@ -134,8 +134,8 @@ export default function Home() {
           <div className="price-card pop">
             <span className="tag-pop">Most popular</span>
             <h3>Reseller</h3>
-            <p className="price-num">£6<span>/ month</span></p>
-            <a href="#" className="btn btn-primary price-cta">Get started</a>
+            <p className="price-num">£6.99<span>/ month</span></p>
+            <span className="btn btn-primary price-cta btn-coming-soon">Coming soon</span>
             <ul>
               <li>Up to 10 active searches</li>
               <li>Desktop alerts</li>
@@ -145,8 +145,8 @@ export default function Home() {
           </div>
           <div className="price-card">
             <h3>Power Seller</h3>
-            <p className="price-num">£14<span>/ month</span></p>
-            <a href="#" className="btn btn-ghost price-cta">Get started</a>
+            <p className="price-num">£13.99<span>/ month</span></p>
+            <span className="btn btn-ghost price-cta btn-coming-soon">Coming soon</span>
             <ul>
               <li>Unlimited active searches</li>
               <li>Everything in Reseller</li>
@@ -154,6 +154,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
+        <p className="pricing-note">Supervint is currently in development and will be available on the Chrome Web Store soon.</p>
       </section>
 
       <section className="final">
