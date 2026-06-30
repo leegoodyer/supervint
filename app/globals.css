@@ -76,6 +76,10 @@ section{max-width:var(--max); margin:0 auto; padding:5rem 2rem;}
   margin:1.6rem auto 2.2rem;
 }
 .hero-fine{margin-top:1rem; font-size:0.82rem; color:#9ca3af;}
+.hero-kw{
+  font-size:1.15rem; color:#374151; line-height:1.55; max-width:40rem;
+  margin:1.2rem auto 0;
+}
 
 /* product visual */
 .product-shot{
@@ -142,6 +146,13 @@ section{max-width:var(--max); margin:0 auto; padding:5rem 2rem;}
 .price-card ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0.65rem; font-size:0.88rem; color:#374151;}
 .price-card li{padding-left:1.3rem; position:relative;}
 .price-card li::before{content:"✓"; position:absolute; left:0; color:var(--green); font-weight:700;}
+
+/* faq */
+.faq-list{max-width:720px; margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--line); padding:1.6rem 0;}
+.faq-item:last-child{border-bottom:none; padding-bottom:0;}
+.faq-item h3{font-size:1.02rem; margin-bottom:0.55rem; color:var(--ink);}
+.faq-item p{font-size:0.92rem; color:var(--gray); line-height:1.6;}
 
 /* final cta */
 .final{text-align:center;}

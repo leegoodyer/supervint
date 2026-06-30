@@ -1,6 +1,65 @@
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is Supervint?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Supervint is a Chrome extension that monitors Vinted searches in real time and sends you an instant desktop alert the moment a matching listing appears — so you can snipe the deal before anyone else.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How is Supervint different from refreshing Vinted manually?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Supervint checks continuously in the background, even when you\'re away from your laptop. Manual refreshing means you\'re always behind buyers who already have an alert running. Good listings on Vinted sell within minutes.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Supervint work on any Vinted search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Paste any Vinted search URL into Supervint and it monitors it for you. You can run multiple searches simultaneously on paid plans.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a free version?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — Supervint is free to install with 1 active search and desktop alerts included. No credit card required. Upgrade to Reseller (£6.99/month) or Power Seller (£13.99/month) for more searches, Google Sheets logging, and email price alerts.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will Supervint get my Vinted account banned?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Supervint monitors Vinted as a regular browser extension — it doesn\'t automate buying, posting, or any actions on your account. It simply watches for new listings matching your search and alerts you.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I set up Supervint?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Install from the Chrome Web Store, paste a Vinted search URL into the extension, give it a name, set your active hours, and optionally add a price alert. Takes under 2 minutes.',
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <header className="nav">
         <div className="nav-inner">
           <a href="/" className="logo"><span className="logo-mark"></span>Supervint</a>
@@ -18,6 +77,7 @@ export default function Home() {
       <section className="hero">
         <p className="eyebrow">The Vinted Product Sniper &amp; Price Alert</p>
         <h1>Spot it first. Snipe it before anyone else does.</h1>
+        <p className="hero-kw">The Vinted Chrome extension that monitors your searches 24/7 and sends an instant alert the moment a matching listing goes live.</p>
         <p className="hero-sub">Supervint runs your snipe around the clock, pulling in every product that matches your setup the second it&apos;s listed.</p>
         <a href="#pricing" className="btn btn-primary btn-lg">Start sniping, free</a>
         <p className="hero-fine">No credit card required · Chrome extension · Set up in 2 minutes</p>
@@ -124,7 +184,7 @@ export default function Home() {
           <div className="price-card">
             <h3>Free</h3>
             <p className="price-num">£0<span>forever</span></p>
-            <span className="btn btn-ghost price-cta btn-coming-soon">Coming soon</span>
+            <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-ghost price-cta">Install free on Chrome</a>
             <ul>
               <li>1 active search</li>
               <li>Desktop alerts</li>
@@ -135,7 +195,7 @@ export default function Home() {
             <span className="tag-pop">Most popular</span>
             <h3>Reseller</h3>
             <p className="price-num">£6.99<span>/ month</span></p>
-            <span className="btn btn-primary price-cta btn-coming-soon">Coming soon</span>
+            <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-primary price-cta">Get started on Chrome</a>
             <ul>
               <li>Up to 10 active searches</li>
               <li>Desktop alerts</li>
@@ -146,7 +206,7 @@ export default function Home() {
           <div className="price-card">
             <h3>Power Seller</h3>
             <p className="price-num">£13.99<span>/ month</span></p>
-            <span className="btn btn-ghost price-cta btn-coming-soon">Coming soon</span>
+            <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-ghost price-cta">Get started on Chrome</a>
             <ul>
               <li>Unlimited active searches</li>
               <li>Everything in Reseller</li>
@@ -154,7 +214,39 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <p className="pricing-note">Supervint is currently in development and will be available on the Chrome Web Store soon.</p>
+        <p className="pricing-note">Reseller and Power Seller plans are activated from within the extension after installing. · Free and Trial accounts are optionally asked for an email inside the extension — for account updates and occasional offers only. Never required.</p>
+      </section>
+
+      <section id="faq" className="section-alt">
+        <div className="sec-head">
+          <h2>Common questions</h2>
+        </div>
+        <div className="faq-list">
+          <div className="faq-item">
+            <h3>What is Supervint?</h3>
+            <p>Supervint is a Chrome extension that monitors Vinted searches in real time and sends you an instant desktop alert the moment a matching listing appears — so you can snipe the deal before anyone else.</p>
+          </div>
+          <div className="faq-item">
+            <h3>How is Supervint different from refreshing Vinted manually?</h3>
+            <p>Supervint checks continuously in the background, even when you&apos;re away from your laptop. Manual refreshing means you&apos;re always behind buyers who already have an alert running. Good listings on Vinted sell within minutes.</p>
+          </div>
+          <div className="faq-item">
+            <h3>Does Supervint work on any Vinted search?</h3>
+            <p>Yes. Paste any Vinted search URL into Supervint and it monitors it for you. You can run multiple searches simultaneously on paid plans — trainers, jackets, consoles, whatever you&apos;re hunting.</p>
+          </div>
+          <div className="faq-item">
+            <h3>Is there a free version?</h3>
+            <p>Yes — Supervint is free to install with 1 active search and desktop alerts included. No credit card required. Upgrade to Reseller (£6.99/month) or Power Seller (£13.99/month) for more searches, Google Sheets logging, and email price alerts.</p>
+          </div>
+          <div className="faq-item">
+            <h3>Will Supervint get my Vinted account banned?</h3>
+            <p>Supervint monitors Vinted as a regular browser extension — it doesn&apos;t automate buying, posting, or any actions on your account. It simply watches for new listings matching your search and alerts you, the same way you&apos;d check the page yourself.</p>
+          </div>
+          <div className="faq-item">
+            <h3>How do I set up Supervint?</h3>
+            <p>Install from the Chrome Web Store, paste a Vinted search URL into the extension, give it a name, set your active hours, and optionally add a price alert. Takes under 2 minutes.</p>
+          </div>
+        </div>
       </section>
 
       <section className="final">
@@ -166,6 +258,8 @@ export default function Home() {
         <div className="footer-inner">
           <span>Supervint</span>
           <div className="footer-links">
+            <a href="/#how">How it works</a>
+            <a href="/#pricing">Pricing</a>
             <a href="/privacy">Privacy Policy</a>
             <a href="/terms">Terms of Service</a>
           </div>
