@@ -36,8 +36,44 @@ export async function POST(request) {
 
   const key    = `sv:sub:${clientId}`;
   const record = await kv.get(key);
+  console.log('[account/email] request', { clientId, email, recordFound: !!record });
   if (!record) {
     return NextResponse.json({ error: 'Unknown clientId' }, { status: 404, headers: CORS });
+  }
+
+  // This email may already belong to a different clientId — e.g. the extension
+  // was uninstalled and reinstalled, generating a fresh clientId, and the user
+  // is re-entering the email tied to their existing plan. Without this check,
+  // that existing account gets orphaned and a brand new trial takes its place
+  // under the new clientId (the exact reinstall-abuse case this field was
+  // meant to prevent). Migrate the existing plan onto the new clientId instead.
+  const existingClientId = await kv.get(`sv:email:${email}`);
+  console.log('[account/email] merge check', {
+    submittedClientId: clientId,
+    submittedEmail:     email,
+    emailIndexLookup:   existingClientId ?? null,
+    wouldMerge:         !!(existingClientId && existingClientId !== clientId),
+  });
+  if (existingClientId && existingClientId !== clientId) {
+    const existingRecord = await kv.get(`sv:sub:${existingClientId}`);
+    console.log('[account/email] existing record for merge candidate', {
+      existingClientId,
+      found: !!existingRecord,
+      existingPlan: existingRecord?.plan ?? null,
+    });
+    if (existingRecord) {
+      const merged = { ...existingRecord, email, updatedAt: Date.now() };
+      await Promise.all([
+        kv.set(key, merged),
+        kv.set(`sv:email:${email}`, clientId),
+        kv.set(`sv:deleted:${existingClientId}`, { ...existingRecord, mergedInto: clientId, deletedAt: Date.now() }),
+        kv.del(`sv:sub:${existingClientId}`),
+        existingRecord.customerId ? kv.set(`sv:customer:${existingRecord.customerId}`, clientId) : Promise.resolve(),
+      ]);
+      return NextResponse.json({ ok: true, merged: true }, { headers: CORS });
+    }
+    // sv:email pointed at a clientId with no live record (stale index) — fall
+    // through to the normal path below.
   }
 
   // Delete old secondary index if email is changing
