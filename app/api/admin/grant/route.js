@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { Redis } from '@upstash/redis';
 import { isAdminAuthed } from '@/lib/admin-auth';
 import { normalizePlan, PLANS } from '@/lib/plans';
+import { mergeEmailOwnership } from '@/lib/accountMerge';
 
 export const runtime = 'nodejs';
 
@@ -36,24 +37,28 @@ export async function POST(request) {
   }
 
   // Read existing record so we can preserve Stripe IDs and createdAt.
-  const existing = (await kv.get(`sv:sub:${clientId}`)) ?? {};
-  const now      = Date.now();
+  let existing = (await kv.get(`sv:sub:${clientId}`)) ?? {};
+  const now    = Date.now();
 
   // admin/grant previously never touched sv:email: at all — the exact reason
   // manually-granted test accounts (no Stripe checkout, no account/email call)
   // ended up with a record.email that the email-index lookup could never find.
+  // This is a deliberate operator action through the password-gated admin
+  // panel, not a self-service claim, so it's exempt from the interactive
+  // code-verification step — but it still goes through the same shared
+  // merge/invalidation helper as every other path, so the single-active-
+  // clientId invariant holds no matter how an email gets attached.
   if (email && email !== (existing.email ?? null)) {
-    const indexedClientId = await kv.get(`sv:email:${email}`);
-    if (indexedClientId && indexedClientId !== clientId) {
-      return NextResponse.json({
-        error: `That email is already linked to a different account (${indexedClientId}). Resolve that first.`,
-      }, { status: 409 });
+    const merge = await mergeEmailOwnership(kv, email, clientId);
+    if (merge.merged) {
+      existing = (await kv.get(`sv:sub:${clientId}`)) ?? {};
+    } else {
+      const oldEmail = existing.email ?? null;
+      if (oldEmail && oldEmail !== email) {
+        await kv.del(`sv:email:${oldEmail}`);
+      }
+      await kv.set(`sv:email:${email}`, clientId);
     }
-    const oldEmail = existing.email ?? null;
-    if (oldEmail && oldEmail !== email) {
-      await kv.del(`sv:email:${oldEmail}`);
-    }
-    await kv.set(`sv:email:${email}`, clientId);
   }
 
   let updated;

@@ -32,6 +32,24 @@ export async function POST(request) {
   let record = await kv.get(key);
 
   if (!record) {
+    // Missing because this clientId was merged into another one (reinstall,
+    // Stripe checkout under a known email, or admin grant) — without this
+    // check, the old device would silently get a brand new trial instead of
+    // a real signal that its plan moved elsewhere.
+    const deletedRecord = await kv.get(`sv:deleted:${clientId}`);
+    if (deletedRecord?.mergedInto) {
+      const freeLimits = planLimits('free');
+      return NextResponse.json({
+        plan:           'free',
+        searchLimit:    freeLimits.searchLimit,
+        emailLimit:     freeLimits.emailLimit,
+        sheets:         freeLimits.sheets,
+        trialExpiresAt: null,
+        email:          null,
+        invalidated:    true,
+      }, { headers: CORS });
+    }
+
     const now = Date.now();
     record = {
       plan:           'trial',

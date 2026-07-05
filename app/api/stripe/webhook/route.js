@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { Redis } from '@upstash/redis';
 import { getStripe } from '@/lib/stripe';
 import { planForPriceId, normalizePlan } from '@/lib/plans';
+import { mergeEmailOwnership } from '@/lib/accountMerge';
 
 export const runtime = 'nodejs';
 
@@ -61,18 +62,18 @@ export async function POST(request) {
         const customerId      = typeof cs.customer     === 'string' ? cs.customer     : cs.customer?.id;
         const subscriptionId  = typeof cs.subscription === 'string' ? cs.subscription : cs.subscription?.id;
         const checkoutEmail   = cs.customer_details?.email?.toLowerCase() ?? null;
-        const existing        = await kv.get(`sv:sub:${clientId}`) ?? {};
 
         // This email may already belong to a different clientId — e.g. an
         // admin-granted trial created for testing before this real purchase
         // (same class of gap as the account/email merge fix, this time from
         // checkout instead of the extension's email field). A verified Stripe
         // checkout is a much stronger ownership signal than a self-reported
-        // email, so auto-retire the other account rather than leave a
-        // duplicate. The one case that must NOT be auto-merged: if that other
-        // account is ALSO an active Stripe customer, silently merging could
-        // paper over two real live subscriptions for one person — flag it for
-        // manual review instead of guessing which one to keep.
+        // email, so this skips the interactive code-verification step (no
+        // interactive surface exists mid-webhook anyway) and merges via the
+        // shared helper automatically. The one case that must NOT be
+        // auto-merged: if that other account is ALSO an active Stripe
+        // customer, silently merging could paper over two real live
+        // subscriptions for one person — flag it for manual review instead.
         if (checkoutEmail) {
           const otherClientId = await kv.get(`sv:email:${checkoutEmail}`);
           if (otherClientId && otherClientId !== clientId) {
@@ -81,20 +82,28 @@ export async function POST(request) {
               console.error(
                 `[stripe/webhook] ${checkoutEmail} already has an active Stripe customer (${otherRecord.customerId}) under a different clientId (${otherClientId}) — new checkout clientId ${clientId} may be a duplicate subscription; needs manual review.`
               );
-            } else if (otherRecord) {
-              await kv.set(`sv:deleted:${otherClientId}`, { ...otherRecord, mergedInto: clientId, deletedAt: Date.now() });
-              await kv.del(`sv:sub:${otherClientId}`);
+            } else {
+              await mergeEmailOwnership(kv, checkoutEmail, clientId);
             }
           }
         }
 
-        // Maintain the sv:email secondary index — delete old entry if email changed
+        const existing = await kv.get(`sv:sub:${clientId}`) ?? {};
+
+        // Maintain the sv:email index for a genuinely new/unclaimed email —
+        // the merge branch above already repointed it for the "claiming an
+        // existing account" case, and this is a no-op if that path ran (or
+        // was skipped for manual review, which deliberately leaves the other
+        // customer's claim on the index untouched).
         if (checkoutEmail) {
-          const oldEmail = existing.email ?? null;
-          if (oldEmail && oldEmail !== checkoutEmail) {
-            await kv.del(`sv:email:${oldEmail}`);
+          const currentOwner = await kv.get(`sv:email:${checkoutEmail}`);
+          if (!currentOwner || currentOwner === clientId) {
+            const oldEmail = existing.email ?? null;
+            if (oldEmail && oldEmail !== checkoutEmail) {
+              await kv.del(`sv:email:${oldEmail}`);
+            }
+            await kv.set(`sv:email:${checkoutEmail}`, clientId);
           }
-          await kv.set(`sv:email:${checkoutEmail}`, clientId);
         }
 
         await kv.set(`sv:sub:${clientId}`, {

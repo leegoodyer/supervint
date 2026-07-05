@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Redis } from '@upstash/redis';
+import { generateCode, checkAndSetRateLimit, storeVerificationCode, sendVerificationEmail } from '@/lib/verificationCode';
 
 export const runtime = 'nodejs';
 
@@ -36,51 +37,31 @@ export async function POST(request) {
 
   const key    = `sv:sub:${clientId}`;
   const record = await kv.get(key);
-  console.log('[account/email] request', { clientId, email, recordFound: !!record });
   if (!record) {
     return NextResponse.json({ error: 'Unknown clientId' }, { status: 404, headers: CORS });
   }
 
   // This email may already belong to a different clientId — e.g. the extension
   // was uninstalled and reinstalled, generating a fresh clientId, and the user
-  // is re-entering the email tied to their existing plan. Without this check,
-  // that existing account gets orphaned and a brand new trial takes its place
-  // under the new clientId (the exact reinstall-abuse case this field was
-  // meant to prevent). Migrate the existing plan onto the new clientId instead.
+  // is re-entering the email tied to their existing plan. Claiming someone
+  // else's (or your own prior) account requires proof of ownership first — a
+  // one-time code sent to the email — before any merge happens. A genuinely
+  // new email (no existing owner) attaches immediately below, unchanged.
   const existingClientId = await kv.get(`sv:email:${email}`);
-  console.log('[account/email] merge check', {
-    submittedClientId: clientId,
-    submittedEmail:     email,
-    emailIndexLookup:   existingClientId ?? null,
-    wouldMerge:         !!(existingClientId && existingClientId !== clientId),
-  });
   if (existingClientId && existingClientId !== clientId) {
     const existingRecord = await kv.get(`sv:sub:${existingClientId}`);
-    console.log('[account/email] existing record for merge candidate', {
-      existingClientId,
-      found: !!existingRecord,
-      existingPlan: existingRecord?.plan ?? null,
-    });
     if (existingRecord) {
-      const merged = { ...existingRecord, email, updatedAt: Date.now() };
-      // Migrate the old clientId's saved searches too — otherwise plan
-      // recovery works but the actual search list is still lost on reinstall
-      // (see project memory on the search-persistence build). The new
-      // clientId shouldn't have any searches of its own yet: creating a
-      // search now requires an email on file for free/trial, and having a
-      // matching email is exactly what triggers this merge — so there's
-      // nothing to reconcile, just overwrite.
-      const existingSearches = await kv.get(`sv:searches:${existingClientId}`);
-      await Promise.all([
-        kv.set(key, merged),
-        kv.set(`sv:email:${email}`, clientId),
-        kv.set(`sv:deleted:${existingClientId}`, { ...existingRecord, mergedInto: clientId, deletedAt: Date.now() }),
-        kv.del(`sv:sub:${existingClientId}`),
-        existingRecord.customerId ? kv.set(`sv:customer:${existingRecord.customerId}`, clientId) : Promise.resolve(),
-        existingSearches ? kv.set(`sv:searches:${clientId}`, existingSearches) : Promise.resolve(),
-        existingSearches ? kv.del(`sv:searches:${existingClientId}`) : Promise.resolve(),
-      ]);
-      return NextResponse.json({ ok: true, merged: true, searches: existingSearches?.searches ?? [] }, { headers: CORS });
+      const allowed = await checkAndSetRateLimit(kv, email);
+      if (!allowed) {
+        return NextResponse.json(
+          { error: 'A code was already sent recently — check your inbox, or wait a minute before requesting another.' },
+          { status: 429, headers: CORS }
+        );
+      }
+      const code = generateCode();
+      await storeVerificationCode(kv, email, code, clientId);
+      await sendVerificationEmail(email, code);
+      return NextResponse.json({ ok: true, needsVerification: true }, { headers: CORS });
     }
     // sv:email pointed at a clientId with no live record (stale index) — fall
     // through to the normal path below.
