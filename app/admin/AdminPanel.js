@@ -56,6 +56,7 @@ export default function AdminPanel() {
   const [lookupEmailErr, setLookupEmailErr] = useState('');
   const [grantPlan, setGrantPlan]   = useState('trial');
   const [trialDays, setTrialDays]   = useState(5);
+  const [grantEmail, setGrantEmail] = useState('');
   const [grantMsg, setGrantMsg]     = useState('');
   const [busy, setBusy]             = useState(false);
 
@@ -101,6 +102,7 @@ export default function AdminPanel() {
   function selectUser(user) {
     setSelected(user);
     setGrantPlan(user.plan);
+    setGrantEmail(user.email || '');
     setGrantMsg('');
     setLookupErr('');
     setConfirmDeleteId(null);
@@ -123,6 +125,7 @@ export default function AdminPanel() {
       } else {
         setSelected(data);
         setGrantPlan(data.plan);
+        setGrantEmail(data.email || '');
       }
     } catch {
       setLookupErr('Network error.');
@@ -147,6 +150,7 @@ export default function AdminPanel() {
       } else {
         setSelected(data);
         setGrantPlan(data.plan);
+        setGrantEmail(data.email || '');
       }
     } catch {
       setLookupEmailErr('Network error.');
@@ -160,7 +164,7 @@ export default function AdminPanel() {
     setGrantMsg('');
     setBusy(true);
     try {
-      const body = { clientId: selected.clientId, plan: grantPlan };
+      const body = { clientId: selected.clientId, plan: grantPlan, email: grantEmail.trim() };
       if (grantPlan === 'trial') body.trialDays = Number(trialDays);
       const res  = await fetch('/api/admin/grant', {
         method:  'POST',
@@ -326,7 +330,7 @@ export default function AdminPanel() {
                         {u.email ?? '—'}
                       </td>
                       <td style={{ padding: '0.65rem 0.9rem', whiteSpace: 'nowrap', color: u.trialDaysLeft === 0 ? '#dc2626' : 'inherit' }}>
-                        {u.trialExpiresAt ? `${u.trialDaysLeft}d left` : '—'}
+                        {u.trialDaysLeft != null ? `${u.trialDaysLeft}d left` : '—'}
                       </td>
                       <td style={{ padding: '0.65rem 0.9rem', fontFamily: 'monospace', fontSize: '0.8rem' }}>
                         {u.customerId ? `${u.customerId.slice(0, 14)}…` : '—'}
@@ -424,7 +428,7 @@ export default function AdminPanel() {
               <DetailRow label="clientId"        value={<span style={{ fontFamily: 'monospace', fontSize: '0.82rem' }}>{selected.clientId}</span>} />
               <DetailRow label="Plan"            value={<PlanBadge plan={selected.plan} />} />
               <DetailRow label="Email"           value={selected.email} />
-              <DetailRow label="Trial expires"   value={selected.trialExpiresAt ? `${fmt(selected.trialExpiresAt)} (${selected.trialDaysLeft}d left)` : null} />
+              <DetailRow label="Trial expires"   value={selected.trialDaysLeft != null ? `${fmt(selected.trialExpiresAt)} (${selected.trialDaysLeft}d left)` : null} />
               <DetailRow label="Stripe customer" value={selected.customerId} />
               <DetailRow label="Subscription"    value={selected.subscriptionId} />
               <DetailRow label="Admin granted"   value={fmt(selected.adminGrantedAt)} />
@@ -435,6 +439,11 @@ export default function AdminPanel() {
 
           <form onSubmit={handleGrant}>
             <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'center', flexWrap: 'wrap' }}>
+              <input
+                type="email" placeholder="email (optional)" value={grantEmail}
+                onChange={e => setGrantEmail(e.target.value)}
+                style={{ padding: '0.55rem 0.8rem', borderRadius: 8, border: '1px solid var(--line)', fontSize: '0.9rem', minWidth: 180 }}
+              />
               <select
                 value={grantPlan}
                 onChange={e => setGrantPlan(e.target.value)}

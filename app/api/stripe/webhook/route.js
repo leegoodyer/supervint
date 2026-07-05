@@ -63,6 +63,31 @@ export async function POST(request) {
         const checkoutEmail   = cs.customer_details?.email?.toLowerCase() ?? null;
         const existing        = await kv.get(`sv:sub:${clientId}`) ?? {};
 
+        // This email may already belong to a different clientId — e.g. an
+        // admin-granted trial created for testing before this real purchase
+        // (same class of gap as the account/email merge fix, this time from
+        // checkout instead of the extension's email field). A verified Stripe
+        // checkout is a much stronger ownership signal than a self-reported
+        // email, so auto-retire the other account rather than leave a
+        // duplicate. The one case that must NOT be auto-merged: if that other
+        // account is ALSO an active Stripe customer, silently merging could
+        // paper over two real live subscriptions for one person — flag it for
+        // manual review instead of guessing which one to keep.
+        if (checkoutEmail) {
+          const otherClientId = await kv.get(`sv:email:${checkoutEmail}`);
+          if (otherClientId && otherClientId !== clientId) {
+            const otherRecord = await kv.get(`sv:sub:${otherClientId}`);
+            if (otherRecord?.customerId) {
+              console.error(
+                `[stripe/webhook] ${checkoutEmail} already has an active Stripe customer (${otherRecord.customerId}) under a different clientId (${otherClientId}) — new checkout clientId ${clientId} may be a duplicate subscription; needs manual review.`
+              );
+            } else if (otherRecord) {
+              await kv.set(`sv:deleted:${otherClientId}`, { ...otherRecord, mergedInto: clientId, deletedAt: Date.now() });
+              await kv.del(`sv:sub:${otherClientId}`);
+            }
+          }
+        }
+
         // Maintain the sv:email secondary index — delete old entry if email changed
         if (checkoutEmail) {
           const oldEmail = existing.email ?? null;
@@ -77,6 +102,7 @@ export async function POST(request) {
           plan,
           customerId,
           subscriptionId,
+          trialExpiresAt: null, // was possibly a trial before this checkout — never leave a stale expiry on a paid plan
           ...(checkoutEmail ? { email: checkoutEmail } : {}),
           updatedAt: Date.now(),
         });
@@ -100,6 +126,7 @@ export async function POST(request) {
           ...existing,
           plan,
           subscriptionId: sub.id,
+          trialExpiresAt: null,
           updatedAt: Date.now(),
         });
         break;
@@ -119,6 +146,7 @@ export async function POST(request) {
           ...existing,
           plan:           'free',
           subscriptionId: null,
+          trialExpiresAt: null,
           updatedAt:      Date.now(),
         });
         break;
