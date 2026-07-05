@@ -63,14 +63,24 @@ export async function POST(request) {
     });
     if (existingRecord) {
       const merged = { ...existingRecord, email, updatedAt: Date.now() };
+      // Migrate the old clientId's saved searches too — otherwise plan
+      // recovery works but the actual search list is still lost on reinstall
+      // (see project memory on the search-persistence build). The new
+      // clientId shouldn't have any searches of its own yet: creating a
+      // search now requires an email on file for free/trial, and having a
+      // matching email is exactly what triggers this merge — so there's
+      // nothing to reconcile, just overwrite.
+      const existingSearches = await kv.get(`sv:searches:${existingClientId}`);
       await Promise.all([
         kv.set(key, merged),
         kv.set(`sv:email:${email}`, clientId),
         kv.set(`sv:deleted:${existingClientId}`, { ...existingRecord, mergedInto: clientId, deletedAt: Date.now() }),
         kv.del(`sv:sub:${existingClientId}`),
         existingRecord.customerId ? kv.set(`sv:customer:${existingRecord.customerId}`, clientId) : Promise.resolve(),
+        existingSearches ? kv.set(`sv:searches:${clientId}`, existingSearches) : Promise.resolve(),
+        existingSearches ? kv.del(`sv:searches:${existingClientId}`) : Promise.resolve(),
       ]);
-      return NextResponse.json({ ok: true, merged: true }, { headers: CORS });
+      return NextResponse.json({ ok: true, merged: true, searches: existingSearches?.searches ?? [] }, { headers: CORS });
     }
     // sv:email pointed at a clientId with no live record (stale index) — fall
     // through to the normal path below.
