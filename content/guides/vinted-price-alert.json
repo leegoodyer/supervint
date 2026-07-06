@@ -1,0 +1,47 @@
+{
+  "title": "Vinted Price Alert: How Instant Listing Notifications Work",
+  "intro": "A Vinted price alert is a tool that watches new listings against a saved search and notifies you the moment a match appears — instead of you manually refreshing the search page yourself.",
+  "meta_description": "How Vinted price alerts work, what to look for in an alert tool, and how to set one up without risking your account.",
+  "date_published": "2026-07-06",
+  "author": "Supervint Team",
+  "pillar_page": "/",
+  "pillar_page_anchor_text": "Try Supervint's free Vinted alerts",
+  "cta_text": "Try Supervint free",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "How a Vinted price alert actually works",
+      "paragraphs": [
+        "You define a search — brand, category, size, price range — and the alert tool checks Vinted's public listings against that search continuously. When a new listing matches, you get a notification (browser push, email, or similar) so you can act before the listing gets buried by newer posts.",
+        "This is different from setting up Vinted's own built-in search, which doesn't proactively notify you the instant something new appears — you'd still need to check back manually."
+      ]
+    },
+    {
+      "heading": "What to look for in an alert tool",
+      "paragraphs": [
+        "Speed of notification matters, but so does what the tool does with your account. Alert-only tools (see our guide on ban risk) only read public listings — they never log into your account or take actions on your behalf, which keeps your account activity entirely normal.",
+        "Also check: how many saved searches you can run at once, whether it supports multiple Vinted markets/currencies if you buy across regions, and whether the free tier is genuinely usable or just a teaser."
+      ]
+    },
+    {
+      "heading": "Setting up your first alert",
+      "paragraphs": [
+        "Install the extension, define your search criteria the same way you would in Vinted's own search bar, and save it. From there the tool runs in the background while your browser is open, and you'll get notified the moment a match appears."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is a Vinted price alert free?",
+      "answer": "Many alert tools, including Supervint, offer a free tier with basic alerts — paid tiers typically unlock more saved searches or faster refresh rates."
+    },
+    {
+      "question": "Do Vinted price alerts work on mobile?",
+      "answer": "Browser extension-based alerts work while that browser is open on desktop; check the specific tool's documentation for mobile support, since this varies by provider."
+    },
+    {
+      "question": "Will using a Vinted alert extension get my account flagged?",
+      "answer": "Alert-only tools that just monitor public listings without logging into your account carry minimal risk — see our full breakdown of alert-only versus auto-buy tools for details."
+    }
+  ]
+}
