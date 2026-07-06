@@ -1,3 +1,5 @@
+'use client';
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -15,7 +17,7 @@ const faqSchema = {
       name: 'How is Supervint different from refreshing Vinted manually?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Supervint checks continuously in the background, even when you\'re away from your laptop. Manual refreshing means you\'re always behind buyers who already have an alert running. Good listings on Vinted sell within minutes.',
+        text: 'Supervint checks continuously in the background, even when you\'re away from the keyboard. Manual refreshing means you\'re always behind buyers who already have an alert running. Good listings on Vinted sell within minutes.',
       },
     },
     {
@@ -23,7 +25,7 @@ const faqSchema = {
       name: 'Does Supervint work on any Vinted search?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Paste any Vinted search URL into Supervint and it monitors it for you. You can run multiple searches simultaneously on paid plans.',
+        text: 'Yes. Paste any Vinted search URL into Supervint and it monitors it for you. You can run multiple searches simultaneously on paid plans — trainers, jackets, consoles, whatever you\'re hunting.',
       },
     },
     {
@@ -39,15 +41,15 @@ const faqSchema = {
       name: 'Will Supervint get my Vinted account banned?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Supervint monitors Vinted as a regular browser extension — it doesn\'t automate buying, posting, or any actions on your account. It simply watches for new listings matching your search and alerts you.',
+        text: 'Supervint is designed to be account-safe — it uses randomised check intervals, respects the active hours you set, and pauses automatically if Vinted returns any rate-limit signals. No automated buying, posting, or account actions are ever involved.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How do I set up Supervint?',
+      name: 'Does it work on mobile?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Install from the Chrome Web Store, paste a Vinted search URL into the extension, give it a name, set your active hours, and optionally add a price alert. Takes under 2 minutes.',
+        text: 'No — Supervint is a desktop Chrome extension and only runs while Chrome is open on a Mac or Windows computer. It does not work on Chrome for iPhone or Android (mobile Chrome does not support extensions).',
       },
     },
   ],
@@ -69,7 +71,13 @@ export default function Home() {
               <a href="#how">How it works</a>
               <a href="#pricing">Pricing</a>
             </nav>
-            <a href="#pricing" className="btn btn-primary btn-sm">Get Supervint</a>
+            <a
+              href="#pricing"
+              className="btn btn-primary btn-sm"
+              onClick={() => fbq('track', 'Lead', { content_name: 'Chrome Web Store Click' })}
+            >
+              Get Supervint
+            </a>
           </div>
         </div>
       </header>
@@ -77,9 +85,15 @@ export default function Home() {
       <section className="hero">
         <p className="eyebrow">The Vinted Product Sniper &amp; Price Alert</p>
         <h1>Spot it first. Snipe it before anyone else does.</h1>
-        <p className="hero-kw">The Vinted Chrome extension that monitors your searches 24/7 and sends an instant alert the moment a matching listing goes live.</p>
+        <p className="hero-kw">The Vinted Chrome extension that monitors your searches while Chrome is open and sends an instant alert the moment a matching listing goes live.</p>
         <p className="hero-sub">Supervint runs your snipe around the clock, pulling in every product that matches your setup the second it&apos;s listed.</p>
-        <a href="#pricing" className="btn btn-primary btn-lg">Start sniping, free</a>
+        <a
+          href="#pricing"
+          className="btn btn-primary btn-lg"
+          onClick={() => fbq('track', 'Lead', { content_name: 'Chrome Web Store Click' })}
+        >
+          Start sniping, free
+        </a>
         <p className="hero-fine">No credit card required · Chrome extension · Set up in 2 minutes</p>
 
         <div className="product-shot">
@@ -214,7 +228,11 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <p className="pricing-note">Reseller and Power Seller plans are activated from within the extension after installing. · Free and Trial accounts are optionally asked for an email inside the extension — for account updates and occasional offers only. Never required.</p>
+        <p className="pricing-callout">
+          <strong>How it works:</strong> install Supervint free from the Chrome Web Store, then upgrade to Reseller or
+          Power Seller directly inside the extension. No separate signup needed.
+        </p>
+        <p className="pricing-note">Free and Trial accounts are optionally asked for an email inside the extension — for account updates and occasional offers only. Never required.</p>
       </section>
 
       <section id="faq" className="section-alt">
@@ -228,7 +246,7 @@ export default function Home() {
           </div>
           <div className="faq-item">
             <h3>How is Supervint different from refreshing Vinted manually?</h3>
-            <p>Supervint checks continuously in the background, even when you&apos;re away from your laptop. Manual refreshing means you&apos;re always behind buyers who already have an alert running. Good listings on Vinted sell within minutes.</p>
+            <p>Supervint checks continuously in the background, even when you&apos;re away from the keyboard. Manual refreshing means you&apos;re always behind buyers who already have an alert running. Good listings on Vinted sell within minutes.</p>
           </div>
           <div className="faq-item">
             <h3>Does Supervint work on any Vinted search?</h3>
@@ -240,18 +258,24 @@ export default function Home() {
           </div>
           <div className="faq-item">
             <h3>Will Supervint get my Vinted account banned?</h3>
-            <p>Supervint monitors Vinted as a regular browser extension — it doesn&apos;t automate buying, posting, or any actions on your account. It simply watches for new listings matching your search and alerts you, the same way you&apos;d check the page yourself.</p>
+            <p>Supervint is designed to be account-safe — it uses randomised check intervals, respects the active hours you set, and pauses automatically if Vinted returns any rate-limit signals. No automated buying, posting, or account actions are ever involved.</p>
           </div>
           <div className="faq-item">
-            <h3>How do I set up Supervint?</h3>
-            <p>Install from the Chrome Web Store, paste a Vinted search URL into the extension, give it a name, set your active hours, and optionally add a price alert. Takes under 2 minutes.</p>
+            <h3>Does it work on mobile?</h3>
+            <p>No — Supervint is a desktop Chrome extension and only runs while Chrome is open on a Mac or Windows computer. It does not work on Chrome for iPhone or Android (mobile Chrome does not support extensions).</p>
           </div>
         </div>
       </section>
 
       <section className="final">
         <h2>Stop refreshing. Start sniping.</h2>
-        <a href="#pricing" className="btn btn-primary btn-lg">Get Supervint free</a>
+        <a
+          href="#pricing"
+          className="btn btn-primary btn-lg"
+          onClick={() => fbq('track', 'Lead', { content_name: 'Chrome Web Store Click' })}
+        >
+          Get Supervint free
+        </a>
       </section>
 
       <footer className="footer">
