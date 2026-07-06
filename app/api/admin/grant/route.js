@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { Redis } from '@upstash/redis';
 import { isAdminAuthed } from '@/lib/admin-auth';
 import { normalizePlan, PLANS } from '@/lib/plans';
-import { mergeEmailOwnership } from '@/lib/accountMerge';
+import { mergeEmailOwnership, getOrRevive } from '@/lib/accountMerge';
 
 export const runtime = 'nodejs';
 
@@ -36,9 +36,14 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Invalid email address.' }, { status: 400 });
   }
 
-  // Read existing record so we can preserve Stripe IDs and createdAt.
-  let existing = (await kv.get(`sv:sub:${clientId}`)) ?? {};
-  const now    = Date.now();
+  // Read existing record so we can preserve Stripe IDs and createdAt. If
+  // there's no live record, check for a soft-deleted one before assuming
+  // there's nothing to preserve — granting a plan to a clientId that was
+  // deleted (rather than merged) minutes earlier previously built a brand
+  // new {} record on top, silently discarding a real Stripe customerId that
+  // was sitting right there in sv:deleted:.
+  let { record: existing, revived } = await getOrRevive(kv, clientId);
+  const now = Date.now();
 
   // admin/grant previously never touched sv:email: at all — the exact reason
   // manually-granted test accounts (no Stripe checkout, no account/email call)
@@ -102,6 +107,7 @@ export async function POST(request) {
   if (email) updated.email = email;
 
   await kv.set(`sv:sub:${clientId}`, updated);
+  if (revived) await kv.del(`sv:deleted:${clientId}`);
 
   return NextResponse.json({ ok: true, clientId, plan });
 }

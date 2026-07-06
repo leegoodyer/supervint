@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Redis } from '@upstash/redis';
 import { generateCode, checkAndSetRateLimit, storeVerificationCode, sendVerificationEmail } from '@/lib/verificationCode';
+import { getOrRevive } from '@/lib/accountMerge';
 import { TRIAL_MS } from '@/lib/plans';
 
 export const runtime = 'nodejs';
@@ -36,12 +37,14 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Invalid email address' }, { status: 400, headers: CORS });
   }
 
-  const key    = `sv:sub:${clientId}`;
-  // No record yet is expected now — subscription/status no longer auto-
-  // creates a trial at first boot, since nothing is usable without an email
-  // anyway. This is where the trial clock actually starts, the moment an
-  // email is actually submitted.
-  const record = (await kv.get(key)) ?? {};
+  const key = `sv:sub:${clientId}`;
+  // No live record yet is expected now — subscription/status no longer
+  // auto-creates a trial at first boot, since nothing is usable without an
+  // email anyway. This is where the trial clock actually starts, the moment
+  // an email is actually submitted. Check for recoverable soft-deleted data
+  // first though — this same clientId could have been deleted (not merged)
+  // by mistake and still have real plan/customerId data sitting there.
+  const { record, revived } = await getOrRevive(kv, clientId);
 
   // This email may already belong to a different clientId — e.g. the extension
   // was uninstalled and reinstalled, generating a fresh clientId, and the user
@@ -86,6 +89,7 @@ export async function POST(request) {
     kv.set(key, updated),
     kv.set(`sv:email:${email}`, clientId),
   ]);
+  if (revived) await kv.del(`sv:deleted:${clientId}`);
 
   return NextResponse.json({ ok: true }, { headers: CORS });
 }

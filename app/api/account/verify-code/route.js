@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Redis } from '@upstash/redis';
 import { checkVerificationCode } from '@/lib/verificationCode';
-import { mergeEmailOwnership } from '@/lib/accountMerge';
+import { mergeEmailOwnership, getOrRevive } from '@/lib/accountMerge';
 import { TRIAL_MS } from '@/lib/plans';
 
 export const runtime = 'nodejs';
@@ -65,10 +65,9 @@ export async function POST(request) {
 
   // Merge target vanished between request-code and verify (rare race) — the
   // code was still valid proof the user owns this email, so just attach it
-  // normally rather than leaving them stuck. No prior record is a real
-  // possibility here too (account/email no longer requires one to exist),
-  // in which case this is where the trial clock starts.
-  const record = (await kv.get(`sv:sub:${clientId}`)) ?? {};
+  // normally rather than leaving them stuck. Check for recoverable
+  // soft-deleted data on this clientId first, same reasoning as account/email.
+  const { record, revived } = await getOrRevive(kv, clientId);
   const oldEmail = record.email ?? null;
   if (oldEmail && oldEmail !== email) {
     await kv.del(`sv:email:${oldEmail}`);
@@ -81,6 +80,7 @@ export async function POST(request) {
     kv.set(`sv:sub:${clientId}`, updated),
     kv.set(`sv:email:${email}`, clientId),
   ]);
+  if (revived) await kv.del(`sv:deleted:${clientId}`);
 
   return NextResponse.json({ ok: true }, { headers: CORS });
 }
