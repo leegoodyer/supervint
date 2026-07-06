@@ -1,0 +1,67 @@
+{
+  "title": "Vintage Denim on Vinted: Set Up Alerts for Rare Levi's, Wrangler & More",
+  "intro": "A Vinted alert for vintage denim notifies you the instant a listing matches your saved search — by brand, waist size, era, or price — so rare or underpriced 501s, Type II jackets, and deadstock Wranglers don't sell before you see them.",
+  "meta_description": "Set up a Vinted alert for vintage denim by brand, era, size and price, and get notified the moment rare Levi's, Wrangler or Lee jeans go live.",
+  "date_published": "2026-07-06",
+  "author": "Supervint Team",
+  "pillar_page": "/guides/vinted-price-alert",
+  "pillar_page_anchor_text": "Learn how Vinted price alerts work",
+  "cta_text": "Try Supervint free",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "Why vintage denim sells fast on Vinted",
+      "paragraphs": [
+        "Desirable vintage denim — 1980s Levi's 501s, Wrangler cowboy cuts, Lee Storm Riders — has a dedicated buyer base that refreshes Vinted constantly throughout the day. A pair of Made in USA 501s in a 30–34 waist listed at £20–£40 can sell in under ten minutes, especially if the photos show genuine fading and a readable care label.",
+        "Vintage denim buyers are experienced searchers. They know exactly what they want — specific waist measurements, button flies, original chainstitch hems — and they check the platform multiple times a day for fresh listings. If you're serious about collecting vintage denim or reselling it, you're competing against people who have refined their Vinted search habits over years.",
+        "Manual refreshing puts you behind dozens of other buyers doing the same thing. By the time you open the app and type your search, the listing is often already sold or marked as pending. An alert tool checks continuously in the background and sends you a desktop notification the moment a matching listing appears — no tab babysitting required, and no lost listings."
+      ]
+    },
+    {
+      "heading": "Setting up a precise vintage denim alert",
+      "paragraphs": [
+        "Add era keywords like \"vintage\", \"Made in USA\", or \"1990s\" alongside the brand and waist size. A search for \"Levi's 501 size 32 vintage under £30\" surfaces far more relevant results than \"Levi's\" alone, because it filters out modern Levi's repros and irrelevant sizes in one go. The price cap is especially useful — it catches underpriced listings that are most likely to sell fast.",
+        "For other brands, use the exact model name where you know it. \"Wrangler 13MWZ cowboy cut\" and \"Lee Storm Rider jacket\" are searches that experienced vintage buyers actually use. Broad terms like \"vintage jacket\" return too much noise — you'll see modern replicas, non-denim jackets, and unrelated brands mixed in with the listings you actually want.",
+        "If you're watching multiple denim categories — say 501s in size 30, Wrangler jackets, and selvedge denim in general — you can save each as a separate search. Supervint lets you run multiple searches simultaneously on the Reseller and Power Seller plans, so you can cover several denim angles at once without juggling browser tabs or losing track of which searches you've already checked."
+      ]
+    },
+    {
+      "heading": "Genuine vintage versus modern reissues",
+      "paragraphs": [
+        "Not everything labelled \"vintage\" on Vinted actually is. A few quick checks before you buy: look at the care label (Levi's switched from the red-line batwing tag in the late 1990s), check the button code for a manufacturing date, and examine the fade pattern — authentic vintage denim has distinct wear and colour loss that modern repros can't fully replicate with artificial washing.",
+        "Price is another useful signal. Genuine 1980s 501s in good condition rarely sit below £25–£30 on Vinted, whereas modern Levi's reissues often list for £10–£20. If a listing claims \"vintage\" but the photos show a modern care label or a pristine wash with no natural fading, it's almost certainly a reissue. Pass on it — your alert will find the real thing eventually.",
+        "For Japanese selvedge denim, look for visible selvedge ID on the outseam (often a red or white line) and check the brand tag — brands like Sugar Cane, Warehouse, and Studio D'Artisan are commonly found on Vinted and hold strong resale value when listed below £50."
+      ]
+    },
+    {
+      "heading": "Condition checks before you buy",
+      "paragraphs": [
+        "An alert gets you to the listing first, but you still need to inspect the photos. Vintage denim is decades old — check for thinning at the knees, frayed hems, stains that won't wash out, and wear around the button fly. Sellers often describe condition honestly, but zoom in on the photos yourself before committing to a purchase.",
+        "If you're buying to resell, factor in repair costs. A £15 pair of 501s with a small crotch repair might still net £50–£80 after a clean and good listing photos. But a pair with significant damage, large stains, or missing buttons probably isn't worth the time when you factor in the effort of repair and the lower final sale price.",
+        "For higher-value pieces — vintage Japanese denim, deadstock 1990s Levi's, rare collaborations — ask the seller for additional photos if the listing only shows one or two angles. Sellers on Vinted are generally responsive, and a quick message can save you from buying a pair with undisclosed damage."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I set a Vinted alert for a specific Levi's era or size?",
+      "answer": "Yes — include era keywords like \"1980s\" or \"Made in USA\" alongside the waist size in your saved search so only matching listings trigger a notification."
+    },
+    {
+      "question": "Does this work for other vintage denim brands like Wrangler or Lee?",
+      "answer": "Yes — save a search for any brand or model combination, such as \"Wrangler 13MWZ\" or \"Lee Storm Rider jacket\"."
+    },
+    {
+      "question": "How fast do vintage jeans sell on Vinted?",
+      "answer": "Desirable sizes and brands in good condition can sell within 5–15 minutes of listing. An alert is the only reliable way to catch them before they're gone."
+    },
+    {
+      "question": "Is it safe to use an alert tool for vintage denim sniping?",
+      "answer": "Yes — alert-only extensions that don't log into your Vinted account carry minimal risk. Supervint never auto-buys, auto-bids, or accesses your account in any way."
+    },
+    {
+      "question": "What price should I set as my maximum for vintage denim alerts?",
+      "answer": "For common sizes of 501s and similar, £25–£35 is a good cap for resale. For rare pieces or Japanese denim, consider £50–£80 depending on condition."
+    }
+  ]
+}
