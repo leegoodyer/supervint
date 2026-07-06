@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { Redis } from '@upstash/redis';
 import { checkVerificationCode } from '@/lib/verificationCode';
 import { mergeEmailOwnership } from '@/lib/accountMerge';
+import { TRIAL_MS } from '@/lib/plans';
 
 export const runtime = 'nodejs';
 
@@ -51,20 +52,33 @@ export async function POST(request) {
   if (merge.merged) {
     return NextResponse.json({ ok: true, merged: true, searches: merge.searches }, { headers: CORS });
   }
+  if (merge.conflict) {
+    // This clientId already has its own real Stripe subscription — do not
+    // fall through to the "attach normally" path below, which would still
+    // repoint sv:email: away from the other (also real) account without
+    // ever migrating its data. Surface this for manual resolution instead.
+    return NextResponse.json(
+      { error: 'This email is linked to a different active subscription. Contact support to resolve this.' },
+      { status: 409, headers: CORS }
+    );
+  }
 
   // Merge target vanished between request-code and verify (rare race) — the
   // code was still valid proof the user owns this email, so just attach it
-  // normally rather than leaving them stuck.
-  const record = await kv.get(`sv:sub:${clientId}`);
-  if (!record) {
-    return NextResponse.json({ error: 'Unknown clientId' }, { status: 404, headers: CORS });
-  }
+  // normally rather than leaving them stuck. No prior record is a real
+  // possibility here too (account/email no longer requires one to exist),
+  // in which case this is where the trial clock starts.
+  const record = (await kv.get(`sv:sub:${clientId}`)) ?? {};
   const oldEmail = record.email ?? null;
   if (oldEmail && oldEmail !== email) {
     await kv.del(`sv:email:${oldEmail}`);
   }
+  const now = Date.now();
+  const updated = record.plan
+    ? { ...record, email, updatedAt: now }
+    : { plan: 'trial', trialStart: now, trialExpiresAt: now + TRIAL_MS, email, updatedAt: now };
   await Promise.all([
-    kv.set(`sv:sub:${clientId}`, { ...record, email, updatedAt: Date.now() }),
+    kv.set(`sv:sub:${clientId}`, updated),
     kv.set(`sv:email:${email}`, clientId),
   ]);
 

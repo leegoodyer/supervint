@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Redis } from '@upstash/redis';
 import { generateCode, checkAndSetRateLimit, storeVerificationCode, sendVerificationEmail } from '@/lib/verificationCode';
+import { TRIAL_MS } from '@/lib/plans';
 
 export const runtime = 'nodejs';
 
@@ -36,10 +37,11 @@ export async function POST(request) {
   }
 
   const key    = `sv:sub:${clientId}`;
-  const record = await kv.get(key);
-  if (!record) {
-    return NextResponse.json({ error: 'Unknown clientId' }, { status: 404, headers: CORS });
-  }
+  // No record yet is expected now — subscription/status no longer auto-
+  // creates a trial at first boot, since nothing is usable without an email
+  // anyway. This is where the trial clock actually starts, the moment an
+  // email is actually submitted.
+  const record = (await kv.get(key)) ?? {};
 
   // This email may already belong to a different clientId — e.g. the extension
   // was uninstalled and reinstalled, generating a fresh clientId, and the user
@@ -73,8 +75,15 @@ export async function POST(request) {
     await kv.del(`sv:email:${oldEmail}`);
   }
 
+  // A record with no plan means this clientId has never been seen before —
+  // start the trial here rather than at first boot.
+  const now = Date.now();
+  const updated = record.plan
+    ? { ...record, email, updatedAt: now }
+    : { plan: 'trial', trialStart: now, trialExpiresAt: now + TRIAL_MS, email, updatedAt: now };
+
   await Promise.all([
-    kv.set(key, { ...record, email, updatedAt: Date.now() }),
+    kv.set(key, updated),
     kv.set(`sv:email:${email}`, clientId),
   ]);
 

@@ -520,7 +520,7 @@ export default function AdminPanel() {
             <table style={{ borderCollapse: 'collapse', width: '100%', fontSize: '0.85rem' }}>
               <thead>
                 <tr style={{ background: 'var(--offwhite)', borderBottom: '1px solid var(--line)' }}>
-                  {['Deleted at', 'clientId', 'Plan', 'Email', ''].map((h, i) => (
+                  {['Deleted at', 'clientId', 'Plan', 'Email', 'Stripe customer', 'Merged into', ''].map((h, i) => (
                     <th key={i} style={{ padding: '0.6rem 0.9rem', textAlign: 'left', fontWeight: 600, fontSize: '0.78rem', color: 'var(--gray)', whiteSpace: 'nowrap' }}>
                       {h}
                     </th>
@@ -541,6 +541,12 @@ export default function AdminPanel() {
                     </td>
                     <td style={{ padding: '0.65rem 0.9rem', fontSize: '0.8rem', color: d.email ? 'var(--ink)' : 'var(--gray)' }}>
                       {d.email ?? '—'}
+                    </td>
+                    <td style={{ padding: '0.65rem 0.9rem', fontFamily: 'monospace', fontSize: '0.8rem', color: d.customerId ? 'var(--ink)' : 'var(--gray)' }}>
+                      {d.customerId ? `${d.customerId.slice(0, 14)}…` : '—'}
+                    </td>
+                    <td style={{ padding: '0.65rem 0.9rem', fontFamily: 'monospace', fontSize: '0.8rem', whiteSpace: 'nowrap', color: d.mergedInto ? 'var(--ink)' : 'var(--gray)' }} title={d.mergedInto || ''}>
+                      {d.mergedInto ? `${d.mergedInto.slice(0, 13)}…` : '—'}
                     </td>
                     <td style={{ padding: '0.65rem 0.9rem' }}>
                       <button

@@ -52,6 +52,14 @@ export async function POST(request) {
     const merge = await mergeEmailOwnership(kv, email, clientId);
     if (merge.merged) {
       existing = (await kv.get(`sv:sub:${clientId}`)) ?? {};
+    } else if (merge.conflict) {
+      // This clientId already has its own real Stripe subscription — do not
+      // repoint sv:email: away from the other (also real) account without
+      // migrating its data. Back to the original behavior for this specific
+      // case: refuse and let the admin resolve it manually.
+      return NextResponse.json({
+        error: 'This clientId already has its own Stripe subscription, and that email belongs to a different active subscription — resolve manually before granting.',
+      }, { status: 409 });
     } else {
       const oldEmail = existing.email ?? null;
       if (oldEmail && oldEmail !== email) {

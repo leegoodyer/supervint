@@ -3,7 +3,6 @@ import { Redis } from '@upstash/redis';
 import { planLimits, normalizePlan } from '@/lib/plans';
 
 const kv = Redis.fromEnv();
-const TRIAL_MS = 5 * 24 * 60 * 60 * 1000;
 
 const CORS = {
   'Access-Control-Allow-Origin': '*',
@@ -29,7 +28,7 @@ export async function POST(request) {
   }
 
   const key = `sv:sub:${clientId}`;
-  let record = await kv.get(key);
+  const record = await kv.get(key);
 
   if (!record) {
     // Missing because this clientId was merged into another one (reinstall,
@@ -37,27 +36,25 @@ export async function POST(request) {
     // check, the old device would silently get a brand new trial instead of
     // a real signal that its plan moved elsewhere.
     const deletedRecord = await kv.get(`sv:deleted:${clientId}`);
-    if (deletedRecord?.mergedInto) {
-      const freeLimits = planLimits('free');
-      return NextResponse.json({
-        plan:           'free',
-        searchLimit:    freeLimits.searchLimit,
-        emailLimit:     freeLimits.emailLimit,
-        sheets:         freeLimits.sheets,
-        trialExpiresAt: null,
-        email:          null,
-        invalidated:    true,
-      }, { headers: CORS });
-    }
+    const invalidated = !!deletedRecord?.mergedInto;
 
-    const now = Date.now();
-    record = {
-      plan:           'trial',
-      trialStart:     now,
-      trialExpiresAt: now + TRIAL_MS,
-      updatedAt:      now,
-    };
-    await kv.set(key, record);
+    // Nothing persisted yet, and this clientId was never merged away either
+    // — a genuinely fresh install. Nothing is usable without an email on
+    // file anyway (search creation and starting a search both require it),
+    // so don't create a record or start the trial clock here — that now
+    // happens in account/email, at the moment an email is actually
+    // submitted. This just reports the pre-email state without writing
+    // anything.
+    const freeLimits = planLimits('free');
+    return NextResponse.json({
+      plan:           'free',
+      searchLimit:    freeLimits.searchLimit,
+      emailLimit:     freeLimits.emailLimit,
+      sheets:         freeLimits.sheets,
+      trialExpiresAt: null,
+      email:          null,
+      invalidated,
+    }, { headers: CORS });
   }
 
   let plan = normalizePlan(record.plan);

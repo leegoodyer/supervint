@@ -27,9 +27,11 @@ export async function GET() {
       const clientId = key.replace('sv:deleted:', '');
       return {
         clientId,
-        plan:      normalizePlan(record.plan),
-        email:     record.email     ?? null,
-        deletedAt: record.deletedAt ?? null,
+        plan:       normalizePlan(record.plan),
+        email:      record.email      ?? null,
+        customerId: record.customerId ?? null,
+        mergedInto: record.mergedInto ?? null,
+        deletedAt:  record.deletedAt  ?? null,
       };
     })
     .filter(Boolean)
