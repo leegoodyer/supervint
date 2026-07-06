@@ -1,0 +1,47 @@
+{
+  "title": "Vinted Nike Trainers Alert: Get Notified First",
+  "intro": "A Vinted alert for Nike trainers notifies you the instant a matching listing goes live — filtered by size, model, and price — so you're not refreshing the search page hoping to beat other buyers to it.",
+  "meta_description": "Set up a Vinted alert for Nike trainers by size, model, and price, and get notified the moment a new listing matches.",
+  "date_published": "2026-07-06",
+  "author": "Supervint Team",
+  "pillar_page": "/guides/vinted-price-alert",
+  "pillar_page_anchor_text": "Learn how Vinted price alerts work",
+  "cta_text": "Try Supervint free",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "Why Nike trainers move fast on Vinted",
+      "paragraphs": [
+        "Popular Nike models — Air Max, Dunk, Air Force 1 — get listed and sold within minutes when priced below market value. Manually refreshing a search page means you're competing against everyone else doing the same thing, and the fastest refresh usually wins.",
+        "An alert tool removes that race: it checks new listings continuously in the background and notifies you the moment something matches your saved search, so you can act without babysitting a browser tab."
+      ]
+    },
+    {
+      "heading": "Setting up a precise trainers alert",
+      "paragraphs": [
+        "Narrow your search beyond just 'Nike' — specify the model, UK size, and a maximum price to cut down on irrelevant notifications. A search for 'Nike Air Max 90, size UK 9, under £40' returns far more useful alerts than a broad 'Nike trainers' search.",
+        "If you're after a specific colourway or a deadstock pair, add that as a keyword too — the more specific the search, the more actionable each alert becomes."
+      ]
+    },
+    {
+      "heading": "What to do when you get an alert",
+      "paragraphs": [
+        "Act quickly but check the listing properly first — photos, seller rating, condition notes — before purchasing. An alert gets you there first; it doesn't replace the basic checks you'd do buying trainers secondhand any other way."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I set alerts for a specific Nike trainer size?",
+      "answer": "Yes — specify the UK size as part of your saved search criteria so you only get notified about listings in your size."
+    },
+    {
+      "question": "How fast do Nike trainer alerts come through?",
+      "answer": "Alert speed depends on the tool's refresh rate; check the specific extension's documentation, but the goal is notification within seconds to minutes of a new listing going live."
+    },
+    {
+      "question": "Is it safe to use an alert tool for sneaker sniping?",
+      "answer": "Alert-only tools that don't log into your account carry minimal risk — see our guide on alert-only versus auto-buy tools for the full breakdown."
+    }
+  ]
+}
