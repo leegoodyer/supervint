@@ -1,0 +1,47 @@
+{
+  "title": "Vinted Alerts Without the Ban Risk",
+  "intro": "Vinted alert tools fall into two categories: alert-only extensions that notify you when a listing matches your search, and autocop bots that log into your account and complete purchases automatically. The second type carries real account-suspension risk because it mimics automated login behavior that Vinted's fraud detection is built to flag.",
+  "meta_description": "Why alert-only tools like Supervint are safer than autocop bots for your Vinted account — and what actually triggers a ban.",
+  "date_published": "2026-07-06",
+  "author": "Supervint Team",
+  "pillar_page": "/",
+  "pillar_page_anchor_text": "Learn more about Supervint",
+  "cta_text": "Try Supervint free",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What actually triggers a Vinted ban",
+      "paragraphs": [
+        "Vinted's systems watch for behavior that doesn't look human: logging in at unusual hours, taking actions in rapid succession, or repeating the same action pattern hundreds of times a day. Autocop and auto-buy bots need to log into your account directly to complete a purchase on your behalf — that login-and-act pattern is exactly what automated fraud detection is built to catch.",
+        "An alert-only extension never logs into your account or takes actions on your behalf. It watches public search results and notifies you — the actual purchase still happens through your normal, manual browser session, the same way it would if you'd refreshed the page yourself."
+      ]
+    },
+    {
+      "heading": "Alert-only vs. auto-buy: the practical difference",
+      "paragraphs": [
+        "Auto-buy tools promise speed — the bot completes checkout in the moment a listing appears, before a human could react. That speed is also the risk: it requires standing account access and rapid automated actions, which is the exact pattern platforms design their bot-detection around.",
+        "Alert-only tools trade a few seconds of speed for account safety. You still get notified the moment a match appears — you just complete the purchase yourself, which keeps every action on your account genuinely human."
+      ]
+    },
+    {
+      "heading": "How to tell which type of tool you're using",
+      "paragraphs": [
+        "Check whether the tool asks for your Vinted login credentials during setup. If it does, and it completes purchases without you clicking anything, it's an auto-buy tool. If it only asks you to define a search and sends a notification you then act on yourself, it's alert-only."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can using a Vinted alert extension get my account banned?",
+      "answer": "An alert-only extension that doesn't log into your account or take automated actions carries minimal ban risk, since every purchase still happens through your normal manual session."
+    },
+    {
+      "question": "What's the difference between an alert tool and an autocop bot?",
+      "answer": "An alert tool notifies you when a listing matches your search; an autocop bot logs into your account and completes the purchase automatically, which requires standing account access."
+    },
+    {
+      "question": "Is it against Vinted's terms to use an alert extension?",
+      "answer": "Alert-only tools that simply monitor public search results without accessing your account or automating actions operate differently from bots that log in and act on your behalf — check Vinted's current terms of service for specifics."
+    }
+  ]
+}

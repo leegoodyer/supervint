@@ -188,3 +188,22 @@ section{max-width:var(--max); margin:0 auto; padding:5rem 2rem;}
 .prose li{font-size:0.95rem; color:var(--gray); line-height:1.7; margin-bottom:0.3rem;}
 .prose a{color:var(--green);}
 .prose a:hover{text-decoration:underline;}
+
+/* guides */
+.guide{max-width:720px; margin:0 auto; padding:4rem 2rem 6rem;}
+.guide h1{font-size:1.9rem; margin-bottom:1rem;}
+.guide-intro{font-size:1.05rem; color:var(--ink); line-height:1.65; margin-bottom:2.5rem;}
+.guide-body h2{font-size:1.25rem; margin-top:2.4rem; margin-bottom:0.8rem; color:var(--ink);}
+.guide-body p{font-size:0.95rem; color:var(--gray); line-height:1.7; margin-bottom:1rem;}
+.guide-faq{margin-top:3rem;}
+.guide-faq > h2{font-size:1.25rem; margin-bottom:0.5rem; color:var(--ink);}
+.guide-related{
+  margin-top:2.5rem; padding:1rem 1.4rem; background:var(--offwhite);
+  border:1px solid var(--line); border-radius:12px; font-size:0.9rem; color:var(--gray);
+}
+.guide-related a{color:var(--green);}
+.guide-related a:hover{text-decoration:underline;}
+.guide-cta{margin-top:2.5rem; text-align:center;}
+.guide-index-list{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.6rem;}
+.guide-index-list a{color:var(--green); font-size:0.95rem;}
+.guide-index-list a:hover{text-decoration:underline;}
