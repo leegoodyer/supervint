@@ -84,7 +84,7 @@ export default function Home() {
 
       <section className="hero">
         <p className="eyebrow">The Vinted Product Sniper &amp; Price Alert</p>
-        <h1>Spot it first. Snipe it before anyone else does.</h1>
+        <h1>Vinted Alerts &amp; Price Sniper — Chrome Extension for Instant Listing Notifications</h1>
         <p className="hero-kw">The Vinted Chrome extension that monitors your searches while Chrome is open and sends an instant alert the moment a matching listing goes live.</p>
         <p className="hero-sub">Supervint runs your snipe around the clock, pulling in every product that matches your setup the second it&apos;s listed.</p>
         <a

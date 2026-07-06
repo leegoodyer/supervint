@@ -5,19 +5,19 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata = {
-  title: 'Supervint — The Vinted Product Sniper & Price Alert',
-  description: 'Supervint monitors your Vinted searches around the clock and alerts you the instant a new listing matches. Spot it first — snipe it before anyone else does.',
+  title: 'Vinted Price Alerts & Sniper Tool — Free Chrome Extension | Supervint',
+  description: 'Get instant Vinted alerts the moment a matching listing goes live — no auto-buy, no ban risk. Free Chrome extension.',
   openGraph: {
-    title: 'Supervint — The Vinted Product Sniper & Price Alert',
-    description: 'Supervint monitors your Vinted searches around the clock and alerts you the instant a new listing matches. Spot it first — snipe it before anyone else does.',
+    title: 'Vinted Price Alerts & Sniper Tool — Free Chrome Extension | Supervint',
+    description: 'Get instant Vinted alerts the moment a matching listing goes live — no auto-buy, no ban risk. Free Chrome extension.',
     url: 'https://supervint.com',
     type: 'website',
     images: [{ url: 'https://supervint.com/og-image.png' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Supervint — The Vinted Product Sniper & Price Alert',
-    description: 'Real-time Vinted alerts for resellers and collectors. Never miss a drop again.',
+    title: 'Vinted Price Alerts & Sniper Tool — Free Chrome Extension | Supervint',
+    description: 'Get instant Vinted alerts the moment a matching listing goes live — no auto-buy, no ban risk. Free Chrome extension.',
     images: ['https://supervint.com/og-image.png'],
   },
 };
