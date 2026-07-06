@@ -22,12 +22,12 @@ export default function GuideTemplate({ guide }) {
 
       <div className="guide-body">
         {guide.body?.map((section, i) => (
-          <section key={i}>
+          <div className="guide-section" key={i}>
             <h2>{section.heading}</h2>
             {section.paragraphs?.map((paragraph, j) => (
               <p key={j}>{paragraph}</p>
             ))}
-          </section>
+          </div>
         ))}
       </div>
 
