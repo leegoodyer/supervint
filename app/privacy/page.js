@@ -104,7 +104,7 @@ export default function Privacy() {
       <h2>Contact Us</h2>
       <p>
         If you have any questions about this Privacy Policy, please contact us at{' '}
-        <a href="mailto:garden4kent@gmail.com">garden4kent@gmail.com</a>.
+        <a href="mailto:support@supervint.com">support@supervint.com</a>.
       </p>
     </div>
   );

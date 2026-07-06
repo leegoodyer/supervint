@@ -92,7 +92,7 @@ export default function Terms() {
       <h2>10. Contact</h2>
       <p>
         If you have questions about these Terms, contact us at{' '}
-        <a href="mailto:garden4kent@gmail.com">garden4kent@gmail.com</a>.
+        <a href="mailto:support@supervint.com">support@supervint.com</a>.
       </p>
     </div>
   );
