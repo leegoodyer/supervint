@@ -1,0 +1,47 @@
+{
+  "title": "Vinted Carhartt & Workwear Alerts: Never Miss a Drop",
+  "intro": "A Vinted alert for Carhartt and workwear notifies you the instant a matching listing appears — filtered by piece, size, and condition — so rare or underpriced pieces don't sell before you see them.",
+  "meta_description": "Set up a Vinted alert for Carhartt and workwear by size, piece, and price, and get notified the moment a new listing goes live.",
+  "date_published": "2026-07-06",
+  "author": "Supervint Team",
+  "pillar_page": "/guides/vinted-price-alert",
+  "pillar_page_anchor_text": "Learn how Vinted price alerts work",
+  "cta_text": "Try Supervint free",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "Why workwear disappears fast on Vinted",
+      "paragraphs": [
+        "Carhartt, Dickies, and other workwear brands hold value well secondhand, which means well-priced or rare pieces — vintage detroit jackets, discontinued colourways, specific fits — get bought within minutes of listing.",
+        "Manually searching means competing against everyone refreshing the same page. An alert tool checks continuously in the background so you're notified the moment something matches, without needing to babysit a search."
+      ]
+    },
+    {
+      "heading": "Setting up a precise workwear alert",
+      "paragraphs": [
+        "Go beyond just the brand name — specify the piece (detroit jacket, chore coat, dungarees), size, and a maximum price. A search for 'Carhartt detroit jacket, size L, under £35' surfaces far more relevant alerts than a broad 'Carhartt' search.",
+        "If you're after a specific era or fabric weight (e.g. duck canvas vs. modern blends), add that as a keyword too — workwear buyers often care about these details as much as size."
+      ]
+    },
+    {
+      "heading": "Checking condition before you buy",
+      "paragraphs": [
+        "Workwear is bought to be worn hard, so check listing photos for wear at cuffs, collar, and pocket seams before purchasing — an alert gets you there first, but the usual secondhand checks still matter."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I set alerts for a specific Carhartt jacket or size?",
+      "answer": "Yes — specify the piece and size as part of your saved search so you only get notified about listings matching those details."
+    },
+    {
+      "question": "Does this work for other workwear brands, not just Carhartt?",
+      "answer": "Yes — you can save a search for any brand or keyword combination, including Dickies, Ben Davis, or other workwear labels."
+    },
+    {
+      "question": "Is it safe to use an alert extension for workwear sniping?",
+      "answer": "Alert-only tools that don't log into your account carry minimal risk — see our guide on alert-only versus auto-buy tools for the full breakdown."
+    }
+  ]
+}
