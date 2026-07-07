@@ -198,7 +198,7 @@ export default function Home() {
           <div className="price-card">
             <h3>Free</h3>
             <p className="price-num">£0<span>forever</span></p>
-            <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-ghost price-cta">Install free on Chrome</a>
+            <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-ghost price-cta" onClick={() => fbq('track', 'Lead', { content_name: 'Free Tier Install Click' })}>Install free on Chrome</a>
             <ul>
               <li>1 active search</li>
               <li>Desktop alerts</li>
@@ -209,7 +209,7 @@ export default function Home() {
             <span className="tag-pop">Most popular</span>
             <h3>Reseller</h3>
             <p className="price-num">£6.99<span>/ month</span></p>
-            <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-primary price-cta">Get started on Chrome</a>
+            <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-primary price-cta" onClick={() => fbq('track', 'Lead', { content_name: 'Reseller Install Click' })}>Get started on Chrome</a>
             <ul>
               <li>Up to 10 active searches</li>
               <li>Desktop alerts</li>
@@ -220,7 +220,7 @@ export default function Home() {
           <div className="price-card">
             <h3>Power Seller</h3>
             <p className="price-num">£13.99<span>/ month</span></p>
-            <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-ghost price-cta">Get started on Chrome</a>
+            <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-ghost price-cta" onClick={() => fbq('track', 'Lead', { content_name: 'Power Seller Install Click' })}>Get started on Chrome</a>
             <ul>
               <li>Unlimited active searches</li>
               <li>Everything in Reseller</li>
