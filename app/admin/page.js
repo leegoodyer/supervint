@@ -7,6 +7,9 @@ export const dynamic = 'force-dynamic';
 export const metadata = {
   title: 'Admin — Supervint',
   robots: { index: false, follow: false },
+  alternates: {
+    canonical: '/admin',
+  },
 };
 
 export default async function AdminPage() {

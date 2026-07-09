@@ -16,6 +16,9 @@ const PLAN_DISPLAY = {
 
 export const metadata = {
   title: 'Welcome — Supervint',
+  alternates: {
+    canonical: '/welcome',
+  },
 };
 
 export default async function WelcomePage({ searchParams }) {

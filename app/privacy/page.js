@@ -1,5 +1,8 @@
 export const metadata = {
   title: 'Privacy Policy — Supervint',
+  alternates: {
+    canonical: '/privacy',
+  },
 };
 
 export default function Privacy() {

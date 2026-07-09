@@ -1,5 +1,8 @@
 export const metadata = {
   title: 'Contact — Supervint',
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default function ContactPage() {

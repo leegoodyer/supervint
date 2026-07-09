@@ -5,8 +5,12 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata = {
+  metadataBase: new URL('https://supervint.com'),
   title: 'Vinted Price Alerts & Sniper Tool — Free Chrome Extension | Supervint',
   description: 'Get instant Vinted alerts the moment a matching listing goes live — no auto-buy, no ban risk. Free Chrome extension.',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Vinted Price Alerts & Sniper Tool — Free Chrome Extension | Supervint',
     description: 'Get instant Vinted alerts the moment a matching listing goes live — no auto-buy, no ban risk. Free Chrome extension.',

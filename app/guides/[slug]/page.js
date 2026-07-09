@@ -14,6 +14,9 @@ export async function generateMetadata({ params }) {
   return {
     title: `${guide.title} — Supervint`,
     description: guide.meta_description || guide.intro,
+    alternates: {
+      canonical: `/guides/${slug}`,
+    },
     openGraph: {
       title: `${guide.title} — Supervint`,
       description: guide.meta_description || guide.intro,

@@ -1,5 +1,8 @@
 export const metadata = {
   title: 'Data Deletion — Supervint',
+  alternates: {
+    canonical: '/deletion',
+  },
 };
 
 export default function Deletion() {

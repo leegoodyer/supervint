@@ -1,5 +1,8 @@
 export const metadata = {
   title: 'Terms of Service — Supervint',
+  alternates: {
+    canonical: '/terms',
+  },
 };
 
 export default function Terms() {

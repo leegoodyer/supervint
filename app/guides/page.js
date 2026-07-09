@@ -3,6 +3,9 @@ import { getAllGuides } from '@/lib/guides';
 export const metadata = {
   title: 'Guides — Supervint',
   description: 'Guides on sniping Vinted listings safely and getting the most out of Supervint.',
+  alternates: {
+    canonical: '/guides',
+  },
 };
 
 export default function GuidesIndex() {
