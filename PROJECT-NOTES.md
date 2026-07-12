@@ -1,0 +1,69 @@
+# Supervint — Project Notes
+
+## Product Facts (never contradict these in any copy/content)
+- Supervint is a free Chrome extension that alerts users when a new
+  Vinted listing matches a saved search.
+- Alert-only: no auto-buy, no auto-checkout, no automated action on
+  Vinted. Never state or imply Supervint logs into Vinted or accesses
+  credentials.
+- Free tier requires an email address to save a search (not optional).
+- "Sniping" in Supervint's context means finding/spotting listings
+  first, not auto-purchasing — consistent with alert-only positioning.
+
+## Live Content
+- Pillar 1: /guides/vinted-alerts-without-the-ban-risk
+- Pillar 2 (hub): /guides/vinted-price-alert
+- Spoke: /guides/vinted-alerts-nike-trainers
+- Spoke: /guides/vinted-alerts-carhartt-workwear
+- Spoke: /guides/vinted-alerts-vintage-denim
+- All guides use GuideTemplate.js, output Article + FAQPage schema,
+  link to exactly one pillar page + the pricing CTA.
+
+## Technical Setup — CONFIRMED LIVE IN PRODUCTION
+- Title/H1/meta/OG/Twitter tags optimized on homepage
+- SoftwareApplication + FAQPage schema on homepage
+- www → apex 301/308 redirect (next.config.mjs) — commit 0a1bd64,
+  verified live in production 2026-07-09:
+  https://www.supervint.com/ → 308 → https://supervint.com/
+- Per-page <link rel="canonical"> tags via alternates.canonical —
+  verified live on /, /privacy, /guides (same commit/verification)
+- Dynamic sitemap.xml (app/sitemap.js), auto-picks up new guide pages,
+  excludes /welcome and /admin
+- CSS scoping bug fixed: guide body blocks used bare <section> tags
+  colliding with homepage's global section padding rule — now uses
+  .guide-section class instead
+- Welcome/admin signup emails shipped via Resend
+
+## Known Pending Items
+- ADMIN_NOTIFICATION_EMAIL environment variable needs to be added to
+  Vercel's environment variables for the admin signup notification to
+  actually work post-deploy — confirm this is set
+- /guides index page and individual guide pages brand styling (teal
+  color, lightning bolt icon) — in progress as of this session
+- No nav link to /guides from homepage yet — guides are effectively
+  orphaned from main navigation (SEO + UX gap) — still pending
+- CWS listing (Overview, Summary, package description) rewritten for
+  accuracy — confirm final versions are actually pasted into the
+  Chrome Web Store Developer Dashboard (manual only, can't be done via
+  Claude Code/Hermes)
+
+## SEO Content Pipeline (Hermes)
+- Hermes runs a standing SEO content cron job, 2x/week
+- Researches keywords via GSC data (once available) or competitor
+  analysis, proposes a target + reasoning, waits for Lee's approval
+- Writes drafts to content/guides/drafts/ — NEVER publishes directly
+  to content/guides/ (live)
+- Keeps self-improvement log at content/guides/_seo-agent-log.md
+- Publish pipeline: Hermes drafts → Lee reviews → Claude Code moves
+  approved draft to content/guides/, verifies schema/render, commits,
+  pushes to main (Vercel auto-deploys)
+
+## Access/Environment Notes
+- supervint-web (website) and Supervint (extension) are SEPARATE
+  folders with separate access grants — a Claude Code session scoped
+  to one cannot read the other. Always confirm working directory
+  matches the task before starting.
+- GA4 property G-0DHBJ4FEQX is for the Chrome extension, not the
+  website (confirmed by Lee)
+- GSC service account (supervint-seo-agent@supervint.iam.gserviceaccount.com)
+  connected and working for the website property (sc-domain:supervint.com)
