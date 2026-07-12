@@ -33,6 +33,7 @@
   colliding with homepage's global section padding rule — now uses
   .guide-section class instead
 - Welcome/admin signup emails shipped via Resend
+- Chrome Web Store review completed and approved — extension live.
 - Brand styling added to /guides pages — commit 643f354, pushed and
   verified live:
   - /guides index: teal gradient hero band with lightning-bolt badge,
@@ -62,8 +63,6 @@ root-cause writeups:
   actually work post-deploy — confirm this is set
 - No nav link to /guides from homepage yet — guides are effectively
   orphaned from main navigation (SEO + UX gap) — still pending
-- Chrome Web Store zip uploaded and submitted for review as of
-  2026-07-12 — pending Google's review/approval outcome
 
 ## SEO Content Pipeline (Hermes)
 - Hermes runs a standing SEO content cron job, 2x/week
