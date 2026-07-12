@@ -33,13 +33,20 @@
   colliding with homepage's global section padding rule — now uses
   .guide-section class instead
 - Welcome/admin signup emails shipped via Resend
+- Brand styling added to /guides pages — commit 643f354, pushed and
+  verified live:
+  - /guides index: teal gradient hero band with lightning-bolt badge,
+    each guide now rendered as a card (title + one-line teaser from
+    meta_description) in a responsive 2-column grid (1-column on mobile)
+  - Individual guide pages: small bolt badge added next to the H1,
+    via new shared component components/BrandBolt.js
+  - Verified: build passes, /privacy and other .prose pages unaffected
+    (styles scoped to .guide* classes only), mobile layout confirmed
 
 ## Known Pending Items
 - ADMIN_NOTIFICATION_EMAIL environment variable needs to be added to
   Vercel's environment variables for the admin signup notification to
   actually work post-deploy — confirm this is set
-- /guides index page and individual guide pages brand styling (teal
-  color, lightning bolt icon) — in progress as of this session
 - No nav link to /guides from homepage yet — guides are effectively
   orphaned from main navigation (SEO + UX gap) — still pending
 - CWS listing (Overview, Summary, package description) rewritten for
