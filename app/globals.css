@@ -189,10 +189,43 @@ section{max-width:var(--max); margin:0 auto; padding:5rem 2rem;}
 .prose a{color:var(--green);}
 .prose a:hover{text-decoration:underline;}
 
+/* brand bolt badge — reused on guides index + individual guide pages */
+.brand-bolt{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:34px; height:34px; border-radius:10px; flex-shrink:0;
+  background:linear-gradient(160deg, var(--green-bright), var(--green-dark));
+  box-shadow:0 6px 16px -6px rgba(0,119,130,0.5);
+}
+.brand-bolt svg{width:17px; height:17px;}
+.brand-bolt.sm{width:26px; height:26px; border-radius:8px;}
+.brand-bolt.sm svg{width:13px; height:13px;}
+
 /* guides */
 .guide{max-width:720px; margin:0 auto; padding:4rem 2rem 6rem;}
 .guide h1{font-size:1.9rem; margin-bottom:1rem;}
 .guide-intro{font-size:1.05rem; color:var(--ink); line-height:1.65; margin-bottom:2.5rem;}
+.guide-hero{display:flex; align-items:center; gap:0.8rem; margin-bottom:1rem;}
+.guide-hero h1{margin-bottom:0;}
+
+/* guides index */
+.guides-hero{
+  text-align:center; padding:2.6rem 2rem; margin-bottom:2.8rem;
+  background:linear-gradient(135deg, rgba(0,163,176,0.08), rgba(0,119,130,0.03));
+  border:1px solid rgba(0,119,130,0.15); border-radius:20px;
+}
+.guides-hero .brand-bolt{margin:0 auto 1rem;}
+.guides-hero h1{margin-bottom:0.8rem;}
+.guides-hero .guide-intro{margin-bottom:0; max-width:34rem; margin-left:auto; margin-right:auto;}
+.guide-card-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.2rem;}
+@media(max-width:700px){.guide-card-grid{grid-template-columns:1fr;}}
+.guide-card{
+  display:block; background:#fff; border:1px solid var(--line); border-top:3px solid var(--green-bright);
+  border-radius:14px; padding:1.5rem 1.6rem;
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.guide-card:hover{transform:translateY(-2px); box-shadow:0 14px 30px -20px rgba(0,119,130,0.35); border-color:var(--green-bright);}
+.guide-card h2{font-size:1.05rem; color:var(--ink); margin-bottom:0.5rem; line-height:1.4;}
+.guide-card p{font-size:0.88rem; color:var(--gray); line-height:1.55;}
 .guide-body{display:flex; flex-direction:column; gap:1.4rem;}
 .guide-section{background:#fff; border:1px solid var(--line); border-radius:14px; padding:1.75rem 1.9rem;}
 .guide-section h2{font-size:1.15rem; margin-bottom:0.8rem; color:var(--ink);}
@@ -207,6 +240,3 @@ section{max-width:var(--max); margin:0 auto; padding:5rem 2rem;}
 .guide-related a{color:var(--green);}
 .guide-related a:hover{text-decoration:underline;}
 .guide-cta{margin-top:2.5rem; text-align:center;}
-.guide-index-list{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.6rem;}
-.guide-index-list a{color:var(--green); font-size:0.95rem;}
-.guide-index-list a:hover{text-decoration:underline;}

@@ -1,4 +1,5 @@
 import { buildArticleSchema, buildFaqSchema } from '@/lib/guides';
+import BrandBolt from '@/components/BrandBolt';
 
 export default function GuideTemplate({ guide }) {
   const faqSchema = buildFaqSchema(guide);
@@ -17,7 +18,10 @@ export default function GuideTemplate({ guide }) {
         />
       )}
 
-      <h1>{guide.title}</h1>
+      <div className="guide-hero">
+        <BrandBolt sm />
+        <h1>{guide.title}</h1>
+      </div>
       <p className="guide-intro">{guide.intro}</p>
 
       <div className="guide-body">

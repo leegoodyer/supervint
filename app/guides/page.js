@@ -1,4 +1,5 @@
 import { getAllGuides } from '@/lib/guides';
+import BrandBolt from '@/components/BrandBolt';
 
 export const metadata = {
   title: 'Guides — Supervint',
@@ -13,15 +14,19 @@ export default function GuidesIndex() {
 
   return (
     <div className="guide">
-      <h1>Guides</h1>
-      <p className="guide-intro">Practical guides on sniping Vinted listings safely and getting the most out of Supervint.</p>
-      <ul className="guide-index-list">
+      <div className="guides-hero">
+        <BrandBolt />
+        <h1>Guides</h1>
+        <p className="guide-intro">Practical guides on sniping Vinted listings safely and getting the most out of Supervint.</p>
+      </div>
+      <div className="guide-card-grid">
         {guides.map((guide) => (
-          <li key={guide.slug}>
-            <a href={`/guides/${guide.slug}`}>{guide.title}</a>
-          </li>
+          <a key={guide.slug} href={`/guides/${guide.slug}`} className="guide-card">
+            <h2>{guide.title}</h2>
+            <p>{guide.meta_description || guide.intro}</p>
+          </a>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
