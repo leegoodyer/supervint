@@ -74,6 +74,12 @@ root-cause writeups:
 - Publish pipeline: Hermes drafts → Lee reviews → Claude Code moves
   approved draft to content/guides/, verifies schema/render, commits,
   pushes to main (Vercel auto-deploys)
+- Cron job live — job ID f9a2ec3cae7d, runs Mon & Thu 9:00am UK time.
+  Each run: reads _seo-agent-log.md + existing guides to avoid
+  duplication, researches a new keyword angle, proposes to Lee with
+  reasoning, waits for approval before writing. First proposal/draft:
+  'vinted-adidas-trainers-alert' (Adidas trainers, extending the Nike
+  guide template) — approved 2026-07-12.
 
 ## Access/Environment Notes
 - supervint-web (website) and Supervint (extension) are SEPARATE
