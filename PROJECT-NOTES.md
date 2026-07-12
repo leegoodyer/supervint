@@ -43,16 +43,27 @@
   - Verified: build passes, /privacy and other .prose pages unaffected
     (styles scoped to .guide* classes only), mobile layout confirmed
 
+## Extension Fixes (this session)
+Reported complete by Lee. The extension folder (Documents/Supervint) is
+not a git repo, so there's no commit history/diff to independently verify
+the specifics against — listed here as confirmed-done, not as verified
+root-cause writeups:
+- Power Seller plan cap fixed
+- Usage counter fixed
+- Google Sheets OAuth/ownership issue fixed
+- Duplicate account creation fixed across all three signup paths
+- Email verification fixed
+- Search persistence fixed
+- Free-tier email gate fixed
+
 ## Known Pending Items
 - ADMIN_NOTIFICATION_EMAIL environment variable needs to be added to
   Vercel's environment variables for the admin signup notification to
   actually work post-deploy — confirm this is set
 - No nav link to /guides from homepage yet — guides are effectively
   orphaned from main navigation (SEO + UX gap) — still pending
-- CWS listing (Overview, Summary, package description) rewritten for
-  accuracy — confirm final versions are actually pasted into the
-  Chrome Web Store Developer Dashboard (manual only, can't be done via
-  Claude Code/Hermes)
+- Chrome Web Store zip uploaded and submitted for review as of
+  2026-07-12 — pending Google's review/approval outcome
 
 ## SEO Content Pipeline (Hermes)
 - Hermes runs a standing SEO content cron job, 2x/week
