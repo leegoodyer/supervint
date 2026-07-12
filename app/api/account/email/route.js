@@ -3,6 +3,7 @@ import { Redis } from '@upstash/redis';
 import { generateCode, checkAndSetRateLimit, storeVerificationCode, sendVerificationEmail } from '@/lib/verificationCode';
 import { getOrRevive } from '@/lib/accountMerge';
 import { TRIAL_MS } from '@/lib/plans';
+import { sendWelcomeEmail, notifyAdminNewAccount } from '@/lib/accountNotifications';
 
 export const runtime = 'nodejs';
 
@@ -80,6 +81,7 @@ export async function POST(request) {
 
   // A record with no plan means this clientId has never been seen before —
   // start the trial here rather than at first boot.
+  const isNewAccount = !record.plan;
   const now = Date.now();
   const updated = record.plan
     ? { ...record, email, updatedAt: now }
@@ -90,6 +92,13 @@ export async function POST(request) {
     kv.set(`sv:email:${email}`, clientId),
   ]);
   if (revived) await kv.del(`sv:deleted:${clientId}`);
+
+  if (isNewAccount) {
+    await Promise.all([
+      sendWelcomeEmail(email, 'trial'),
+      notifyAdminNewAccount({ email, plan: 'trial', clientId, event: 'signup', timestamp: now }),
+    ]);
+  }
 
   return NextResponse.json({ ok: true }, { headers: CORS });
 }

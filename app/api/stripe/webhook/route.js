@@ -3,6 +3,7 @@ import { Redis } from '@upstash/redis';
 import { getStripe } from '@/lib/stripe';
 import { planForPriceId, normalizePlan } from '@/lib/plans';
 import { mergeEmailOwnership } from '@/lib/accountMerge';
+import { sendWelcomeEmail, notifyAdminNewAccount } from '@/lib/accountNotifications';
 
 export const runtime = 'nodejs';
 
@@ -89,6 +90,8 @@ export async function POST(request) {
         }
 
         const existing = await kv.get(`sv:sub:${clientId}`) ?? {};
+        const previousPlan = existing.plan ?? null;
+        const notifyEmail  = checkoutEmail || existing.email || null;
 
         // Maintain the sv:email index for a genuinely new/unclaimed email —
         // the merge branch above already repointed it for the "claiming an
@@ -117,6 +120,22 @@ export async function POST(request) {
         });
         if (customerId) {
           await kv.set(`sv:customer:${customerId}`, clientId);
+        }
+
+        // Admin notification fires on every real conversion, whether this
+        // clientId was brand new or upgrading from an existing trial/free
+        // account — previousPlan shows which. Welcome email is narrower: only
+        // for a genuinely first-time account, since an upgrading account
+        // already got welcomed when its trial/email was first set up.
+        await notifyAdminNewAccount({
+          email: notifyEmail,
+          plan,
+          clientId,
+          event: previousPlan ? 'stripe_conversion' : 'stripe_signup',
+          previousPlan,
+        });
+        if (!previousPlan && checkoutEmail) {
+          await sendWelcomeEmail(checkoutEmail, plan);
         }
         break;
       }

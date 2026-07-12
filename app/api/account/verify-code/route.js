@@ -3,6 +3,7 @@ import { Redis } from '@upstash/redis';
 import { checkVerificationCode } from '@/lib/verificationCode';
 import { mergeEmailOwnership, getOrRevive } from '@/lib/accountMerge';
 import { TRIAL_MS } from '@/lib/plans';
+import { sendWelcomeEmail, notifyAdminNewAccount } from '@/lib/accountNotifications';
 
 export const runtime = 'nodejs';
 
@@ -68,6 +69,7 @@ export async function POST(request) {
   // normally rather than leaving them stuck. Check for recoverable
   // soft-deleted data on this clientId first, same reasoning as account/email.
   const { record, revived } = await getOrRevive(kv, clientId);
+  const isNewAccount = !record.plan;
   const oldEmail = record.email ?? null;
   if (oldEmail && oldEmail !== email) {
     await kv.del(`sv:email:${oldEmail}`);
@@ -81,6 +83,13 @@ export async function POST(request) {
     kv.set(`sv:email:${email}`, clientId),
   ]);
   if (revived) await kv.del(`sv:deleted:${clientId}`);
+
+  if (isNewAccount) {
+    await Promise.all([
+      sendWelcomeEmail(email, 'trial'),
+      notifyAdminNewAccount({ email, plan: 'trial', clientId, event: 'signup', timestamp: now }),
+    ]);
+  }
 
   return NextResponse.json({ ok: true }, { headers: CORS });
 }
