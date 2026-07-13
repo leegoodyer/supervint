@@ -16,6 +16,7 @@
 - Spoke: /guides/vinted-alerts-nike-trainers
 - Spoke: /guides/vinted-alerts-carhartt-workwear
 - Spoke: /guides/vinted-alerts-vintage-denim
+- Spoke: /guides/vinted-adidas-trainers-alert
 - All guides use GuideTemplate.js, output Article + FAQPage schema,
   link to exactly one pillar page + the pricing CTA.
 
@@ -80,6 +81,14 @@ root-cause writeups:
   reasoning, waits for approval before writing. First proposal/draft:
   'vinted-adidas-trainers-alert' (Adidas trainers, extending the Nike
   guide template) — approved 2026-07-12.
+- First Hermes-proposed guide published: Adidas trainers alert (commit
+  1fddb47, 2026-07-12) — proposed, drafted, reviewed, and approved via
+  the standing pipeline end to end. Note: slug naming
+  (vinted-adidas-trainers-alert) doesn't match the vinted-alerts-
+  [category] pattern used by other spokes — kept as-is since it's
+  already live/indexed, not worth a redirect for a cosmetic fix. Future
+  Hermes drafts should aim for the vinted-alerts-[category] pattern for
+  consistency going forward.
 
 ## Access/Environment Notes
 - supervint-web (website) and Supervint (extension) are SEPARATE
