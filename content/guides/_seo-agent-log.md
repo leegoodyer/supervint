@@ -9,6 +9,8 @@
 | 4 | Vinted Nike trainers alert | Pre-existing | ✅ Published | content/guides/vinted-alerts-nike-trainers.json | — |
 | 5 | Vinted Carhartt & workwear alert | Pre-existing | ✅ Published | content/guides/vinted-alerts-carhartt-workwear.json | — |
 | 6 | Vinted alerts without ban risk | Pre-existing | ✅ Published | content/guides/vinted-alerts-without-the-ban-risk.json | — |
-| 7 | Vinted Dr. Martens alert | 2026-07-16 | 📝 Draft | content/guides/drafts/vinted-alerts-dr-martens.json | — |
-| 8 | Vinted Patagonia alert | 2026-07-16 | 📝 Draft | content/guides/drafts/vinted-alerts-patagonia.json | — |
-| 9 | Vinted alerts for resellers | 2026-07-16 | 📝 Draft | content/guides/drafts/vinted-alerts-for-resellers.json | — |
+| 7 | Vinted Dr. Martens alert | 2026-07-16 | ✅ Published | content/guides/vinted-alerts-dr-martens.json | — |
+| 8 | Vinted Patagonia alert | 2026-07-20 | ✅ Published | content/guides/vinted-alerts-patagonia.json | — |
+| 9 | Vinted alerts for resellers | 2026-07-20 | ✅ Published | content/guides/vinted-alerts-for-resellers.json | — |
+| 10 | Vinted Barbour alert | 2026-07-20 | ✅ Published | content/guides/vinted-alerts-barbour.json | — |
+| 11 | Vinted Arc'teryx alert | 2026-07-20 | ✅ Published | content/guides/vinted-alerts-arcteryx.json | — |
