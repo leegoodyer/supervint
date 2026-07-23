@@ -14,3 +14,4 @@
 | 9 | Vinted alerts for resellers | 2026-07-20 | ✅ Published | content/guides/vinted-alerts-for-resellers.json | — |
 | 10 | Vinted Barbour alert | 2026-07-20 | ✅ Published | content/guides/vinted-alerts-barbour.json | — |
 | 11 | Vinted Arc'teryx alert | 2026-07-20 | ✅ Published | content/guides/vinted-alerts-arcteryx.json | — |
+| 12 | Vinted Designer Bags alert | 2026-07-23 | ✅ Published | content/guides/vinted-alerts-designer-bags.json | — |
