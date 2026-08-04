@@ -16,3 +16,5 @@
 | 11 | Vinted Arc'teryx alert | 2026-07-20 | ✅ Published | content/guides/vinted-alerts-arcteryx.json | — |
 | 12 | Vinted Designer Bags alert | 2026-07-23 | ✅ Published | content/guides/vinted-alerts-designer-bags.json | — |
 | 13 | Vinted Retro Gaming alert | 2026-07-23 | ✅ Published | content/guides/vinted-alerts-retro-gaming.json | — |
+| 14 | Vinted North Face alert | 2026-07-23 | ✅ Published | content/guides/vinted-alerts-north-face.json | — |
+| 15 | Vinted Children's Clothing alert | 2026-07-23 | ✅ Published | content/guides/vinted-alerts-childrens-clothing.json | — |
