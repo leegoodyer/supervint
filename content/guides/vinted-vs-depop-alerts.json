@@ -1,0 +1,75 @@
+{
+  "title": "Vinted vs Depop for Alerts: Which Platform Finds You the Best Deals First?",
+  "intro": "Vinted and Depop are the two biggest second-hand fashion marketplaces in the UK, but they work very differently when it comes to alerting you about new listings — and that difference decides which one finds you the best deals first.",
+  "meta_description": "Vinted vs Depop compared for deal hunting: fees, alert systems, item availability, and which platform's notifications catch new listings first. Includes pricing and sizing guidance.",
+  "date_published": "2026-08-06",
+  "author": "Supervint Team",
+  "pillar_page": "/guides/vinted-price-alert",
+  "pillar_page_anchor_text": "Learn how Vinted price alerts work",
+  "cta_text": "Try Supervint free",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "The short answer: Vinted wins for deal-hunting speed",
+      "paragraphs": [
+        "For most buyers and resellers, Vinted is the better platform for catching deals first. Its saved-search alert system fires the moment a new listing matches your filters, and the volume of items on Vinted UK is far higher than Depop — which means more underpriced listings appearing every minute.",
+        "Depop has a saved-search feature too, but its search and notification system is weaker: Depop's notifications can lag behind new listings, the app prioritises social feeds over chronological results, and its inventory is smaller and more style-curated. That's not a criticism — it's a different product. Depop leans into a social, boutique marketplace feel; Vinted leans into volume and speed.",
+        "Both are worth using. The practical approach is a Vinted alert for catching underpriced fast-movers (brands, bundles, everyday items), and a Depop saved search for the curated vintage and streetwear pieces that sellers list there specifically."
+      ]
+    },
+    {
+      "heading": "Fee comparison: what it actually costs to sell",
+      "paragraphs": [
+        "Fees are where the two platforms differ most, and the gap has narrowed recently. On Vinted, sellers pay zero selling fee — no commission, no listing fee, no payment processing deduction. The buyer pays a Buyer Protection fee (roughly 5% + £0.70) at checkout. When you sell an item on Vinted for £30, you receive the full £30 (minus shipping if you choose to cover it).",
+        "On Depop, UK-based sellers also pay no selling fee as of 2026 — Depop removed its 10% selling fee for UK, US, and Australian sellers. The remaining cost is a payment processing fee of 2.9% + £0.30 per transaction via Depop Payments, plus an optional boosting fee (8–12%) if you pay to promote a listing.",
+        "The practical difference for sellers: Vinted keeps your payout at 100% of the sale price, while Depop deducts roughly 2.9% + £0.30 per sale for payment processing. On a £30 sale that's about £1.17 on Depop versus £0 on Vinted. Neither platform charges listing fees, so the real cost difference is small for casual sellers and adds up only for high-volume resellers."
+      ]
+    },
+    {
+      "heading": "Alert systems compared: saved searches and notifications",
+      "paragraphs": [
+        "Vinted's alert system is built around saved searches. You save a search (brand, size, category, max price), and Vinted sends a push notification when a new item matches. On the website you can also get email alerts for saved searches. The alerts fire quickly and match is based on your exact filters, including price caps.",
+        "Depop's equivalent is saved searches with notifications, but the behaviour differs: Depop's notifications are less immediate, can arrive in batches, and the app's home feed algorithm tends to surface items by relevance rather than newest-first. Many Depop users report seeing a saved-search match hours after it was listed — by which time a fast seller has often already sold it.",
+        "That latency is the key difference. If you're chasing a specific brand or size, a few hours' delay can be the difference between buying at £25 and watching it sell at £25 to someone else. Vinted's faster, filter-exact alerts make it the better tool for genuinely beating other buyers to a listing. For the fastest possible catching, a browser extension like Supervint monitors Vinted continuously and notifies you the instant a new listing matches — no manual refreshing required."
+      ]
+    },
+    {
+      "heading": "Item availability: where the deals actually are",
+      "paragraphs": [
+        "Volume is on Vinted's side. Vinted UK has a far larger catalogue of second-hand clothing, footwear, and accessories than Depop, and its inventory skews toward everyday and mid-range brands at very low prices — the exact listings that produce quick flips. Depop's catalogue is smaller but heavily curated toward vintage, streetwear, designer, and Y2K pieces, often listed at boutique-style prices.",
+        "The deal-hunting implication: Vinted gives you more opportunities per day to catch an underpriced item, especially for fast-moving brands (North Face, Barbour, Carhartt, Levi's, Adidas, Nike) and for bundles and job lots. Depop's strength is in the specific niches its community is known for — hand-picked vintage, rare streetwear, and pieces listed by sellers who know fashion trends well.",
+        "If you're reselling, the pattern that works best is usually: catch on Vinted (fast alerts, low prices, high volume), and where appropriate cross-list the best finds on Depop, where the curated audience often pays more for the same item."
+      ]
+    },
+    {
+      "heading": "Which should you choose for your use case?",
+      "paragraphs": [
+        "If your goal is catching the fastest-moving underpriced listings — a North Face Nuptse at £55, a Levi's 501 bundle at £20, a Carhartt jacket at £40 — Vinted's alert speed and volume make it the clear choice. Set precise saved searches with price caps, turn on notifications, and you'll be ahead of most manual browsers.",
+        "If your goal is buying specific vintage or streetwear pieces from a curated selection, Depop is worth running a saved search on alongside Vinted. Just don't rely on Depop notifications for time-critical catches — check the app yourself when you see new items appear.",
+        "The best setup uses both without overlapping: Vinted alerts for speed and volume, Depop saved searches for the curated niches, and an alert tool to close the gap on Vinted's most competitive listings. You can start with one saved search on Supervint free to see how quickly the instant alerts arrive compared with native notifications."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is Vinted or Depop cheaper for sellers?",
+      "answer": "Vinted charges sellers nothing — no selling fee and no payment processing fee. Depop also charges UK sellers no selling fee (since 2026) but takes a 2.9% + £0.30 payment processing fee per transaction. On a £30 sale, Vinted keeps your payout at £30 while Depop deducts about £1.17."
+    },
+    {
+      "question": "Does Depop have saved search alerts?",
+      "answer": "Yes, Depop has saved searches with notifications, but the alerts are less immediate than Vinted's and can arrive in batches. For time-critical catches (a rare size or brand at a low price), Vinted's saved-search alerts fire faster and match your exact filters including price caps."
+    },
+    {
+      "question": "Which platform has more second-hand items?",
+      "answer": "Vinted UK has a significantly larger catalogue of second-hand clothing, footwear, and accessories than Depop. Vinted skews toward everyday and mid-range brands at very low prices; Depop is smaller but more curated toward vintage, streetwear, and designer pieces."
+    },
+    {
+      "question": "Can Supervint alert me on Depop as well as Vinted?",
+      "answer": "Supervint currently monitors Vinted, which is the stronger platform for catching fast-moving, underpriced listings. It is alert-only — it never logs into your Vinted account or takes any action on your behalf."
+    },
+    {
+      "question": "What's the best strategy for resellers using both platforms?",
+      "answer": "Catch on Vinted (faster alerts, higher volume, lower prices), then cross-list the best finds on Depop where the curated fashion audience often pays more for the same item. Use Vinted alerts for speed and Depop saved searches for its vintage and streetwear niches."
+    }
+  ]
+}
