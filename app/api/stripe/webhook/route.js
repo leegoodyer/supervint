@@ -137,6 +137,42 @@ export async function POST(request) {
         if (!previousPlan && checkoutEmail) {
           await sendWelcomeEmail(checkoutEmail, plan);
         }
+
+        // ── Meta CAPI Purchase event (attribution) ────────────────────────
+        // Fire-and-forget: report the paying customer to Meta so it can
+        // attribute the conversion to the originating ad campaign and build
+        // purchase audiences. Hashed email + clientId as external_id.
+        if (process.env.META_PIXEL_ID && process.env.META_CAPI_TOKEN) {
+          const planPrice = { reseller: 6.99, powerseller: 13.99 }[plan] || null;
+          try {
+            const crypto = require('node:crypto');
+            const em = checkoutEmail
+              ? crypto.createHash('sha256').update(checkoutEmail.trim().toLowerCase()).digest('hex')
+              : null;
+            const payload = {
+              data: [{
+                event_name: 'Purchase',
+                event_time: Math.floor(Date.now() / 1000),
+                event_id:   `sv_${clientId.slice(0, 12)}_purchase_${Date.now()}`,
+                action_source: 'website',
+                user_data: {
+                  external_id: clientId,
+                  ...(em ? { em } : {}),
+                },
+                custom_data: {
+                  content_name: plan,
+                  ...(planPrice ? { value: planPrice, currency: 'GBP' } : {}),
+                },
+              }],
+              access_token: process.env.META_CAPI_TOKEN,
+            };
+            await fetch(`https://graph.facebook.com/v25.0/${process.env.META_PIXEL_ID}/events`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload),
+            }).catch(() => null);
+          } catch { /* CAPI best effort */ }
+        }
         break;
       }
 
