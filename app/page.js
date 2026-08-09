@@ -92,17 +92,17 @@ export default function Home() {
 
       <section className="hero">
         <p className="eyebrow">The Vinted Product Sniper &amp; Price Alert</p>
-        <h1>Vinted Alerts &amp; Price Sniper — Chrome Extension for Instant Listing Notifications</h1>
-        <p className="hero-kw">The Vinted Chrome extension that monitors your searches while Chrome is open and sends an instant alert the moment a matching listing goes live.</p>
-        <p className="hero-sub">Supervint runs your snipe around the clock, pulling in every product that matches your setup the second it&apos;s listed.</p>
+        <h1>Never miss a Vinted deal again. <span className="hero-accent">Flip for profit, before anyone else.</span></h1>
+        <p className="hero-kw">The Vinted Chrome extension that watches your searches 24/7 and fires an instant desktop alert the second a matching listing goes live — so you snipe the flip before it&apos;s gone.</p>
+        <p className="hero-sub">Deals on Vinted sell in minutes. Supervint alerts you in seconds — no bots, no ban risk, just faster than everyone else.</p>
         <a
           href="#pricing"
           className="btn btn-primary btn-lg"
-          onClick={() => fbq('track', 'Lead', { content_name: 'Chrome Web Store Click' })}
+          onClick={() => fbq('track', 'Lead', { content_name: 'Hero CTA Click' })}
         >
-          Start sniping, free
+          Add Supervint to Chrome — it&apos;s free
         </a>
-        <p className="hero-fine">No credit card required · Chrome extension · Set up in 2 minutes</p>
+        <p className="hero-fine">No credit card required · Set up in 2 minutes · No Vinted login details ever</p>
 
         <div className="product-shot">
           <div className="shot-bar">
