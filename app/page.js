@@ -52,6 +52,14 @@ const faqSchema = {
         text: 'No — Supervint is a desktop Chrome extension and only runs while Chrome is open on a Mac or Windows computer. It does not work on Chrome for iPhone or Android (mobile Chrome does not support extensions).',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Do I need a Vinted tab open for it to work?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. As long as Chrome is open and you are signed in to Vinted, Supervint checks your searches in the background on its own — you don\u2019t need a Vinted tab open, and you can use other apps while it monitors. The only requirements are: Chrome open, signed in to Vinted, and your computer not asleep.',
+      },
+    },
   ],
 };
 
@@ -270,6 +278,10 @@ export default function Home() {
           <div className="faq-item">
             <h3>Does it work on mobile?</h3>
             <p>No — Supervint is a desktop Chrome extension and only runs while Chrome is open on a Mac or Windows computer. It does not work on Chrome for iPhone or Android (mobile Chrome does not support extensions).</p>
+          </div>
+          <div className="faq-item">
+            <h3>Do I need a Vinted tab open for it to work?</h3>
+            <p>No. As long as Chrome is open and you&apos;re signed in to Vinted, Supervint checks your searches in the background on its own — no Vinted tab needed, and you can use other apps while it monitors. The only requirements: Chrome open, signed in to Vinted, and your computer not asleep.</p>
           </div>
         </div>
       </section>
