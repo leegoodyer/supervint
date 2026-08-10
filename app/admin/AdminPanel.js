@@ -20,6 +20,21 @@ function fmt(ts) {
   return new Date(ts).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' });
 }
 
+// Pretty-print the install attribution record:
+// e.g. "Facebook ad (fbclid …) · utm_campaign=spring24" or "chatgpt.com / ai-assistant"
+function fmtAttribution(a) {
+  if (!a) return '—';
+  const parts = [];
+  if (a.utm_source)  parts.push(a.utm_source);
+  if (a.utm_medium)  parts.push(a.utm_medium);
+  if (a.utm_campaign) parts.push(`campaign: ${a.utm_campaign}`);
+  if (a.fbclid)      parts.push(`fbclid: ${String(a.fbclid).slice(0, 12)}…`);
+  if (a.gclid)       parts.push(`gclid: ${String(a.gclid).slice(0, 12)}…`);
+  if (parts.length === 0) return '—';
+  const when = a.ts ? ` (${fmt(a.ts)})` : '';
+  return parts.join(' · ') + when;
+}
+
 function PlanBadge({ plan }) {
   const c = PLAN_COLORS[plan] ?? PLAN_COLORS.free;
   return (
@@ -434,6 +449,7 @@ export default function AdminPanel() {
               <DetailRow label="Admin granted"   value={fmt(selected.adminGrantedAt)} />
               <DetailRow label="Created"         value={fmt(selected.createdAt)} />
               <DetailRow label="Updated"         value={fmt(selected.updatedAt)} />
+              <DetailRow label="Came from"       value={selected.attribution ? fmtAttribution(selected.attribution) : '—'} />
             </tbody>
           </table>
 

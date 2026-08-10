@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import FacebookPixel from '@/components/FacebookPixel';
+import AttributionCapture from '@/components/AttributionCapture';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <FacebookPixel />
+        <AttributionCapture />
         <noscript>
           <img
             height="1"

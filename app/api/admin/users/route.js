@@ -25,6 +25,11 @@ export async function GET() {
   const records = await kv.mget(...keys);
   const now     = Date.now();
 
+  // Fetch install attribution for each user (sv:attrib:<clientId>) so the
+  // admin panel can show where each signup/install came from.
+  const attribKeys = keys.map(k => `sv:attrib:${k.replace('sv:sub:', '')}`);
+  const attribs    = await kv.mget(...attribKeys);
+
   const users = keys
     .map((key, i) => {
       const record = records[i];
@@ -45,6 +50,7 @@ export async function GET() {
         adminGrantedAt:  record.adminGrantedAt   ?? null,
         createdAt:       record.trialStart       ?? record.updatedAt ?? null,
         updatedAt:       record.updatedAt        ?? null,
+        attribution:     attribs[i]              ?? null,
       };
     })
     .filter(Boolean)

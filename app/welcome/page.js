@@ -1,4 +1,5 @@
 import { getStripe } from '@/lib/stripe';
+import WelcomeAttribution from '@/components/WelcomeAttribution';
 
 // Update this once the extension is published to the Chrome Web Store
 const CWS_URL = 'https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo';
@@ -24,6 +25,7 @@ export const metadata = {
 export default async function WelcomePage({ searchParams }) {
   const params = await searchParams;
   const sessionId = params?.session_id;
+  const clientId  = params?.clientId;
   let planKey = null;
 
   if (sessionId && typeof sessionId === 'string' && sessionId.length < 200) {
@@ -39,6 +41,7 @@ export default async function WelcomePage({ searchParams }) {
 
   return (
     <main>
+      <WelcomeAttribution clientId={clientId} />
       <nav className="nav">
         <div className="nav-inner">
           <a href="/" className="logo">
