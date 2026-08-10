@@ -1,0 +1,73 @@
+{
+  "title": "Vinted Alerts for Resellers: Find Undervalued Items Before Anyone Else",
+  "intro": "Vinted alerts for resellers work by notifying you the instant a listing matches your flip criteria — underpriced branded items, bulk lots, or fast-moving categories — so you can secure stock before other flippers even see it.",
+  "meta_description": "Use Vinted alerts to find undervalued items to flip for profit. Set up targeted brand alerts, category scouts, and price-drop triggers that give you first look at resellable stock.",
+  "date_published": "2026-07-20",
+  "author": "Supervint Team",
+  "pillar_page": "/guides/vinted-price-alert",
+  "pillar_page_anchor_text": "Learn how Vinted price alerts work",
+  "cta_text": "Try Supervint free",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "Why resellers need Vinted alerts",
+      "paragraphs": [
+        "The most profitable flips on Vinted come from sellers who don't know what they have — someone listing a Carhartt Detroit jacket for £40 because it's just 'an old work coat', or a Patagonia Retro-X fleece for £30 because they cleared out a loft. These listings get snapped up within minutes by resellers who spotted the opportunity first.",
+        "Manually refreshing search pages means you're competing against every other flipper doing the same thing. An alert tool removes that race — it checks new listings in the background and fires a notification the second something matches your flip criteria, giving you a head start of minutes to hours over anyone still refreshing.",
+        "For volume resellers, alerts turn what would be a full-time monitoring job into a passive notification stream. You set up your brand and category searches once, then act only when something worth your time comes through."
+      ]
+    },
+    {
+      "heading": "Building your reseller alert stack",
+      "paragraphs": [
+        "Resellers get the best results from a combination of alert types rather than a single broad search. Set up multiple overlapping alerts to catch flips at different stages.",
+        "Brand alerts — narrow searches for specific brands you know how to flip. Carhartt, Patagonia, Arc'teryx, Levi's vintage, Ralph Lauren, Nike, Adidas, Dr. Martens, and premium denim (Nudie, APC, Acne) are reliable resale performers. Set each with a realistic price cap (e.g. 'Carhartt, under £50') to filter out listings that are already priced at retail.",
+        "Category scouts — broader category alerts that catch items you can't predict. Set alerts for 'vintage', 'deadstock', 'bundle', or 'job lot' across clothing categories. These catch bulk deals and multi-item bundles that other flippers might miss because they're searching brand-specific terms.",
+        "Price-drop triggers — some resellers monitor specific saved searches and act only when a listing drops in price. While Supervint alerts on new listings (not price changes), you can achieve a similar effect with a very narrow search like 'North Face, M, under £50' — new listings that match are almost always priced below market."
+      ]
+    },
+    {
+      "heading": "Setting up effective flip alerts",
+      "paragraphs": [
+        "The most common mistake resellers make is setting alerts that are too broad — 'Nike under £30' will fire dozens of times a day for random sportswear you'll struggle to sell. The most effective reseller alerts are narrow enough to return only items with clear profit potential.",
+        "A good formula: brand + specific product type + realistic buy price. 'Carhartt Detroit jacket, under £50' is tight enough that every alert is worth opening. 'Levi's 501, size 32, under £25' catches the exact vintage denim listings that flip fastest on Depop or eBay.",
+        "Set separate alerts for different price tiers. A 'premium' alert for 'Arc'teryx under £150' catches rare Gore-Tex shells that might need a specialist buyer but have high margins. A 'bread and butter' alert for 'Carhartt under £40' catches everyday workwear that sells quickly with minimal holding time."
+      ]
+    },
+    {
+      "heading": "Evaluating an alert: what makes a profitable flip",
+      "paragraphs": [
+        "Not every alert-worthy listing is worth buying. When a notification fires, run through this quick checklist before committing.",
+        "Check sold prices first — search the same item on eBay (sold listings filter) or Depop to see what it's actually selling for, not what people are asking. A Carhartt jacket listed at £45 might flip for £85–£110 on Depop if it's a desirable model in good condition, but only £50–£60 if it's a common style with visible wear.",
+        "Factor in your costs. Vinted buyer protection is already included in the price you see, but you'll pay a selling fee on Depop or eBay (roughly 10–15%), plus shipping and any packaging. A £35 buy needs to sell for at least £55 to leave a worthwhile margin after fees.",
+        "Check the listing photos carefully. Blurry photos, bad lighting, and missing tags usually mean an unpriced flip opportunity — but they can also hide damage. If the listing has only one photo and no description, message the seller for more details before buying."
+      ]
+    },
+    {
+      "heading": "Speed tips for resellers",
+      "paragraphs": [
+        "Turn notifications on and keep them on. The difference between a profitable flip and a missed opportunity is often a matter of minutes — the first person to message or buy wins.",
+        "Have a quick-check routine. When an alert fires: open the listing, check the brand and model against your knowledge, scan the photos for condition issues, check the seller's rating, and either buy or pass within 60 seconds. If you hesitate for five minutes to think about it, someone else will have bought it.",
+        "Know your exit before you buy. If you don't already know where you'll list a flip (Depop for streetwear, eBay for vintage workwear, Vinted itself for unbranded bundles), don't buy it. The best resellers buy with a specific resale channel in mind."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "How many alerts should a reseller have active?",
+      "answer": "Start with 5–10 carefully targeted alerts (3–4 brands at your buy price, 1–2 category scouts, 1–2 size-specific searches) and expand as you learn which ones actually generate profitable flips."
+    },
+    {
+      "question": "Can I set alerts for specific sizes as a reseller?",
+      "answer": "Yes — narrow by UK size to focus on the sizes you know sell fastest. Resellers commonly focus on M–L (the most liquid sizing) and branch into XL or S as they learn their niche."
+    },
+    {
+      "question": "Do Vinted alerts work for bulk buying?",
+      "answer": "Yes — set a search for 'bundle' or 'job lot' plus a category (e.g. 'Levi's bundle under £30') to catch multi-item listings where the seller wants to clear everything in one go. These are often the best margin opportunities."
+    },
+    {
+      "question": "Is alert-based flipping against Vinted's rules?",
+      "answer": "No — alert-only tools like Supervint don't log into your Vinted account or take automated actions. You're using alerts the same way you'd use a saved search, just faster. See our guide on alert-only versus auto-buy tools for more detail."
+    }
+  ]
+}
