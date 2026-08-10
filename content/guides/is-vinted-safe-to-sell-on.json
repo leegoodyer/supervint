@@ -1,0 +1,76 @@
+{
+  "title": "Is Vinted Safe to Sell On? What UK Sellers Need to Know",
+  "intro": "Vinted is safe to sell on for the vast majority of UK sellers — transactions are protected by Vinted's built-in payment system, and sellers receive payment only after the buyer confirms the item has arrived as described.",
+  "meta_description": "Is Vinted safe to sell on in the UK? How seller protection works, how to avoid scams, what happens if a buyer disputes a sale, and when alerts can help.",
+  "date_published": "2026-08-06",
+  "author": "Supervint Team",
+  "pillar_page": "/guides/vinted-price-alert",
+  "pillar_page_anchor_text": "Learn how Vinted price alerts work",
+  "cta_text": "Try Supervint free",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "How Vinted protects sellers",
+      "paragraphs": [
+        "Vinted uses an escrow-style payment system — the buyer pays at checkout and the money is held by Vinted. The seller is only paid out after the buyer confirms receipt and raises no dispute, or after a 2-day window passes with no issue raised. This means sellers can't be left chasing payment after sending an item.",
+        "Vinted's payment system is handled via Stripe (a regulated payment processor), so card details and financial information are handled securely — you never share bank details directly with buyers. Payouts go to your Vinted Wallet and can be transferred to your bank account.",
+        "Sellers do not pay a selling fee on Vinted. There is no commission deducted from your payout. The buyer pays a Buyer Protection fee (approximately 5% + £0.70) on top of the item price — this funds Vinted's dispute resolution and buyer support, not the seller."
+      ]
+    },
+    {
+      "heading": "Common seller risks and how to avoid them",
+      "paragraphs": [
+        "The most common risk for Vinted sellers is a false 'item not as described' claim. A buyer can raise a dispute and request a return within the dispute window. Vinted reviews the evidence both sides provide. To protect yourself: take clear, detailed photos of the item before you send it (all angles, any flaws, the label, and the packaging), and describe condition accurately in the listing. If your photos prove the item matches the description, Vinted typically sides with the seller.",
+        "A less common risk is an item going missing in transit. If you use Vinted's integrated shipping (the labels generated inside the app), lost parcels are the courier's responsibility and Vinted supports the claim process. If you arrange your own shipping outside Vinted, you lose this protection — always use Vinted's integrated shipping for valuable items.",
+        "Scammers occasionally try to move transactions off-platform ('message me on WhatsApp', 'pay via bank transfer') to avoid Vinted's payment protection. Never agree to this — Vinted explicitly prohibits off-platform transactions and they offer zero protection if something goes wrong outside the app. Any buyer pushing you off-platform is running a scam.",
+        "Another tactic is a buyer claiming non-delivery when the item was delivered. Using tracked Vinted-integrated shipping gives you proof of delivery with the courier's tracking information — this protects you in any dispute."
+      ]
+    },
+    {
+      "heading": "What happens if a buyer raises a dispute",
+      "paragraphs": [
+        "If a buyer raises a dispute (claiming the item didn't arrive or wasn't as described), Vinted contacts both parties and asks for evidence. As a seller, you'll be asked to provide: your photos of the item before shipping, the shipping label and tracking details, and any messages from the buyer. Provide these promptly — disputes are reviewed within a few days.",
+        "If the dispute is found in the buyer's favour, the item is returned to you and the buyer is refunded. If it's found in your favour, you're paid out normally. Vinted does not automatically side with buyers — evidence matters, and sellers with accurate descriptions and good photo evidence win the majority of disputes.",
+        "A buyer can also leave a negative review. You can respond publicly to any review, and a single negative review among positive ones has minimal impact on your profile. If a review is clearly false or violates Vinted's guidelines, you can report it for removal."
+      ]
+    },
+    {
+      "heading": "Is Vinted safe for high-value items?",
+      "paragraphs": [
+        "Vinted is generally safe for high-value items but requires extra care. For items over £50–£100, take more photos than you think you need (15–20 is not excessive for a £150 Stone Island knit or a £100 vintage jacket) and describe every flaw, no matter how minor. Buyers who receive a high-value item exactly as described rarely dispute.",
+        "Use tracked, insured shipping for anything valuable. Vinted's integrated shipping partners (Evri, Royal Mail, DPD) offer tracking as standard, but insurance coverage varies — check the coverage level for your item's value before shipping. For items over £250, consider adding additional postal insurance or using a specialist courier.",
+        "Be wary of buyers with no reviews or brand-new accounts asking about high-value items. It's not a definitive red flag, but experienced buyers on Vinted typically have a review history. A new account offering to buy a £200 item immediately, or pushing to complete the transaction quickly, warrants extra scrutiny."
+      ]
+    },
+    {
+      "heading": "How alert tools fit into safe selling on Vinted",
+      "paragraphs": [
+        "If you're a buyer using Vinted alerts to find deals, the same safety principles apply in reverse — alerts get you to listings first, but you should still check seller reviews, photo quality, and item descriptions before buying.",
+        "Alert-only tools like Supervint do not access your Vinted account, do not log in on your behalf, and do not take any action. They monitor new public listings matching your saved searches and send a notification — nothing more. Your account credentials are never shared and no action is taken without you manually buying through Vinted's normal checkout.",
+        "This matters for safety: tools that offer to auto-buy or log into your Vinted account on your behalf create real risk — your credentials could be stored insecurely or your account used without your knowledge. Supervint is alert-only by design, so your account and payment details stay entirely within Vinted."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does Vinted protect sellers if a buyer lies about an item?",
+      "answer": "Yes — if a buyer raises a false dispute, you can provide evidence (photos taken before shipping, tracking proof, accurate description). Vinted reviews both sides and does not automatically side with buyers. Sellers with detailed photos and accurate listings win the majority of false disputes."
+    },
+    {
+      "question": "What happens if my parcel goes missing on Vinted?",
+      "answer": "If you use Vinted's integrated shipping labels, lost parcels are handled through the courier and Vinted supports the claim process. If you arrange your own shipping outside Vinted, you lose this protection — always use Vinted's integrated shipping for anything valuable."
+    },
+    {
+      "question": "Is it safe to sell designer or high-value items on Vinted?",
+      "answer": "Yes, with extra care: take 15–20 detailed photos, describe every flaw accurately, use tracked insured shipping, and check the buyer's review history. Sellers with accurate listings and good evidence win disputes. Vinted's escrow payment system means you're never chasing payment after sending."
+    },
+    {
+      "question": "Can a buyer scam me on Vinted?",
+      "answer": "The most common attempted scam is asking to complete the transaction off-platform (WhatsApp, bank transfer). Never do this — Vinted's payment protection only applies to transactions completed through the app. Any buyer pushing you off-platform is attempting a scam."
+    },
+    {
+      "question": "Does using a Vinted alert tool put my account at risk?",
+      "answer": "Not if the tool is alert-only. Supervint does not log into your Vinted account, does not store your credentials, and does not take any action on Vinted. It only monitors new public listings and notifies you — your account stays entirely within Vinted's control."
+    }
+  ]
+}

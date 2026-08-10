@@ -20,3 +20,5 @@
 | 15 | Vinted Children's Clothing alert | 2026-08-06 | ✅ Published | content/guides/vinted-alerts-childrens-clothing.json | — |
 | 16 | Vinted vs Depop alerts comparison | 2026-08-06 | ✅ Published | content/guides/vinted-vs-depop-alerts.json | — |
 | 17 | Vinted Football Shirt alerts (primary) / Vinted Stone Island alerts (secondary) | 2026-08-06 | ✅ Published | content/guides/vinted-alerts-football-shirts.json + vinted-alerts-stone-island.json | — |
+| 18 | Is Vinted safe to sell on | 2026-08-06 | ✅ Published | content/guides/is-vinted-safe-to-sell-on.json | — |
+| 19 | Vinted Levi's denim alert | 2026-08-06 | ✅ Published | content/guides/vinted-alerts-levis-denim.json | — |
