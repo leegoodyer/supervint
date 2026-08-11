@@ -9,6 +9,10 @@ const kv = Redis.fromEnv();
 // Reported by the extension itself on chrome.runtime.onInstalled (reason=install).
 // This is the authoritative "real install" counter — independent of Google's
 // delayed dashboard and the GA4 listing-page property (which counts viewers).
+//
+// Since 2026-08-11 — also stores rudimentary install metadata (country from
+// Vercel's geo header) so the admin panel can show WHERE installs come from
+// even when the attribution cookie is missing.
 export async function POST(request) {
   let body;
   try { body = await request.json(); } catch { body = {}; }
@@ -20,6 +24,7 @@ export async function POST(request) {
 
   const day = new Date().toISOString().slice(0, 10);
   const ts  = Number(body.ts) || Date.now();
+  const country = (request.headers.get('x-vercel-ip-country') || '').slice(0, 2) || null;
 
   // Store: sv:install:clientId -> timestamp (dedupe: an install fires once per clientId)
   //        sv:install:day:YYYY-MM-DD -> count (daily install counter)
@@ -27,7 +32,7 @@ export async function POST(request) {
   const key       = `sv:install:${clientId}`;
   const existing  = await kv.get(key);
   if (!existing) {
-    await kv.set(key, ts);
+    await kv.set(key, { ts, country });
     await kv.incr(`sv:install:day:${day}`);
     await kv.incr('sv:installs');
   }
