@@ -22,3 +22,6 @@
 | 17 | Vinted Football Shirt alerts (primary) / Vinted Stone Island alerts (secondary) | 2026-08-06 | ✅ Published | content/guides/vinted-alerts-football-shirts.json + vinted-alerts-stone-island.json | — |
 | 18 | Is Vinted safe to sell on | 2026-08-06 | ✅ Published | content/guides/is-vinted-safe-to-sell-on.json | — |
 | 19 | Vinted Levi's denim alert | 2026-08-06 | ✅ Published | content/guides/vinted-alerts-levis-denim.json | — |
+| 20 | How to contact Vinted support | 2026-08-11 | ✅ Published | content/guides/how-to-contact-vinted-support.json (from FB/Reddit pain point: "how do I contact Vinted") | — |
+| 21 | Vinted delivery issues troubleshooting | 2026-08-11 | ✅ Published | content/guides/vinted-delivery-issues-troubleshooting.json (pain point: "delivered but not received") | — |
+| 22 | Vinted scams & buyer protection | 2026-08-11 | ✅ Published | content/guides/vinted-scams-buyer-protection.json (pain point: scam reports) | — |
