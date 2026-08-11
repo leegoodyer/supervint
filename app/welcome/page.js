@@ -39,6 +39,21 @@ export default async function WelcomePage({ searchParams }) {
 
   const planInfo = PLAN_DISPLAY[planKey] ?? null;
 
+  // Two very different flows land on this page:
+  // 1. Stripe checkout success (?session_id=...) — confirm the payment.
+  // 2. Extension install (?clientId=...) — the extension opens this tab
+  //    after install for attribution + onboarding. MUST NOT say
+  //    "Payment confirmed" — the user just installed the free extension.
+  const isInstall = !sessionId && !!clientId;
+
+  const eyebrow  = isInstall ? 'Welcome to Supervint' : 'Payment confirmed';
+  const heading  = isInstall
+    ? 'You’re all set — let’s find your first deal.'
+    : (planInfo ? `You're on ${planInfo.name}.` : "You're all set.");
+  const subText  = isInstall
+    ? 'The extension is installed and ready. Build your first search below — it takes about 30 seconds.'
+    : (planInfo ? planInfo.summary : 'Open the extension to get started.');
+
   return (
     <main>
       <WelcomeAttribution clientId={clientId} />
@@ -59,12 +74,12 @@ export default async function WelcomePage({ searchParams }) {
           background: 'linear-gradient(160deg, var(--green-bright), var(--green-dark))',
           color: '#fff', fontSize: '1.4rem', fontWeight: '700', marginBottom: '1.4rem',
         }}>✓</div>
-        <p className="eyebrow">Payment confirmed</p>
+        <p className="eyebrow">{eyebrow}</p>
         <h1 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', lineHeight: 1.15, maxWidth: '36rem', margin: '0 auto 1rem' }}>
-          {planInfo ? `You're on ${planInfo.name}.` : "You're all set."}
+          {heading}
         </h1>
         <p className="hero-sub" style={{ marginBottom: 0 }}>
-          {planInfo ? planInfo.summary : 'Open the extension to get started.'}
+          {subText}
         </p>
       </section>
 
