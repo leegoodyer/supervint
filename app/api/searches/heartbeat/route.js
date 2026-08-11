@@ -50,7 +50,11 @@ export async function POST(request) {
   })).filter(s => s.id);
   // Store the offscreen session-warm diagnostics (if the extension sent any)
   // so the monitor can see WHY the session warm is/isn't holding.
-  const record = { at: Date.now(), searches };
+  const record = {
+    at: Date.now(),
+    searches,
+    version: typeof body?.version === 'string' ? body.version.slice(0, 30) : null,
+  };
   if (body?.warmSummary && typeof body.warmSummary === 'object') {
     record.warmSummary = {
       attempts:     Number(body.warmSummary.attempts ?? 0),
