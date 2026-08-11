@@ -54,6 +54,7 @@ export async function POST(request) {
     at: Date.now(),
     searches,
     version: typeof body?.version === 'string' ? body.version.slice(0, 30) : null,
+    offscreenPingAgoMs: typeof body?.offscreenPingAgoMs === 'number' ? body.offscreenPingAgoMs : null,
   };
   if (body?.warmSummary && typeof body.warmSummary === 'object') {
     record.warmSummary = {
