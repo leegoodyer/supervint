@@ -60,6 +60,14 @@ const faqSchema = {
         text: 'No. As long as Chrome is open and you are signed in to Vinted, Supervint checks your searches in the background on its own — you don\u2019t need a Vinted tab open, and you can use other apps while it monitors. The only requirements are: Chrome open, signed in to Vinted, and your computer not asleep.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Will battery saver or power saving mode stop it working?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — it can. Low power mode, battery saver, or Chrome\u2019s energy saver can pause background apps, which pauses your Supervint alerts. For alerts to keep coming through, turn off low battery / power saving mode (on Windows: disable Battery Saver; on Mac: disable Low Power Mode) and keep the laptop plugged in where possible.',
+      },
+    },
   ],
 };
 

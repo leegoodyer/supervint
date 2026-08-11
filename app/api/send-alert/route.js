@@ -130,15 +130,15 @@ function esc(str) {
 function buildAlertHtml({ searchLabel, itemTitle, itemPrice, itemUrl, thumbnailUrl, sentToday, dailyLimit }) {
   return `<!DOCTYPE html><html><body style="margin:0;padding:0;background:#f0f2f5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
 <div style="max-width:480px;margin:24px auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.12)">
-  <div style="background:#09B83C;padding:12px 16px;display:flex;align-items:baseline;gap:8px">
+  <div style="background:#007782;padding:12px 16px;display:flex;align-items:baseline;gap:8px">
     <span style="color:#fff;font-size:15px;font-weight:700">Supervint</span>
     <span style="color:rgba(255,255,255,.8);font-size:12px">${esc(searchLabel)}</span>
   </div>
   <div style="padding:16px 18px">
     ${thumbnailUrl ? `<img src="${esc(thumbnailUrl)}" alt="" width="70" style="float:right;border-radius:4px;margin:0 0 8px 12px">` : ''}
     <p style="margin:0 0 4px;font-size:14px;font-weight:600;color:#1a1a2e">${esc(itemTitle)}</p>
-    <p style="margin:0 0 14px;font-size:20px;font-weight:700;color:#09B83C">${esc(itemPrice)}</p>
-    <a href="${esc(itemUrl)}" style="display:inline-block;padding:8px 18px;background:#09B83C;color:#fff;text-decoration:none;border-radius:6px;font-size:13px;font-weight:600">View on Vinted →</a>
+    <p style="margin:0 0 14px;font-size:20px;font-weight:700;color:#007782">${esc(itemPrice)}</p>
+    <a href="${esc(itemUrl)}" style="display:inline-block;padding:8px 18px;background:#007782;color:#fff;text-decoration:none;border-radius:6px;font-size:13px;font-weight:600">View on Vinted →</a>
     <div style="clear:both"></div>
   </div>
   <div style="padding:8px 16px;background:#f9fafb;border-top:1px solid #e5e7eb;font-size:11px;color:#9ca3af">
@@ -156,13 +156,13 @@ function buildCapNotifHtml(dailyLimit, plan) {
     : 'Desktop notifications';
   return `<!DOCTYPE html><html><body style="margin:0;padding:0;background:#f0f2f5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
 <div style="max-width:480px;margin:24px auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.12)">
-  <div style="background:#09B83C;padding:12px 16px">
+  <div style="background:#007782;padding:12px 16px">
     <span style="color:#fff;font-size:15px;font-weight:700">Supervint</span>
   </div>
   <div style="padding:16px 18px">
     <p style="margin:0 0 10px;font-size:14px;color:#1a1a2e">You've reached your daily email alert limit of <strong>${dailyLimit} emails</strong> on the ${planName} plan.</p>
     <p style="margin:0 0 10px;font-size:13px;color:#6b7280">${continuing} continue as normal. Email alerts will resume automatically at midnight.</p>
-    ${canUpgrade ? `<p style="margin:0 0 10px;font-size:13px;color:#6b7280">Need more? <a href="https://supervint.com/#pricing" style="color:#09B83C;text-decoration:none;font-weight:600">Upgrade to Power Seller</a> for 25 alerts/day.</p>` : ''}
+    ${canUpgrade ? `<p style="margin:0 0 10px;font-size:13px;color:#6b7280">Need more? <a href="https://supervint.com/#pricing" style="color:#007782;text-decoration:none;font-weight:600">Upgrade to Power Seller</a> for 25 alerts/day.</p>` : ''}
     <p style="margin:0;font-size:13px;color:#9ca3af">— The Supervint team</p>
   </div>
 </div>
