@@ -1,6 +1,6 @@
 {
   "title": "How to Contact Vinted Support: Phone, Email & Response Times (UK)",
-  "intro": "Vinted has no phone number and no public email address — support is reached through the in-app Help Centre or the Contact us form, with response times of 1-5 business days. This guide covers every route, what gets answered fastest, and what to include so your case is resolved in one message.",
+  "intro": "Vinted has no phone number and no general customer-service email — support is reached through the in-app Help Centre or the Contact us form, with response times of 1-5 business days. The one email exception is legal@vinted.com for legal or regulatory escalation. This guide covers every route, what gets answered fastest, and what to include so your case is resolved in one message.",
   "meta_description": "How to contact Vinted support in the UK: the fastest routes, response times, what to include in your message, and how to escalate an order issue for a refund.",
   "date_published": "2026-08-11",
   "author": "Supervint Team",
@@ -10,10 +10,10 @@
   "cta_href": "/#pricing",
   "body": [
     {
-      "heading": "Does Vinted have a phone number?",
+      "heading": "Does Vinted have a phone number or email?",
       "paragraphs": [
-        "No. Vinted does not operate a phone line or call centre in the UK — and it never has. Any website or article claiming to list a Vinted phone number is either out of date or trying to send you elsewhere. All support is handled through Vinted's Help Centre, in writing.",
-        "There is also no public support email address. Emails circulating online (such as feedback@vinted.com) are not monitored support channels and will not get your issue fixed. The only supported routes are inside the Vinted app and website."
+        "No phone number. Vinted does not operate a phone line or call centre in the UK — any article claiming to list a Vinted phone number is out of date or trying to send you elsewhere. All general support is handled in writing through the Help Centre.",
+        "There is no general customer-service email address — emails like feedback@vinted.com are not monitored support channels. The one exception: Vinted's official dispute-resolution help page lists legal@vinted.com for legal or regulatory issues the standard form can't handle (for example a GDPR data request or a formal dispute that hasn't been resolved through the normal route). Use it only for that kind of escalation, not everyday problems — general queries sent there won't get a faster answer than the Help Centre form."
       ]
     },
     {
@@ -51,7 +51,7 @@
     },
     {
       "question": "What is Vinted's support email address?",
-      "answer": "Vinted does not publish a support email address. Emails like feedback@vinted.com are not monitored support channels. Use the Help Centre contact form instead."
+      "answer": "Vinted has no general customer-service email — emails like feedback@vinted.com are not monitored. The one exception is legal@vinted.com, listed on Vinted's official dispute-resolution page for legal or regulatory issues (like GDPR requests) the standard form can't handle. Everyday support goes through the Help Centre contact form."
     },
     {
       "question": "How long does Vinted support take to reply?",
