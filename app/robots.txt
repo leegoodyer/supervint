@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://supervint.com/sitemap.xml

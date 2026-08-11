@@ -1,0 +1,68 @@
+{
+  "title": "Vinted Delivery Issues: Parcel Not Arrived, Lost or Stuck (UK Troubleshooting)",
+  "intro": "If a Vinted parcel hasn't arrived, first check the carrier's own tracking, then report it through the order page within 2 days of the delivery date — that 2-day window is what protects your refund under Buyer Protection. This guide covers every delivery problem UK buyers hit: stuck in transit, marked delivered but missing, lost parcels and damaged items.",
+  "meta_description": "Vinted delivery troubleshooting for UK buyers: parcel not arrived, stuck in transit, marked delivered but missing, lost or damaged. What to do and the 2-day reporting window explained.",
+  "date_published": "2026-08-11",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Get alerts the moment items are listed",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "My Vinted parcel is stuck \"in transit\" — what now?",
+      "paragraphs": [
+        "First, don't panic — \"in transit\" for a few days is normal, and Vinted's tracking often lags behind the carrier's. Open the tracking link in the order page and check the courier's own system (InPost, Yodel, Evri, Royal Mail or DPD). The carrier updates more frequently than the Vinted mirror.",
+        "If there's been no scan for 5+ days, contact Vinted support from the order page with the tracking number and the last scan location. Don't mark the item as received or confirm anything until it's genuinely in your hands."
+      ]
+    },
+    {
+      "heading": "It says \"delivered\" but I haven't received it",
+      "paragraphs": [
+        "This is the most common — and most time-sensitive — Vinted delivery problem. Report it within 2 days of the tracking update showing delivered. Open the order → \"I have an issue\" → \"I haven't received it\" and follow the prompts. Under Buyer Protection, reporting within the window is what makes a refund possible.",
+        "Before reporting, check everywhere the courier might have left it: neighbours, a safe place, a parcel locker or shop. Also check the tracking photo — couriers like Evri and Yodel often photograph where the parcel was left. If you find it, great — if not, report it with that detail and you're covered."
+      ]
+    },
+    {
+      "heading": "The parcel arrived damaged or with the wrong item",
+      "paragraphs": [
+        "Photograph everything immediately: the outer packaging, the damaged item, and the item against the listing photos if it's the wrong product. Then report through the order page within 2 days of delivery. Photos of the packaging and item are what win disputes — without them, Vinted support has nothing to assess.",
+        "For wrong items, don't wear or alter anything before the case is resolved, and don't accept offers from the seller to settle outside Vinted — keep the dispute in the order thread so Buyer Protection applies."
+      ]
+    },
+    {
+      "heading": "The parcel is lost — who pays?",
+      "paragraphs": [
+        "If a carrier loses a parcel, Vinted's Buyer Protection refunds the buyer (including the item cost and shipping). The seller doesn't lose out either — Vinted covers lost-in-transit cases through the protection system, which is exactly why keeping the transaction inside Vinted matters. Never pay a seller directly outside the platform; you lose that protection instantly."
+      ]
+    },
+    {
+      "heading": "How to avoid delivery problems",
+      "paragraphs": [
+        "Check the seller's dispatch speed before buying, and read their reviews for mentions of packaging or shipping. Choose a delivery method with tracking you can check (most Vinted options include it). And once the parcel is on its way, keep an eye on the tracking — the 2-day reporting window moves fast, and missing it is the single biggest reason buyers lose delivery disputes."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "My Vinted item says delivered but I never got it — what do I do?",
+      "answer": "Report it within 2 days: open the order → \"I have an issue\" → \"I haven't received it\". Check neighbours, safe places and the courier's delivery photo first. Reporting in the window triggers Buyer Protection."
+    },
+    {
+      "question": "How long does Vinted give you to report a delivery problem?",
+      "answer": "2 days from the item being marked delivered. Report within that window or the case may be closed without a refund."
+    },
+    {
+      "question": "Who is responsible if a Vinted parcel is lost?",
+      "answer": "Vinted Buyer Protection covers lost parcels — the buyer is refunded for the item and shipping. Keeping the transaction on Vinted is what makes this apply."
+    },
+    {
+      "question": "Why is my Vinted parcel stuck in transit for days?",
+      "answer": "Usually the carrier's scanning is delayed. Check the courier's own tracking first. If there's no scan for 5+ days, contact Vinted support from the order page with the tracking number."
+    },
+    {
+      "question": "Can I refuse a damaged Vinted parcel?",
+      "answer": "Yes — if the parcel is visibly damaged on delivery you can refuse it at the door or locker. Report it through the order page with photos within 2 days for a refund under Buyer Protection."
+    }
+  ]
+}

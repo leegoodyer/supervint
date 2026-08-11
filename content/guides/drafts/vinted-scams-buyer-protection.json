@@ -1,0 +1,69 @@
+{
+  "title": "Vinted Scams: How to Spot Them and Get Your Money Back (UK)",
+  "intro": "The most common Vinted scams are sellers demanding payment outside the app, fake listings with stock photos, and phishing links sent in chat — and the single rule that protects you from all of them is to keep every payment and conversation inside Vinted. This guide covers the scam patterns UK buyers and sellers actually see, how Buyer Protection refunds you, and the exact steps to report a scam.",
+  "meta_description": "How to spot and report Vinted scams in the UK: payment-outside-app tricks, fake listings, phishing links, how Buyer Protection refunds you, and the exact reporting steps.",
+  "date_published": "2026-08-11",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Never miss a deal — and never get caught out",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "The scams Vinted users actually get hit by",
+      "paragraphs": [
+        "Payment outside the app is the big one. A seller asks you to pay by bank transfer, PayPal \"friends and family\" or a payment link, often with a story about fees or their account being frozen. The moment you pay outside Vinted, Buyer Protection stops applying and your money is effectively gone.",
+        "Fake or phantom listings are second: items listed with stock photos, prices far below market, or brand-new sellers with no reviews pushing urgency (\"someone else is about to buy it\"). And phishing links sent in chat — courier tracking sites, payment pages, or \"verify your account\" pages — are designed to steal your login or card details."
+      ]
+    },
+    {
+      "heading": "The one rule that protects you",
+      "paragraphs": [
+        "Keep everything inside Vinted. Payment, messaging, tracking and disputes all happen on the platform, and Vinted's Buyer Protection only covers transactions completed through it. If a seller pushes you to WhatsApp, Instagram, email or a payment link, that's not a workaround — it's the scam.",
+        "The second rule: report problems within 2 days of delivery. Buyer Protection refunds you if an item never arrives or arrives not as described, but only if you press \"I have an issue\" within 2 days of it being marked delivered. Set the habit of checking tracking and acting immediately."
+      ]
+    },
+    {
+      "heading": "How to check a seller before you buy",
+      "paragraphs": [
+        "Read the seller's reviews — look at the pattern, not just the star count. A seller with a dozen 5-star reviews and hundreds of items is a power seller; a brand-new account selling a single high-value designer bag at 70% off is a red flag. Check the listing photos: stock images, watermarks from other sites, or photos that don't match the item description are all warning signs.",
+        "Check the price. If a listing is dramatically cheaper than the same item elsewhere with no explanation, ask yourself why. Genuine bargains exist — that's what alerts are for — but extreme discounts on high-value items are the classic bait."
+      ]
+    },
+    {
+      "heading": "What to do if you've been scammed",
+      "paragraphs": [
+        "If you paid inside Vinted and the item never arrived or wasn't as described: open the order → \"I have an issue\" → report it within 2 days of delivery. Attach photos and a clear description. If the case is closed and you disagree, reply in the same thread — support can see the full history there.",
+        "If you paid outside Vinted (bank transfer, PayPal friends and family): contact your bank or card provider immediately and report an unauthorised payment — banks have fraud teams for exactly this. Report the seller to Vinted too (the report button on the profile or listing), and consider reporting to Action Fraud, the UK's national fraud reporting centre. The police won't usually pursue a single small payment, but the report is useful evidence if the same scammer hits others."
+      ]
+    },
+    {
+      "heading": "Phishing and account security on Vinted",
+      "paragraphs": [
+        "Vinted will never ask for your password, verification code or payment details in a message — anyone who does is a scammer. Never open links sent in Vinted chat that go to external sites; legitimate tracking only ever appears inside the order page. Turn on two-factor authentication in your Vinted account settings if you haven't already, and never share the SMS code Vinted sends you, even with someone claiming to be support."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is Vinted safe to buy from?",
+      "answer": "Yes, if you keep payment and communication inside the platform. Buyer Protection refunds items that never arrive or arrive not as described, provided you report within 2 days of delivery. Paying outside Vinted removes that protection."
+    },
+    {
+      "question": "What is the most common Vinted scam?",
+      "answer": "Sellers asking for payment outside the app — bank transfer or PayPal friends and family — usually with a story about fees or urgency. Once you pay outside Vinted, Buyer Protection no longer applies."
+    },
+    {
+      "question": "How do I report a scam on Vinted?",
+      "answer": "Open the listing or seller profile and use the report option. For an order gone wrong, open the order → \"I have an issue\" and report within 2 days of delivery. If you paid outside Vinted, also contact your bank or card provider."
+    },
+    {
+      "question": "Does Vinted Buyer Protection cover scams?",
+      "answer": "It covers purchases made through Vinted where the item doesn't arrive or isn't as described, reported within 2 days of delivery. It does not cover payments made outside the platform."
+    },
+    {
+      "question": "Can I get a refund if I paid a Vinted seller by bank transfer?",
+      "answer": "Not through Vinted — Buyer Protection doesn't apply to off-platform payments. Contact your bank immediately and report an unauthorised payment; UK banks have fraud teams that can investigate chargebacks."
+    }
+  ]
+}

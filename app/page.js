@@ -83,6 +83,8 @@ export default function Home() {
           <a href="/" className="logo"><span className="logo-mark"></span>Supervint</a>
           <div className="nav-right">
             <nav className="nav-links">
+              <a href="/help">Help</a>
+              <a href="/guides">Guides</a>
               <a href="#features">Features</a>
               <a href="#how">How it works</a>
               <a href="#pricing">Pricing</a>

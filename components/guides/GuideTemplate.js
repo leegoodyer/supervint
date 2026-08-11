@@ -56,6 +56,17 @@ export default function GuideTemplate({ guide }) {
         </p>
       )}
 
+      {/* Cross-link cluster: every guide links to the Help Hub + the three
+          help articles. This is what makes Google crawl the site as one
+          connected set instead of isolated pages. */}
+      <nav className="guide-crosslinks" aria-label="Related help">
+        <span className="guide-crosslinks-label">More help:</span>
+        <a href="/help">Help Hub</a>
+        <a href="/guides/how-to-contact-vinted-support">Contact Vinted</a>
+        <a href="/guides/vinted-delivery-issues-troubleshooting">Delivery issues</a>
+        <a href="/guides/vinted-scams-buyer-protection">Scams &amp; buyer protection</a>
+      </nav>
+
       {guide.cta_href && (
         <div className="guide-cta">
           <a href={guide.cta_href} className="btn btn-primary btn-lg">

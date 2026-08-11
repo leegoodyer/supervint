@@ -1,7 +1,7 @@
 import { getAllGuides } from '@/lib/guides';
 
 const SITE_URL = 'https://supervint.com';
-const STATIC_ROUTES = ['', '/guides', '/privacy', '/terms', '/deletion', '/contact'];
+const STATIC_ROUTES = ['', '/guides', '/help', '/privacy', '/terms', '/deletion', '/contact'];
 
 export default function sitemap() {
   const staticEntries = STATIC_ROUTES.map((route) => ({
