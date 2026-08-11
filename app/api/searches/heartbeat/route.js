@@ -48,6 +48,28 @@ export async function POST(request) {
     lastPollTime:   s?.lastPollTime ?? null,
     lastPollResult: s?.lastPollResult ?? null,
   })).filter(s => s.id);
-  await kv.set(`sv:heartbeat:${clientId}`, { at: Date.now(), searches });
+  // Store the offscreen session-warm diagnostics (if the extension sent any)
+  // so the monitor can see WHY the session warm is/isn't holding.
+  const record = { at: Date.now(), searches };
+  if (body?.warmSummary && typeof body.warmSummary === 'object') {
+    record.warmSummary = {
+      attempts:     Number(body.warmSummary.attempts ?? 0),
+      ok:           Number(body.warmSummary.ok ?? 0),
+      failed:       Number(body.warmSummary.failed ?? 0),
+      lastStatus:   body.warmSummary.lastStatus ?? null,
+      lastError:    body.warmSummary.lastError ?? null,
+      lastWarmAgoMs: body.warmSummary.lastWarmAgoMs ?? null,
+    };
+  }
+  if (Array.isArray(body?.warmLog)) {
+    record.warmLog = body.warmLog.slice(-10).map(e => ({
+      ts:      e?.ts ?? null,
+      ok:      !!e?.ok,
+      status:  e?.status ?? null,
+      error:   e?.error ?? null,
+      finalUrl: e?.finalUrl ?? null,
+    }));
+  }
+  await kv.set(`sv:heartbeat:${clientId}`, record);
   return NextResponse.json({ ok: true }, { headers: CORS });
 }
