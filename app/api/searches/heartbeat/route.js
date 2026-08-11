@@ -57,6 +57,14 @@ export async function POST(request) {
     offscreenPingAgoMs: typeof body?.offscreenPingAgoMs === 'number' ? body.offscreenPingAgoMs : null,
     offscreenVersion: typeof body?.offscreenVersion === 'string' ? body.offscreenVersion.slice(0, 30) : null,
   };
+  if (body?.offscreenDiag && typeof body.offscreenDiag === 'object') {
+    record.offscreenDiag = {
+      created: !!body.offscreenDiag.created,
+      attempt: body.offscreenDiag.attempt ?? null,
+      error:   body.offscreenDiag.error ?? null,
+      ts:      body.offscreenDiag.ts ?? null,
+    };
+  }
   if (body?.warmSummary && typeof body.warmSummary === 'object') {
     record.warmSummary = {
       attempts:     Number(body.warmSummary.attempts ?? 0),
