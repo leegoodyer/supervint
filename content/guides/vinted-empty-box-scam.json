@@ -1,0 +1,90 @@
+{
+  "title": "Vinted Empty Box Scam: How It Works and What to Do If It Happens to You",
+  "intro": "The empty box scam is when a buyer claims the parcel they received was empty — or contained something worthless — so Vinted refunds them while the seller loses both the item and the payment. It hits sellers of high-value items hardest, but buyers get caught by a mirror version too. This guide explains exactly how the scam works, the signs to look for, and the step-by-step recovery path whether you're the seller or the buyer.",
+  "meta_description": "The Vinted empty box scam explained: how buyers fake empty parcels to get refunds, how sellers can prove they sent the item, and the exact steps to recover your money.",
+  "date_published": "2026-08-12",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Never miss a deal — and never get caught out",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What the empty box scam actually is",
+      "paragraphs": [
+        "There are two versions, and they target opposite sides of the same sale.",
+        "The seller-targeted version: you send a real item, and the buyer opens a dispute claiming the box arrived empty or contained junk. Vinted's default is to side with the buyer on 'item not received' or 'not as described' claims, so the buyer gets a refund and keeps the item, while you lose both. High-value items — consoles, phones, designer goods, laptops — are the main target, because the payout is worth the effort.",
+        "The buyer-targeted version is a variation: the seller ships a weighted filler (old coffee, rice, paper) instead of the item. The filler is chosen to match the item's weight, so it passes the courier's weight check and there's no obvious red flag at the sorting depot. The buyer receives a box of rubbish and has to fight to prove it."
+      ]
+    },
+    {
+      "heading": "How the scam is pulled off",
+      "paragraphs": [
+        "The core trick is that the scammer never has to prove anything — they only have to make a claim. Vinted's resolution system is automated and leans heavily toward the party who reports first. A buyer who claims 'empty box' within minutes of delivery puts the burden of proof on the seller, and most sellers don't have video evidence of packing the item.",
+        "Weight-matching is the buyer-targeted version's signature. Scammers weigh the real item, then package a filler — coffee, rice, cheap electronics, even bags of sand — to within a few grams of that weight. The courier's system records a plausible weight, the parcel moves normally, and the scam only becomes visible when the box is opened.",
+        "A common extra layer is a second shipping label. The parcel is addressed so it appears to have been delivered to the wrong nearby address, which makes it look like a courier mix-up rather than a deliberate scam. This muddies the investigation and buys the scammer time."
+      ]
+    },
+    {
+      "heading": "Red flags before you get caught",
+      "paragraphs": [
+        "Sellers, watch the buyer: a brand-new account with no reviews buying a high-value item is the biggest warning sign. A buyer who immediately pushes to use a courier they chose, or asks for the item sent unboxed or with minimal packaging, is worth pausing over. And a buyer who reports a problem within minutes of the delivery scan — before any normal person would have opened and inspected it — is suspicious.",
+        "Buyers, watch the seller and the price: a high-value item at 50% off market with a seller who has no sales history is the classic bait. Check the listing photos aren't stock images, and be wary of sellers who won't answer questions about the item's condition or who push urgency."
+      ]
+    },
+    {
+      "heading": "Sellers: how to protect yourself before you ship",
+      "paragraphs": [
+        "Record yourself packing the item. A short video showing the item going into the box, the box being sealed, and the label being applied is the single strongest piece of evidence you can have. It doesn't need to be professional — a phone video, uncut, from packing to sealed parcel, is enough.",
+        "Never ship in the original branded box. A PS5 box, an Apple box or a designer box advertises the contents to every handler along the route and invites theft — which then looks identical to an empty-box claim. Put the item's box inside a plain, unbranded outer box.",
+        "Use the courier's weight record as your evidence. The postage receipt and tracking record a parcel weight. If the buyer claims the box was empty, that weight is proof something was inside when it left your hands. Keep the receipt.",
+        "For anything valuable, consider Vinted's item verification service, which routes the item through Vinted's own inspection before it reaches the buyer. It costs a small fee but removes the empty-box claim entirely."
+      ]
+    },
+    {
+      "heading": "Sellers: what to do if an empty-box claim is opened against you",
+      "paragraphs": [
+        "Don't accept the first automated decision. Vinted's initial ruling is frequently automated and frequently wrong. Reply in the same dispute thread, attach your packing video, the postage receipt with the weight, and any photos you took, and explicitly ask for a human review. Saying 'please escalate this to a human review' in the thread is often enough to trigger one.",
+        "Point out inconsistencies in the claim. If the buyer said 'empty box' but Vinted's reply talks about 'damaged due to insufficient packaging', those are two different claims — flag that contradiction. It's a sign the system has mishandled the case.",
+        "If Vinted won't move, go to the courier. The courier has the parcel's recorded weight at each scan point. If the weight never changed between drop-off and delivery, the item was in the box the whole way — which is proof the buyer's claim is false. Couriers are insured and can compensate you.",
+        "As a last resort for high-value items, a small claims letter often changes Vinted's mind. Many sellers report that Vinted refunds and covers costs once formal proceedings are initiated, because the case isn't worth fighting. You'll need the buyer's details and your evidence."
+      ]
+    },
+    {
+      "heading": "Buyers: what to do if you receive an empty or fake parcel",
+      "paragraphs": [
+        "Open the parcel on camera if it's high value. A video of you opening the sealed parcel and finding it empty or wrong is your equivalent of the packing video — it's hard to argue with.",
+        "Report it within 2 days of delivery. Open the order, press 'I have an issue', and select 'not as described' or 'item not received'. The 2-day window is strict — miss it and Vinted closes the case automatically.",
+        "Weigh what you received. If it's a weight-matching scam, weighing the box and comparing it to the item's real weight exposes the trick. Screenshot the courier's recorded weight too.",
+        "If the seller gets hostile or threatens legal action, stop replying and let Vinted handle it. The threat itself is often part of the scam — designed to make you back down. Keep everything inside the Vinted chat so there's a full record.",
+        "If you paid by card and Vinted won't refund, a chargeback through your bank is a final option — but be aware it usually means Vinted closes your account, so treat it as the nuclear option."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the empty box scam on Vinted?",
+      "answer": "A buyer falsely claims the parcel they received was empty, so Vinted refunds them and the seller loses both the item and the money. A buyer-targeted version involves a seller shipping a weighted filler instead of the real item."
+    },
+    {
+      "question": "How do I prove I sent the item if a buyer says the box was empty?",
+      "answer": "Record a video of yourself packing and sealing the parcel, keep the postage receipt showing the recorded weight, and ask the courier for the weight log across scan points. Reply in the dispute thread asking for a human review and attach everything."
+    },
+    {
+      "question": "Does Vinted side with the buyer in empty box disputes?",
+      "answer": "The initial automated decision often does, which is why it's important not to accept it. Replying in the thread with evidence and asking for a human review frequently reverses it."
+    },
+    {
+      "question": "I received a box of coffee instead of my item — what now?",
+      "answer": "This is a weight-matching scam. Record yourself opening the parcel, report it within 2 days of delivery via 'I have an issue', weigh what you received, and keep the tracking weight as evidence."
+    },
+    {
+      "question": "Can the courier help with an empty box claim?",
+      "answer": "Yes. The courier records the parcel weight at each scan point. If the weight stayed constant from drop-off to delivery, the item was in the box throughout — proof the buyer's claim is false. Couriers are insured and can compensate you."
+    },
+    {
+      "question": "Should I use Vinted item verification for expensive items?",
+      "answer": "Yes. Vinted's item verification routes the item through Vinted's own inspection before delivery, which removes the empty-box claim entirely. It costs a small fee but is worth it for high-value items."
+    }
+  ]
+}
