@@ -3,7 +3,17 @@ import { Resend } from 'resend';
 import { planLimits, normalizePlan, PAID_PLANS } from '@/lib/plans';
 
 const kv     = Redis.fromEnv();
-const resend  = new Resend(process.env.RESEND_API_KEY);
+
+// Lazy Resend client. Eager `new Resend(undefined)` throws "Missing API key" at
+// module-load time, crashing the entire build before the runtime guard below can
+// return a graceful 503. Construct only when we actually need to send.
+let _resend = null;
+function getResend() {
+  if (!process.env.RESEND_API_KEY) return null;
+  if (!_resend) _resend = new Resend(process.env.RESEND_API_KEY);
+  return _resend;
+}
+
 const FROM    = 'Supervint <alerts@supervint.com>';
 const RESEND_FREE_DAILY_MAX = 100;
 
@@ -74,13 +84,16 @@ export async function POST(request) {
   if (newCount > dailyLimit) {
     if (newCount === dailyLimit + 1) {
       try {
-        await resend.emails.send({
-          from:    FROM,
-          to:      toEmail,
-          subject: 'Supervint — daily email alert limit reached',
-          html:    buildCapNotifHtml(dailyLimit, effectivePlan),
-        });
-        await incrementGlobalCounter(today);
+        const resend = getResend();
+        if (resend) {
+          await resend.emails.send({
+            from:    FROM,
+            to:      toEmail,
+            subject: 'Supervint — daily email alert limit reached',
+            html:    buildCapNotifHtml(dailyLimit, effectivePlan),
+          });
+          await incrementGlobalCounter(today);
+        }
       } catch (err) {
         console.error('[Supervint] Cap notification failed:', err.message);
       }
@@ -89,6 +102,10 @@ export async function POST(request) {
   }
 
   try {
+    const resend = getResend();
+    if (!resend) {
+      return Response.json({ error: 'Email service not configured' }, { status: 503, headers: CORS });
+    }
     await resend.emails.send({
       from:    FROM,
       to:      toEmail,
