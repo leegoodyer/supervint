@@ -1,0 +1,75 @@
+{
+  "title": "Does Vinted Notify You When Prices Change? What Actually Triggers a Notification",
+  "intro": "Vinted does not notify you when a seller changes a price by just any amount — it only sends a price-drop notification when a seller reduces an item you've favourited by at least 5%, and it stays silent on price increases and on changes to items you haven't favourited.",
+  "meta_description": "Vinted notifies buyers of a price drop only when a favourited item drops by 5% or more. Learn what triggers Vinted price notifications and how new-listing alerts differ.",
+  "date_published": "2026-08-14",
+  "author": "Supervint Team",
+  "pillar_page": "/guides/vinted-price-alert",
+  "pillar_page_anchor_text": "Learn how Vinted price alerts work",
+  "cta_text": "Try Supervint free",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "The short answer: only 5%+ drops on favourited items",
+      "paragraphs": [
+        "Vinted's price-change notification is narrow and easy to misunderstand. It sends a notification to buyers when — and only when — a seller reduces the price of an item those buyers have already favourited, and the reduction is at least 5% of the current price.",
+        "That leaves three big gaps. A reduction under 5% triggers nothing. A price increase triggers nothing. And a price change on an item you haven't favourited triggers nothing, because Vinted has no way to watch arbitrary listings for price movement — it only tracks the items you've explicitly saved to your favourites.",
+        "This is the detail most people miss when they search \"does Vinted notify when prices change\". The answer is conditional, not a simple yes or no, and that's why so many forum threads and Reddit posts exist on the topic — buyers assume they're being notified of every change when they're actually only being notified of a narrow slice."
+      ]
+    },
+    {
+      "heading": "What Vinted actually notifies you about",
+      "paragraphs": [
+        "Vinted sends notifications for a specific set of events, and price changes are only one of them. Understanding the full list clears up most confusion about why you do or don't get pinged.",
+        "New-listing alerts fire when a new item matches one of your saved searches — this is a brand-new listing, not a price change on an existing one. Favourite notifications fire when a seller reduces a favourited item by 5% or more. And transactional notifications cover messages, purchases, sales, offers, and delivery updates.",
+        "Notice what's missing: there is no notification for a price drop under 5%, no notification for a price increase, and no notification for a price change on an item you're merely interested in but haven't favourited. If you want to catch every underpriced change, favourites alone won't do it."
+      ]
+    },
+    {
+      "heading": "The 5% threshold, explained",
+      "paragraphs": [
+        "The 5% threshold is Vinted's deliberate design choice to prevent notification spam. If every one-pound adjustment on a £20 item pinged every buyer, favourites would become useless. So Vinted only fires a notification when the reduction clears 5% of the current price.",
+        "In practice: a seller drops a £40 jacket to £38, and you hear nothing (that's a 5% reduction — right on the line, and only reductions strictly at or above the threshold count). They drop it again to £35, and everyone who favourited it gets pinged. A £2 drop on a £100 item is below the line; a £5 drop is exactly on it.",
+        "Sellers also have a second tool that's not a price drop at all: private offers. A seller can send an individual offer to buyers who favourited an item, and that lands as a direct notification. This is separate from a price reduction and only goes to the specific buyers the seller chooses."
+      ]
+    },
+    {
+      "heading": "Price drops vs new listings: two different alerts",
+      "paragraphs": [
+        "It's easy to conflate the two, but they're separate mechanisms. A price-drop notification is about an existing item you've favourited getting cheaper. A new-listing alert is about a brand-new item appearing that matches a saved search. They solve different problems.",
+        "If you're watching a specific £100 coat waiting for it to drop to £60, favourites are the right tool — you'll get pinged when it crosses the 5% thresholds on the way down. But if you're hunting for bargains across a whole category or brand, favourites don't help at all, because they only watch items you already know about.",
+        "That's the gap a new-listing alert tool fills. Supervint watches Vinted for newly listed items matching your saved searches — brand, size, category, and a maximum price — and notifies you the instant one appears, so you catch underpriced new listings before they get favourited and bought by someone else. It's alert-only: it never logs into your Vinted account, never auto-buys, and never takes any action on your behalf."
+      ]
+    },
+    {
+      "heading": "What is a Vinted sniper?",
+      "paragraphs": [
+        "\"Vinted sniper\" is the community term for a tool or script that monitors listings and alerts you the moment a matching item appears, so you can buy it before anyone else. The name borrows from eBay sniping, where bidders place their bid in the final seconds of an auction to win it.",
+        "Vinted has no auctions — everything is a fixed-price listing — so \"sniping\" on Vinted really means being first to a newly listed bargain. The tools people call snipers work by polling Vinted's search results on a schedule and sending a notification when a new item matches your criteria, typically within minutes of it going live.",
+        "The appeal is speed: genuinely underpriced items — a £10 vintage denim jacket, a £30 pair of barely-worn trainers — often sell within minutes of listing, and the buyer who's notified first wins. The risks sit with tools that ask for your Vinted login or offer to auto-buy, which can run against Vinted's terms and put your account at risk. Alert-only tools that don't touch your credentials are the safer version of the same idea."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does Vinted notify you when a seller lowers a price?",
+      "answer": "Only if you have favourited the item and the reduction is at least 5% of the current price. Reductions under 5%, price increases, and changes on items you haven't favourited all trigger no notification."
+    },
+    {
+      "question": "Does Vinted notify you when a price goes up?",
+      "answer": "No. Vinted is silent on price increases. A seller can raise a price by any amount and no one who favourited the item is notified."
+    },
+    {
+      "question": "What's the difference between a price-drop alert and a new-listing alert?",
+      "answer": "A price-drop alert is about an existing item you've favourited getting cheaper. A new-listing alert is about a brand-new item appearing that matches a saved search. Vinted does the first (with a 5% threshold); tools like Supervint do the second, watching for new listings by brand, size, category, and price."
+    },
+    {
+      "question": "What is a Vinted sniper?",
+      "answer": "A tool that monitors Vinted listings and notifies you the moment a matching item appears, so you can buy it before others. Vinted has no auctions, so sniping means being first to a newly listed bargain. Alert-only tools that don't access your Vinted account are the safer option."
+    },
+    {
+      "question": "Does Supervint notify me of price drops?",
+      "answer": "No — Supervint is a new-listing alert tool. It notifies you when a new item matching your saved search appears, not when an existing item's price changes. Vinted's own favourites handle price drops (at 5%+); Supervint handles catching new listings first."
+    }
+  ]
+}

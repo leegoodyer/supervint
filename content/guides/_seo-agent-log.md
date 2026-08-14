@@ -25,3 +25,4 @@
 | 20 | How to contact Vinted support | 2026-08-11 | ✅ Published | content/guides/how-to-contact-vinted-support.json (from FB/Reddit pain point: "how do I contact Vinted") | — |
 | 21 | Vinted delivery issues troubleshooting | 2026-08-11 | ✅ Published | content/guides/vinted-delivery-issues-troubleshooting.json (pain point: "delivered but not received") | — |
 | 22 | Vinted scams & buyer protection | 2026-08-11 | ✅ Published | content/guides/vinted-scams-buyer-protection.json (pain point: scam reports) | — |
+| 23 | PRIMARY: Does Vinted notify when price changes / SECONDARY: What is a Vinted sniper | 2026-08-14 | ✅ Published | content/guides/does-vinted-notify-price-changes.json | — |
