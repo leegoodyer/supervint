@@ -30,6 +30,12 @@ export async function GET() {
   const attribKeys = keys.map(k => `sv:attrib:${k.replace('sv:sub:', '')}`);
   const attribs    = await kv.mget(...attribKeys);
 
+  // Also fetch install metadata (sv:install:<clientId>) which carries the
+  // country from Vercel's geo header — a second, independent source signal
+  // that works even when the attribution cookie/referrer never fired.
+  const installKeys = keys.map(k => `sv:install:${k.replace('sv:sub:', '')}`);
+  const installs    = await kv.mget(...installKeys);
+
   const users = keys
     .map((key, i) => {
       const record = records[i];
@@ -39,6 +45,16 @@ export async function GET() {
       const trialDaysLeft = (plan === 'trial' && record.trialExpiresAt)
         ? Math.max(0, Math.ceil((record.trialExpiresAt - now) / 86_400_000))
         : null;
+
+      // Merge attribution (referrer/UTM/source) with install country so the
+      // admin panel has a single, complete "where did they come from" picture.
+      const attrib   = attribs[i]   ?? null;
+      const install  = installs[i]  ?? null;
+      let mergedAttrib = attrib;
+      if (install && typeof install === 'object' && install.country) {
+        mergedAttrib = { ...(attrib && typeof attrib === 'object' ? attrib : {}), country: install.country };
+      }
+
       return {
         clientId,
         plan,
@@ -50,7 +66,7 @@ export async function GET() {
         adminGrantedAt:  record.adminGrantedAt   ?? null,
         createdAt:       record.trialStart       ?? record.updatedAt ?? null,
         updatedAt:       record.updatedAt        ?? null,
-        attribution:     attribs[i]              ?? null,
+        attribution:     mergedAttrib            ?? null,
       };
     })
     .filter(Boolean)

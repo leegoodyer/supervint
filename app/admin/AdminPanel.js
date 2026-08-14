@@ -25,11 +25,14 @@ function fmt(ts) {
 function fmtAttribution(a) {
   if (!a) return '—';
   const parts = [];
-  if (a.utm_source)  parts.push(a.utm_source);
-  if (a.utm_medium)  parts.push(a.utm_medium);
+  if (a.source)       parts.push(a.source);
+  if (a.utm_source)   parts.push(a.utm_source);
+  if (a.utm_medium)   parts.push(a.utm_medium);
   if (a.utm_campaign) parts.push(`campaign: ${a.utm_campaign}`);
-  if (a.fbclid)      parts.push(`fbclid: ${String(a.fbclid).slice(0, 12)}…`);
-  if (a.gclid)       parts.push(`gclid: ${String(a.gclid).slice(0, 12)}…`);
+  if (a.fbclid)       parts.push(`fbclid: ${String(a.fbclid).slice(0, 12)}…`);
+  if (a.gclid)        parts.push(`gclid: ${String(a.gclid).slice(0, 12)}…`);
+  if (a.referrer && a.source !== a.referrer) parts.push(`ref: ${a.referrer.replace(/^https?:\/\/(www\.)?/i, '').slice(0, 40)}`);
+  if (a.country)      parts.push(a.country.toUpperCase());
   if (parts.length === 0) return '—';
   const when = a.ts ? ` (${fmt(a.ts)})` : '';
   return parts.join(' · ') + when;
