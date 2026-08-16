@@ -217,10 +217,16 @@ prefix search, member = "lowercased-title||itemId"), `sv:sold:recent` (zset).
   user starts monitoring → 🎉 report.
 
 ## Known Pending Items
+- **TIER GATE (Lee, 2026-08-17)**: tier limits LOCKED (see brain/PROJECT-NOTES
+  tiers section) but **DO NOT deploy the tier limit changes until the newest
+  extension version is deployed to the Chrome Store** — Lee's explicit gate.
+  Target: Free 5 searches no email/sold/sheets · Trial 7 days everything ·
+  Reseller 10/10 · Power Seller unlimited/25. Existing 14-day trials keep
+  their full window (stored absolute trialExpiresAt).
 - **Store release (Lee's call)**: current Store zip is v1.2.12 WITHOUT sold-tracker/
   usage-tracking/AI Assistant. Next release zip should include ALL of today's
   batch (seen-set detection, AI chat + search create/delete, usage tracking,
-  popup UI, sold view). After the Store push, **advertise on the website that
+  popup UI, sold view, wardrobe type-ahead). After the Store push, **advertise on the website that
   Supervint has an AI brain that creates snipes AND finds sold prices** —
   i.e. market the AI search-creation capability (plain-language → Vinted
   search link → monitoring) PLUS real sold-price intelligence ("how much did
