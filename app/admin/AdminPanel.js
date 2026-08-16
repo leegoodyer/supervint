@@ -705,7 +705,7 @@ export default function AdminPanel() {
                       <td style={{ padding: '0.4rem 0.7rem', color: 'var(--ink)', fontWeight: s.enabled ? 600 : 400 }}>
                         {s.label || '(unnamed search)'}
                       </td>
-                      <td style={{ padding: '0.4rem 0.7rem', textAlign: 'right', whiteSpace: 'nowrap' }}>
+                      <td style={{ padding: '0.4rem 0.7rem', textAlign: 'left', whiteSpace: 'nowrap', width: 110 }}>
                         {s.enabled
                           ? <span style={{ color: 'var(--green)', fontWeight: 600 }}>● {friendlySearchStatus(s)}</span>
                           : <span style={{ color: '#9ca3af' }}>○ stopped</span>}
