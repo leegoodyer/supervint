@@ -66,12 +66,24 @@ export async function POST(request) {
   return NextResponse.json({ ok: true, stored: true, sold: record });
 }
 
-// GET /api/sold?keyword=ps5&days=30 — query the SHARED sold-price index.
+// GET /api/sold?keyword=ps5&days=30&clientId=xxx — query the SHARED sold-price index.
+// Paid-only: free plans get 403 (the extension shows the upgrade prompt).
 // Returns aggregates + recent individual sales for a keyword.
 export async function GET(request) {
   const url = new URL(request.url);
   const keyword = (url.searchParams.get('keyword') || '').trim().toLowerCase().slice(0, KEYWORD_MAX);
   const days = Math.min(Number(url.searchParams.get('days')) || 90, 90);
+  const clientId = (url.searchParams.get('clientId') || '').trim();
+
+  // Plan gate: paid (reseller/power seller) or trial (reverse trial = full
+  // features) can read; free cannot. Trial users have plan 'trial' in KV.
+  if (clientId) {
+    const sub = await kv.get(`sv:sub:${clientId}`);
+    const plan = (sub?.plan || '').toLowerCase();
+    if (plan === 'free' || plan === '') {
+      return NextResponse.json({ error: 'Sold-price history requires a paid plan.' }, { status: 403 });
+    }
+  }
   const limit = Math.min(Number(url.searchParams.get('limit')) || 25, 100);
 
   if (!keyword) {
