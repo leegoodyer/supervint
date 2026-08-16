@@ -28,6 +28,25 @@ const TITLE_MAX = 300;
 const KEYWORD_MAX = 120;
 const RECENT_TTL = 90 * 24 * 3600; // 90 days of recency index
 
+// Tokens that carry no price signal — never indexed as match terms.
+const STOPWORDS = new Set([
+  'the','a','an','and','or','for','with','new','rare','vintage','original',
+  'brand','genuine','authentic','boxed','with','free','uk','size','plus',
+  'unisex','mens','womens','kids','boys','girls','used','like','from',
+]);
+
+// Normalize a title/query into significant search tokens. Numbers and
+// identifiers (set numbers like "2-1B", "42115", "175/151") are kept intact
+// — splitting them would break exact item matching.
+export function tokenize(text) {
+  const out = new Set();
+  for (const raw of String(text || '').toLowerCase().split(/\s+/)) {
+    let tok = raw.replace(/^[^a-z0-9]+|[^a-z0-9]+$/g, '');
+    if (tok.length >= 3 && !STOPWORDS.has(tok)) out.add(tok);
+  }
+  return [...out];
+}
+
 export async function POST(request) {
   let body;
   try { body = await request.json(); } catch { body = {}; }
@@ -61,6 +80,12 @@ export async function POST(request) {
   pipe.set(itemKey, record, { ex: RECENT_TTL });
   pipe.hset(`sv:sold:kw:${keyword.toLowerCase()}`, { [itemId]: soldAt });
   pipe.zadd('sv:sold:recent', { score: soldAt, member: itemId });
+  // Exact-match index: significant tokens from the TITLE. This is what makes
+  // "lego 2-1B medical droid" return that exact item's sales instead of every
+  // Lego listing (which would be a meaningless £1–£1000 average).
+  for (const tok of tokenize(title)) {
+    pipe.hset(`sv:sold:tok:${tok}`, { [itemId]: soldAt });
+  }
   await pipe.exec();
 
   return NextResponse.json({ ok: true, stored: true, sold: record });
@@ -92,12 +117,31 @@ export async function GET(request) {
 
   const since = Date.now() - days * 24 * 3600 * 1000;
 
-  // All item IDs ever seen for this keyword.
-  const kwHash = await kv.hgetall(`sv:sold:kw:${keyword}`);
-  const ids = kwHash ? Object.keys(kwHash) : [];
+  // EXACT-MATCH semantics: the query is tokenized, each token's sold-item
+  // bucket is fetched, and the intersection is the set of items whose TITLES
+  // contain every significant term. "lego 2-1B medical droid" thus matches
+  // only that exact item — never the whole Lego category (whose £1–£1000
+  // spread would make the average meaningless). Falls back to the broad
+  // keyword bucket only when no token matches at all.
+  const tokens = tokenize(keyword);
+  let ids = [];
+  if (tokens.length > 0) {
+    const buckets = await Promise.all(tokens.map(t => kv.hgetall(`sv:sold:tok:${t}`)));
+    // Start with the smallest bucket, intersect the rest.
+    const sets = buckets.filter(Boolean).map(b => Object.keys(b));
+    if (sets.length === tokens.length) {
+      sets.sort((a, b) => a.length - b.length);
+      ids = sets[0].filter(id => sets.every(s => s.includes(id)));
+    }
+  }
+  // No exact token match → fall back to the search-keyword bucket (broad).
+  if (ids.length === 0) {
+    const kwHash = await kv.hgetall(`sv:sold:kw:${keyword}`);
+    ids = kwHash ? Object.keys(kwHash) : [];
+  }
 
   if (ids.length === 0) {
-    return NextResponse.json({ keyword, days, sales: [], total: 0, avgPrice: null, minPrice: null, maxPrice: null, sampleSize: 0 });
+    return NextResponse.json({ keyword, days, sales: [], total: 0, avgPrice: null, minPrice: null, maxPrice: null, sampleSize: 0, matchMode: tokens.length ? 'exact' : 'keyword' });
   }
 
   // Fetch each item record (bounded).
@@ -117,6 +161,7 @@ export async function GET(request) {
     keyword,
     days,
     total,
+    matchMode: (tokens.length > 0 && ids.length > 0) ? 'exact' : 'keyword',
     avgPrice: avg ? Math.round(avg * 100) / 100 : null,
     minPrice: prices.length ? Math.min(...prices) : null,
     maxPrice: prices.length ? Math.max(...prices) : null,
