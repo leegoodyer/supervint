@@ -496,7 +496,7 @@ export default function AdminPanel() {
                         {fmt(u.createdAt)}
                       </td>
                       <td style={{ padding: '0.65rem 0.9rem', whiteSpace: 'nowrap', color: u.active24h ? 'var(--green)' : 'var(--gray)', fontWeight: u.active24h ? 600 : 400 }}>
-                        {u.lastSeenAt ? fmt(u.lastSeenAt) : <span style={{ color: '#9ca3af', fontSize: '0.75rem' }}>never started</span>}
+                        {u.lastSeenAt ? fmt(u.lastSeenAt) : <span style={{ color: '#9ca3af', fontSize: '0.75rem' }}>not running</span>}
                       </td>
                       <td style={{ padding: '0.65rem 0.9rem', textAlign: 'center' }}>
                         {u.searchCount != null ? u.searchCount : '—'}
