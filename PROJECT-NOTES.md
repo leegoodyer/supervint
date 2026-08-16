@@ -52,6 +52,68 @@ The extension folder is NOT a git repo; each build has its own git repo
 (commits per fix). Store zip = v1.2.12 WITHOUT the sold-tracker (not shipped
 to Store yet).
 
+## AI Assistant chat (major, 2026-08-16 — LIVE on supervint.com/api/help-chat)
+DeepSeek-backed chat in the popup ("AI Assistant", renamed from "Help"; no ⚡
+bolt, no clipart). Server-side so the key never touches the extension; per-plan
+daily caps 15/50/200 (sv:helpchat:<cid>:<date>). Key protocols:
+- **===SEARCH=== block** at end of reply → popup creates + starts the search.
+  Vinted-exact URL format: `search_text` URL-encoded with `+`, `status_ids[]=`,
+  `color_ids[]=` (bracket array syntax — verified live from Vinted's own DOM:
+  status 6=new-with-tags 1=new-no-tags 2=very-good 3=good 4=satisfactory; 28
+  colours incl. Black 1, White 12, Navy 27...). NEVER guess catalog/brand IDs;
+  size stays in search_text. **MULTI-ADD**: one block per search, but popup
+  also parses merged blocks (multiple JSON objects in one ===SEARCH===...
+  ===END===) as resilience.
+- **===DELETE=== block** `{match, filter}` → popup deletes searches whose
+  label/URL contains the filter (case-insensitive), stops alarms, syncs
+  server. Bulk-added searches carry `(≤£N)` in labels — filter "(≤£" catches
+  them all. AI is instructed to NEVER say "I can't delete" (old refusals in
+  history are wrong — it can now).
+- **Sold-price answers use REAL DB records**: when the message smells like
+  sold/worth/bargain, route.js looks up `sv:sold:kw:<kw>` (HASH — hgetall,
+  NOT zrange) then falls back to title-prefix byLex; injects "REAL SOLD
+  RECORDS" block as source of truth. Keyword = LAST non-stop word + singular
+  candidates (jackets→jacket). Watch out: kw hash is a hash, titles index is
+  a zset — the two need different reads.
+- **Quick-prompt chips** above the input: "Set up search with AI", "Sold
+  prices", "Is it a bargain?", "How to use Supervint", "Set up first link
+  manually", "Why no alerts?" — one-tap canned questions.
+- **Post-creation follow-up widget** (after AI creates search(es)): clickable
+  chips "Email alert: under 10%/20%/30%/50% below the price cap" (per-search
+  threshold = cap×(100−pct)%, works for mixed-cap bulk) + strictness
+  Balanced/Strict/Lenient. If the user already said "email" in the chat
+  message, email auto-enables at 10% and only strictness is asked.
+- **History**: persisted `sv_help_chat_history` (last 20); sanitized on load
+  (strips ===SEARCH===/===DELETE=== blocks so raw JSON never re-renders).
+- **Starts are fire-and-forget** in multi-add (no per-message await — 55
+  sequential awaits let the popup close mid-loop and leave searches never
+  started/enabled).
+
+## Popup UI (2026-08-16 cleanup — Lee's design rules: no emoji/clipart icons
+anywhere, clean SVG line icons, brand teal #007782, works for ALL users)
+- Compact bar: brand + count + 🔔-SVG + "Full screen" (no "+ Add" — the big
+  "Add search" button does that; consistent translucent button style).
+- 4 buttons row: Add search (+), My Items (t-shirt), Sold (price-tag), AI
+  Assistant (sparkle) — all SVG line icons, teal, text-only labels.
+- Bulk-add box full width; forgiving parser (strips bullets/numbers/labels/
+  &amp;/trailing punctuation, skips invalid lines instead of rejecting batch).
+- Sold prices on a card → opens FULL sold-search view with that search's
+  search_text pre-filled + auto-runs (was a fiddly inline panel — removed
+  openSoldPanels/renderSoldPanel dead code).
+- Sold/My Items results scroll internally (flex column, overflow-y:auto) —
+  list grows without stretching the window.
+- Account section = collapsible toggle like Google Sheets/Email (person icon,
+  plan name as plain teal text right-aligned with ✓ Connected; caret hugs it).
+- Integrations rows: status badges right-aligned into one column (✓ Connected
+  teal / ⚠ Paused orange / "Connect" grey underlined text when not set up —
+  span role=button, NEVER a <button> nested in the row <button> = invalid
+  HTML → outline + mislayout). Email "Connect" shows only when no alert email
+  saved; account email does NOT count as configured.
+- Compact popup = fixed-height flex column (600px): searches scroll, buttons
+  + integrations + account ALWAYS visible, one scrollbar (was two + buried
+  settings).
+- **Fire-and-forget START_SEARCH** in bulk-add + AI multi-add (see above).
+
 - **Poll reliability**: `chrome.alarms.onAlarm` runs the poll DIRECTLY — no
   setTimeout. MV3 suspends the service worker in the setTimeout gap, which
   silently lost polls forever (the "0 polls ever ran" bug). Stagger comes
@@ -118,10 +180,19 @@ prefix search, member = "lowercased-title||itemId"), `sv:sold:recent` (zset).
   grant, Created, Last seen, Searches, Version, Status (● Active / ◐ Stale /
   ○ Idle). Status + plan filters, Recently deleted (35 accounts, collapsible).
 - Selected-user detail panel: plan, subscription, version, searches list with
-  live poll results (label · new_items/no_new/stopped), Feature usage chips
+  live poll results, Feature usage chips
   (panel_opened, sold_search, search_created, search_toggled). **Clean text
   rows — NO emoji icons, NO pastel chip colours** (Lee's design rule:
   "weird colours with weird logos from clipart" rejected 2026-08-16).
+- **Search status wording + colour (2026-08-16)**: admin COMPUTES hibernation
+  from active hours vs current time (insideActiveHours — null hours = always
+  active, overnight windows handled) → amber "● hibernating (resumes 08:00)"
+  instead of green even when the last poll was hours ago. Never-polled
+  searches = grey "○ starting up" (needsBaseline) / "waiting for first poll"
+  (enabled, no result yet) — NOT "stopped". Green only when genuinely running.
+  Heartbeat now sends activeHoursStart/activeHoursEnd/needsBaseline per search
+  (was id/label/enabled/lastPollTime/lastPollResult only — without them the
+  admin couldn't tell hibernating from stopped).
 - Usage telemetry: extension trackUsage() → POST /api/usage →
   sv:usage:client:<cid> hash. **Read hashes with hgetall — mget on hash keys
   returns null** (hit twice; the repeated footgun). Only Lee's dev build
@@ -146,6 +217,14 @@ prefix search, member = "lowercased-title||itemId"), `sv:sold:recent` (zset).
   user starts monitoring → 🎉 report.
 
 ## Known Pending Items
+- **Deal searches (Lee's flips)**: ~35 bargain-tier URLs live as searches with
+  `(≤£N)` labels (mistake-tier caps: lego £4-5, carhartt £5, barbour £6,
+  moncler £15...). File: `~/Documents/supervint-web/deal-urls-paste.txt`
+  (55 URLs, rock-bottom caps — "a couple hits a week = real bargain").
+  Lee can bulk-add via popup box or AI chat; delete via AI ("remove the bulk
+  upload" → filter "(≤£"). AI ALSO creates searches from plain language.
+- **Email-merge hypothesis** — idle users' heartbeats under a different
+  clientId (merge mismatch) — still open (interrupted previously).
 - Heartbeat monitor cron (03cf6024c76b) fixed 2026-08-16: now watches Lee's
   LIVE clientId 19a5e8b0-1539-445d-a97b-855ec3c8dde9 (was stale dev
   f2b661db) + stale threshold 45m (was 6h — reported "ALL GREEN" on 4h-old
