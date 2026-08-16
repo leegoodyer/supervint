@@ -220,11 +220,12 @@ prefix search, member = "lowercased-title||itemId"), `sv:sold:recent` (zset).
 - **TIER GATE (Lee, 2026-08-17)**: tier limits LOCKED (see brain/PROJECT-NOTES
   tiers section) but **DO NOT deploy the tier limit changes until the newest
   extension version is deployed to the Chrome Store** — Lee's explicit gate.
-  Target: Free 5 searches no AI/email/sold/sheets · Trial 7 days everything
-  (unlimited/unlimited) · Reseller 10 searches + 10 emails · Power Seller
-  unlimited searches + unlimited emails. **Email alerts = search count per
-  tier** (Lee). Existing 14-day trials keep their full window (stored
-  absolute trialExpiresAt).
+  Target: Free 5 (no AI/email/sold/sheets) · Trial 7d all-bells 100 · Reseller
+  10+10 · Power Seller 100+100 · **NEW top tier 200+200 (name/price TBD)**.
+  **Email alerts = search count per tier** (Lee). **NO unlimited anywhere**
+  (Lee: "unlimited is going to hit problems if every user has unlimited").
+  Existing 14-day trials keep their full window (stored absolute
+  trialExpiresAt).
 - **Store release (Lee's call)**: current Store zip is v1.2.12 WITHOUT sold-tracker/
   usage-tracking/AI Assistant. Next release zip should include ALL of today's
   batch (seen-set detection, AI chat + search create/delete, usage tracking,
