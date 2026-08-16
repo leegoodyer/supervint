@@ -138,12 +138,13 @@ export async function GET(request) {
     const hi = `[${prefix}\uFFFF`;
     let members = [];
     try {
-      members = await kv.zrange('sv:sold:titles', { min: lo, max: hi, by: 'lex' });
+      // Upstash option is byLex (camelCase). byScore/rev/count/offset also
+      // accepted — the driver builds "zrange key min max bylex".
+      members = await kv.zrange('sv:sold:titles', lo, hi, { byLex: true });
     } catch {
-      // by:'lex' may not be supported by the KV client shorthand — fall back
-      // to a manual zrangebylex call shape if the driver rejects it.
+      // Fallback: raw command shape in case the option object isn't accepted.
       try {
-        members = await kv.zrangebylex('sv:sold:titles', lo, hi);
+        members = await kv.zrange('sv:sold:titles', lo, hi, 'bylex');
       } catch { members = []; }
     }
     ids = members.map(m => String(m).split('||').pop()).filter(Boolean);
