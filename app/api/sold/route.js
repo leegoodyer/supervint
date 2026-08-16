@@ -173,11 +173,11 @@ export async function GET(request) {
   });
 }
 
-// DELETE /api/sold?purge=<secret> — nuke the whole sold DB (used after a
-// classifier bug polluted it). Secret matches the admin password hash.
-import { verifyAdminAuth } from '@/lib/admin-auth';
-export async function DELETE(request) {
-  const ok = await verifyAdminAuth(request);
+// DELETE /api/sold — nuke the whole sold DB (used after a classifier bug
+// polluted it with live items). Admin-only.
+import { isAdminAuthed } from '@/lib/admin-auth';
+export async function DELETE() {
+  const ok = await isAdminAuthed();
   if (!ok) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   const keys = await kv.keys('sv:sold:*');
   if (keys.length) await kv.del(...keys);
