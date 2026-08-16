@@ -64,6 +64,7 @@ function DetailRow({ label, value }) {
 }
 
 // Fancy collapsible section header — a proper button with chevron + hover.
+// Responsive: on narrow screens the `right` slot wraps onto its own row.
 function SectionHeader({ title, subtitle, open, onClick, right }) {
   return (
     <div
@@ -73,6 +74,7 @@ function SectionHeader({ title, subtitle, open, onClick, right }) {
       onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } }}
       style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        flexWrap: 'wrap', rowGap: '0.5rem',
         padding: '0.65rem 1rem', marginBottom: '0.75rem',
         background: open ? 'var(--green)' : 'var(--offwhite)',
         border: '1px solid var(--line)', borderRadius: 10,
@@ -82,10 +84,10 @@ function SectionHeader({ title, subtitle, open, onClick, right }) {
       onMouseEnter={e => { if (!open) e.currentTarget.style.background = '#eef2ff'; }}
       onMouseLeave={e => { if (!open) e.currentTarget.style.background = 'var(--offwhite)'; }}
     >
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', minWidth: 0 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', minWidth: 0, flex: '1 1 auto' }}>
         <span style={{
           display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-          width: 20, height: 20, borderRadius: 6,
+          flexShrink: 0, width: 20, height: 20, borderRadius: 6,
           background: open ? 'rgba(255,255,255,0.25)' : 'var(--line)',
           color: open ? '#fff' : 'var(--gray)',
           fontSize: '0.7rem', transition: 'transform 0.15s',
@@ -102,7 +104,14 @@ function SectionHeader({ title, subtitle, open, onClick, right }) {
           </span>
         )}
       </div>
-      {right}
+      {right && (
+        <div
+          onClick={e => e.stopPropagation()}
+          style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', flex: '0 1 auto', justifyContent: 'flex-end' }}
+        >
+          {right}
+        </div>
+      )}
     </div>
   );
 }
