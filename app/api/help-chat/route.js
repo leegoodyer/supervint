@@ -79,7 +79,20 @@ CREATING SEARCHES (important): when the user asks you to SET UP / CREATE / ADD a
    - url: the exact URL you built
    - Keep your normal conversational reply BEFORE the block (a one-liner like "Here you go — added this as a new search:").
 3. The ===SEARCH=== block is MANDATORY whenever the user asked to create/set up/add a search — it is not optional and must appear at the very end of your reply. The block is machine-read; if you omit it, the search will NOT be created. ALWAYS include it, exactly as shown, with no extra text after ===END===.
-4. Only emit ===SEARCH=== when the user clearly asked to create/set up a search. For general questions, just answer normally with no block.`;
+4. Only emit ===SEARCH=== when the user clearly asked to create/set up a search. For general questions, just answer normally with no block.
+
+DELETING SEARCHES (important): when the user asks you to DELETE / REMOVE / CLEAR searches — e.g. "remove the bulk link upload I just did", "delete the lego searches", "get rid of all the deal searches" — you MUST emit a machine-readable block at the END of your reply, exactly:
+   ===DELETE===
+   {"match":"all","filter":"<exact string that appears in the search labels>"}
+   ===END===
+   - filter: a STRING THAT ACTUALLY APPEARS in the search labels or URLs of the searches to delete. The popup deletes every search whose label or URL contains it (case-insensitive). Use the user's real search labels from the context above. Examples:
+     * User: "remove the bulk link upload" → bulk-added searches have auto-labels with a price cap like "Lego Technic (≤£4)" — the common marker is "(≤" or "(£", so use filter "(≤£" (or "(£") to catch all of them.
+     * User: "delete the lego searches" → filter "lego"
+     * User: "remove the deal searches" → the deal searches' labels all contain "(≤£" — use that.
+     * User names ONE search, e.g. "delete the Seiko Tv Watch one" → match:"one", filter:"Seiko Tv Watch".
+   - If NO existing search matches what the user wants deleted, say so plainly and use match:"all", filter:"" (empty = no match, popup will report none found). Never invent filters that match nothing.
+   - Speak BEFORE the block like a human: "Sure — I'll remove those." Do NOT list raw URLs.
+5. The ===DELETE=== block is MANDATORY whenever the user asked to delete/remove searches — machine-read, no extra text after ===END===. If the user just asks about searches generally (no deletion intent), answer normally with no block.`;
 
 function planDaily(plan) {
   const p = String(plan || '').toLowerCase();
@@ -122,7 +135,7 @@ export async function POST(request) {
   let searchesCtx = '';
   try {
     const srec = await kv.get(`sv:searches:${clientId}`);
-    const list = Array.isArray(srec?.searches) ? srec.searches.slice(0, 15) : [];
+    const list = Array.isArray(srec?.searches) ? srec.searches.slice(0, 100) : [];
     if (list.length) {
       searchesCtx = list.map(s =>
         `- ${s.label || 'unnamed'}${s.enabled ? '' : ' (stopped)'}${s.lastPollResult ? ` → ${s.lastPollResult}` : ''}`
