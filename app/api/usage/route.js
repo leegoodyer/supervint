@@ -62,11 +62,12 @@ export async function GET(request) {
   const clientKeys = await kv.keys('sv:usage:client:*');
   const clients = {};
   if (clientKeys.length > 0) {
-    const hashes = await kv.mget(...clientKeys);
-    clientKeys.forEach((k, i) => {
+    // Each key is a HASH (event -> count). hgetall reads the full hash.
+    for (const k of clientKeys) {
       const clientId = k.replace('sv:usage:client:', '');
-      clients[clientId] = hashes[i] || {};
-    });
+      const hash = await kv.hgetall(k);
+      clients[clientId] = hash || {};
+    }
   }
 
   return NextResponse.json({ days, events, clients });
