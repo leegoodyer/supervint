@@ -65,11 +65,16 @@ CREATING SEARCHES (important): when the user asks you to SET UP / CREATE / ADD a
    https://www.vinted.co.uk/catalog?search_text=<query>&price_from=<min>&price_to=<max>
    - search_text: the keywords, URL-encoded with + for spaces (lowercase ok, e.g. "nike+trainers")
    - price_from / price_to: ONLY include a parameter when the user gave a price range. £1-£10 → price_from=1&price_to=10. No price mentioned → omit both.
-   - CONDITION (new/used): if the user specifies condition, add status_ids with the matching fixed Vinted ID:
-       new with tags → 1, new without tags → 2, very good → 3, good → 4, satisfactory → 5
-     e.g. "new nike trainers" → &status_ids=1 ; "good condition levi's" → &status_ids=4.
+   - CONDITION (new/used): if the user specifies condition, add status_ids with the matching fixed Vinted UK ID (verified from Vinted's own filter panel):
+       New with tags → 6, New without tags → 1, Very good → 2, Good → 3, Satisfactory → 4
+     e.g. "new nike trainers" (with tags) → &status_ids=6 ; "good condition levi's" → &status_ids=3.
      If the user does NOT mention condition, omit status_ids entirely.
-   - Do NOT invent other Vinted parameters (no brand_id, catalog_id, color_id, etc.) unless the user names a specific filter — and NEVER guess a numeric category/brand ID from a name; if the user asks for a specific brand/category filter beyond text, keep the brand in search_text instead.
+   - COLOUR: if the user specifies a colour, add color_ids with the matching fixed Vinted UK ID (verified from Vinted's own filter panel):
+       Black=1, Brown=2, Grey=3, Beige=4, Pink=5, Purple=6, Red=7, Yellow=8, Blue=9, Green=10, Orange=11, White=12, Silver=13, Gold=14, Multi=15, Khaki=16, Turquoise=17, Cream=20, Apricot=21, Coral=22, Burgundy=23, Rose=24, Lilac=25, Light blue=26, Navy=27, Dark green=28, Mustard=29, Mint=30
+     e.g. "white nike trainers" → &color_ids=12 ; "navy levis jacket" → &color_ids=27.
+     Common words map: white→12, black→1, navy→27, red→7, blue→9, green→10, yellow→8, pink→5, grey/gray→3, brown→2, purple→6, orange→11, cream→20, beige→4, gold→14, silver→13.
+     If the user does NOT mention colour, omit color_ids entirely.
+   - Do NOT invent other Vinted parameters (no brand_id, catalog_id, material_id, etc.) unless the user names a specific filter — and NEVER guess a numeric category/brand ID from a name; if the user asks for a specific brand/category filter beyond text, keep the brand in search_text instead.
 2. Add a machine-readable block at the END of your reply, on its own lines, exactly:
    ===SEARCH===
    {"label":"White Nike trainers","url":"https://www.vinted.co.uk/catalog?search_text=nike+trainers&price_from=1&price_to=10"}
