@@ -221,7 +221,7 @@ prefix search, member = "lowercased-title||itemId"), `sv:sold:recent` (zset).
   tiers section) but **DO NOT deploy the tier limit changes until the newest
   extension version is deployed to the Chrome Store** — Lee's explicit gate.
   Target: Free 5 (no AI/email/sold/sheets) · Trial 7d all-bells 100 · Reseller
-  10+10 · Power Seller 100+100 · **NEW top tier 200+200 (name/price TBD)**.
+  10+10 · Power Seller 100+100 · **Empire 200+200 (£19.99–24.99 TBD)**.
   **Email alerts = search count per tier** (Lee). **NO unlimited anywhere**
   (Lee: "unlimited is going to hit problems if every user has unlimited").
   Existing 14-day trials keep their full window (stored absolute
