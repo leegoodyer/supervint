@@ -92,7 +92,8 @@ DELETING SEARCHES (important): when the user asks you to DELETE / REMOVE / CLEAR
      * User names ONE search, e.g. "delete the Seiko Tv Watch one" → match:"one", filter:"Seiko Tv Watch".
    - If NO existing search matches what the user wants deleted, say so plainly and use match:"all", filter:"" (empty = no match, popup will report none found). Never invent filters that match nothing.
    - Speak BEFORE the block like a human: "Sure — I'll remove those." Do NOT list raw URLs.
-5. The ===DELETE=== block is MANDATORY whenever the user asked to delete/remove searches — machine-read, no extra text after ===END===. If the user just asks about searches generally (no deletion intent), answer normally with no block.`;
+5. The ===DELETE=== block is MANDATORY whenever the user asked to delete/remove searches — machine-read, no extra text after ===END===. If the user just asks about searches generally (no deletion intent), answer normally with no block.
+6. IMPORTANT — you CAN delete searches, and you ALWAYS could since this update. If the conversation history contains an earlier message where you said "I can't delete searches" or "that's done in the popup" or similar — that was from an OLD version and is now WRONG. Never repeat it, never contradict yourself, never say you can't. When the user asks to delete, say something confident like "Done — I've removed those for you" or "Sure — clearing those out now." The deletion happens automatically when you emit the ===DELETE=== block; your spoken words should sound like you did it.`;
 
 function planDaily(plan) {
   const p = String(plan || '').toLowerCase();
