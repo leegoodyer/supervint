@@ -84,16 +84,31 @@ function friendlyPollResult(u) {
 function friendlySearchStatus(s) {
   const r = (s.lastPollResult || '').toLowerCase();
   const n = s.newItemsLastCount;
+  // A search that has never polled yet isn't "stopped" — it's starting up
+  // (first poll happens within minutes of being added).
+  if (!r && s.needsBaseline) return 'starting up';
+  if (!r && s.enabled)      return 'waiting for first poll';
   switch (r) {
     case 'new_items': return n > 0 ? `${n} new` : 'new items';
     case 'no_new':    return 'no new';
     case 'stopped':   return 'stopped';
-    case 'hibernating': return 'hibernating';
+    case 'hibernating': return `hibernating (resumes ${s.activeHoursStart || '08:00'})`;
     case 'capped':    return 'capped';
     case 'rate_limited': return 'rate-limited';
     case 'error':     return 'error';
-    default:          return 'running';
+    default:          return r || 'starting up';
   }
+}
+
+// Color for a search row's status — green only when it's genuinely running
+// and finding/checking items; amber for hibernating (outside active hours);
+// grey for stopped/starting.
+function searchStatusColor(s) {
+  const r = (s.lastPollResult || '').toLowerCase();
+  if (!s.enabled)       return 'var(--gray)';
+  if (r === 'hibernating') return '#b45309';   // amber — paused by the clock
+  if (r === 'capped' || r === 'rate_limited' || r === 'error') return '#b45309';
+  return 'var(--green)';
 }
 
 function PlanBadge({ plan }) {
@@ -705,10 +720,10 @@ export default function AdminPanel() {
                       <td style={{ padding: '0.4rem 0.7rem', color: 'var(--ink)', fontWeight: s.enabled ? 600 : 400 }}>
                         {s.label || '(unnamed search)'}
                       </td>
-                      <td style={{ padding: '0.4rem 0.7rem', textAlign: 'left', whiteSpace: 'nowrap', width: 110 }}>
+                      <td style={{ padding: '0.4rem 0.7rem', textAlign: 'left', whiteSpace: 'nowrap', width: 170 }}>
                         {s.enabled
-                          ? <span style={{ color: 'var(--green)', fontWeight: 600 }}>● {friendlySearchStatus(s)}</span>
-                          : <span style={{ color: '#9ca3af' }}>○ stopped</span>}
+                          ? <span style={{ color: searchStatusColor(s), fontWeight: 600 }}>● {friendlySearchStatus(s)}</span>
+                          : <span style={{ color: 'var(--gray)' }}>○ {friendlySearchStatus(s)}</span>}
                       </td>
                     </tr>
                   ))}
