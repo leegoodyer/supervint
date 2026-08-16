@@ -165,36 +165,44 @@ export async function POST(request) {
       // Pick the LAST non-stop word — the query object usually comes last
       // ("...for Barbour jackets", "...Carhartt jacket"). Reverse scan.
       const nonStop = words.filter(w => !stop.has(w));
-      const kw = nonStop[nonStop.length - 1] || words[0] || '';
-      if (kw) {
-        // keyword hash first (sv:sold:kw:<kw> = hash itemId -> soldAt)
-        const kwHash = await kv.hgetall(`sv:sold:kw:${kw}`);
-        let records = [];
+      const candidates = [];
+      for (let i = nonStop.length - 1; i >= 0 && candidates.length < 3; i--) {
+        const w = nonStop[i];
+        if (w.endsWith('ies')) candidates.push(w.slice(0, -3) + 'y');
+        else if (w.endsWith('es')) candidates.push(w.slice(0, -2));
+        else if (w.endsWith('s')) candidates.push(w.slice(0, -1));
+        candidates.push(w);
+      }
+      let records = [];
+      for (const cand of candidates) {
+        if (!cand) continue;
+        // keyword hash (sv:sold:kw:<kw> = hash itemId -> soldAt)
+        const kwHash = await kv.hgetall(`sv:sold:kw:${cand}`);
         if (kwHash && Object.keys(kwHash).length) {
           const ids = Object.keys(kwHash).slice(0, 10);
           records = (await kv.mget(ids.map(id => `sv:sold:item:${id}`))).filter(Boolean);
         }
-        if (!records.length) {
-          // prefix fallback
-          const lo = `[${kw}`;
-          const hi = `[${kw}\uFFFF`;
-          let members = [];
-          try { members = await kv.zrange('sv:sold:titles', lo, hi, { byLex: true }); }
-          catch {
-            try { members = await kv.zrange('sv:sold:titles', lo, hi, 'bylex'); } catch { members = []; }
-          }
-          const ids = members.map(m => String(m).split('||').pop()).filter(Boolean).slice(0, 10);
-          if (ids.length) {
-            const batch = await kv.mget(ids.map(id => `sv:sold:item:${id}`));
-            records = batch.filter(Boolean);
-          }
+        if (records.length) break;
+        // prefix fallback on titles index
+        const lo = `[${cand}`;
+        const hi = `[${cand}\uFFFF`;
+        let members = [];
+        try { members = await kv.zrange('sv:sold:titles', lo, hi, { byLex: true }); }
+        catch {
+          try { members = await kv.zrange('sv:sold:titles', lo, hi, 'bylex'); } catch { members = []; }
         }
-        if (records.length) {
-          soldCtx = '\n\nREAL SOLD RECORDS (from the Supervint sold database — use these numbers when answering):\n' +
-            records.slice(0, 10).map(r =>
-              `- "${r.title || 'item'}" sold for ${r.price || '?'}${r.currency ? ' ' + r.currency : ''}`
-            ).join('\n');
+        const ids = members.map(m => String(m).split('||').pop()).filter(Boolean).slice(0, 10);
+        if (ids.length) {
+          const batch = await kv.mget(ids.map(id => `sv:sold:item:${id}`));
+          records = batch.filter(Boolean);
         }
+        if (records.length) break;
+      }
+      if (records.length) {
+        soldCtx = '\n\nREAL SOLD RECORDS (from the Supervint sold database — use these numbers when answering):\n' +
+          records.slice(0, 10).map(r =>
+            `- "${r.title || 'item'}" sold for ${r.price || '?'}${r.currency ? ' ' + r.currency : ''}`
+          ).join('\n');
       }
     } catch { /* sold lookup best-effort */ }
   }
