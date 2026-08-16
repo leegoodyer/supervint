@@ -41,6 +41,12 @@ export async function GET() {
   const heartbeatKeys = keys.map(k => `sv:heartbeat:${k.replace('sv:sub:', '')}`);
   const heartbeats    = await kv.mget(...heartbeatKeys);
 
+  // Server-side search backup: sv:searches:<clientId> holds full search
+  // definitions WITH labels. The heartbeat only carries ids for Store builds,
+  // so merge labels from here to show what each user is searching for.
+  const serverSearchKeys = keys.map(k => `sv:searches:${k.replace('sv:sub:', '')}`);
+  const serverSearches   = await kv.mget(...serverSearchKeys);
+
   const users = keys
     .map((key, i) => {
       const record = records[i];
@@ -76,10 +82,31 @@ export async function GET() {
         lastSeenAt:      heartbeats[i]?.at      ?? null,
         lastPollResult:  heartbeats[i]?.lastPollResult ?? null,
         searchCount:     Array.isArray(heartbeats[i]?.searches) ? heartbeats[i].searches.length : null,
-        searches:        Array.isArray(heartbeats[i]?.searches) ? heartbeats[i].searches.map(s => ({
-          id: s?.id ?? '', label: s?.label ?? '', enabled: !!s?.enabled,
-          lastPollTime: s?.lastPollTime ?? null, lastPollResult: s?.lastPollResult ?? null,
-        })) : null,
+        searches:        (() => {
+          const hb = heartbeats[i]?.searches;
+          const sv = serverSearches[i]?.searches;
+          if (Array.isArray(sv) && sv.length > 0) {
+            // Server backup has full definitions — authoritative for labels.
+            const svById = new Map(sv.map(s => [String(s?.id), s]));
+            const merged = sv.map(s => ({
+              id: s?.id ?? '', label: s?.label ?? '', enabled: !!s?.enabled,
+              lastPollTime: s?.lastPollTime ?? null, lastPollResult: s?.lastPollResult ?? null,
+            }));
+            // Add heartbeat-only searches not in the backup (fresh ones).
+            if (Array.isArray(hb)) {
+              for (const h of hb) {
+                if (!svById.has(String(h?.id))) {
+                  merged.push({ id: h?.id ?? '', label: h?.label ?? '', enabled: !!h?.enabled, lastPollTime: h?.lastPollTime ?? null, lastPollResult: h?.lastPollResult ?? null });
+                }
+              }
+            }
+            return merged;
+          }
+          return Array.isArray(hb) ? hb.map(s => ({
+            id: s?.id ?? '', label: s?.label ?? '', enabled: !!s?.enabled,
+            lastPollTime: s?.lastPollTime ?? null, lastPollResult: s?.lastPollResult ?? null,
+          })) : null;
+        })(),
         version:         heartbeats[i]?.version ?? null,
         offscreenAlive:  typeof heartbeats[i]?.offscreenPingAgoMs === 'number'
           ? heartbeats[i].offscreenPingAgoMs < 120_000

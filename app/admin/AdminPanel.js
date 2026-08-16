@@ -570,7 +570,7 @@ export default function AdminPanel() {
         <div style={{ marginTop: '1rem' }}>
           <SectionHeader
             title="Selected user"
-            subtitle={selected.email || selected.clientId.slice(0, 13)}
+            subtitle={selected.email ? `· ${selected.email.length > 28 ? selected.email.slice(0, 25) + '…' : selected.email}` : `· ${selected.clientId.slice(0, 13)}`}
             open={selectedOpen}
             onClick={() => setSelectedOpen(o => !o)}
           />
