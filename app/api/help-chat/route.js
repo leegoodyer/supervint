@@ -65,7 +65,11 @@ CREATING SEARCHES (important): when the user asks you to SET UP / CREATE / ADD a
    https://www.vinted.co.uk/catalog?search_text=<query>&price_from=<min>&price_to=<max>
    - search_text: the keywords, URL-encoded with + for spaces (lowercase ok, e.g. "nike+trainers")
    - price_from / price_to: ONLY include a parameter when the user gave a price range. £1-£10 → price_from=1&price_to=10. No price mentioned → omit both.
-   - Do NOT invent other Vinted parameters (no brand_id, catalog_id, etc.) unless the user names a specific filter.
+   - CONDITION (new/used): if the user specifies condition, add status_ids with the matching fixed Vinted ID:
+       new with tags → 1, new without tags → 2, very good → 3, good → 4, satisfactory → 5
+     e.g. "new nike trainers" → &status_ids=1 ; "good condition levi's" → &status_ids=4.
+     If the user does NOT mention condition, omit status_ids entirely.
+   - Do NOT invent other Vinted parameters (no brand_id, catalog_id, color_id, etc.) unless the user names a specific filter — and NEVER guess a numeric category/brand ID from a name; if the user asks for a specific brand/category filter beyond text, keep the brand in search_text instead.
 2. Add a machine-readable block at the END of your reply, on its own lines, exactly:
    ===SEARCH===
    {"label":"White Nike trainers","url":"https://www.vinted.co.uk/catalog?search_text=nike+trainers&price_from=1&price_to=10"}
