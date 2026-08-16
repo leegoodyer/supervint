@@ -176,10 +176,6 @@ export default function AdminPanel() {
   const [usersOpen, setUsersOpen]             = useState(true);
   const [deletedOpen, setDeletedOpen]         = useState(false);
   const [selectedOpen, setSelectedOpen]       = useState(true);
-  const [usageEvents, setUsageEvents]         = useState({});
-  const [usageClients, setUsageClients]       = useState({});
-  const [usageLoading, setUsageLoading]       = useState(true);
-  const [usageOpen, setUsageOpen]             = useState(false);
 
   const loadUsers = useCallback(async () => {
     setUE('');
@@ -210,26 +206,10 @@ export default function AdminPanel() {
     }
   }, []);
 
-  const loadUsage = useCallback(async () => {
-    try {
-      const res  = await fetch('/api/usage');
-      const data = await res.json();
-      if (res.ok) {
-        setUsageEvents(data.events ?? {});
-        setUsageClients(data.clients ?? {});
-      }
-    } catch {
-      // non-critical — silently fail
-    } finally {
-      setUsageLoading(false);
-    }
-  }, []);
-
   useEffect(() => {
     loadUsers();
     loadDeleted();
-    loadUsage();
-  }, [loadUsers, loadDeleted, loadUsage]);
+  }, [loadUsers, loadDeleted]);
 
   function selectUser(user) {
     setSelected(user);
@@ -675,19 +655,30 @@ export default function AdminPanel() {
                 label="Usage"
                 value={
                   selected.usage && Object.keys(selected.usage).length > 0 ? (
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
-                      {Object.entries(selected.usage)
-                        .sort((a, b) => b[1] - a[1])
-                        .map(([ev, n]) => (
-                          <span key={ev} style={{
-                            display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
-                            background: usageColor(ev), border: '1px solid var(--line)',
-                            borderRadius: 999, padding: '0.15rem 0.6rem',
-                            fontSize: '0.78rem', fontWeight: 600, color: 'var(--ink)',
-                          }}>
-                            {usageIcon(ev)} {usageLabel(ev)} <b style={{ color: 'var(--green)' }}>×{n}</b>
-                          </span>
-                        ))}
+                    <div style={{ width: '100%' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
+                        <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--gray)' }}>Feature usage</span>
+                        <span style={{
+                          fontSize: '0.72rem', fontWeight: 700, color: '#fff',
+                          background: 'var(--green)', borderRadius: 999, padding: '0.05rem 0.5rem',
+                        }}>
+                          {usageTotal(selected.usage)} events
+                        </span>
+                      </div>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                        {Object.entries(selected.usage)
+                          .sort((a, b) => b[1] - a[1])
+                          .map(([ev, n]) => (
+                            <span key={ev} style={{
+                              display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
+                              background: usageColor(ev), border: '1px solid var(--line)',
+                              borderRadius: 999, padding: '0.15rem 0.6rem',
+                              fontSize: '0.78rem', fontWeight: 600, color: 'var(--ink)',
+                            }}>
+                              {usageIcon(ev)} {usageLabel(ev)} <b style={{ color: 'var(--green)' }}>×{n}</b>
+                            </span>
+                          ))}
+                      </div>
                     </div>
                   ) : (
                     '—'
@@ -831,101 +822,6 @@ export default function AdminPanel() {
           </div>
         )}
           </>
-        )}
-      </div>
-
-      {/* Feature usage — collapsible */}
-      <div style={{ marginTop: '1.5rem' }}>
-        <SectionHeader
-          title="Feature usage"
-          subtitle={usageLoading ? 'loading…' : `${usageTotal(usageEvents)} events · ${Object.keys(usageClients).length} users`}
-          open={usageOpen}
-          onClick={() => setUsageOpen(o => !o)}
-        />
-        {usageOpen && (
-          <div style={{ border: '1px solid var(--line)', borderRadius: 12, padding: '1.2rem', background: 'var(--offwhite)' }}>
-            {usageLoading ? (
-              <p style={{ fontSize: '0.85rem', color: 'var(--gray)' }}>Loading…</p>
-            ) : Object.keys(usageEvents).length === 0 ? (
-              <p style={{ fontSize: '0.85rem', color: 'var(--gray)' }}>
-                No usage events yet — they start counting once users run the updated extension (panel opens, searches, Sold search, notification clicks).
-              </p>
-            ) : (
-              <>
-                {/* Overall event ranking — chips with icons + colours */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.2rem' }}>
-                  {Object.entries(usageEvents)
-                    .sort((a, b) => b[1] - a[1])
-                    .map(([ev, n]) => (
-                      <span key={ev} style={{
-                        display: 'inline-flex', alignItems: 'center', gap: '0.35rem',
-                        background: usageColor(ev), border: '1px solid var(--line)',
-                        borderRadius: 10, padding: '0.35rem 0.7rem',
-                        fontSize: '0.82rem', fontWeight: 600, color: 'var(--ink)',
-                      }}>
-                        {usageIcon(ev)} {usageLabel(ev)}
-                        <b style={{ color: 'var(--green)', fontSize: '0.9rem' }}>{n}</b>
-                      </span>
-                    ))}
-                </div>
-
-                {/* Per-user breakdown — real users (email), ranked by activity */}
-                <p style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--gray)', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 0.6rem' }}>
-                  Who's using what
-                </p>
-                <div style={{ maxHeight: 320, overflowY: 'auto' }}>
-                  {Object.entries(usageClients)
-                    .map(([cid, evs]) => {
-                      // Join with the users list to get the real email/name.
-                      const u = users.find(x => x.clientId === cid);
-                      const total = usageTotal(evs);
-                      return { cid, evs, total, email: u?.email || null, plan: u?.plan || null };
-                    })
-                    .sort((a, b) => b.total - a.total)
-                    .map(({ cid, evs, total, email, plan }) => (
-                      <div key={cid} style={{
-                        display: 'flex', alignItems: 'flex-start', gap: '0.6rem',
-                        padding: '0.55rem 0.4rem', borderBottom: '1px solid var(--line)',
-                      }}>
-                        <div style={{
-                          flexShrink: 0, width: 28, height: 28, borderRadius: '50%',
-                          background: plan ? (PLAN_COLORS[plan]?.bg ?? '#e5e7eb') : '#e5e7eb',
-                          color: plan ? (PLAN_COLORS[plan]?.color ?? '#374151') : '#374151',
-                          display: 'flex', alignItems: 'center', justifyContent: 'center',
-                          fontSize: '0.7rem', fontWeight: 800, textTransform: 'uppercase',
-                        }}>
-                          {(email || '?').slice(0, 2).toUpperCase()}
-                        </div>
-                        <div style={{ flex: 1, minWidth: 0 }}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--ink)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                              {email || `${cid.slice(0, 13)}…`}
-                            </span>
-                            <span style={{
-                              fontSize: '0.72rem', fontWeight: 700, color: '#fff',
-                              background: 'var(--green)', borderRadius: 999, padding: '0.05rem 0.5rem',
-                            }}>
-                              {total} events
-                            </span>
-                          </div>
-                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.3rem', marginTop: '0.3rem' }}>
-                            {Object.entries(evs).sort((a, b) => b[1] - a[1]).map(([ev, n]) => (
-                              <span key={ev} style={{
-                                display: 'inline-flex', alignItems: 'center', gap: '0.2rem',
-                                background: usageColor(ev), borderRadius: 999, padding: '0.1rem 0.5rem',
-                                fontSize: '0.72rem', fontWeight: 600, color: 'var(--ink)',
-                              }}>
-                                {usageIcon(ev)} {usageLabel(ev)} ×{n}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                </div>
-              </>
-            )}
-          </div>
         )}
       </div>
 
