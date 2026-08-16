@@ -150,9 +150,50 @@ export async function POST(request) {
     ? `\n\nUSER'S CURRENT SEARCHES:\n${searchesCtx}\n`
     : '';
 
+  // ── Sold-price lookup ────────────────────────────────────────────────────
+  // When the user asks about sold prices / what things sell for, pull REAL
+  // records from the sold DB and inject them so the AI answers with actual
+  // numbers, not guesses. Query: tokenize, use the first significant word as
+  // the keyword bucket, fall back to title-prefix search.
+  let soldCtx = '';
+  const soldIntent = /sold|sell for|what.*worth|how much.*(go|sell)|price.*(sold|selling)|bargain|resell|flip/i.test(message);
+  if (soldIntent) {
+    try {
+      const words = message.toLowerCase().match(/[a-z]{3,}/g) || [];
+      const stop = new Set(['what','does','they','sell','sold','price','prices','much','show','barbour','jacket','coat','shoes','trainers','under','for','the','and','a','new','good','used','about','how','many','you','tell','me','looking','any','are','is','it','worth','bargain','resell','flip','vinted']);
+      const kw = words.find(w => !stop.has(w)) || words[0] || '';
+      if (kw) {
+        // keyword bucket first
+        const bucket = await kv.zrange(`sv:sold:kw:${kw}`, 0, 10);
+        let records = (bucket || []).filter(Boolean);
+        if (!records.length) {
+          // prefix fallback
+          const lo = `[${kw}`;
+          const hi = `[${kw}\uFFFF`;
+          let members = [];
+          try { members = await kv.zrange('sv:sold:titles', lo, hi, { byLex: true }); }
+          catch {
+            try { members = await kv.zrange('sv:sold:titles', lo, hi, 'bylex'); } catch { members = []; }
+          }
+          const ids = members.map(m => String(m).split('||').pop()).filter(Boolean).slice(0, 10);
+          if (ids.length) {
+            const batch = await kv.mget(ids.map(id => `sv:sold:item:${id}`));
+            records = batch.filter(Boolean);
+          }
+        }
+        if (records.length) {
+          soldCtx = '\n\nREAL SOLD RECORDS (from the Supervint sold database — use these numbers when answering):\n' +
+            records.slice(0, 10).map(r =>
+              `- "${r.title || 'item'}" sold for ${r.price || '?'}${r.currency ? ' ' + r.currency : ''}`
+            ).join('\n');
+        }
+      }
+    } catch { /* sold lookup best-effort */ }
+  }
+
   // ── Build the chat payload ───────────────────────────────────────────────
   const messages = [
-    { role: 'system', content: SYSTEM_PROMPT + `\n\nUSER PLAN: ${planLine}.` + contextBlock },
+    { role: 'system', content: SYSTEM_PROMPT + `\n\nUSER PLAN: ${planLine}.` + contextBlock + soldCtx },
     ...history.map(h => ({
       role: h.role === 'user' ? 'user' : 'assistant',
       content: String(h.content || '').slice(0, MAX_MSG_LEN),
