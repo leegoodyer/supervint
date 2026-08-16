@@ -584,6 +584,29 @@ export default function AdminPanel() {
               <DetailRow label="Version"         value={selected.version ?? '—'} />
               <DetailRow label="Last poll"       value={selected.lastPollResult ?? '—'} />
               <DetailRow label="Offscreen"       value={selected.offscreenAlive ? 'alive' : selected.offscreenAlive === false ? 'not pinging' : '—'} />
+              <DetailRow
+                label="Searches"
+                value={
+                  Array.isArray(selected.searches) && selected.searches.length > 0 ? (
+                    <details style={{ width: '100%' }}>
+                      <summary style={{ cursor: 'pointer', color: 'var(--green)', fontSize: '0.85rem', fontWeight: 600 }}>
+                        {selected.searches.length} search{selected.searches.length !== 1 ? 'es' : ''} — click to view
+                      </summary>
+                      <ul style={{ margin: '0.5rem 0 0', paddingLeft: '1.2rem', fontSize: '0.85rem', lineHeight: 1.7 }}>
+                        {selected.searches.map(s => (
+                          <li key={s.id}>
+                            <span style={{ color: 'var(--ink)' }}>{s.label || '(unnamed search)'}</span>
+                            {!s.enabled && <span style={{ color: '#9ca3af', fontSize: '0.75rem' }}> · stopped</span>}
+                            {s.lastPollResult && <span style={{ color: '#6b7280', fontSize: '0.75rem' }}> · {s.lastPollResult}</span>}
+                          </li>
+                        ))}
+                      </ul>
+                    </details>
+                  ) : (
+                    '—'
+                  )
+                }
+              />
             </tbody>
           </table>
 

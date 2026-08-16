@@ -76,6 +76,10 @@ export async function GET() {
         lastSeenAt:      heartbeats[i]?.at      ?? null,
         lastPollResult:  heartbeats[i]?.lastPollResult ?? null,
         searchCount:     Array.isArray(heartbeats[i]?.searches) ? heartbeats[i].searches.length : null,
+        searches:        Array.isArray(heartbeats[i]?.searches) ? heartbeats[i].searches.map(s => ({
+          id: s?.id ?? '', label: s?.label ?? '', enabled: !!s?.enabled,
+          lastPollTime: s?.lastPollTime ?? null, lastPollResult: s?.lastPollResult ?? null,
+        })) : null,
         version:         heartbeats[i]?.version ?? null,
         offscreenAlive:  typeof heartbeats[i]?.offscreenPingAgoMs === 'number'
           ? heartbeats[i].offscreenPingAgoMs < 120_000

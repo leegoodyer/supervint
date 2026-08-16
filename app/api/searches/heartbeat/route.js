@@ -44,6 +44,7 @@ export async function POST(request) {
   const raw = Array.isArray(body?.searches) ? body.searches.slice(0, 50) : [];
   const searches = raw.map(s => ({
     id:             String(s?.id ?? ''),
+    label:          String(s?.label ?? '').slice(0, 80),
     enabled:        !!s?.enabled,
     lastPollTime:   s?.lastPollTime ?? null,
     lastPollResult: s?.lastPollResult ?? null,
