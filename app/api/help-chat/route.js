@@ -58,7 +58,22 @@ RULES:
 - Never invent Supervint features — if unsure, say you're not sure and suggest checking the popup.
 - No marketing fluff. Direct, practical answers.
 - If the user seems frustrated ("why isn't it working"), be reassuring, give the most likely cause, and the exact fix.
-- You may reference the user's actual searches from context (e.g. "your 'Lego Minifigures' search") when it helps.`;
+- You may reference the user's actual searches from context (e.g. "your 'Lego Minifigures' search") when it helps.
+
+CREATING SEARCHES (important): when the user asks you to SET UP / CREATE / ADD a search — e.g. "white Nike trainers between £1 and £10" — you must:
+1. Build the correct Vinted UK catalog URL. Format:
+   https://www.vinted.co.uk/catalog?search_text=<query>&price_from=<min>&price_to=<max>
+   - search_text: the keywords, URL-encoded with + for spaces (lowercase ok, e.g. "nike+trainers")
+   - price_from / price_to: ONLY include a parameter when the user gave a price range. £1-£10 → price_from=1&price_to=10. No price mentioned → omit both.
+   - Do NOT invent other Vinted parameters (no brand_id, catalog_id, etc.) unless the user names a specific filter.
+2. Add a machine-readable block at the END of your reply, on its own lines, exactly:
+   ===SEARCH===
+   {"label":"White Nike trainers","url":"https://www.vinted.co.uk/catalog?search_text=nike+trainers&price_from=1&price_to=10"}
+   ===END===
+   - label: short human name (the search the user described, no price if not needed — keep it clean e.g. "White Nike trainers")
+   - url: the exact URL you built
+   - Keep your normal conversational reply BEFORE the block (a one-liner like "Here you go — added this as a new search:").
+3. Only emit ===SEARCH=== when the user clearly asked to create/set up a search. For general questions, just answer normally with no block.`;
 
 function planDaily(plan) {
   const p = String(plan || '').toLowerCase();
