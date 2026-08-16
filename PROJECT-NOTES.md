@@ -224,8 +224,13 @@ prefix search, member = "lowercased-title||itemId"), `sv:sold:recent` (zset).
   10+10 · Power Seller 100+100 · **Empire 200+200 @ £24.99/mo (LOCKED)**.
   **Email alerts = search count per tier** (Lee). **NO unlimited anywhere**
   (Lee: "unlimited is going to hit problems if every user has unlimited").
-  **Pacing implemented** (background.js pollIntervalMs + START_ALL spread,
-  committed both builds): aggregate stays ~8 req/min at every tier.
+  **Pacing implemented v2** (background.js pollIntervalMs + START_ALL spread,
+  committed both builds): aggregate stays ~10 req/min at every tier — ≤50
+  searches = 5 min each, 100 = ~10 min, 200 (Empire) = ~20 min (v1 was an
+  over-cautious 30 min; Lee rejected it — "how have we gone from 5 minutes
+  to 30 minutes"). 429-backoff (30-min cooldown) is the spike safety net.
+  Research basis: Redrip (~10–30 req/min per endpoint) + fbm-sniper
+  community bot (3-min cycles, 1.5s between targets, actively flips).
   Existing 14-day trials keep their full window (stored absolute
   trialExpiresAt).
 - **Store release (Lee's call)**: current Store zip is v1.2.12 WITHOUT sold-tracker/
