@@ -141,6 +141,10 @@ export default function AdminPanel() {
   const [usersOpen, setUsersOpen]             = useState(true);
   const [deletedOpen, setDeletedOpen]         = useState(false);
   const [selectedOpen, setSelectedOpen]       = useState(true);
+  const [usageEvents, setUsageEvents]         = useState({});
+  const [usageClients, setUsageClients]       = useState({});
+  const [usageLoading, setUsageLoading]       = useState(true);
+  const [usageOpen, setUsageOpen]             = useState(false);
 
   const loadUsers = useCallback(async () => {
     setUE('');
@@ -171,10 +175,26 @@ export default function AdminPanel() {
     }
   }, []);
 
+  const loadUsage = useCallback(async () => {
+    try {
+      const res  = await fetch('/api/usage');
+      const data = await res.json();
+      if (res.ok) {
+        setUsageEvents(data.events ?? {});
+        setUsageClients(data.clients ?? {});
+      }
+    } catch {
+      // non-critical — silently fail
+    } finally {
+      setUsageLoading(false);
+    }
+  }, []);
+
   useEffect(() => {
     loadUsers();
     loadDeleted();
-  }, [loadUsers, loadDeleted]);
+    loadUsage();
+  }, [loadUsers, loadDeleted, loadUsage]);
 
   function selectUser(user) {
     setSelected(user);
@@ -753,6 +773,62 @@ export default function AdminPanel() {
           </div>
         )}
           </>
+        )}
+      </div>
+
+      {/* Feature usage — collapsible */}
+      <div style={{ marginTop: '1.5rem' }}>
+        <SectionHeader
+          title="Feature usage"
+          subtitle={usageLoading ? 'loading…' : `${Object.keys(usageEvents).length} events tracked`}
+          open={usageOpen}
+          onClick={() => setUsageOpen(o => !o)}
+        />
+        {usageOpen && (
+          <div style={{ border: '1px solid var(--line)', borderRadius: 12, padding: '1.2rem', background: 'var(--offwhite)' }}>
+            {usageLoading ? (
+              <p style={{ fontSize: '0.85rem', color: 'var(--gray)' }}>Loading…</p>
+            ) : Object.keys(usageEvents).length === 0 ? (
+              <p style={{ fontSize: '0.85rem', color: 'var(--gray)' }}>
+                No usage events yet — they start counting once users run the updated extension (panel opens, searches, Sold search, notification clicks).
+              </p>
+            ) : (
+              <>
+                <table style={{ borderCollapse: 'collapse', width: '100%', marginBottom: '1.2rem' }}>
+                  <thead>
+                    <tr style={{ borderBottom: '1px solid var(--line)' }}>
+                      {['Event', 'Count'].map((h, i) => (
+                        <th key={i} style={{ padding: '0.4rem 0.5rem', textAlign: 'left', fontWeight: 600, fontSize: '0.78rem', color: 'var(--gray)' }}>{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {Object.entries(usageEvents).sort((a, b) => b[1] - a[1]).map(([ev, count]) => (
+                      <tr key={ev} style={{ borderBottom: '1px solid var(--line)' }}>
+                        <td style={{ padding: '0.4rem 0.5rem', fontSize: '0.85rem' }}>{ev}</td>
+                        <td style={{ padding: '0.4rem 0.5rem', fontSize: '0.85rem', fontWeight: 700, color: 'var(--green)' }}>{count}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <details style={{ fontSize: '0.85rem' }}>
+                  <summary style={{ cursor: 'pointer', color: 'var(--green)', fontWeight: 600, fontSize: '0.8rem' }}>
+                    Per-user breakdown ({Object.keys(usageClients).length} users)
+                  </summary>
+                  <div style={{ marginTop: '0.6rem', maxHeight: 260, overflowY: 'auto' }}>
+                    {Object.entries(usageClients).map(([cid, evs]) => (
+                      <div key={cid} style={{ padding: '0.3rem 0', borderBottom: '1px solid var(--line)' }}>
+                        <span style={{ fontFamily: 'monospace', fontSize: '0.75rem', color: 'var(--gray)' }}>{cid.slice(0, 13)}…</span>
+                        <span style={{ marginLeft: '0.5rem', fontSize: '0.8rem' }}>
+                          {Object.entries(evs).map(([ev, n]) => `${ev}×${n}`).join(' · ')}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </details>
+              </>
+            )}
+          </div>
         )}
       </div>
 
