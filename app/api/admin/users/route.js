@@ -85,27 +85,26 @@ export async function GET() {
         searches:        (() => {
           const hb = heartbeats[i]?.searches;
           const sv = serverSearches[i]?.searches;
-          if (Array.isArray(sv) && sv.length > 0) {
-            // Server backup has full definitions — authoritative for labels.
-            const svById = new Map(sv.map(s => [String(s?.id), s]));
-            const merged = sv.map(s => ({
-              id: s?.id ?? '', label: s?.label ?? '', enabled: !!s?.enabled,
-              lastPollTime: s?.lastPollTime ?? null, lastPollResult: s?.lastPollResult ?? null,
-            }));
-            // Add heartbeat-only searches not in the backup (fresh ones).
-            if (Array.isArray(hb)) {
-              for (const h of hb) {
-                if (!svById.has(String(h?.id))) {
-                  merged.push({ id: h?.id ?? '', label: h?.label ?? '', enabled: !!h?.enabled, lastPollTime: h?.lastPollTime ?? null, lastPollResult: h?.lastPollResult ?? null });
-                }
-              }
-            }
-            return merged;
-          }
-          return Array.isArray(hb) ? hb.map(s => ({
-            id: s?.id ?? '', label: s?.label ?? '', enabled: !!s?.enabled,
-            lastPollTime: s?.lastPollTime ?? null, lastPollResult: s?.lastPollResult ?? null,
-          })) : null;
+          // The heartbeat is the LIVE truth (enabled + poll state, sent every
+          // few minutes). The server backup (sv:searches) has full definitions
+          // WITH labels but can be STALE (enabled false from an old sync) — so
+          // labels come from the backup, live state comes from the heartbeat.
+          const svById = new Map((Array.isArray(sv) ? sv : []).map(s => [String(s?.id), s]));
+          const hbById = new Map((Array.isArray(hb) ? hb : []).map(s => [String(s?.id), s]));
+          const allIds = [...new Set([...svById.keys(), ...hbById.keys()])];
+          if (allIds.length === 0) return null;
+          return allIds.map(id => {
+            const b = svById.get(id) || {};
+            const h = hbById.get(id) || {};
+            return {
+              id: id,
+              label: b.label || h.label || '',
+              // Live state wins — heartbeat is authoritative for enabled/polls.
+              enabled: h.enabled !== undefined ? !!h.enabled : !!b.enabled,
+              lastPollTime: h.lastPollTime ?? b.lastPollTime ?? null,
+              lastPollResult: h.lastPollResult ?? b.lastPollResult ?? null,
+            };
+          });
         })(),
         version:         heartbeats[i]?.version ?? null,
         offscreenAlive:  typeof heartbeats[i]?.offscreenPingAgoMs === 'number'
