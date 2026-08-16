@@ -63,6 +63,50 @@ function DetailRow({ label, value }) {
   );
 }
 
+// Fancy collapsible section header — a proper button with chevron + hover.
+function SectionHeader({ title, subtitle, open, onClick, right }) {
+  return (
+    <div
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } }}
+      style={{
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        padding: '0.65rem 1rem', marginBottom: '0.75rem',
+        background: open ? 'var(--green)' : 'var(--offwhite)',
+        border: '1px solid var(--line)', borderRadius: 10,
+        cursor: 'pointer', userSelect: 'none',
+        transition: 'background 0.15s',
+      }}
+      onMouseEnter={e => { if (!open) e.currentTarget.style.background = '#eef2ff'; }}
+      onMouseLeave={e => { if (!open) e.currentTarget.style.background = 'var(--offwhite)'; }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', minWidth: 0 }}>
+        <span style={{
+          display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+          width: 20, height: 20, borderRadius: 6,
+          background: open ? 'rgba(255,255,255,0.25)' : 'var(--line)',
+          color: open ? '#fff' : 'var(--gray)',
+          fontSize: '0.7rem', transition: 'transform 0.15s',
+          transform: open ? 'rotate(0deg)' : 'rotate(-90deg)',
+        }}>
+          ▼
+        </span>
+        <span style={{ fontSize: '0.8rem', fontWeight: 700, color: open ? '#fff' : 'var(--gray)', textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+          {title}
+        </span>
+        {subtitle && (
+          <span style={{ fontSize: '0.78rem', color: open ? 'rgba(255,255,255,0.85)' : 'var(--gray)', fontWeight: 500 }}>
+            {subtitle}
+          </span>
+        )}
+      </div>
+      {right}
+    </div>
+  );
+}
+
 export default function AdminPanel() {
   const [users, setUsers]           = useState([]);
   const [usersLoading, setUL]       = useState(true);
@@ -87,6 +131,7 @@ export default function AdminPanel() {
   const [filterPlan, setFilterPlan]           = useState('all');
   const [usersOpen, setUsersOpen]             = useState(true);
   const [deletedOpen, setDeletedOpen]         = useState(false);
+  const [selectedOpen, setSelectedOpen]       = useState(true);
 
   const loadUsers = useCallback(async () => {
     setUE('');
@@ -334,32 +379,32 @@ export default function AdminPanel() {
 
       {/* User table — collapsible + filterable */}
       <div style={{ marginBottom: '1.5rem' }}>
-        <div
+        <SectionHeader
+          title="Users"
+          subtitle={`${filteredUsers.length}${filterStatus !== 'all' || filterPlan !== 'all' ? ` of ${users.length}` : ''} shown`}
+          open={usersOpen}
           onClick={() => setUsersOpen(o => !o)}
-          style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', padding: '0.6rem 0', userSelect: 'none' }}
-        >
-          <p style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--gray)', textTransform: 'uppercase', letterSpacing: '0.08em', margin: 0 }}>
-            Users ({filteredUsers.length}{filterStatus !== 'all' || filterPlan !== 'all' ? ` / ${users.length}` : ''}) <span style={{ fontSize: '0.7rem', color: 'var(--green)' }}>{usersOpen ? '▾' : '▸'}</span>
-          </p>
-          {usersOpen && (
-            <div style={{ display: 'flex', gap: '0.5rem' }} onClick={e => e.stopPropagation()}>
-              <select
-                value={filterStatus}
-                onChange={e => setFilterStatus(e.target.value)}
-                style={{ padding: '0.35rem 0.6rem', borderRadius: 7, border: '1px solid var(--line)', fontSize: '0.78rem', background: '#fff' }}
-              >
-                {FILTER_STATUS_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
-              </select>
-              <select
-                value={filterPlan}
-                onChange={e => setFilterPlan(e.target.value)}
-                style={{ padding: '0.35rem 0.6rem', borderRadius: 7, border: '1px solid var(--line)', fontSize: '0.78rem', background: '#fff' }}
-              >
-                {FILTER_PLAN_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
-              </select>
-            </div>
-          )}
-        </div>
+          right={
+            usersOpen && (
+              <div style={{ display: 'flex', gap: '0.5rem' }} onClick={e => e.stopPropagation()}>
+                <select
+                  value={filterStatus}
+                  onChange={e => setFilterStatus(e.target.value)}
+                  style={{ padding: '0.35rem 0.6rem', borderRadius: 7, border: '1px solid rgba(255,255,255,0.4)', fontSize: '0.78rem', background: '#fff', color: '#111827' }}
+                >
+                  {FILTER_STATUS_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+                </select>
+                <select
+                  value={filterPlan}
+                  onChange={e => setFilterPlan(e.target.value)}
+                  style={{ padding: '0.35rem 0.6rem', borderRadius: 7, border: '1px solid rgba(255,255,255,0.4)', fontSize: '0.78rem', background: '#fff', color: '#111827' }}
+                >
+                  {FILTER_PLAN_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+                </select>
+              </div>
+            )
+          }
+        />
         {usersOpen && (
           <>
         {usersError && <p style={{ color: '#dc2626', fontSize: '0.85rem' }}>{usersError}</p>}
@@ -511,12 +556,17 @@ export default function AdminPanel() {
         <p style={{ color: '#dc2626', fontSize: '0.85rem', marginBottom: '1rem' }}>{lookupEmailErr}</p>
       )}
 
-      {/* Selected user detail + grant */}
+      {/* Selected user detail + grant — collapsible */}
       {selected && (
-        <div style={{ border: '1px solid var(--line)', borderRadius: 12, padding: '1.4rem', marginTop: '1rem', background: 'var(--offwhite)' }}>
-          <p style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--green)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.75rem' }}>
-            Selected user
-          </p>
+        <div style={{ marginTop: '1rem' }}>
+          <SectionHeader
+            title="Selected user"
+            subtitle={selected.email || selected.clientId.slice(0, 13)}
+            open={selectedOpen}
+            onClick={() => setSelectedOpen(o => !o)}
+          />
+          {selectedOpen && (
+            <div style={{ border: '1px solid var(--line)', borderRadius: 12, padding: '1.4rem', background: 'var(--offwhite)' }}>
           <table style={{ borderCollapse: 'collapse', width: '100%', marginBottom: '1.4rem' }}>
             <tbody>
               <DetailRow label="clientId"        value={<span style={{ fontFamily: 'monospace', fontSize: '0.82rem' }}>{selected.clientId}</span>} />
@@ -603,19 +653,19 @@ export default function AdminPanel() {
               </button>
             )}
           </div>
+            </div>
+          )}
         </div>
       )}
 
       {/* Recently deleted — collapsible */}
       <div style={{ marginTop: '1.5rem' }}>
-        <div
+        <SectionHeader
+          title="Recently deleted"
+          subtitle={deleted.length > 0 ? `${deleted.length} account${deleted.length !== 1 ? 's' : ''}` : 'nothing deleted'}
+          open={deletedOpen}
           onClick={() => setDeletedOpen(o => !o)}
-          style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', padding: '0.6rem 0', userSelect: 'none' }}
-        >
-          <p style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--gray)', textTransform: 'uppercase', letterSpacing: '0.08em', margin: 0 }}>
-            Recently deleted ({deleted.length}) <span style={{ fontSize: '0.7rem', color: 'var(--green)' }}>{deletedOpen ? '▾' : '▸'}</span>
-          </p>
-        </div>
+        />
         {deletedOpen && (
           <>
         {deletedLoading && <p style={{ fontSize: '0.85rem', color: 'var(--gray)' }}>Loading…</p>}
