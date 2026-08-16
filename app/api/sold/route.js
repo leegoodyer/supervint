@@ -156,8 +156,12 @@ export async function GET(request) {
     // only that exact item — never the whole Lego category (whose £1–£1000
     // spread would make the average meaningless). Falls back to the broad
     // keyword bucket only when no token matches at all.
+    //
+    // A SINGLE token (e.g. "barbour", "lego", "nike") is NOT an exact item —
+    // it's a brand/category, so it must NOT get the average either. Exact
+    // requires at least 2 significant words intersecting (a specific item).
     const tokens = tokenize(keyword);
-    if (tokens.length > 0) {
+    if (tokens.length >= 2) {
       const buckets = await Promise.all(tokens.map(t => kv.hgetall(`sv:sold:tok:${t}`)));
       // Start with the smallest bucket, intersect the rest.
       const sets = buckets.filter(Boolean).map(b => Object.keys(b));
@@ -171,7 +175,7 @@ export async function GET(request) {
       const kwHash = await kv.hgetall(`sv:sold:kw:${keyword}`);
       ids = kwHash ? Object.keys(kwHash) : [];
     }
-    matchMode = (tokens.length > 0 && ids.length > 0) ? 'exact' : 'keyword';
+    matchMode = (tokens.length >= 2 && ids.length > 0) ? 'exact' : 'keyword';
   }
 
   if (ids.length === 0) {
