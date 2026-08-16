@@ -309,7 +309,7 @@ export default function AdminPanel() {
             <table style={{ borderCollapse: 'collapse', width: '100%', fontSize: '0.85rem' }}>
               <thead>
                 <tr style={{ background: 'var(--offwhite)', borderBottom: '1px solid var(--line)' }}>
-                  {['clientId', 'Plan', 'Email', 'Trial expires', 'Stripe customer', 'Admin grant', 'Created', ''].map((h, i) => (
+                  {['clientId', 'Plan', 'Email', 'Trial expires', 'Stripe customer', 'Admin grant', 'Created', 'Last seen', 'Searches', 'Status', ''].map((h, i) => (
                     <th key={i} style={{ padding: '0.6rem 0.9rem', textAlign: 'left', fontWeight: 600, fontSize: '0.78rem', color: 'var(--gray)', whiteSpace: 'nowrap' }}>
                       {h}
                     </th>
@@ -319,7 +319,7 @@ export default function AdminPanel() {
               <tbody>
                 {users.length === 0 && (
                   <tr>
-                    <td colSpan={8} style={{ padding: '1.4rem', color: 'var(--gray)', textAlign: 'center' }}>
+                    <td colSpan={11} style={{ padding: '1.4rem', color: 'var(--gray)', textAlign: 'center' }}>
                       No users yet.
                     </td>
                   </tr>
@@ -358,6 +358,21 @@ export default function AdminPanel() {
                       </td>
                       <td style={{ padding: '0.65rem 0.9rem', whiteSpace: 'nowrap', color: 'var(--gray)' }}>
                         {fmt(u.createdAt)}
+                      </td>
+                      <td style={{ padding: '0.65rem 0.9rem', whiteSpace: 'nowrap', color: u.active24h ? 'var(--green)' : 'var(--gray)', fontWeight: u.active24h ? 600 : 400 }}>
+                        {u.lastSeenAt ? fmt(u.lastSeenAt) : '—'}
+                      </td>
+                      <td style={{ padding: '0.65rem 0.9rem', textAlign: 'center' }}>
+                        {u.searchCount != null ? u.searchCount : '—'}
+                      </td>
+                      <td style={{ padding: '0.65rem 0.9rem', whiteSpace: 'nowrap' }}>
+                        {u.active24h ? (
+                          <span style={{ color: 'var(--green)', fontWeight: 600 }}>● Active</span>
+                        ) : u.active7d ? (
+                          <span style={{ color: '#d97706', fontWeight: 600 }}>◐ Seen 7d</span>
+                        ) : (
+                          <span style={{ color: 'var(--gray)' }}>○ Idle</span>
+                        )}
                       </td>
                       <td style={{ padding: '0.65rem 0.9rem', whiteSpace: 'nowrap' }} onClick={e => e.stopPropagation()}>
                         {isConfirming ? (
@@ -453,6 +468,11 @@ export default function AdminPanel() {
               <DetailRow label="Created"         value={fmt(selected.createdAt)} />
               <DetailRow label="Updated"         value={fmt(selected.updatedAt)} />
               <DetailRow label="Came from"       value={selected.attribution ? fmtAttribution(selected.attribution) : '—'} />
+              <DetailRow label="Last seen"       value={selected.lastSeenAt ? `${fmt(selected.lastSeenAt)}${selected.active24h ? ' · active' : selected.active7d ? ' · seen this week' : ''}` : '—'} />
+              <DetailRow label="Searches"        value={selected.searchCount != null ? `${selected.searchCount} running` : '—'} />
+              <DetailRow label="Version"         value={selected.version ?? '—'} />
+              <DetailRow label="Last poll"       value={selected.lastPollResult ?? '—'} />
+              <DetailRow label="Offscreen"       value={selected.offscreenAlive ? 'alive' : selected.offscreenAlive === false ? 'not pinging' : '—'} />
             </tbody>
           </table>
 
