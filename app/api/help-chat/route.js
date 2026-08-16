@@ -161,12 +161,19 @@ export async function POST(request) {
   if (soldIntent) {
     try {
       const words = message.toLowerCase().match(/[a-z]{3,}/g) || [];
-      const stop = new Set(['what','does','they','sell','sold','price','prices','much','show','for','the','and','a','new','good','used','about','how','many','you','tell','me','looking','any','are','is','it','worth','bargain','resell','flip','vinted','give','similar','items','recently','recent','check','this','that','these','those','with','jacket','coat','shoes','trainers','under']);
-      const kw = words.find(w => !stop.has(w)) || words[0] || '';
+      const stop = new Set(['what','does','they','sell','sold','price','prices','much','show','for','the','and','a','new','good','used','about','how','many','you','your','tell','me','looking','any','are','is','it','its','worth','bargain','resell','flip','vinted','give','similar','items','item','recently','recent','check','this','that','these','those','with','jacket','coat','shoes','trainers','under','have','has','had','been','was','were','will','would','can','could','should','real','actual','please','want','need','like','know','see','whats','doesnt','cant','dont']);
+      // Pick the LAST non-stop word — the query object usually comes last
+      // ("...for Barbour jackets", "...Carhartt jacket"). Reverse scan.
+      const nonStop = words.filter(w => !stop.has(w));
+      const kw = nonStop[nonStop.length - 1] || words[0] || '';
       if (kw) {
-        // keyword bucket first
-        const bucket = await kv.zrange(`sv:sold:kw:${kw}`, 0, 10);
-        let records = (bucket || []).filter(Boolean);
+        // keyword hash first (sv:sold:kw:<kw> = hash itemId -> soldAt)
+        const kwHash = await kv.hgetall(`sv:sold:kw:${kw}`);
+        let records = [];
+        if (kwHash && Object.keys(kwHash).length) {
+          const ids = Object.keys(kwHash).slice(0, 10);
+          records = (await kv.mget(ids.map(id => `sv:sold:item:${id}`))).filter(Boolean);
+        }
         if (!records.length) {
           // prefix fallback
           const lo = `[${kw}`;
