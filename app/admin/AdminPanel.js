@@ -20,6 +20,41 @@ function fmt(ts) {
   return new Date(ts).toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' });
 }
 
+// ── Feature-usage event metadata ────────────────────────────────────────────
+// icon + human label + chip colour for each tracked event.
+const USAGE_META = {
+  panel_opened:       { icon: '🪟', label: 'Opened panel' },
+  search_created:     { icon: '➕', label: 'Created search' },
+  search_deleted:     { icon: '🗑️', label: 'Deleted search' },
+  search_toggled:     { icon: '⏯️', label: 'Started/stopped' },
+  search_my_items:    { icon: '👕', label: 'Search my items' },
+  sold_search:        { icon: '💰', label: 'Sold search' },
+  notif_clicked:      { icon: '🔔', label: 'Alert clicked' },
+  email_setup:        { icon: '📧', label: 'Email set up' },
+  sheets_connected:   { icon: '📊', label: 'Sheets connected' },
+  alert_test:         { icon: '🧪', label: 'Test alert' },
+};
+const USAGE_CHIP = {
+  panel_opened:     '#f0fdfa',
+  search_created:   '#ecfdf5',
+  search_deleted:   '#fef2f2',
+  search_toggled:   '#f5f3ff',
+  search_my_items:  '#fffbeb',
+  sold_search:      '#eff6ff',
+  notif_clicked:    '#fdf4ff',
+  email_setup:      '#f0f9ff',
+  sheets_connected: '#f0fdf4',
+  alert_test:       '#fefce8',
+};
+function usageLabel(ev) { return USAGE_META[ev]?.label ?? ev.replace(/_/g, ' '); }
+function usageIcon(ev)  { return USAGE_META[ev]?.icon ?? '🔹'; }
+function usageColor(ev) { return USAGE_CHIP[ev] ?? '#f3f4f6'; }
+// Total across all events for one usage hash.
+function usageTotal(u) {
+  if (!u) return 0;
+  return Object.values(u).reduce((a, b) => a + (Number(b) || 0), 0);
+}
+
 // Pretty-print the install attribution record:
 // e.g. "Facebook ad (fbclid …) · utm_campaign=spring24" or "chatgpt.com / ai-assistant"
 function fmtAttribution(a) {
@@ -636,6 +671,29 @@ export default function AdminPanel() {
                   )
                 }
               />
+              <DetailRow
+                label="Usage"
+                value={
+                  selected.usage && Object.keys(selected.usage).length > 0 ? (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                      {Object.entries(selected.usage)
+                        .sort((a, b) => b[1] - a[1])
+                        .map(([ev, n]) => (
+                          <span key={ev} style={{
+                            display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
+                            background: usageColor(ev), border: '1px solid var(--line)',
+                            borderRadius: 999, padding: '0.15rem 0.6rem',
+                            fontSize: '0.78rem', fontWeight: 600, color: 'var(--ink)',
+                          }}>
+                            {usageIcon(ev)} {usageLabel(ev)} <b style={{ color: 'var(--green)' }}>×{n}</b>
+                          </span>
+                        ))}
+                    </div>
+                  ) : (
+                    '—'
+                  )
+                }
+              />
             </tbody>
           </table>
 
@@ -780,7 +838,7 @@ export default function AdminPanel() {
       <div style={{ marginTop: '1.5rem' }}>
         <SectionHeader
           title="Feature usage"
-          subtitle={usageLoading ? 'loading…' : `${Object.keys(usageEvents).length} events tracked`}
+          subtitle={usageLoading ? 'loading…' : `${usageTotal(usageEvents)} events · ${Object.keys(usageClients).length} users`}
           open={usageOpen}
           onClick={() => setUsageOpen(o => !o)}
         />
@@ -794,38 +852,77 @@ export default function AdminPanel() {
               </p>
             ) : (
               <>
-                <table style={{ borderCollapse: 'collapse', width: '100%', marginBottom: '1.2rem' }}>
-                  <thead>
-                    <tr style={{ borderBottom: '1px solid var(--line)' }}>
-                      {['Event', 'Count'].map((h, i) => (
-                        <th key={i} style={{ padding: '0.4rem 0.5rem', textAlign: 'left', fontWeight: 600, fontSize: '0.78rem', color: 'var(--gray)' }}>{h}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {Object.entries(usageEvents).sort((a, b) => b[1] - a[1]).map(([ev, count]) => (
-                      <tr key={ev} style={{ borderBottom: '1px solid var(--line)' }}>
-                        <td style={{ padding: '0.4rem 0.5rem', fontSize: '0.85rem' }}>{ev}</td>
-                        <td style={{ padding: '0.4rem 0.5rem', fontSize: '0.85rem', fontWeight: 700, color: 'var(--green)' }}>{count}</td>
-                      </tr>
+                {/* Overall event ranking — chips with icons + colours */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.2rem' }}>
+                  {Object.entries(usageEvents)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([ev, n]) => (
+                      <span key={ev} style={{
+                        display: 'inline-flex', alignItems: 'center', gap: '0.35rem',
+                        background: usageColor(ev), border: '1px solid var(--line)',
+                        borderRadius: 10, padding: '0.35rem 0.7rem',
+                        fontSize: '0.82rem', fontWeight: 600, color: 'var(--ink)',
+                      }}>
+                        {usageIcon(ev)} {usageLabel(ev)}
+                        <b style={{ color: 'var(--green)', fontSize: '0.9rem' }}>{n}</b>
+                      </span>
                     ))}
-                  </tbody>
-                </table>
-                <details style={{ fontSize: '0.85rem' }}>
-                  <summary style={{ cursor: 'pointer', color: 'var(--green)', fontWeight: 600, fontSize: '0.8rem' }}>
-                    Per-user breakdown ({Object.keys(usageClients).length} users)
-                  </summary>
-                  <div style={{ marginTop: '0.6rem', maxHeight: 260, overflowY: 'auto' }}>
-                    {Object.entries(usageClients).map(([cid, evs]) => (
-                      <div key={cid} style={{ padding: '0.3rem 0', borderBottom: '1px solid var(--line)' }}>
-                        <span style={{ fontFamily: 'monospace', fontSize: '0.75rem', color: 'var(--gray)' }}>{cid.slice(0, 13)}…</span>
-                        <span style={{ marginLeft: '0.5rem', fontSize: '0.8rem' }}>
-                          {Object.entries(evs).map(([ev, n]) => `${ev}×${n}`).join(' · ')}
-                        </span>
+                </div>
+
+                {/* Per-user breakdown — real users (email), ranked by activity */}
+                <p style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--gray)', textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 0.6rem' }}>
+                  Who's using what
+                </p>
+                <div style={{ maxHeight: 320, overflowY: 'auto' }}>
+                  {Object.entries(usageClients)
+                    .map(([cid, evs]) => {
+                      // Join with the users list to get the real email/name.
+                      const u = users.find(x => x.clientId === cid);
+                      const total = usageTotal(evs);
+                      return { cid, evs, total, email: u?.email || null, plan: u?.plan || null };
+                    })
+                    .sort((a, b) => b.total - a.total)
+                    .map(({ cid, evs, total, email, plan }) => (
+                      <div key={cid} style={{
+                        display: 'flex', alignItems: 'flex-start', gap: '0.6rem',
+                        padding: '0.55rem 0.4rem', borderBottom: '1px solid var(--line)',
+                      }}>
+                        <div style={{
+                          flexShrink: 0, width: 28, height: 28, borderRadius: '50%',
+                          background: plan ? (PLAN_COLORS[plan]?.bg ?? '#e5e7eb') : '#e5e7eb',
+                          color: plan ? (PLAN_COLORS[plan]?.color ?? '#374151') : '#374151',
+                          display: 'flex', alignItems: 'center', justifyContent: 'center',
+                          fontSize: '0.7rem', fontWeight: 800, textTransform: 'uppercase',
+                        }}>
+                          {(email || '?').slice(0, 2).toUpperCase()}
+                        </div>
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--ink)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                              {email || `${cid.slice(0, 13)}…`}
+                            </span>
+                            <span style={{
+                              fontSize: '0.72rem', fontWeight: 700, color: '#fff',
+                              background: 'var(--green)', borderRadius: 999, padding: '0.05rem 0.5rem',
+                            }}>
+                              {total} events
+                            </span>
+                          </div>
+                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.3rem', marginTop: '0.3rem' }}>
+                            {Object.entries(evs).sort((a, b) => b[1] - a[1]).map(([ev, n]) => (
+                              <span key={ev} style={{
+                                display: 'inline-flex', alignItems: 'center', gap: '0.2rem',
+                                background: usageColor(ev), borderRadius: 999, padding: '0.1rem 0.5rem',
+                                fontSize: '0.72rem', fontWeight: 600, color: 'var(--ink)',
+                              }}>
+                                {usageIcon(ev)} {usageLabel(ev)} ×{n}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     ))}
-                  </div>
-                </details>
+                </div>
               </>
             )}
           </div>

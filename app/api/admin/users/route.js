@@ -47,6 +47,12 @@ export async function GET() {
   const serverSearchKeys = keys.map(k => `sv:searches:${k.replace('sv:sub:', '')}`);
   const serverSearches   = await kv.mget(...serverSearchKeys);
 
+  // Feature-usage telemetry: sv:usage:client:<clientId> is a hash of
+  // event -> count (panel_opened, search_my_items, sold_search, ...).
+  // Merge it into each user row so the admin panel can show "who used what".
+  const usageKeys = keys.map(k => `sv:usage:client:${k.replace('sv:sub:', '')}`);
+  const usageHashes = await kv.mget(...usageKeys);
+
   const users = keys
     .map((key, i) => {
       const record = records[i];
@@ -106,6 +112,9 @@ export async function GET() {
             };
           });
         })(),
+        // Feature usage: event -> count hash (panel_opened, sold_search, ...).
+        // Null/empty = no tracked usage yet.
+        usage:           (usageHashes[i] && Object.keys(usageHashes[i]).length > 0) ? usageHashes[i] : null,
         version:         heartbeats[i]?.version ?? null,
         offscreenAlive:  typeof heartbeats[i]?.offscreenPingAgoMs === 'number'
           ? heartbeats[i].offscreenPingAgoMs < 120_000
