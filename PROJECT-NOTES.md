@@ -221,10 +221,12 @@ prefix search, member = "lowercased-title||itemId"), `sv:sold:recent` (zset).
   usage-tracking/AI Assistant. Next release zip should include ALL of today's
   batch (seen-set detection, AI chat + search create/delete, usage tracking,
   popup UI, sold view). After the Store push, **advertise on the website that
-  Supervint has an AI brain that creates snipes** — i.e. market the AI
-  search-creation capability (plain-language → Vinted search link → monitoring)
-  as a headline feature (Lee's ask: "advertise that we have an ai brain to
-  create snipes").
+  Supervint has an AI brain that creates snipes AND finds sold prices** —
+  i.e. market the AI search-creation capability (plain-language → Vinted
+  search link → monitoring) PLUS real sold-price intelligence ("how much did
+  X actually sell for?" answered from the crowd-sourced sold DB) as headline
+  features (Lee's ask: "advertise that we have an ai brain to create snipes",
+  "and find sold prices etc").
 - **Deal searches (Lee's flips)**: ~35 bargain-tier URLs live as searches with
   `(≤£N)` labels (mistake-tier caps: lego £4-5, carhartt £5, barbour £6,
   moncler £15...). File: `~/Documents/supervint-web/deal-urls-paste.txt`
