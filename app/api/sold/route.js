@@ -193,11 +193,12 @@ export async function GET(request) {
   inWindow.sort((a, b) => b.soldAt - a.soldAt);
 
   const total = inWindow.length;
-  // AVERAGE ONLY MEANS SOMETHING FOR AN EXACT ITEM with MULTIPLE sales.
-  // Broad/category/prefix matches (Lego £1–£1000) must NOT show an average —
-  // it would be actively misleading. Exact matches with only ONE sale don't
-  // get one either (a single data point isn't an average). Requires >= 2.
-  const avg = (matchMode === 'exact' && prices.length >= 2)
+  // AVERAGE ONLY MEANS SOMETHING FOR AN EXACT ITEM. Broad/category/prefix
+  // matches (Lego £1–£1000) must NOT show an average — it would be actively
+  // misleading. Exact matches show the mean from as few as ONE sale for now
+  // (Lee: "leave it as one for the moment so it has something") — revisit
+  // once the sold DB has enough repeat sales per item.
+  const avg = (matchMode === 'exact' && prices.length > 0)
     ? Math.round((prices.reduce((a, b) => a + b, 0) / prices.length) * 100) / 100
     : null;
 
@@ -208,8 +209,8 @@ export async function GET(request) {
     total,
     matchMode,
     avgPrice: avg,
-    minPrice: (matchMode === 'exact' && prices.length >= 2) ? Math.min(...prices) : null,
-    maxPrice: (matchMode === 'exact' && prices.length >= 2) ? Math.max(...prices) : null,
+    minPrice: (matchMode === 'exact' && prices.length) ? Math.min(...prices) : null,
+    maxPrice: (matchMode === 'exact' && prices.length) ? Math.max(...prices) : null,
     sampleSize: prices.length,
     sales: inWindow.slice(0, limit).map(r => ({
       itemId: r.itemId, title: r.title, price: r.price, currency: r.currency,
