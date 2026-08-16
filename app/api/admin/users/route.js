@@ -50,8 +50,13 @@ export async function GET() {
   // Feature-usage telemetry: sv:usage:client:<clientId> is a hash of
   // event -> count (panel_opened, search_my_items, sold_search, ...).
   // Merge it into each user row so the admin panel can show "who used what".
+  // NOTE: hashes must be read with hgetall — mget on a hash key returns
+  // nothing (the bug that made the admin panel show usage:null).
   const usageKeys = keys.map(k => `sv:usage:client:${k.replace('sv:sub:', '')}`);
-  const usageHashes = await kv.mget(...usageKeys);
+  const usageHashes = [];
+  for (const uk of usageKeys) {
+    usageHashes.push(await kv.hgetall(uk));
+  }
 
   const users = keys
     .map((key, i) => {
