@@ -36,6 +36,11 @@ export async function GET() {
   const installKeys = keys.map(k => `sv:install:${k.replace('sv:sub:', '')}`);
   const installs    = await kv.mget(...installKeys);
 
+  // Live usage: every active extension pings sv:heartbeat:<clientId> on a
+  // keepalive interval — this tells us who is actually USING the plugin now.
+  const heartbeatKeys = keys.map(k => `sv:heartbeat:${k.replace('sv:sub:', '')}`);
+  const heartbeats    = await kv.mget(...heartbeatKeys);
+
   const users = keys
     .map((key, i) => {
       const record = records[i];
@@ -67,6 +72,16 @@ export async function GET() {
         createdAt:       record.trialStart       ?? record.updatedAt ?? null,
         updatedAt:       record.updatedAt        ?? null,
         attribution:     mergedAttrib            ?? null,
+        // Live usage from heartbeat (null = never pinged / not running)
+        lastSeenAt:      heartbeats[i]?.at      ?? null,
+        lastPollResult:  heartbeats[i]?.lastPollResult ?? null,
+        searchCount:     Array.isArray(heartbeats[i]?.searches) ? heartbeats[i].searches.length : null,
+        version:         heartbeats[i]?.version ?? null,
+        offscreenAlive:  typeof heartbeats[i]?.offscreenPingAgoMs === 'number'
+          ? heartbeats[i].offscreenPingAgoMs < 120_000
+          : null,
+        active24h:       heartbeats[i]?.at ? (now - heartbeats[i].at) < 86_400_000 : false,
+        active7d:        heartbeats[i]?.at ? (now - heartbeats[i].at) < 7 * 86_400_000 : false,
       };
     })
     .filter(Boolean)
