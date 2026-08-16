@@ -82,6 +82,11 @@ export default function AdminPanel() {
   const [deleteMsg, setDeleteMsg]             = useState('');
   const [deleted, setDeleted]                 = useState([]);
   const [deletedLoading, setDeletedLoading]   = useState(true);
+  // Filters + collapsible sections
+  const [filterStatus, setFilterStatus]       = useState('all');
+  const [filterPlan, setFilterPlan]           = useState('all');
+  const [usersOpen, setUsersOpen]             = useState(true);
+  const [deletedOpen, setDeletedOpen]         = useState(false);
 
   const loadUsers = useCallback(async () => {
     setUE('');
@@ -271,6 +276,37 @@ export default function AdminPanel() {
     window.location.href = '/admin';
   }
 
+  // Filtered user list (status + plan filters)
+  const filteredUsers = users.filter(u => {
+    if (filterPlan !== 'all' && u.plan !== filterPlan) return false;
+    if (filterStatus === 'all') return true;
+    if (filterStatus === 'active') return !!u.active24h;
+    if (filterStatus === 'stale')  return !u.active24h && !!u.active7d;
+    if (filterStatus === 'idle')   return !u.active24h && !u.active7d;
+    return true;
+  });
+
+  const statusCounts = {
+    all: users.length,
+    active: users.filter(u => u.active24h).length,
+    stale:  users.filter(u => !u.active24h && u.active7d).length,
+    idle:   users.filter(u => !u.active24h && !u.active7d).length,
+  };
+
+  const FILTER_STATUS_OPTIONS = [
+    { value: 'all',    label: `All (${statusCounts.all})` },
+    { value: 'active', label: `● Active (${statusCounts.active})` },
+    { value: 'stale',  label: `◐ Stale (${statusCounts.stale})` },
+    { value: 'idle',   label: `○ Idle (${statusCounts.idle})` },
+  ];
+  const FILTER_PLAN_OPTIONS = [
+    { value: 'all', label: 'All plans' },
+    { value: 'trial', label: 'Trial' },
+    { value: 'reseller', label: 'Reseller' },
+    { value: 'powerseller', label: 'Power Seller' },
+    { value: 'free', label: 'Free' },
+  ];
+
   return (
     <main style={{ maxWidth: 960, margin: '0 auto', padding: '3rem 2rem' }}>
 
@@ -296,13 +332,36 @@ export default function AdminPanel() {
         </div>
       )}
 
-      {/* User table */}
-      <div style={{ marginBottom: '2rem' }}>
-        <p style={{ fontSize: '0.8rem', color: 'var(--gray)', marginBottom: '0.75rem' }}>
-          {usersLoading
-            ? 'Loading…'
-            : `${users.length} user${users.length !== 1 ? 's' : ''} · no email stored server-side · click a row to manage`}
-        </p>
+      {/* User table — collapsible + filterable */}
+      <div style={{ marginBottom: '1.5rem' }}>
+        <div
+          onClick={() => setUsersOpen(o => !o)}
+          style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', padding: '0.6rem 0', userSelect: 'none' }}
+        >
+          <p style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--gray)', textTransform: 'uppercase', letterSpacing: '0.08em', margin: 0 }}>
+            Users ({filteredUsers.length}{filterStatus !== 'all' || filterPlan !== 'all' ? ` / ${users.length}` : ''}) <span style={{ fontSize: '0.7rem', color: 'var(--green)' }}>{usersOpen ? '▾' : '▸'}</span>
+          </p>
+          {usersOpen && (
+            <div style={{ display: 'flex', gap: '0.5rem' }} onClick={e => e.stopPropagation()}>
+              <select
+                value={filterStatus}
+                onChange={e => setFilterStatus(e.target.value)}
+                style={{ padding: '0.35rem 0.6rem', borderRadius: 7, border: '1px solid var(--line)', fontSize: '0.78rem', background: '#fff' }}
+              >
+                {FILTER_STATUS_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+              </select>
+              <select
+                value={filterPlan}
+                onChange={e => setFilterPlan(e.target.value)}
+                style={{ padding: '0.35rem 0.6rem', borderRadius: 7, border: '1px solid var(--line)', fontSize: '0.78rem', background: '#fff' }}
+              >
+                {FILTER_PLAN_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+              </select>
+            </div>
+          )}
+        </div>
+        {usersOpen && (
+          <>
         {usersError && <p style={{ color: '#dc2626', fontSize: '0.85rem' }}>{usersError}</p>}
         {!usersLoading && !usersError && (
           <div style={{ overflowX: 'auto', border: '1px solid var(--line)', borderRadius: 10 }}>
@@ -317,14 +376,14 @@ export default function AdminPanel() {
                 </tr>
               </thead>
               <tbody>
-                {users.length === 0 && (
+                {filteredUsers.length === 0 && (
                   <tr>
                     <td colSpan={11} style={{ padding: '1.4rem', color: 'var(--gray)', textAlign: 'center' }}>
-                      No users yet.
+                      {users.length === 0 ? 'No users yet.' : 'No users match the selected filters.'}
                     </td>
                   </tr>
                 )}
-                {users.map(u => {
+                {filteredUsers.map(u => {
                   const isSelected  = selected?.clientId === u.clientId;
                   const isConfirming = confirmDeleteId === u.clientId;
                   return (
@@ -407,6 +466,8 @@ export default function AdminPanel() {
               </tbody>
             </table>
           </div>
+        )}
+          </>
         )}
       </div>
 
@@ -545,11 +606,18 @@ export default function AdminPanel() {
         </div>
       )}
 
-      {/* Recently deleted */}
-      <div style={{ marginTop: '3rem' }}>
-        <p style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--gray)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.75rem' }}>
-          Recently deleted
-        </p>
+      {/* Recently deleted — collapsible */}
+      <div style={{ marginTop: '1.5rem' }}>
+        <div
+          onClick={() => setDeletedOpen(o => !o)}
+          style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', padding: '0.6rem 0', userSelect: 'none' }}
+        >
+          <p style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--gray)', textTransform: 'uppercase', letterSpacing: '0.08em', margin: 0 }}>
+            Recently deleted ({deleted.length}) <span style={{ fontSize: '0.7rem', color: 'var(--green)' }}>{deletedOpen ? '▾' : '▸'}</span>
+          </p>
+        </div>
+        {deletedOpen && (
+          <>
         {deletedLoading && <p style={{ fontSize: '0.85rem', color: 'var(--gray)' }}>Loading…</p>}
         {!deletedLoading && deleted.length === 0 && (
           <p style={{ fontSize: '0.85rem', color: 'var(--gray)' }}>Nothing deleted yet.</p>
@@ -601,6 +669,8 @@ export default function AdminPanel() {
               </tbody>
             </table>
           </div>
+        )}
+          </>
         )}
       </div>
 
