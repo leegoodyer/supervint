@@ -26,15 +26,24 @@ export async function POST(request) {
   const ts  = Number(body.ts) || Date.now();
   const country = (request.headers.get('x-vercel-ip-country') || '').slice(0, 2) || null;
 
-  // Store: sv:install:clientId -> timestamp (dedupe: an install fires once per clientId)
+  // Store: sv:install:clientId -> {ts, country, version} (dedupe: an install
+  // fires once per clientId, but an UPDATE fires with reason=update — we
+  // still refresh version/ts so the admin panel always sees the latest build
+  // even for users who never started a search).
   //        sv:install:day:YYYY-MM-DD -> count (daily install counter)
   //        sv:installs -> total count
   const key       = `sv:install:${clientId}`;
   const existing  = await kv.get(key);
+  const version   = typeof body?.version === 'string' ? body.version.slice(0, 20) : null;
+  const updated   = { ts, country, ...(version ? { version } : {}) };
   if (!existing) {
-    await kv.set(key, { ts, country });
+    await kv.set(key, updated);
     await kv.incr(`sv:install:day:${day}`);
     await kv.incr('sv:installs');
+  } else if (version && existing.version !== version) {
+    // Reinstall / update under the same clientId — refresh version + ts so
+    // idle users still report which build they're on.
+    await kv.set(key, { ...existing, ...updated });
   }
 
   return NextResponse.json({ ok: true, firstInstall: !existing });

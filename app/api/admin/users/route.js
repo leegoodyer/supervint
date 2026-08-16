@@ -120,7 +120,13 @@ export async function GET() {
         // Feature usage: event -> count hash (panel_opened, sold_search, ...).
         // Null/empty = no tracked usage yet.
         usage:           (usageHashes[i] && Object.keys(usageHashes[i]).length > 0) ? usageHashes[i] : null,
-        version:         heartbeats[i]?.version ?? null,
+        // Version: heartbeat is live (updated every poll). Fall back to the
+        // install record for users who never started a search — they never
+        // send heartbeats, so sv:install:<clientId>.version is the only
+        // signal we have for what build they're on.
+        version:         heartbeats[i]?.version
+                      ?? (installs[i] && typeof installs[i] === 'object' ? installs[i].version : null)
+                      ?? null,
         offscreenAlive:  typeof heartbeats[i]?.offscreenPingAgoMs === 'number'
           ? heartbeats[i].offscreenPingAgoMs < 120_000
           : null,

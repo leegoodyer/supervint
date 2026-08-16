@@ -445,7 +445,7 @@ export default function AdminPanel() {
             <table style={{ borderCollapse: 'collapse', width: '100%', fontSize: '0.85rem' }}>
               <thead>
                 <tr style={{ background: 'var(--offwhite)', borderBottom: '1px solid var(--line)' }}>
-                  {['clientId', 'Plan', 'Email', 'Trial expires', 'Stripe customer', 'Admin grant', 'Created', 'Last seen', 'Searches', 'Status', ''].map((h, i) => (
+                  {['clientId', 'Plan', 'Email', 'Trial expires', 'Stripe customer', 'Admin grant', 'Created', 'Last seen', 'Searches', 'Version', 'Status', ''].map((h, i) => (
                     <th key={i} style={{ padding: '0.6rem 0.9rem', textAlign: 'left', fontWeight: 600, fontSize: '0.78rem', color: 'var(--gray)', whiteSpace: 'nowrap' }}>
                       {h}
                     </th>
@@ -496,10 +496,13 @@ export default function AdminPanel() {
                         {fmt(u.createdAt)}
                       </td>
                       <td style={{ padding: '0.65rem 0.9rem', whiteSpace: 'nowrap', color: u.active24h ? 'var(--green)' : 'var(--gray)', fontWeight: u.active24h ? 600 : 400 }}>
-                        {u.lastSeenAt ? fmt(u.lastSeenAt) : '—'}
+                        {u.lastSeenAt ? fmt(u.lastSeenAt) : <span style={{ color: '#9ca3af', fontSize: '0.75rem' }}>never started</span>}
                       </td>
                       <td style={{ padding: '0.65rem 0.9rem', textAlign: 'center' }}>
                         {u.searchCount != null ? u.searchCount : '—'}
+                      </td>
+                      <td style={{ padding: '0.65rem 0.9rem', whiteSpace: 'nowrap', fontFamily: 'monospace', fontSize: '0.78rem', color: u.version ? 'var(--ink)' : '#9ca3af' }}>
+                        {u.version ?? 'unknown'}
                       </td>
                       <td style={{ padding: '0.65rem 0.9rem', whiteSpace: 'nowrap' }}>
                         {u.active24h ? (
