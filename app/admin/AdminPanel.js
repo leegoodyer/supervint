@@ -21,34 +21,22 @@ function fmt(ts) {
 }
 
 // ── Feature-usage event metadata ────────────────────────────────────────────
-// icon + human label + chip colour for each tracked event.
+// Human label for each tracked event. No icons, no colours — a clean,
+// minimal admin list (Lee: "weird colours with weird logos from clipart —
+// make it clean").
 const USAGE_META = {
-  panel_opened:       { icon: '🪟', label: 'Opened panel' },
-  search_created:     { icon: '➕', label: 'Created search' },
-  search_deleted:     { icon: '🗑️', label: 'Deleted search' },
-  search_toggled:     { icon: '⏯️', label: 'Started/stopped' },
-  search_my_items:    { icon: '👕', label: 'Search my items' },
-  sold_search:        { icon: '💰', label: 'Sold search' },
-  notif_clicked:      { icon: '🔔', label: 'Alert clicked' },
-  email_setup:        { icon: '📧', label: 'Email set up' },
-  sheets_connected:   { icon: '📊', label: 'Sheets connected' },
-  alert_test:         { icon: '🧪', label: 'Test alert' },
-};
-const USAGE_CHIP = {
-  panel_opened:     '#f0fdfa',
-  search_created:   '#ecfdf5',
-  search_deleted:   '#fef2f2',
-  search_toggled:   '#f5f3ff',
-  search_my_items:  '#fffbeb',
-  sold_search:      '#eff6ff',
-  notif_clicked:    '#fdf4ff',
-  email_setup:      '#f0f9ff',
-  sheets_connected: '#f0fdf4',
-  alert_test:       '#fefce8',
+  panel_opened:       { label: 'Opened panel' },
+  search_created:     { label: 'Created search' },
+  search_deleted:     { label: 'Deleted search' },
+  search_toggled:     { label: 'Started/stopped' },
+  search_my_items:    { label: 'Search my items' },
+  sold_search:        { label: 'Sold search' },
+  notif_clicked:      { label: 'Alert clicked' },
+  email_setup:        { label: 'Email set up' },
+  sheets_connected:   { label: 'Sheets connected' },
+  alert_test:         { label: 'Test alert' },
 };
 function usageLabel(ev) { return USAGE_META[ev]?.label ?? ev.replace(/_/g, ' '); }
-function usageIcon(ev)  { return USAGE_META[ev]?.icon ?? '🔹'; }
-function usageColor(ev) { return USAGE_CHIP[ev] ?? '#f3f4f6'; }
 // Total across all events for one usage hash.
 function usageTotal(u) {
   if (!u) return 0;
@@ -624,7 +612,6 @@ export default function AdminPanel() {
               <DetailRow label="Updated"         value={fmt(selected.updatedAt)} />
               <DetailRow label="Came from"       value={selected.attribution ? fmtAttribution(selected.attribution) : '—'} />
               <DetailRow label="Last seen"       value={selected.lastSeenAt ? `${fmt(selected.lastSeenAt)}${selected.active24h ? ' · active' : selected.active7d ? ' · seen this week' : ''}` : '—'} />
-              <DetailRow label="Searches"        value={selected.searchCount != null ? `${selected.searchCount} running` : '—'} />
               <DetailRow label="Version"         value={selected.version ?? '—'} />
               <DetailRow label="Last poll"       value={selected.lastPollResult ?? '—'} />
               <DetailRow label="Offscreen"       value={selected.offscreenAlive ? 'alive' : selected.offscreenAlive === false ? 'not pinging' : '—'} />
@@ -632,20 +619,29 @@ export default function AdminPanel() {
                 label="Searches"
                 value={
                   Array.isArray(selected.searches) && selected.searches.length > 0 ? (
-                    <details style={{ width: '100%' }}>
-                      <summary style={{ cursor: 'pointer', color: 'var(--green)', fontSize: '0.85rem', fontWeight: 600 }}>
-                        {selected.searches.length} search{selected.searches.length !== 1 ? 'es' : ''} — click to view
-                      </summary>
-                      <ul style={{ margin: '0.5rem 0 0', paddingLeft: '1.2rem', fontSize: '0.85rem', lineHeight: 1.7 }}>
-                        {selected.searches.map(s => (
-                          <li key={s.id}>
-                            <span style={{ color: 'var(--ink)' }}>{s.label || '(unnamed search)'}</span>
-                            {!s.enabled && <span style={{ color: '#9ca3af', fontSize: '0.75rem' }}> · stopped</span>}
-                            {s.lastPollResult && <span style={{ color: '#6b7280', fontSize: '0.75rem' }}> · {s.lastPollResult}</span>}
-                          </li>
-                        ))}
-                      </ul>
-                    </details>
+                    <div style={{ width: '100%' }}>
+                      <div style={{ fontSize: '0.8rem', color: 'var(--gray)', marginBottom: '0.4rem' }}>
+                        {selected.searches.length} total · {selected.searches.filter(s => s.enabled).length} running
+                      </div>
+                      <div style={{ border: '1px solid var(--line)', borderRadius: 8, overflow: 'hidden' }}>
+                        <table style={{ borderCollapse: 'collapse', width: '100%', fontSize: '0.8rem' }}>
+                          <tbody>
+                            {selected.searches.map(s => (
+                              <tr key={s.id} style={{ borderBottom: '1px solid var(--line)', background: s.enabled ? '#fff' : '#f9fafb' }}>
+                                <td style={{ padding: '0.35rem 0.7rem', color: 'var(--ink)', fontWeight: s.enabled ? 600 : 400 }}>
+                                  {s.label || '(unnamed search)'}
+                                </td>
+                                <td style={{ padding: '0.35rem 0.7rem', textAlign: 'right', whiteSpace: 'nowrap', color: 'var(--gray)' }}>
+                                  {s.enabled
+                                    ? <span style={{ color: 'var(--green)', fontWeight: 600 }}>● {s.lastPollResult || 'running'}</span>
+                                    : <span style={{ color: '#9ca3af' }}>○ stopped</span>}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   ) : (
                     '—'
                   )
@@ -665,18 +661,17 @@ export default function AdminPanel() {
                           {usageTotal(selected.usage)} events
                         </span>
                       </div>
-                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
                         {Object.entries(selected.usage)
                           .sort((a, b) => b[1] - a[1])
                           .map(([ev, n]) => (
-                            <span key={ev} style={{
-                              display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
-                              background: usageColor(ev), border: '1px solid var(--line)',
-                              borderRadius: 999, padding: '0.15rem 0.6rem',
-                              fontSize: '0.78rem', fontWeight: 600, color: 'var(--ink)',
+                            <div key={ev} style={{
+                              display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
+                              fontSize: '0.85rem', lineHeight: 1.5,
                             }}>
-                              {usageIcon(ev)} {usageLabel(ev)} <b style={{ color: 'var(--green)' }}>×{n}</b>
-                            </span>
+                              <span style={{ color: 'var(--ink)' }}>{usageLabel(ev)}</span>
+                              <span style={{ color: 'var(--gray)', fontVariantNumeric: 'tabular-nums' }}>{n}</span>
+                            </div>
                           ))}
                       </div>
                     </div>
