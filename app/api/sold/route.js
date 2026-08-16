@@ -75,11 +75,18 @@ export async function POST(request) {
 
   const record = { itemId, title, price, currency, keyword, brand, size, soldAt, firstReportedBy: reporter };
 
-  // Multi-write so the three indexes stay consistent.
+  // Multi-write so the four indexes stay consistent.
   const pipe = kv.pipeline();
   pipe.set(itemKey, record, { ex: RECENT_TTL });
   pipe.hset(`sv:sold:kw:${keyword.toLowerCase()}`, { [itemId]: soldAt });
   pipe.zadd('sv:sold:recent', { score: soldAt, member: itemId });
+  // Title-prefix index: every title goes into one lexicographic zset so a
+  // live search can dial down as the user types ("l" -> "le" -> "lego...").
+  // Member = "lowercased-title||itemId" — lex-rangeable by title prefix.
+  const titleKey = String(title || '').toLowerCase();
+  if (titleKey) {
+    pipe.zadd('sv:sold:titles', { score: soldAt, member: `${titleKey}||${itemId}` });
+  }
   // Exact-match index: significant tokens from the TITLE. This is what makes
   // "lego 2-1B medical droid" return that exact item's sales instead of every
   // Lego listing (which would be a meaningless £1–£1000 average).
@@ -97,6 +104,9 @@ export async function POST(request) {
 export async function GET(request) {
   const url = new URL(request.url);
   const keyword = (url.searchParams.get('keyword') || '').trim().toLowerCase().slice(0, KEYWORD_MAX);
+  // Live prefix search: "l" -> all sold titles starting with l, "le" ->
+  // narrower, dials down as the user types. Empty string returns nothing.
+  const prefix = (url.searchParams.get('q') || '').trim().toLowerCase().slice(0, KEYWORD_MAX);
   const days = Math.min(Number(url.searchParams.get('days')) || 90, 90);
   const clientId = (url.searchParams.get('clientId') || '').trim();
 
@@ -111,37 +121,60 @@ export async function GET(request) {
   }
   const limit = Math.min(Number(url.searchParams.get('limit')) || 25, 100);
 
-  if (!keyword) {
-    return NextResponse.json({ error: 'keyword required' }, { status: 400 });
+  if (!keyword && !prefix) {
+    return NextResponse.json({ error: 'keyword or q required' }, { status: 400 });
   }
 
   const since = Date.now() - days * 24 * 3600 * 1000;
 
-  // EXACT-MATCH semantics: the query is tokenized, each token's sold-item
-  // bucket is fetched, and the intersection is the set of items whose TITLES
-  // contain every significant term. "lego 2-1B medical droid" thus matches
-  // only that exact item — never the whole Lego category (whose £1–£1000
-  // spread would make the average meaningless). Falls back to the broad
-  // keyword bucket only when no token matches at all.
-  const tokens = tokenize(keyword);
+  // LIVE PREFIX SEARCH — lexicographic range over the title index.
+  // ZRANGEBYLEX [prefix .. prefix+\uFFFF] returns every title starting with
+  // the typed prefix, so "le" finds "lego...", "leather..." etc. and keeps
+  // narrowing as more letters are typed.
   let ids = [];
-  if (tokens.length > 0) {
-    const buckets = await Promise.all(tokens.map(t => kv.hgetall(`sv:sold:tok:${t}`)));
-    // Start with the smallest bucket, intersect the rest.
-    const sets = buckets.filter(Boolean).map(b => Object.keys(b));
-    if (sets.length === tokens.length) {
-      sets.sort((a, b) => a.length - b.length);
-      ids = sets[0].filter(id => sets.every(s => s.includes(id)));
+  let matchMode = 'keyword';
+  if (prefix) {
+    const lo = `[${prefix}`;
+    const hi = `[${prefix}\uFFFF`;
+    let members = [];
+    try {
+      members = await kv.zrange('sv:sold:titles', { min: lo, max: hi, by: 'lex' });
+    } catch {
+      // by:'lex' may not be supported by the KV client shorthand — fall back
+      // to a manual zrangebylex call shape if the driver rejects it.
+      try {
+        members = await kv.zrangebylex('sv:sold:titles', lo, hi);
+      } catch { members = []; }
     }
-  }
-  // No exact token match → fall back to the search-keyword bucket (broad).
-  if (ids.length === 0) {
-    const kwHash = await kv.hgetall(`sv:sold:kw:${keyword}`);
-    ids = kwHash ? Object.keys(kwHash) : [];
+    ids = members.map(m => String(m).split('||').pop()).filter(Boolean);
+    matchMode = 'prefix';
+  } else {
+    // EXACT-MATCH semantics: the query is tokenized, each token's sold-item
+    // bucket is fetched, and the intersection is the set of items whose TITLES
+    // contain every significant term. "lego 2-1B medical droid" thus matches
+    // only that exact item — never the whole Lego category (whose £1–£1000
+    // spread would make the average meaningless). Falls back to the broad
+    // keyword bucket only when no token matches at all.
+    const tokens = tokenize(keyword);
+    if (tokens.length > 0) {
+      const buckets = await Promise.all(tokens.map(t => kv.hgetall(`sv:sold:tok:${t}`)));
+      // Start with the smallest bucket, intersect the rest.
+      const sets = buckets.filter(Boolean).map(b => Object.keys(b));
+      if (sets.length === tokens.length) {
+        sets.sort((a, b) => a.length - b.length);
+        ids = sets[0].filter(id => sets.every(s => s.includes(id)));
+      }
+    }
+    // No exact token match → fall back to the search-keyword bucket (broad).
+    if (ids.length === 0) {
+      const kwHash = await kv.hgetall(`sv:sold:kw:${keyword}`);
+      ids = kwHash ? Object.keys(kwHash) : [];
+    }
+    matchMode = (tokens.length > 0 && ids.length > 0) ? 'exact' : 'keyword';
   }
 
   if (ids.length === 0) {
-    return NextResponse.json({ keyword, days, sales: [], total: 0, avgPrice: null, minPrice: null, maxPrice: null, sampleSize: 0, matchMode: tokens.length ? 'exact' : 'keyword' });
+    return NextResponse.json({ keyword, prefix, days, sales: [], total: 0, avgPrice: null, minPrice: null, maxPrice: null, sampleSize: 0, matchMode });
   }
 
   // Fetch each item record (bounded).
@@ -155,16 +188,22 @@ export async function GET(request) {
   inWindow.sort((a, b) => b.soldAt - a.soldAt);
 
   const total = inWindow.length;
-  const avg = prices.length ? prices.reduce((a, b) => a + b, 0) / prices.length : null;
+  // AVERAGE ONLY MEANS SOMETHING FOR AN EXACT ITEM with multiple sales.
+  // Broad/category/prefix matches (Lego £1–£1000) must NOT show an average —
+  // it would be actively misleading. Exact matches get the true mean.
+  const avg = (matchMode === 'exact' && prices.length > 0)
+    ? Math.round((prices.reduce((a, b) => a + b, 0) / prices.length) * 100) / 100
+    : null;
 
   return NextResponse.json({
     keyword,
+    prefix,
     days,
     total,
-    matchMode: (tokens.length > 0 && ids.length > 0) ? 'exact' : 'keyword',
-    avgPrice: avg ? Math.round(avg * 100) / 100 : null,
-    minPrice: prices.length ? Math.min(...prices) : null,
-    maxPrice: prices.length ? Math.max(...prices) : null,
+    matchMode,
+    avgPrice: avg,
+    minPrice: (matchMode === 'exact' && prices.length) ? Math.min(...prices) : null,
+    maxPrice: (matchMode === 'exact' && prices.length) ? Math.max(...prices) : null,
     sampleSize: prices.length,
     sales: inWindow.slice(0, limit).map(r => ({
       itemId: r.itemId, title: r.title, price: r.price, currency: r.currency,
