@@ -114,6 +114,11 @@ export async function GET() {
               enabled: h.enabled !== undefined ? !!h.enabled : !!b.enabled,
               lastPollTime: h.lastPollTime ?? b.lastPollTime ?? null,
               lastPollResult: h.lastPollResult ?? b.lastPollResult ?? null,
+              // Active hours + baseline (heartbeat now sends them; the server
+              // backup is the fallback for older builds).
+              activeHoursStart: h.activeHoursStart ?? b.activeHoursStart ?? null,
+              activeHoursEnd:   h.activeHoursEnd   ?? b.activeHoursEnd   ?? null,
+              needsBaseline:    h.needsBaseline    ?? b.needsBaseline    ?? false,
             };
           });
         })(),

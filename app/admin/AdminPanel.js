@@ -80,10 +80,29 @@ function friendlyPollResult(u) {
   }
 }
 
+// Is the search inside its active-hours window right now? Null hours = always
+// active (old searches / no window set).
+function insideActiveHours(s) {
+  if (!s.activeHoursStart || !s.activeHoursEnd) return true;
+  const now = new Date();
+  const mins = now.getHours() * 60 + now.getMinutes();
+  const [sh, sm] = String(s.activeHoursStart).split(':').map(Number);
+  const [eh, em] = String(s.activeHoursEnd).split(':').map(Number);
+  if (Number.isNaN(sh) || Number.isNaN(eh)) return true;
+  const start = sh * 60 + (sm || 0);
+  const end = eh * 60 + (em || 0);
+  if (start === end) return true;          // 24h
+  if (start < end) return mins >= start && mins < end;
+  return mins >= start || mins < end;      // overnight window
+}
+
 // Poll status for a single search row (compact).
 function friendlySearchStatus(s) {
   const r = (s.lastPollResult || '').toLowerCase();
   const n = s.newItemsLastCount;
+  // Enabled but outside active hours = hibernating, regardless of the last
+  // poll result (the server may not have a fresh "hibernating" sync yet).
+  if (s.enabled && !insideActiveHours(s)) return `hibernating (resumes ${s.activeHoursStart || '08:00'})`;
   // A search that has never polled yet isn't "stopped" — it's starting up
   // (first poll happens within minutes of being added).
   if (!r && s.needsBaseline) return 'starting up';
@@ -106,7 +125,8 @@ function friendlySearchStatus(s) {
 function searchStatusColor(s) {
   const r = (s.lastPollResult || '').toLowerCase();
   if (!s.enabled)       return 'var(--gray)';
-  if (r === 'hibernating') return '#b45309';   // amber — paused by the clock
+  if (!insideActiveHours(s)) return '#b45309';   // amber — paused by the clock
+  if (r === 'hibernating') return '#b45309';
   if (r === 'capped' || r === 'rate_limited' || r === 'error') return '#b45309';
   return 'var(--green)';
 }
