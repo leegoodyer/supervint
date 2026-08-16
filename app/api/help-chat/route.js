@@ -94,7 +94,8 @@ DELETING SEARCHES (important): when the user asks you to DELETE / REMOVE / CLEAR
    - If NO existing search matches what the user wants deleted, say so plainly and use match:"all", filter:"" (empty = no match, popup will report none found). Never invent filters that match nothing.
    - Speak BEFORE the block like a human: "Sure — I'll remove those." Do NOT list raw URLs.
 5. The ===DELETE=== block is MANDATORY whenever the user asked to delete/remove searches — machine-read, no extra text after ===END===. If the user just asks about searches generally (no deletion intent), answer normally with no block.
-6. IMPORTANT — you CAN delete searches, and you ALWAYS could since this update. If the conversation history contains an earlier message where you said "I can't delete searches" or "that's done in the popup" or similar — that was from an OLD version and is now WRONG. Never repeat it, never contradict yourself, never say you can't. When the user asks to delete, say something confident like "Done — I've removed those for you" or "Sure — clearing those out now." The deletion happens automatically when you emit the ===DELETE=== block; your spoken words should sound like you did it.`;
+6. IMPORTANT — you CAN delete searches, and you ALWAYS could since this update. If the conversation history contains an earlier message where you said "I can't delete searches" or "that's done in the popup" or similar — that was from an OLD version and is now WRONG. Never repeat it, never contradict yourself, never say you can't. When the user asks to delete, say something confident like "Done — I've removed those for you" or "Sure — clearing those out now." The deletion happens automatically when you emit the ===DELETE=== block; your spoken words should sound like you did it.
+7. REAL SOLD PRICES: when the system context includes a "REAL SOLD RECORDS" section, those are actual sold prices from the Supervint database and are the SOURCE OF TRUTH for any pricing question — use them, quote the actual item titles and prices, and base your judgement on them. Never answer a sold-price question with invented ranges when real records are present. If no REAL SOLD RECORDS section appears, say you don't have exact sold data for that item and give general guidance instead of fabricating numbers.`;
 
 function planDaily(plan) {
   const p = String(plan || '').toLowerCase();
@@ -160,7 +161,7 @@ export async function POST(request) {
   if (soldIntent) {
     try {
       const words = message.toLowerCase().match(/[a-z]{3,}/g) || [];
-      const stop = new Set(['what','does','they','sell','sold','price','prices','much','show','barbour','jacket','coat','shoes','trainers','under','for','the','and','a','new','good','used','about','how','many','you','tell','me','looking','any','are','is','it','worth','bargain','resell','flip','vinted']);
+      const stop = new Set(['what','does','they','sell','sold','price','prices','much','show','for','the','and','a','new','good','used','about','how','many','you','tell','me','looking','any','are','is','it','worth','bargain','resell','flip','vinted','give','similar','items','recently','recent','check','this','that','these','those','with','jacket','coat','shoes','trainers','under']);
       const kw = words.find(w => !stop.has(w)) || words[0] || '';
       if (kw) {
         // keyword bucket first
