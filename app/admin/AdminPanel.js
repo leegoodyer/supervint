@@ -95,11 +95,11 @@ function SectionHeader({ title, subtitle, open, onClick, right }) {
         }}>
           ▼
         </span>
-        <span style={{ fontSize: '0.8rem', fontWeight: 700, color: open ? '#fff' : 'var(--gray)', textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+        <span style={{ fontSize: '0.8rem', fontWeight: 700, color: open ? '#fff' : 'var(--gray)', textTransform: 'uppercase', letterSpacing: '0.08em', flexShrink: 0 }}>
           {title}
         </span>
         {subtitle && (
-          <span style={{ fontSize: '0.78rem', color: open ? 'rgba(255,255,255,0.85)' : 'var(--gray)', fontWeight: 500 }}>
+          <span style={{ fontSize: '0.78rem', color: open ? 'rgba(255,255,255,0.85)' : 'var(--gray)', fontWeight: 500, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: 0, flex: '1 1 auto' }}>
             {subtitle}
           </span>
         )}
@@ -570,7 +570,7 @@ export default function AdminPanel() {
         <div style={{ marginTop: '1rem' }}>
           <SectionHeader
             title="Selected user"
-            subtitle={selected.email ? `· ${selected.email.length > 28 ? selected.email.slice(0, 25) + '…' : selected.email}` : `· ${selected.clientId.slice(0, 13)}`}
+            subtitle={`· ${selected.email || selected.clientId.slice(0, 13)}`}
             open={selectedOpen}
             onClick={() => setSelectedOpen(o => !o)}
           />
