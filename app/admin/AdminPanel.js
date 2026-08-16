@@ -61,6 +61,41 @@ function fmtAttribution(a) {
   return parts.join(' · ') + when;
 }
 
+// Human-friendly poll status — "12 new items found", "no new items",
+// "stopped", "error (HTTP 429)" — never the raw internal token.
+function friendlyPollResult(u) {
+  const r = (u.lastPollResult || '').toLowerCase();
+  const when = u.lastPollTime ? ` ${fmt(u.lastPollTime)}` : '';
+  const n = u.newItemsLastCount;
+  switch (r) {
+    case 'new_items':
+      return n > 0 ? `${n} new item${n !== 1 ? 's' : ''} found${when}` : 'new items found';
+    case 'no_new':      return `no new items${when}`;
+    case 'stopped':     return 'stopped';
+    case 'hibernating': return `hibernating (resumes ${u.activeHoursStart || '08:00'})`;
+    case 'capped':      return `daily cap reached (${u.dailyCap || 200}/day)`;
+    case 'rate_limited': return `rate-limited${u.lastPollError ? ` (${u.lastPollError})` : ''}`;
+    case 'error':       return `error${u.lastPollError ? ` — ${u.lastPollError}` : ''}`;
+    default:            return r || '—';
+  }
+}
+
+// Poll status for a single search row (compact).
+function friendlySearchStatus(s) {
+  const r = (s.lastPollResult || '').toLowerCase();
+  const n = s.newItemsLastCount;
+  switch (r) {
+    case 'new_items': return n > 0 ? `${n} new` : 'new items';
+    case 'no_new':    return 'no new';
+    case 'stopped':   return 'stopped';
+    case 'hibernating': return 'hibernating';
+    case 'capped':    return 'capped';
+    case 'rate_limited': return 'rate-limited';
+    case 'error':     return 'error';
+    default:          return 'running';
+  }
+}
+
 function PlanBadge({ plan }) {
   const c = PLAN_COLORS[plan] ?? PLAN_COLORS.free;
   return (
@@ -616,40 +651,9 @@ export default function AdminPanel() {
               <DetailRow label="Came from"       value={selected.attribution ? fmtAttribution(selected.attribution) : '—'} />
               <DetailRow label="Last seen"       value={selected.lastSeenAt ? `${fmt(selected.lastSeenAt)}${selected.active24h ? ' · active' : selected.active7d ? ' · seen this week' : ''}` : '—'} />
               <DetailRow label="Version"         value={selected.version ?? '—'} />
-              <DetailRow label="Last poll"       value={selected.lastPollResult ?? '—'} />
+              <DetailRow label="Last poll"       value={selected.lastPollResult ? friendlyPollResult(selected) : '—'} />
               <DetailRow label="Offscreen"       value={selected.offscreenAlive ? 'alive' : selected.offscreenAlive === false ? 'not pinging' : '—'} />
-              <DetailRow
-                label="Searches"
-                value={
-                  Array.isArray(selected.searches) && selected.searches.length > 0 ? (
-                    <div style={{ width: '100%' }}>
-                      <div style={{ fontSize: '0.8rem', color: 'var(--gray)', marginBottom: '0.4rem' }}>
-                        {selected.searches.length} total · {selected.searches.filter(s => s.enabled).length} running
-                      </div>
-                      <div style={{ border: '1px solid var(--line)', borderRadius: 8, overflow: 'hidden' }}>
-                        <table style={{ borderCollapse: 'collapse', width: '100%', fontSize: '0.8rem' }}>
-                          <tbody>
-                            {selected.searches.map(s => (
-                              <tr key={s.id} style={{ borderBottom: '1px solid var(--line)', background: s.enabled ? '#fff' : '#f9fafb' }}>
-                                <td style={{ padding: '0.35rem 0.7rem', color: 'var(--ink)', fontWeight: s.enabled ? 600 : 400 }}>
-                                  {s.label || '(unnamed search)'}
-                                </td>
-                                <td style={{ padding: '0.35rem 0.7rem', textAlign: 'right', whiteSpace: 'nowrap', color: 'var(--gray)' }}>
-                                  {s.enabled
-                                    ? <span style={{ color: 'var(--green)', fontWeight: 600 }}>● {s.lastPollResult || 'running'}</span>
-                                    : <span style={{ color: '#9ca3af' }}>○ stopped</span>}
-                                </td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  ) : (
-                    '—'
-                  )
-                }
-              />
+              <DetailRow label="Searches"        value={Array.isArray(selected.searches) ? `${selected.searches.length} total · ${selected.searches.filter(s => s.enabled).length} running` : '—'} />
               <DetailRow
                 label="Usage"
                 value={
@@ -670,10 +674,10 @@ export default function AdminPanel() {
                           .map(([ev, n]) => (
                             <div key={ev} style={{
                               display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
-                              fontSize: '0.85rem', lineHeight: 1.5,
+                              fontSize: '0.8rem',
                             }}>
-                              <span style={{ color: 'var(--ink)' }}>{usageLabel(ev)}</span>
-                              <span style={{ color: 'var(--gray)', fontVariantNumeric: 'tabular-nums' }}>{n}</span>
+                              <span style={{ color: 'var(--ink)' }}>{USAGE_META[ev]?.label || ev}</span>
+                              <span style={{ fontWeight: 700, fontVariantNumeric: 'tabular-nums' }}>{n}</span>
                             </div>
                           ))}
                       </div>
@@ -685,6 +689,34 @@ export default function AdminPanel() {
               />
             </tbody>
           </table>
+
+        {/* Searches list — full width, outside the detail table so it fills
+            the panel instead of being squeezed into a value cell. */}
+        {Array.isArray(selected.searches) && selected.searches.length > 0 && (
+          <div style={{ marginTop: '0.2rem' }}>
+            <div style={{ fontSize: '0.78rem', fontWeight: 600, color: 'var(--gray)', margin: '0.35rem 0 0.3rem' }}>
+              Searches
+            </div>
+            <div style={{ border: '1px solid var(--line)', borderRadius: 8, overflow: 'hidden' }}>
+              <table style={{ borderCollapse: 'collapse', width: '100%', fontSize: '0.82rem' }}>
+                <tbody>
+                  {selected.searches.map(s => (
+                    <tr key={s.id} style={{ borderBottom: '1px solid var(--line)', background: s.enabled ? '#fff' : '#f9fafb' }}>
+                      <td style={{ padding: '0.4rem 0.7rem', color: 'var(--ink)', fontWeight: s.enabled ? 600 : 400 }}>
+                        {s.label || '(unnamed search)'}
+                      </td>
+                      <td style={{ padding: '0.4rem 0.7rem', textAlign: 'right', whiteSpace: 'nowrap' }}>
+                        {s.enabled
+                          ? <span style={{ color: 'var(--green)', fontWeight: 600 }}>● {friendlySearchStatus(s)}</span>
+                          : <span style={{ color: '#9ca3af' }}>○ stopped</span>}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
 
           <form onSubmit={handleGrant}>
             <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'center', flexWrap: 'wrap' }}>
