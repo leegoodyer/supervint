@@ -217,6 +217,11 @@ prefix search, member = "lowercased-title||itemId"), `sv:sold:recent` (zset).
   user starts monitoring → 🎉 report.
 
 ## Known Pending Items
+- **Store release (Lee's call)**: current Store zip is v1.2.12 WITHOUT sold-tracker/
+  usage-tracking/AI Assistant. Next release zip should include ALL of today's
+  batch (seen-set detection, AI chat + search create/delete, usage tracking,
+  popup UI, sold view). After the Store push, **advertise the AI Assistant on
+  the website** (Lee's ask: "advertise it on the website when its done").
 - **Deal searches (Lee's flips)**: ~35 bargain-tier URLs live as searches with
   `(≤£N)` labels (mistake-tier caps: lego £4-5, carhartt £5, barbour £6,
   moncler £15...). File: `~/Documents/supervint-web/deal-urls-paste.txt`
