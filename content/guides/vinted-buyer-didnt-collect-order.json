@@ -1,0 +1,81 @@
+{
+  "title": "Buyer Didn't Pick Up Your Vinted Order? What Happens Next (Suspended Orders, Returns & Compensation)",
+  "intro": "If a Vinted buyer doesn't collect their parcel, the sale is cancelled, the buyer is refunded, and the item is sent back to you — but the order can sit \"suspended\" for weeks while the return crawls home, and if the parcel never arrives you can claim compensation from Vinted after 25 business days. This guide walks through the exact timeline, what you can actually do at each stage, and how to get paid when a return goes missing.",
+  "meta_description": "What happens when a Vinted buyer doesn't pick up their parcel: order suspended, return to sender, how long it takes, and how to claim compensation after 25 business days.",
+  "date_published": "2026-08-17",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Never miss a sale — get alerted the moment items are listed",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What actually happens when a buyer doesn't collect",
+      "paragraphs": [
+        "When a buyer doesn't pick up their parcel within the collection window (usually a few days at a locker or shop), the carrier starts the return-to-sender process. Vinted's help page \"Parcel was sent back to me\" confirms the sequence: the order status updates to \"returning to sender\", the parcel makes its way back to you, and once the order is cancelled the buyer is refunded. Sellers regularly point out that the buyer's refund includes the shipping fee even though the delivery service was fully provided.",
+        "The hard truth: you don't get paid for the sale, and because the transaction never completes, you also don't get to leave feedback. The item — and your time and packaging — is the price of the no-show. That's why this problem keeps generating vent threads on r/vinted, r/vintedUK and the big Facebook seller groups: sellers who shipped fast, communicated, and did everything right are left waiting weeks for their own item to come home."
+      ]
+    },
+    {
+      "heading": "Why your order is stuck on \"suspended\" with no buttons",
+      "paragraphs": [
+        "The most confusing part for sellers is the order status. While the parcel is on its way back, the order can show as suspended — frozen mid-transaction — with no obvious action available. As one seller described it: \"the transaction shows as suspended with no available options to say I've received it back, so I can't just relist it, I have to do a new post again.\"",
+        "Here's what's happening: the mark-as-received option only appears once the return is actually scanned as delivered back to you. Until then, the order sits in limbo and you can't touch it. Vinted's official guidance is to watch the message thread for status updates, and if you've physically received the parcel, mark it as received and cancel the order from there. If the order has been suspended with no updates for weeks, contact Vinted support from the order thread itself — that's the one place you can always reach them about a specific order."
+      ]
+    },
+    {
+      "heading": "How long the return actually takes (and why tracking goes quiet)",
+      "paragraphs": [
+        "Officially, Vinted says that if the item doesn't reach either you or the buyer within 15 business days, they'll take the matter into their own hands and investigate. In practice, sellers report returns taking anywhere from two weeks to two months. Some parcels sit at a pickup point for weeks before the carrier even starts the return; others come back quickly but tracking stops updating entirely — \"the shipping info completely stopped after it was marked as not collected\", as one r/vinted seller put it — only for the parcel to turn up with no scan at all.",
+        "The practical takeaway: don't panic if tracking goes dark for a week or two. Don't relist the item while the order is still open, and don't assume the worst. But do keep the tracking number safe — if the parcel never arrives, that number is what you'll need for a compensation claim."
+      ]
+    },
+    {
+      "heading": "The return never arrives: claiming compensation after 25 business days",
+      "paragraphs": [
+        "If the returned parcel never reaches you, you can claim compensation. The official route, per Vinted's help article 731 (\"Parcel was sent back to me\"): contact Vinted after 25 business days have passed from the moment the parcel was shipped back, and they'll compensate you up to set amounts. Sellers who have been through it confirm the timeline: \"after 25 working days you can contact Vinted and have your money refunded — worked for me both times.\"",
+        "Expect to chase. Multiple sellers report being bounced between Vinted and the carrier, with Vinted only paying out after persistent follow-up — sometimes framed as a \"goodwill gesture\" — once the carrier has confirmed the return is lost. When you contact support: quote the tracking number, give the date the parcel was shipped back to you, reference help article 731, and keep everything in the original order thread so support can see the full history. The 25-business-day clock starts from when the parcel was shipped back, not from when you noticed it was missing — so note that date down the day you see \"returning to sender\"."
+      ]
+    },
+    {
+      "heading": "What to do while you wait (and how to protect the next sale)",
+      "paragraphs": [
+        "Message the buyer as soon as tracking shows the parcel is out for delivery. A gentle \"your order is at the locker, don't forget to collect it\" nudge genuinely saves some sales — plenty of non-collections are forgetfulness or a missed window, not malice. Some buyers even reply, apologise, and immediately buy the item again once it's back with you.",
+        "When the item finally returns, inspect it before anything else — some sellers report items coming back damaged or having been opened. Then create a brand-new listing; there's no one-click relist for returned items, and the old listing's likes and favourites don't carry over. And as a rule: don't treat the money as yours until the order completes. If a buyer buys at full price, with no questions and no messages, and then ghosts you — that's the exact pattern sellers in every thread describe before a non-collection."
+      ]
+    },
+    {
+      "heading": "Can you block repeat non-collectors or leave them feedback?",
+      "paragraphs": [
+        "Right now, no. You can only leave feedback once a transaction completes, and a cancelled non-collection never completes — so the buyer walks away with no review at all. This is the single most repeated complaint in the threads: sellers get automatic negative reviews for shipping late, while buyers who never collect get nothing, not even an automated note on their profile.",
+        "As of writing, Vinted hasn't introduced automatic negative feedback for missed pickups, and there's no penalty for repeat non-collectors. Until that changes, the practical defence is to protect your own listing: for higher-value items, keep proof of the item's condition before shipping, and consider whether the sale is worth the risk of a two-month limbo. The one upside: the item does normally come back, and there are always more buyers — especially if you're using alerts to catch them the moment they list."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Buyer didn't pick up my Vinted order — do I still get paid?",
+      "answer": "No. The sale is cancelled and the buyer is refunded (sellers note this includes the shipping fee). You get the item back, usually, and can relist it. You're only compensated if the return parcel never reaches you — claim from Vinted after 25 business days."
+    },
+    {
+      "question": "Why is my Vinted order suspended with no buttons to press?",
+      "answer": "The order is frozen while the parcel returns to sender. The mark-as-received option only appears once the return is scanned as delivered back to you. Check the message thread for status updates; if it's stuck for weeks, contact support from the order thread."
+    },
+    {
+      "question": "How long does an uncollected Vinted parcel take to come back to the seller?",
+      "answer": "Vinted investigates if the item hasn't reached either party within 15 business days. In practice sellers report returns taking two weeks to two months, often with tracking that stops updating before the parcel suddenly arrives."
+    },
+    {
+      "question": "The returned parcel never arrived — can I get compensation from Vinted?",
+      "answer": "Yes. Contact Vinted after 25 business days from when the parcel was shipped back to you (help article 731, \"Parcel was sent back to me\"). Quote the tracking number and the ship-back date, and keep everything in the order thread. Expect to follow up more than once."
+    },
+    {
+      "question": "Can I relist an item that came back because the buyer didn't collect?",
+      "answer": "Yes, once the order is closed — but you have to create a brand-new listing. There's no one-click relist for returned items, and the original listing's likes and favourites don't carry over."
+    },
+    {
+      "question": "Does the buyer get their money back when they don't collect a Vinted parcel?",
+      "answer": "Yes. Vinted refunds the buyer in full once the order is cancelled, which sellers regularly point out includes the shipping fee even though the item was shipped. The item is returned to you, and the buyer faces no penalty or negative review."
+    }
+  ]
+}
