@@ -231,6 +231,11 @@ prefix search, member = "lowercased-title||itemId"), `sv:sold:recent` (zset).
   to 30 minutes"). 429-backoff (30-min cooldown) is the spike safety net.
   Research basis: Redrip (~10–30 req/min per endpoint) + fbm-sniper
   community bot (3-min cycles, 1.5s between targets, actively flips).
+  **All THREE burst points spread (2026-08-17)**: cold start
+  (restoreAlarmsForEnabledSearches), Start All (START_ALL_SEARCHES), and the
+  **08:00 morning wake-up** (nextActiveWindowMs now adds random 0–15 min
+  jitter — was exactly HH:00:00.000 for every search → all 50 fired same ms
+  → 429 burst every morning; Lee spotted it).
   Existing 14-day trials keep their full window (stored absolute
   trialExpiresAt).
 - **Store release (Lee's call)**: current Store zip is v1.2.12 WITHOUT sold-tracker/
