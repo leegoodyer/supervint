@@ -1,0 +1,76 @@
+{
+  "title": "What Is a Vinted Sniper? How Sniper Tools Find Vinted Deals Before Anyone Else",
+  "intro": "A Vinted sniper is a tool that watches Vinted for newly listed items matching your search and alerts you the moment one appears, so you can buy an underpriced item before the manual searchers and other buyers even see it.",
+  "meta_description": "What is a Vinted sniper? How sniper tools monitor Vinted listings and alert you to new items first — and how to snipe deals safely without risking your account.",
+  "date_published": "2026-08-17",
+  "author": "Supervint Team",
+  "pillar_page": "/guides/vinted-price-alert",
+  "pillar_page_anchor_text": "Learn how Vinted price alerts work",
+  "cta_text": "Try Supervint free",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What 'sniping' means on Vinted",
+      "paragraphs": [
+        "\"Sniping\" on Vinted is borrowed from eBay, where it means placing your bid in the final seconds of an auction to win it. But Vinted has no auctions — every listing is a fixed price, first-come-first-served. So on Vinted, sniping means something simpler: being the first person to spot a newly listed bargain and buy it before anyone else does.",
+        "A Vinted sniper, then, is a tool that watches Vinted's search results on a schedule and notifies you the instant a new item matching your criteria appears. The tools people call snipers work by polling listings and firing a notification when something new goes live, usually within minutes.",
+        "Why the name matters: on Vinted there's no bidding to win, only speed to beat. The genuinely underpriced items — a £10 vintage denim jacket, a £30 pair of barely-worn trainers, a £15 Barbour someone underpriced — often sell within minutes of listing. The buyer who's notified first is the one who gets it."
+      ]
+    },
+    {
+      "heading": "How Vinted sniper tools work",
+      "paragraphs": [
+        "Every Vinted sniper works on the same core loop: check the search results for your saved searches, compare what's there now against what was there before, and alert you when something new appears. The differences between tools come down to how often they check, how accurately they detect genuinely new listings, and how they notify you.",
+        "The check frequency is the biggest factor in how fast you are. A tool that checks every few minutes beats a tool that checks every hour, and both beat a human who refreshes a browser tab whenever they remember. Faster checks mean you're more likely to catch an item in the minutes before it sells.",
+        "Detection accuracy is the other half. A good sniper tells the difference between a genuinely new listing and one that was always there but just fell outside the first page of results. A bad one re-alerts you on the same old items over and over, which is noise you learn to ignore.",
+        "Notifications are the payoff: a desktop or mobile ping the moment a match appears, so you can open the listing and buy without sitting in front of a screen all day."
+      ]
+    },
+    {
+      "heading": "Sniper tools vs Vinted's own notifications",
+      "paragraphs": [
+        "It's worth being clear about what Vinted itself does versus what a sniper adds. Vinted's native alerts cover two things: new items matching a saved search, and price drops (5% or more) on items you've favourited. Both are useful, but both have gaps.",
+        "Vinted's new-listing alerts can lag, and its price-drop alerts only apply to items you've already found and favourited — they can't help you catch a brand-new listing you've never seen before. A sniper is aimed squarely at that gap: catching new listings, fast, before they get favourited and bought by someone else.",
+        "The practical difference is speed and control. A sniper checks on a tight schedule and gives you fine-grained control over what you watch (exact brand, size, category, and a maximum price), where Vinted's native search alerts are broader and slower to fire."
+      ]
+    },
+    {
+      "heading": "The safety line: alert-only vs auto-buying",
+      "paragraphs": [
+        "There are two kinds of tool that get called a 'Vinted sniper', and they're not equally safe. The safe kind is alert-only: it watches listings and notifies you, but you do the buying yourself through Vinted's normal checkout. It never touches your account credentials and never acts on your behalf.",
+        "The risky kind goes further and offers to auto-buy, or asks for your Vinted login so it can act inside your session. This is where problems start: anything that logs into your account or purchases automatically runs against Vinted's terms and can get your account restricted, and handing over your credentials to a third party is a security risk.",
+        "The safe approach is an alert-only sniper that watches public listing data and sends you a notification, leaving the decision — and the account — entirely in your hands. You still buy fast, but you're the one in control, and your account stays yours."
+      ]
+    },
+    {
+      "heading": "Setting up sniping without the risk",
+      "paragraphs": [
+        "To snipe effectively and safely, start with precise searches rather than broad ones. A specific search — brand plus size plus a maximum price — means every notification is worth opening, and you're not wading through noise. 'North Face Nuptse size M under £90' beats 'North Face' every time.",
+        "Set your price cap deliberately. The best snipe targets are items priced below what they'll actually sell for, so a tight cap is how you filter for bargains automatically. If the market price for something is £60, a cap of £35 means every alert is a genuine opportunity, not just a new listing.",
+        "When a notification fires, act fast but verify. Open the listing, check the photos and condition, and buy through Vinted's normal checkout. Speed wins the item; verification makes sure you're not sniping a fake or a misdescribed listing. The two aren't in conflict — a quick glance at the photos and price is enough."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is a Vinted sniper?",
+      "answer": "A tool that watches Vinted for newly listed items matching your search and notifies you the moment one appears, so you can buy underpriced items before others see them. On Vinted, sniping means being first to a new listing, since there are no auctions."
+    },
+    {
+      "question": "Is sniping against Vinted's rules?",
+      "answer": "Alert-only sniping — watching public listings and getting notified — is not against Vinted's rules and doesn't put your account at risk. Auto-buying tools or tools that ask for your Vinted login are a different matter and can violate Vinted's terms."
+    },
+    {
+      "question": "How fast do Vinted sniper tools alert you?",
+      "answer": "It depends on how often the tool checks listings — anywhere from every few minutes to hourly. Faster checks mean you're more likely to catch an item in the minutes before it sells. Speed is the whole point, since underpriced items often sell within minutes."
+    },
+    {
+      "question": "How is a sniper different from Vinted's own alerts?",
+      "answer": "Vinted alerts you to new items matching a saved search and to price drops on favourited items, but those can lag and only cover items you've already found. A sniper targets the gap: catching brand-new listings fast, with fine-grained control over brand, size, and price."
+    },
+    {
+      "question": "Does a Vinted sniper auto-buy items for me?",
+      "answer": "An alert-only sniper does not auto-buy — it notifies you and you buy manually through Vinted's checkout. Tools that offer auto-buying or ask for your Vinted login are riskier and can put your account at risk. Supervint is alert-only: it never logs into your account or acts on your behalf."
+    }
+  ]
+}
