@@ -175,6 +175,51 @@ prefix search, member = "lowercased-title||itemId"), `sv:sold:recent` (zset).
   item page → confirms genuinely SOLD → POSTs. Every user's searches feed the
   one shared index.
 
+## Google Sheets "Check sheet for sold" button (2026-08-17 — FIXED, under test)
+Feature (built earlier, forgotten in compaction): popup Google Sheets section
+has **"Check sheet for sold"** — reads every vinted.co.uk item URL from the
+connected sheet (Supervint Log!A2:E100000, oldest-first by timestamp — Lee:
+"start at the beginning of my google sheet") and walks each URL through the
+tab proxy (fetchItemPage → real Vinted tab context) at the same jittered
+6–12s rate gate as polls (~5–10 req/min). Genuine sales are POSTed to the
+sold DB; progress persisted every 10 items (resumes on re-click after SW
+death). Sheet had **24,077 URLs** at test time (Lee's public copy had
+22,945 — sheet grows).
+
+**THREE bugs found + fixed this session (all committed, both builds):**
+1. **MV3 dynamic import**: `BACKFILL_SOLD` handler did `await import('./sheets.js')`
+   inside the SW → MV3 service workers DISALLOW `import()` of extension files
+   → button always threw "import() is disallowed" (the popup showed that text
+   as status). FIX: modules already statically imported at top; use the
+   bindings directly. (Same class as the `chrome.tabs.executeScript` MV2 bug.)
+2. **`.co.uk` regex**: `readSheetUrls()` filtered with `/www\.vinted\.\w+/` —
+   `\w+` cannot match `co.uk` (dot in TLD) → EVERY sheet URL rejected →
+   "No URLs found in the connected sheet (column E)" even when connected.
+   FIX: `[\w.-]+` (same bug class as findVintedTabs hostname regex).
+3. **Bare records**: walker POSTed `title:'', brand:''` — DB had itemId+price
+   only, useless ("we can't have a database without the keywords and price
+   and what the item was" — Lee). FIX: `classifyItemPage()` now also parses
+   title/brand/size from the page's escaped JSON:
+   - title: `\"value\":\"...\",\"style\":\"title\"` (fallback og:title meta)
+   - brand: `\"navigational\",\"value\":\"Seiko\",\"uri\":\"vintedfr://items?brand_id=`
+     (fallback `\"title\":\"Brand\",\"value\":\"...\"`)
+   - size: `\"title\":\"Size\",\"value\":\"...\"`
+   Verified against real page: "Seiko 5 GMT Silver Cloud Automatic Watch",
+   brand Seiko, £275.00 GBP. Backfill AND live-tracker paths both pass
+   title/brand/size through now.
+
+**Verification (live, before reload):** clicked button → status
+"Checking... (running)" then "Sold check running: 10/24077 links → sold 3 -
+removed 0 - live 8 - failed 0" — 3 genuine sales reported to DB in ~2 min at
+gated pace, zero rate-limits. Walk was interrupted by the extension reload
+(needed for fix #3); resumes from link 10 on re-click. **UNDER TEST — Lee
+re-clicks "Check sheet for sold" to resume the full ~40–50h walk.**
+Admin helper routes added: `/api/admin/sold-stats` (total/emptyTitle/withPrice)
++ `/api/admin/sold-delete` (per-itemId purge) — both admin-authed, kept for
+DB monitoring/cleanup. Sold DB count at test time: **383 genuine records**
+(1 empty-title = the sheet-walk sale; probes created during debugging were
+purged).
+
 ## Admin Panel (supervint.com/admin)
 - Users table: clientId, Plan, Email, Trial expires, Stripe customer, Admin
   grant, Created, Last seen, Searches, Version, Status (● Active / ◐ Stale /
