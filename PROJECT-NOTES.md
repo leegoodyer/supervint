@@ -236,6 +236,29 @@ prefix search, member = "lowercased-title||itemId"), `sv:sold:recent` (zset).
   **08:00 morning wake-up** (nextActiveWindowMs now adds random 0–15 min
   jitter — was exactly HH:00:00.000 for every search → all 50 fired same ms
   → 429 burst every morning; Lee spotted it).
+  **GLOBAL RATE GATE (offscreen + tab proxy + direct fallback)**: every
+  Vinted request serialized at jittered 6–12s gap (≤5–10 req/min). Sold
+  capture 3→2 fetches/poll. Content-proxy warm 45s→5min.
+  **THE BIG ONE — 2026-08-17 rate-limit incident + ROOT CAUSE**:
+  - Sold-tracker's ungated item-page fetches (3/poll × 50 polls) ≈ 40+
+    req/min flagged the household IP → wife's single search collaterally
+    rate-limited (per-IP limits).
+  - `chrome.tabs.query({url:'https://www.vinted.*/*'})` is an INVALID
+    match pattern (wildcard TLD not allowed) — it THREW, was swallowed, and
+    returned [] forever. The ENTIRE tab-proxy path (keep-alive tab, tab
+    proxy, content injection) silently never worked. Polls stayed on the
+    offscreen doc which DataDome flags (extension-context headers leak).
+  - FIX: `findVintedTabs()` — query all tabs + hostname regex in JS
+    (regex must allow multi-label TLDs: `[\w.]+` not `\w+` — `vinted.co.uk`
+    has a dot; verified live via CDP).
+  - Tab-proxy-FIRST reorder (real page context = strongest DataDome
+    context per Scrapfly research); offscreen = fallback.
+  - Escalating cooldown: 30m→1h→2h→4h with ±20% jitter (flat 30-min poked
+    the flag forever); reloads respect in-progress cooldowns.
+  - Auto keep-alive Vinted tab (fires on onInstalled AND onStartup AND 60s
+    health check — was onStartup-only, so reloads never opened it).
+  - VERIFIED LIVE via CDP: proxied fetch through real Vinted tab → HTTP 200
+    + real data. Searches recovered to green same day.
   Existing 14-day trials keep their full window (stored absolute
   trialExpiresAt).
 - **Store release (Lee's call)**: current Store zip is v1.2.12 WITHOUT sold-tracker/
