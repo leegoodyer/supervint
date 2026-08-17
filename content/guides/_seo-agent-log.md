@@ -26,7 +26,8 @@
 | 21 | Vinted delivery issues troubleshooting | 2026-08-11 | ✅ Published | content/guides/vinted-delivery-issues-troubleshooting.json (pain point: "delivered but not received") | — |
 | 22 | Vinted scams & buyer protection | 2026-08-11 | ✅ Published | content/guides/vinted-scams-buyer-protection.json (pain point: scam reports) | — |
 | 23 | PRIMARY: Does Vinted notify when price changes / SECONDARY: What is a Vinted sniper | 2026-08-14 | ✅ Published | content/guides/does-vinted-notify-price-changes.json | — |
-| 24 | vinted sniper (dedicated guide; secondary: vinted sniping / vinted snipe / how to snipe on vinted) | 2026-08-17 | ⏳ Proposed — awaiting approval | GSC-backed: "vinted sniper" 11 imp @ pos 14.3 (top 11–30 query, no dedicated page). Competitors cover it thinly (Reddit/YouTube/listicles; no trustworthy alert-only explainer). Cross-links with guide #23 to avoid cannibalisation. Slug: content/guides/drafts/vinted-sniper.json | GSC 90d: "vinted sniper" 11 imp / 1 cl / 14.3 |
+| 24 | How to see sold prices on Vinted | 2026-08-17 | ✅ Published | content/guides/how-to-see-sold-prices-on-vinted.json | GSC: "how to see sold prices on vinted" pos 42 — product-feature match (sold DB) |
+| 25 | vinted sniper (dedicated guide; secondary: vinted sniping / vinted snipe / how to snipe on vinted) | 2026-08-17 | ⏳ Proposed — awaiting approval | GSC-backed: "vinted sniper" 11 imp @ pos 14.3 (top 11–30 query, no dedicated page). Competitors cover it thinly (Reddit/YouTube/listicles; no trustworthy alert-only explainer). Cross-links with guide #23 to avoid cannibalisation. Slug: content/guides/drafts/vinted-sniper.json | GSC 90d: "vinted sniper" 11 imp / 1 cl / 14.3 |
 
 ## GSC snapshot (90 days to 2026-08-17, from scripts/gsc-report.py)
 - Totals: 26 clicks / 488 impressions / CTR 5.33% / avg pos 9.5 / 52 active days

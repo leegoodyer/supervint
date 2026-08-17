@@ -1,0 +1,75 @@
+{
+  "title": "How to See Sold Prices on Vinted (It Doesn't Show Them — Here's What to Do Instead)",
+  "intro": "Vinted does not show sold prices anywhere on the platform — unlike eBay, there is no 'sold listings' filter or completed-items history, so to find what items actually sell for you have to use an external sold-price tool or estimate from live listing data.",
+  "meta_description": "Vinted doesn't show sold prices. Here's how to find what items actually sold for using external tools, and why sold prices matter for pricing and flipping.",
+  "date_published": "2026-08-17",
+  "author": "Supervint Team",
+  "pillar_page": "/guides/vinted-price-alert",
+  "pillar_page_anchor_text": "Learn how Vinted price alerts work",
+  "cta_text": "Try Supervint free",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "The short answer: Vinted has no sold-price view",
+      "paragraphs": [
+        "Vinted does not display sold prices. There is no 'completed listings' filter, no sold-items search, and no price history on an item's page. Once an item sells, it simply disappears from search results — you can't click back into it to see what it went for.",
+        "This is a deliberate difference from eBay, which has a well-known 'sold listings' toggle, and from Depop, which shows recent sold items in some cases. Vinted keeps sale prices private, so there is no official way to look up what a specific item actually sold for after the fact.",
+        "This matters for both buyers and sellers. Buyers can't easily check whether a listing is a genuine bargain or overpriced against real sale data. Sellers can't look up comparable sold prices to price their own items competitively. Both sides are working partly blind."
+      ]
+    },
+    {
+      "heading": "Why sold prices matter for pricing and flipping",
+      "paragraphs": [
+        "The single most useful number when buying to resell is what an item actually sold for — not what people are asking. Listing prices on Vinted are often aspirational: sellers ask £40 for something that consistently sells at £20, or list a genuinely £100 item at £35 because they don't know what they have.",
+        "Without sold data, you can only guess at market value. With sold data, you can spot the underpriced listing instantly and know your margin before you buy. That's the difference between flipping reliably and gambling.",
+        "For sellers, sold data answers the 'how should I price this?' question with evidence instead of instinct. Price too high and it sits; price too low and you leave money on the table. Sold prices are the ground truth for both decisions."
+      ]
+    },
+    {
+      "heading": "How people estimate sold prices without a tool",
+      "paragraphs": [
+        "Since Vinted offers no sold view, buyers and resellers have to approximate. The most common workaround is cross-checking eBay's sold listings filter — eBay and Vinted overlap heavily in the UK second-hand market, so an eBay sold price is a reasonable proxy for what the same item fetches on Vinted, usually within 10–20%.",
+        "Another approach is watching how fast live listings move: an item that sells within hours of being listed at £30 was likely underpriced, while an item that sits for weeks at £30 is probably overpriced. This is observational and slow, but it's free and works for anyone.",
+        "None of these give you Vinted-specific sold prices, and all of them require manual work. The gap between 'what I want to know' and 'what Vinted shows me' is exactly why dedicated sold-price tools have emerged."
+      ]
+    },
+    {
+      "heading": "The tool-based approach: real Vinted sold prices",
+      "paragraphs": [
+        "The cleaner answer is a tool that records what items actually sold for on Vinted. Supervint's sold-price database is crowd-sourced — as users run saved searches, the extension detects when a watched item vanishes from results, confirms it genuinely sold, and records the final sale price into a shared index that every user can query.",
+        "That gives you something Vinted itself won't: a searchable record of real, completed Vinted sales. Ask 'what does a Barbour Bedale actually sell for?' and you get real sold prices rather than a guess from live listings, so you can price your own listings and spot bargains with confidence.",
+        "The database grows the more people use it — every user's searches quietly feed one shared index of completed sales. It's the kind of data that gets more valuable the larger it gets, and it's exactly the feature Vinted itself has never built."
+      ]
+    },
+    {
+      "heading": "A note on accuracy and averages",
+      "paragraphs": [
+        "Sold prices are most reliable when you query a specific item — a particular model, style, or combination of features. A single-word search like 'Barbour' or 'Nike' covers a huge range of items at wildly different prices, so an average across that category is meaningless (£2 kids' tee vs £200 jacket).",
+        "The useful query is specific: 'Barbour Bedale size 40', 'Lego Millennium Falcon retired set', 'Carhartt Detroit jacket'. The more specific the query, the more meaningful the sold-price result. This is the same discipline as setting a good saved search — precision beats breadth.",
+        "If you're seeing a price that looks wrong, treat it as a data point rather than gospel — condition, size, and how quickly the seller wanted to move the item all shift what 'sold for £X' actually means. Used alongside live-listings research, sold data turns pricing from a guess into a calculation."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does Vinted show sold prices?",
+      "answer": "No. Vinted has no sold-listings filter, no completed-items view, and no price history on item pages. Once an item sells it disappears from search results and its final price is not shown anywhere."
+    },
+    {
+      "question": "How can I find what an item sold for on Vinted?",
+      "answer": "Use an external sold-price tool like Supervint, which records real completed Vinted sales into a searchable database. The manual alternative is cross-checking eBay's sold listings filter as a rough proxy for market value."
+    },
+    {
+      "question": "Why doesn't Vinted show sold prices?",
+      "answer": "Vinted keeps sale prices private by design, unlike eBay's public sold-listings view. This is likely a deliberate choice to protect sellers, but it leaves buyers and resellers without an official way to check real market value."
+    },
+    {
+      "question": "How accurate are external Vinted sold-price tools?",
+      "answer": "They're accurate for specific queries — a particular model, size, or item — because they record real completed sales. Broad single-word searches across a whole category produce misleading averages, so always query as specifically as you can."
+    },
+    {
+      "question": "Why do sold prices matter for resellers?",
+      "answer": "Sold prices show what items actually sell for, versus what sellers are asking. That lets you spot genuinely underpriced listings, calculate your flip margin before you buy, and price your own listings with evidence instead of guesswork."
+    }
+  ]
+}
