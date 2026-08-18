@@ -9,7 +9,7 @@ export default function Privacy() {
   return (
     <div className="prose">
       <h1>Privacy Policy for Supervint</h1>
-      <span className="updated">Last Updated: 18 August 2026</span>
+      <span className="updated">Last Updated: 21 August 2026</span>
 
       <p>
         This Privacy Policy describes how Supervint (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) collects, uses, and
@@ -44,6 +44,12 @@ export default function Privacy() {
           sold-order history (item titles and sale prices) and contributes it to an anonymised sold-price database that
           improves price alerts for all Supervint users. No buyer details, usernames, messages, or payment information
           are collected or stored.
+        </li>
+        <li>
+          <strong>AI Assistant Queries:</strong> If you use the AI assistant, the messages you type are sent to a
+          third-party AI model provider solely to generate a response. Your AI queries are not used to train models and
+          are not sold. We keep a daily count of AI messages per account to enforce plan limits; message content is not
+          retained beyond what is needed to respond to your current conversation.
         </li>
       </ul>
 
@@ -80,7 +86,8 @@ export default function Privacy() {
         <li>
           <strong>Service Providers:</strong> If you enable email alerts, item and price details relevant to that
           specific alert are passed to a transactional email-sending service in order to deliver the email to the
-          address you provided.
+          address you provided. If you use the AI assistant, your queries are passed to a third-party AI model provider
+          solely to generate a response.
         </li>
         <li>
           <strong>Aggregated Sold-Price Database:</strong> Anonymised sold-order data (item titles and sale prices) is

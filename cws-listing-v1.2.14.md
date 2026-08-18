@@ -1,45 +1,73 @@
 # Supervint — Chrome Web Store listing (v1.2.14 / Empire tier)
 
+> NOTE: The Chrome Web Store "detailed description" field is PLAIN TEXT — it does
+> not render markdown (`**bold**` shows as literal asterisks). Use all-caps section
+> headers, `•` bullets, and blank lines. The copy below is store-ready as-is.
+
 ## Short description (max 132 chars)
 Vinted price alerts with an AI assistant — build snipes in plain English, see real sold prices, get notified the instant a deal drops.
 
-## Detailed description
+## Detailed description (paste exactly)
 
-**Supervint watches your Vinted searches around the clock and notifies you the instant a new listing appears.** While you're working, sleeping, or away from your screen, Supervint is checking — so you see the best listings before anyone else does.
+Supervint watches your Vinted searches around the clock and notifies you the instant a new listing appears. While you're working, sleeping, or away from your screen, Supervint is checking — so you see the best listings before anyone else does.
 
-**HOW IT WORKS**
+FEATURES
+
+• Paste any Vinted search and Supervint snipes it for you — copy a search URL (or set your own filters for brand, size, colour, condition and price), paste it in, and Supervint watches it around the clock, alerting you the instant a new matching listing goes live.
+
+AI ASSISTANT
+
+• Describe what you're hunting in plain English and it builds the search for you — setting the brand, size, colour and price cap automatically
+
+• Paste a whole list of links and it adds them all at once
+
+• Ask it anything about selling on Vinted — what to charge, what sells fast, whether a listing is a bargain — and it answers using real sold-price data
+
+• Tell it to remove searches and it cleans them up for you
+
+• Search your own listings — type a keyword to find any item in your own closet instantly. No more scrolling your entire wardrobe to find one jacket.
+
+• Sold-price intelligence — see what items actually sold for on Vinted, not just what they're listed at, so you know a genuine bargain from a trap.
+
+• Instant desktop notifications — photo and price the moment a listing goes live.
+
+• Email price alerts — set a lower "urgent" price per search and get emailed only when something exceptionally cheap appears.
+
+• Google Sheets logging — every match written automatically to a spreadsheet you own, accessible from any device.
+
+• Run multiple searches at once — watch trainers, jackets, vintage gear, anything you're hunting, all simultaneously.
+
+• Active hours — tell Supervint when to check, and when not to.
+
+• Transparent — if a search pauses for any reason, you'll see exactly why in the popup, never just silence.
+
+HOW IT WORKS
 
 1. Go to Vinted and set your filters — size, condition, price range, brand, colour. Copy the URL from the address bar.
+
 2. Paste it into Supervint, give it a name, and switch it on.
+
 3. Supervint runs quietly in the background and fires a desktop notification the moment something matches. Click it and you're straight on the listing.
 
 Or skip the filters entirely — tell the built-in AI assistant what you're after in plain English ("Nike P-6000 trainers under £20 in UK size 8–10") and it builds the search, sets the price cap and filters, and starts watching for you.
 
-**FEATURES**
+PLANS
 
-• **AI search builder** — describe it in plain language, Supervint turns it into a live, monitored search
-• **Sold-price intelligence** — see what items actually sold for on Vinted, so you know a genuine bargain from a trap
-• Run multiple searches simultaneously — watch trainers, jackets, vintage gear, anything you're hunting, all at once
-• Instant desktop notifications with photo and price the moment a listing goes live
-• Search your own listings — type a keyword to find any item in your own closet instantly, no scrolling
-• Email price alerts — set a lower "urgent" price per search and get emailed only when something exceptionally cheap appears
-• Google Sheets logging — every match written automatically to a spreadsheet you own, accessible from any device
-• Active hours — tell Supervint when to check, and when not to
-• Transparent — if a search pauses for any reason, you'll see exactly why in the popup, never just silence
+• Free — 5 active searches, desktop alerts, search your own listings
 
-**PLANS**
+• Trial (7 days, starts automatically) — 50 searches, email alerts, sold prices, AI assistant, Sheets — the full experience, no card required
 
-- **Free** — 5 active searches, desktop alerts, search your own listings
-- **Trial (7 days, starts automatically)** — 50 searches, email alerts, sold prices, AI assistant, Sheets — the full experience, no card required
-- **Reseller** — 50 searches, email alerts, sold prices, AI assistant, Sheets — £6.99/month
-- **Power Seller** — 100 searches, everything included — £13.99/month
-- **Empire** — 200 searches, built for high-volume sellers — £24.99/month
+• Reseller — 50 searches, email alerts, sold prices, AI assistant, Sheets — £6.99/month
+
+• Power Seller — 100 searches, everything included — £13.99/month
+
+• Empire — 200 searches, built for high-volume sellers — £24.99/month
 
 Subscriptions are handled via Stripe. Upgrade, downgrade, or cancel at any time from within the extension.
 
 Free users may optionally provide an email address inside the extension — used only for account recovery and occasional updates, never required to use the extension.
 
-**PRIVACY**
+PRIVACY
 
 Supervint fetches Vinted search results directly from Vinted's public catalogue — the same data your browser loads when you search normally. It does not log in to Vinted on your behalf, does not store your Vinted credentials, and does not post, bid, or buy on your account. Your search configurations are stored locally on your device. The optional Google Sheets feature connects only to a spreadsheet Supervint itself creates in your own Drive — no other Drive files are accessed.
 

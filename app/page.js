@@ -157,8 +157,16 @@ export default function Home() {
         </div>
         <div className="feature-grid">
           <div className="feature-card">
-            <h3>Run as many searches as you want</h3>
+            <h3>Run up to 200 searches at once</h3>
             <p>Track every search that matters at once — each with its own schedule and daily limit, fully independent of the rest.</p>
+          </div>
+          <div className="feature-card">
+            <h3>AI assistant that builds your searches</h3>
+            <p>Describe what you&apos;re hunting in plain English and the AI builds the search — brand, size, colour and price cap set for you. Paste a list of links and it adds them all at once.</p>
+          </div>
+          <div className="feature-card">
+            <h3>Sold-price intelligence</h3>
+            <p>See what items actually sold for on Vinted, not just what they&apos;re listed at — so you know a genuine bargain from a trap.</p>
           </div>
           <div className="feature-card">
             <h3>Search your own listings, instantly</h3>
