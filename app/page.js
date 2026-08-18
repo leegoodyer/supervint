@@ -103,8 +103,8 @@ export default function Home() {
       <section className="hero">
         <p className="eyebrow">The Vinted Product Sniper &amp; Price Alert</p>
         <h1>Never miss a Vinted deal again. <span className="hero-accent">Flip for profit, before anyone else.</span></h1>
-        <p className="hero-kw">The Vinted Chrome extension that watches your searches 24/7 and fires an instant desktop alert the second a matching listing goes live — so you snipe the flip before it&apos;s gone.</p>
-        <p className="hero-sub">Deals on Vinted sell in minutes. Supervint alerts you in seconds — no bots, no ban risk, just faster than everyone else.</p>
+        <p className="hero-kw">Supervint is the Chrome extension that watches every Vinted search you set — 24/7, in the background — and fires an instant desktop alert the second a matching listing goes live. While other buyers are still scrolling, you&apos;re already on the listing.</p>
+        <p className="hero-sub">Good listings on Vinted sell in minutes, not hours. Supervint checks continuously, not when you remember to hit refresh — so you see the item the moment it drops, at the price you wanted, before someone else grabs it.</p>
         <a
           href="#pricing"
           className="btn btn-primary btn-lg"
@@ -135,17 +135,17 @@ export default function Home() {
           <div className="problem">
             <span className="problem-no">01</span>
             <h3>Good listings sell in minutes</h3>
-            <p>Manually refreshing means you&apos;re always behind the buyers who already have an alert running.</p>
+            <p>On Vinted, a genuine bargain — a £40 Carhartt jacket listed for £12, a working N64 for a tenner — is gone in under ten minutes. If you only check when you think of it, you&apos;re always the buyer who arrives after it&apos;s sold.</p>
           </div>
           <div className="problem">
             <span className="problem-no">02</span>
             <h3>You can&apos;t watch ten searches at once</h3>
-            <p>Trainers, jackets, that console — your eyes can only be on one tab at a time. Supervint&apos;s can be on all of them.</p>
+            <p>Trainers, jackets, consoles, baby gear, vintage denim — the stuff worth flipping is spread across a dozen searches. Your eyes can only be on one tab at a time. Supervint&apos;s can be on all of them, every minute of the day.</p>
           </div>
           <div className="problem">
             <span className="problem-no">03</span>
             <h3>The big one never waits</h3>
-            <p>You need something sniping for you even when you&apos;re nowhere near your laptop.</p>
+            <p>The listing that pays for your whole week lands at 2pm on a Tuesday while you&apos;re at work — or asleep, or on the school run. Someone needs to be watching when you can&apos;t be.</p>
           </div>
         </div>
       </section>
@@ -262,17 +262,17 @@ export default function Home() {
           <div className="how-step">
             <span className="how-no">1</span>
             <h3>Paste a search</h3>
-            <p>Search Vinted like normal, copy the link, drop it into Supervint.</p>
+            <p>Search Vinted like you normally would — brand, size, price range, whatever filters you use — then copy the link and drop it into Supervint. Or skip straight past this and let the AI build it from a sentence.</p>
           </div>
           <div className="how-step">
             <span className="how-no">2</span>
             <h3>Name it, set your alert</h3>
-            <p>Give it a label, choose your hours, set a price alert if you want emails.</p>
+            <p>Give it a label, pick the hours you want it checking, and set a &ldquo;steal price&rdquo; if you want an email when something drops below a threshold. Everything else runs itself.</p>
           </div>
           <div className="how-step">
             <span className="how-no">3</span>
             <h3>Get on with your day</h3>
-            <p>Supervint snipes in the background. You find out the moment it matters.</p>
+            <p>Supervint works in the background while you do literally anything else. When a match goes live you get a desktop alert with the photo and price — click it and you&apos;re on the listing. That&apos;s the whole job.</p>
           </div>
         </div>
       </section>
@@ -377,6 +377,7 @@ export default function Home() {
 
       <section className="final">
         <h2>Stop refreshing. Start sniping.</h2>
+        <p className="final-sub">Every minute you spend manually checking Vinted is a minute someone else is already on the listing. Install Supervint free, set your searches once, and let it do the watching for you.</p>
         <a
           href="#pricing"
           className="btn btn-primary btn-lg"

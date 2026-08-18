@@ -225,7 +225,8 @@ section{max-width:var(--max); margin:0 auto; padding:5rem 2rem;}
 
 /* final cta */
 .final{text-align:center;}
-.final h2{font-size:clamp(1.9rem,3.6vw,2.4rem); margin-bottom:1.6rem;}
+.final h2{font-size:clamp(1.9rem,3.6vw,2.4rem); margin-bottom:1rem;}
+.final-sub{font-size:1.05rem; color:var(--gray); line-height:1.6; max-width:34rem; margin:0 auto 2rem;}
 
 /* footer */
 .footer{border-top:1px solid var(--line); padding:2.4rem 2rem;}
