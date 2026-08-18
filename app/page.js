@@ -243,10 +243,10 @@ export default function Home() {
             <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-primary price-cta" onClick={() => fbq('track', 'Lead', { content_name: 'Reseller Install Click' })}>Get started on Chrome</a>
             <ul>
               <li>Up to 50 active searches</li>
-              <li>Desktop alerts</li>
-              <li>Google Sheets logging</li>
+              <li>AI assistant — 50 messages/day</li>
+              <li>Sold-price intelligence</li>
               <li>Email price alerts</li>
-              <li>Search your own listings</li>
+              <li>Google Sheets logging</li>
             </ul>
           </div>
           <div className="price-card">
@@ -255,6 +255,7 @@ export default function Home() {
             <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-ghost price-cta" onClick={() => fbq('track', 'Lead', { content_name: 'Power Seller Install Click' })}>Get started on Chrome</a>
             <ul>
               <li>Up to 100 active searches</li>
+              <li>AI assistant — 100 messages/day</li>
               <li>Everything in Reseller</li>
               <li>Priority support</li>
             </ul>
@@ -265,15 +266,17 @@ export default function Home() {
             <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-ghost price-cta" onClick={() => fbq('track', 'Lead', { content_name: 'Empire Install Click' })}>Get started on Chrome</a>
             <ul>
               <li>Up to 200 active searches</li>
+              <li>AI assistant — 200 messages/day</li>
               <li>Everything in Power Seller</li>
               <li>Built for high-volume sellers</li>
             </ul>
           </div>
         </div>
         <p className="pricing-callout">
-          <strong>Every new account gets 7 days of Trial free</strong> — 50 searches, Google Sheets
-          logging and email alerts, no card needed. After 7 days you keep everything on Free (5 searches) forever.
-          Upgrade to Reseller, Power Seller or Empire directly inside the extension when you need more room.
+          <strong>Every new account gets 7 days of Trial free</strong> — 50 searches, AI assistant,
+          sold prices, Google Sheets logging and email alerts, no card needed. After 7 days you keep
+          everything on Free (5 searches) forever. Upgrade to Reseller, Power Seller or Empire directly
+          inside the extension when you need more room.
         </p>
         <p className="pricing-note">Free accounts are optionally asked for an email inside the extension — to back up your searches across devices and for account updates. Never required to start.</p>
       </section>
