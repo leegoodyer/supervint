@@ -32,7 +32,7 @@ export default function UninstallPage() {
             🎁 Changed your mind? Get 7 more days free
           </p>
           <p style={{ margin: '0', color: '#4b5563', fontSize: '0.85rem', lineHeight: 1.5 }}>
-            Reinstall and your trial extends by a week — unlimited searches, no card needed.
+            Reinstall and your trial extends by a week — 50 searches, no card needed.
             If it wasn&apos;t for you, no hard feelings.
           </p>
         </div>

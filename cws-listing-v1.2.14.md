@@ -30,8 +30,8 @@ Or skip the filters entirely — tell the built-in AI assistant what you're afte
 **PLANS**
 
 - **Free** — 5 active searches, desktop alerts, search your own listings
-- **Trial (7 days, starts automatically)** — 100 searches, email alerts, sold prices, AI assistant, Sheets — the full experience, no card required
-- **Reseller** — 10 searches, email alerts, sold prices, AI assistant, Sheets — £6.99/month
+- **Trial (7 days, starts automatically)** — 50 searches, email alerts, sold prices, AI assistant, Sheets — the full experience, no card required
+- **Reseller** — 50 searches, email alerts, sold prices, AI assistant, Sheets — £6.99/month
 - **Power Seller** — 100 searches, everything included — £13.99/month
 - **Empire** — 200 searches, built for high-volume sellers — £24.99/month
 

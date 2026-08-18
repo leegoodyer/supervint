@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'Is there a free version?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — Supervint is free to install with 5 active searches and desktop alerts included. Every new account also gets 7 days of Power Seller free, with no card required. Upgrade to Reseller (£6.99/month), Power Seller (£13.99/month) or Empire (£24.99/month) for more searches, Google Sheets logging, email price alerts, and priority support.',
+        text: 'Yes — Supervint is free to install with 5 active searches and desktop alerts included. Every new account also gets 7 days of Trial free, with no card required. Upgrade to Reseller (£6.99/month), Power Seller (£13.99/month) or Empire (£24.99/month) for more searches, Google Sheets logging, email price alerts, and priority support.',
       },
     },
     {
@@ -234,7 +234,7 @@ export default function Home() {
             <p className="price-num">£6.99<span>/ month</span></p>
             <a href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo" className="btn btn-primary price-cta" onClick={() => fbq('track', 'Lead', { content_name: 'Reseller Install Click' })}>Get started on Chrome</a>
             <ul>
-              <li>Up to 10 active searches</li>
+              <li>Up to 50 active searches</li>
               <li>Desktop alerts</li>
               <li>Google Sheets logging</li>
               <li>Email price alerts</li>
@@ -263,7 +263,7 @@ export default function Home() {
           </div>
         </div>
         <p className="pricing-callout">
-          <strong>Every new account gets 7 days of Power Seller free</strong> — 100 searches, Google Sheets
+          <strong>Every new account gets 7 days of Trial free</strong> — 50 searches, Google Sheets
           logging and email alerts, no card needed. After 7 days you keep everything on Free (5 searches) forever.
           Upgrade to Reseller, Power Seller or Empire directly inside the extension when you need more room.
         </p>
@@ -289,7 +289,7 @@ export default function Home() {
           </div>
           <div className="faq-item">
             <h3>Is there a free version?</h3>
-            <p>Yes — Supervint is free to install with 5 active searches and desktop alerts included. Every new account also gets 7 days of Power Seller free, with no card required. Upgrade to Reseller (£6.99/month), Power Seller (£13.99/month) or Empire (£24.99/month) for more searches, Google Sheets logging, email price alerts, and priority support.</p>
+            <p>Yes — Supervint is free to install with 5 active searches and desktop alerts included. Every new account also gets 7 days of Trial free, with no card required. Upgrade to Reseller (£6.99/month), Power Seller (£13.99/month) or Empire (£24.99/month) for more searches, Google Sheets logging, email price alerts, and priority support.</p>
           </div>
           <div className="faq-item">
             <h3>Will Supervint get my Vinted account banned?</h3>

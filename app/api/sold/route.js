@@ -110,8 +110,8 @@ export async function GET(request) {
   const days = Math.min(Number(url.searchParams.get('days')) || 90, 90);
   const clientId = (url.searchParams.get('clientId') || '').trim();
 
-  // Plan gate: paid (reseller/power seller) or trial (reverse trial = full
-  // features) can read; free cannot. Trial users have plan 'trial' in KV.
+  // Plan gate: paid (reseller/power seller/empire) or trial can read; free
+  // cannot. Trial users have plan 'trial' in KV.
   if (clientId) {
     const sub = await kv.get(`sv:sub:${clientId}`);
     const plan = (sub?.plan || '').toLowerCase();
