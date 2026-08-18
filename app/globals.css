@@ -123,6 +123,73 @@ section{max-width:var(--max); margin:0 auto; padding:5rem 2rem;}
 .feature-card h3{font-size:1.02rem; margin-bottom:0.55rem;}
 .feature-card p{font-size:0.9rem; color:var(--gray); line-height:1.55;}
 
+/* feature showcases — headline features with visual demos */
+.showcase{display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; margin-bottom:4.5rem;}
+.showcase.reverse .showcase-copy{order:2;}
+.showcase.reverse .showcase-visual{order:1;}
+@media(max-width:840px){
+  .showcase{grid-template-columns:1fr; gap:1.5rem;}
+  .showcase.reverse .showcase-copy{order:1;}
+  .showcase.reverse .showcase-visual{order:2;}
+}
+.showcase-copy h3{font-size:1.5rem; line-height:1.25; margin-bottom:0.9rem; color:var(--ink);}
+.showcase-copy p{font-size:1rem; color:var(--gray); line-height:1.6; margin-bottom:1.2rem;}
+.showcase-copy ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0.6rem;}
+.showcase-copy li{position:relative; padding-left:1.4rem; font-size:0.92rem; color:#374151; line-height:1.5;}
+.showcase-copy li::before{content:"✓"; position:absolute; left:0; color:var(--green); font-weight:700;}
+
+/* AI chat mockup */
+.ai-chat{
+  background:var(--offwhite); border:1px solid var(--line); border-radius:16px;
+  padding:1.2rem 1.2rem 1.4rem; box-shadow:0 24px 50px -30px rgba(0,119,130,0.35);
+}
+.chat-bar{display:flex; align-items:center; gap:0.5rem; margin-bottom:1.1rem;}
+.chat-title{font-size:0.8rem; color:var(--gray); margin-left:0.4rem; font-weight:600;}
+.ai-msg{border-radius:12px; padding:0.8rem 1rem; font-size:0.88rem; line-height:1.5; max-width:88%;}
+.ai-msg-user{background:linear-gradient(160deg, var(--green-bright), var(--green)); color:#fff; margin-left:auto; margin-bottom:0.6rem;}
+.ai-msg-bot{background:#fff; border:1px solid var(--line); color:var(--ink);}
+.ai-built{
+  display:block; margin-top:0.5rem; padding:0.55rem 0.7rem; border-radius:8px;
+  background:#e7f7f4; color:var(--green-dark); font-weight:600; font-size:0.82rem;
+}
+
+/* sold prices mockup */
+.sold-panel{
+  background:#fff; border:1px solid var(--line); border-radius:16px;
+  padding:1.2rem 1.2rem 0.9rem; box-shadow:0 24px 50px -30px rgba(0,119,130,0.35);
+}
+.sold-panel-title{font-size:0.78rem; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:var(--gray); margin-bottom:1rem;}
+.sold-row{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0.7rem 0; border-top:1px solid var(--line); font-size:0.9rem;
+}
+.sold-row:first-of-type{border-top:none;}
+.sold-row span{color:#374151;}
+.sold-row strong{color:var(--green-dark); font-weight:700;}
+
+/* wardrobe mockup */
+.wardrobe{
+  background:#fff; border:1px solid var(--line); border-radius:16px;
+  padding:1.2rem 1.2rem 1rem; box-shadow:0 24px 50px -30px rgba(0,119,130,0.35);
+}
+.wardrobe-search{
+  border:1px solid var(--line); border-radius:10px; padding:0.7rem 1rem;
+  font-size:0.88rem; color:var(--gray); margin-bottom:1rem; background:var(--offwhite);
+}
+.wardrobe-row{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0.7rem 0; border-top:1px solid var(--line); font-size:0.9rem;
+}
+.wardrobe-row:first-of-type{border-top:none;}
+.wardrobe-row span:first-child{color:#374151; font-weight:500;}
+
+/* support grid (secondary features) */
+.support-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem;}
+@media(max-width:900px){.support-grid{grid-template-columns:1fr;}}
+.support-card{background:#fff; border:1px solid var(--line); border-radius:14px; padding:1.5rem;}
+.support-card h3{font-size:1rem; margin-bottom:0.5rem;}
+.support-card p{font-size:0.9rem; color:var(--gray); line-height:1.55;}
+
 /* how it works */
 .how-steps{display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:1rem;}
 @media(max-width:840px){.how-steps{grid-template-columns:1fr;}}

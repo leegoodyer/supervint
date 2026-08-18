@@ -155,42 +155,100 @@ export default function Home() {
           <p className="eyebrow">What Supervint does</p>
           <h2>Everything you need to snipe the drop.</h2>
         </div>
-        <div className="feature-grid">
-          <div className="feature-card">
-            <h3>Run up to 200 searches at once</h3>
-            <p>Track every search that matters at once — each with its own schedule and daily limit, fully independent of the rest.</p>
+
+        <div className="showcase">
+          <div className="showcase-copy">
+            <h3>Tell the AI what you&apos;re hunting. It builds the search.</h3>
+            <p>
+              No more fiddling with filters. Describe the item in plain English — brand, size, price, the
+              lot — and the AI assistant turns it into a live, monitored Vinted search in seconds.
+            </p>
+            <ul>
+              <li>Sets brand, size, colour and price cap automatically</li>
+              <li>Paste a whole list of links and it adds them all at once</li>
+              <li>Ask it anything about selling — what to charge, what sells fast</li>
+              <li>Tell it to remove searches and it cleans them up for you</li>
+            </ul>
           </div>
-          <div className="feature-card">
-            <h3>AI assistant that builds your searches</h3>
-            <p>Describe what you&apos;re hunting in plain English and the AI builds the search — brand, size, colour and price cap set for you. Paste a list of links and it adds them all at once.</p>
+          <div className="showcase-visual">
+            <div className="ai-chat">
+              <div className="chat-bar"><span className="shot-dot"></span><span className="shot-dot"></span><span className="shot-dot"></span><span className="chat-title">Supervint AI</span></div>
+              <div className="ai-msg ai-msg-user">&ldquo;Nike P-6000 trainers under £20, UK size 8–10&rdquo;</div>
+              <div className="ai-msg ai-msg-bot">
+                Done — search built and watching now.
+                <span className="ai-built">Nike P-6000 · ≤£20 · UK 8–10 · colour: any</span>
+              </div>
+            </div>
           </div>
-          <div className="feature-card">
-            <h3>Sold-price intelligence</h3>
-            <p>See what items actually sold for on Vinted, not just what they&apos;re listed at — so you know a genuine bargain from a trap.</p>
+        </div>
+
+        <div className="showcase reverse">
+          <div className="showcase-copy">
+            <h3>Know what it actually sold for.</h3>
+            <p>
+              Asking price is a guess. Sold price is the truth. Supervint shows what items really went for
+              on Vinted, so you know a genuine bargain from a listing that just looks cheap.
+            </p>
+            <ul>
+              <li>Real sale prices, not asking prices</li>
+              <li>Average sold price for the exact item you&apos;re hunting</li>
+              <li>Spot flips instantly — buy low, sell at true market value</li>
+            </ul>
           </div>
-          <div className="feature-card">
-            <h3>Search your own listings, instantly</h3>
-            <p>Got hundreds of items listed? Type a keyword and find your own listing in a second — no more scrolling your whole wardrobe to locate one item.</p>
+          <div className="showcase-visual">
+            <div className="sold-panel">
+              <div className="sold-panel-title">Sold prices — what it actually went for</div>
+              <div className="sold-row"><span>&amp;honey Shampoo</span><strong>£11</strong></div>
+              <div className="sold-row"><span>Carhartt Jacket · M</span><strong>£45</strong></div>
+              <div className="sold-row"><span>Lego Star Wars set</span><strong>£4.50</strong></div>
+              <div className="sold-row"><span>Barbour Wax Jacket</span><strong>£38</strong></div>
+            </div>
           </div>
-          <div className="feature-card">
+        </div>
+
+        <div className="showcase">
+          <div className="showcase-copy">
+            <h3>Find any item in your own closet, instantly.</h3>
+            <p>
+              Got hundreds of items listed? Type a keyword and Supervint finds the one you&apos;re after in
+              a second — no more scrolling your whole wardrobe to locate a single jacket.
+            </p>
+            <ul>
+              <li>Keyword search across your entire listing history</li>
+              <li>Built for high-volume sellers with hundreds of items</li>
+              <li>Zero scrolling — type it, find it</li>
+            </ul>
+          </div>
+          <div className="showcase-visual">
+            <div className="wardrobe">
+              <div className="wardrobe-search">jacket</div>
+              <div className="wardrobe-row"><span>Vintage Levi&apos;s Denim Jacket</span><span className="shot-tag tag-new">found</span></div>
+              <div className="wardrobe-row"><span>Barbour Wax Jacket · M</span><span className="shot-tag tag-new">found</span></div>
+              <div className="wardrobe-row"><span>Carhartt Detroit Jacket · L</span><span className="shot-tag tag-new">found</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="support-grid">
+          <div className="support-card">
             <h3>Instant alerts, the second it&apos;s live</h3>
-            <p>A real desktop notification with the photo and price, the moment a new listing matches. Click it — you&apos;re already on the page.</p>
+            <p>A real desktop notification with the photo and price, the moment a new listing matches.</p>
           </div>
-          <div className="feature-card">
-            <h3>Every find, logged to a Google Sheet</h3>
-            <p>Connect your own Google account and every item Supervint snipes gets written straight to a spreadsheet you can check from any device.</p>
+          <div className="support-card">
+            <h3>Email price alerts</h3>
+            <p>Set a lower &ldquo;urgent&rdquo; price and get emailed only when something drops below it.</p>
           </div>
-          <div className="feature-card">
-            <h3>Set a price alert, get emailed on the steals</h3>
-            <p>Tell Supervint what counts as a steal for any search and get an email the second something drops below it.</p>
+          <div className="support-card">
+            <h3>Google Sheets logging</h3>
+            <p>Every find written straight to a spreadsheet in your own Drive, checkable from any device.</p>
           </div>
-          <div className="feature-card">
+          <div className="support-card">
             <h3>Active hours you control</h3>
-            <p>Set the window Supervint should be checking — it hibernates outside it, so it&apos;s never running when you wouldn&apos;t be.</p>
+            <p>Set when Supervint checks — it hibernates outside your window.</p>
           </div>
-          <div className="feature-card">
+          <div className="support-card">
             <h3>Upfront, always</h3>
-            <p>If a search needs to pause to keep your account safe, you&apos;ll see exactly why, right in the popup — never just silence.</p>
+            <p>If a search pauses to keep your account safe, you&apos;ll see exactly why — never silence.</p>
           </div>
         </div>
       </section>
