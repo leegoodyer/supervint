@@ -14,7 +14,7 @@ export const runtime = 'nodejs';
 // ⚠️ BUMP THIS whenever a new version is PUBLISHED to the Chrome Web Store.
 // It must track the *published* version, NOT the dev version — otherwise a
 // dev build would flag every Store user as "out of date" before it's live.
-const LATEST_VERSION = '1.2.12';
+const LATEST_VERSION = '1.2.13';
 
 export async function GET() {
   return NextResponse.json({ version: LATEST_VERSION }, {
