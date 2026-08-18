@@ -15,7 +15,7 @@ const CORS = {
 // just what gets pulled back on a reinstall/new device via the account/email
 // merge (or directly, via /api/searches/status, if local storage is ever
 // cleared without a full uninstall).
-const MAX_SEARCHES = 50;
+const MAX_SEARCHES = 200; // Empire ceiling — never truncate a legit 100/200-tier backup
 const DEF_FIELDS = ['id', 'label', 'searchUrl', 'activeHoursStart', 'activeHoursEnd', 'urgentPriceThreshold', 'dailyCap'];
 
 function sanitizeSearch(s) {
