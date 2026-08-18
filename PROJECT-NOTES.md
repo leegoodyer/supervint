@@ -363,9 +363,59 @@ purged).
   Hermes drafts should aim for the vinted-alerts-[category] pattern for
   consistency going forward.
 
+## v1.2.13 Ship + Remote Harvest Control (2026-08-18)
+- **Shipped v1.2.13** (zip at `~/Documents/supervint-v1.2.13-store.zip`, key
+  stripped, verified clean — no .md/.git/.claude leaks, version 1.2.13, all
+  features present). Includes: sold classifier fix (sold vs removed vs live —
+  the INVERTED bug), harvest crowd-source engine, version-check banner, AI
+  assistant, rate-gate corrections. Server `LATEST_VERSION` = 1.2.13.
+- **Sold classifier corrected (major bug)**: old logic labelled removed/holiday
+  items "sold" and real sales "removed". New truth table (verified against 3
+  known-state items): live = ld+json `availability:InStock`; **sold = no ld+json
+  + `can_buy:false`**; removed = no ld+json + `can_buy:true`. `is_hidden` NOT a
+  discriminator. Unit-tested in sold-tracker.js.
+- **Harvest engine** (`harvestMySold`, sold-tracker.js): reads logged-in user's
+  OWN sold history via `my_orders` API (`type=sold&status=completed&per_page=20`
+  → itemId `tx-<transaction_id>`, skips "Bundle"). Auto-runs on install + weekly
+  (`sv_sold_harvest` alarm). Dedupes on itemId.
+- **Remote harvest control (NEW — the remote cap Lee asked for)**: endpoint
+  `/api/extension/harvest-config` returns `{harvestEnabled, harvestMaxOrders}`.
+  Default ships at `harvestMaxOrders:50` (cautious first run). Lee can bump to
+  0 (unlimited) or kill it (`harvestEnabled:false`) on the server WITHOUT a
+  Store re-publish. Extension fetches it before each run; on any failure falls
+  back to local default 50 (conservative, never unlimited). Local storage
+  `harvestMaxOrders` flag still works as manual override.
+- **Version-check banner**: popup compares `chrome.runtime.getManifest().version`
+  vs `GET /api/extension/latest-version`; if behind, shows "Update available"
+  banner + button that opens chrome://extensions via `chrome.tabs.create`
+  (`requestUpdateCheck` no-ops on dev/unpacked). **BUMP `LATEST_VERSION` in the
+  route on EVERY Store publish** or the banner silently never fires.
+- **Scraping button removed from popup** (Lee: "scraping sheets buttons gone,
+  just Connect Google Sheets"). `renderSheetPanel` no longer shows "Check sheet
+  for sold" — the connected state now only has Open sheet / Reauthorize.
+  NOTE: the auto-start walker (`autoStartBackfillIfConnected`) + `BACKFILL_SOLD`
+  handler + `runSheetBackfill`/`ensureBackfillWatchdog` still EXIST in
+  background.js (Lee's own sheet walker). Not gated off in this build.
+- **Privacy policy updated + live** (`/privacy`): added "Sold-Price Data"
+  (Information We Collect) + "Aggregated Sold-Price Database" (How We Share).
+  Sold DB stores itemId/title/price/currency/keyword/brand/size + `firstReportedBy`
+  (clientId UUID, NOT a buyer name). No buyer usernames/messages/payment info.
+- **CWS compliance note**: harvest is the one piece with policy surface — it's
+  user's PRIVATE sold history (Vinted has NO public sold channel), so it's user
+  data, not public info. Disclosed in privacy policy + store listing = defensible;
+  "invisible + auto" is the risk. Lee chose disclosure-over-consent-button.
+
+## Queued for v1.2.14 (Lee 2026-08-18)
+- **Per-search item-count display (admin panel).** Every poll already computes
+  `trackedItemCount` (total matching) + `newItemsLastCount` (new this poll) but
+  writes them to local storage only — never surfaced. Build: add these two to
+  the heartbeat (or tiny telemetry POST) and show in admin panel as a LIVE
+  snapshot per search — "10 new · 180 total" — no history, no time series. Goal:
+  tell healthy (items flowing) from dead (zero new) at a glance (the exact
+  question from diagnosing Archie's 39 "no_new" searches).
+
 ## Access/Environment Notes
 - supervint-web (website) and Supervint (extension) are SEPARATE
-  folders with separate access grants — a Claude Code session scoped
   to one cannot read the other. Always confirm working directory
   matches the task before starting.
 - GA4 property G-0DHBJ4FEQX is for the Chrome extension, not the
