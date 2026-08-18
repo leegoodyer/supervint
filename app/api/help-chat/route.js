@@ -28,7 +28,7 @@ export async function OPTIONS() {
 
 const MODEL       = 'deepseek-chat';
 const MAX_HISTORY = 12;           // messages of context (6 turns)
-const FREE_DAILY      = 15;       // free plan messages/day
+const FREE_DAILY      = 0;        // free plan: no AI
 const TRIAL_DAILY     = 50;       // = Reseller allowance
 const RESELLER_DAILY  = 50;
 const POWERSELLER_DAILY = 100;
@@ -133,8 +133,11 @@ export async function POST(request) {
   const usageKey = `sv:helpchat:${clientId}:${dayKey}`;
   const used = Number(await kv.get(usageKey)) || 0;
   if (used >= daily) {
+    const err = plan === 'free'
+      ? 'The AI assistant is a paid feature. Upgrade to Reseller, Power Seller or Empire to unlock it.'
+      : `You've used your ${daily} AI help messages today. Come back tomorrow!`;
     return NextResponse.json({
-      error: `You've used your ${daily} free AI help messages today${plan === 'free' ? ' — upgrade to Reseller or Power Seller for more' : ''}. Come back tomorrow!`,
+      error: err,
       limitReached: true,
     }, { status: 429, headers: CORS });
   }
