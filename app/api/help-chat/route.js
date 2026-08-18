@@ -101,7 +101,9 @@ function planDaily(plan) {
   const p = String(plan || '').toLowerCase();
   if (p === 'free')   return FREE_DAILY;
   if (p === 'trial')  return TRIAL_DAILY;
-  return PAID_DAILY; // reseller, power seller, null/unknown (generous)
+  // reseller, power seller, empire, null/unknown — all paid tiers get the full
+  // paid daily cap (200). Empire is the same AI allowance as Power Seller.
+  return PAID_DAILY;
 }
 
 export async function POST(request) {

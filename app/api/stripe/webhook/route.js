@@ -143,7 +143,7 @@ export async function POST(request) {
         // attribute the conversion to the originating ad campaign and build
         // purchase audiences. Hashed email + clientId as external_id.
         if (process.env.META_PIXEL_ID && process.env.META_CAPI_TOKEN) {
-          const planPrice = { reseller: 6.99, powerseller: 13.99 }[plan] || null;
+          const planPrice = { reseller: 6.99, powerseller: 13.99, empire: 24.99 }[plan] || null;
           try {
             const crypto = require('node:crypto');
             const em = checkoutEmail
