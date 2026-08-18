@@ -276,6 +276,10 @@ section{max-width:var(--max); margin:0 auto; padding:5rem 2rem;}
 .guide-intro{font-size:1.05rem; color:var(--ink); line-height:1.65; margin-bottom:2.5rem;}
 .guide-hero{display:flex; align-items:center; gap:0.8rem; margin-bottom:1rem;}
 .guide-hero h1{margin-bottom:0;}
+.guide-breadcrumb{display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; font-size:0.85rem; color:var(--muted, #6b7280); margin-bottom:1.5rem;}
+.guide-breadcrumb a{color:var(--green); text-decoration:none; font-weight:500;}
+.guide-breadcrumb a:hover{text-decoration:underline;}
+.guide-breadcrumb span[aria-hidden="true"]{color:#cbd5e1;}
 
 /* guides index */
 .guides-hero{

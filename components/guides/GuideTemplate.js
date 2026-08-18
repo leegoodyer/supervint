@@ -1,9 +1,11 @@
-import { buildArticleSchema, buildFaqSchema } from '@/lib/guides';
+import { buildArticleSchema, buildFaqSchema, buildBreadcrumbSchema, getRelatedGuides } from '@/lib/guides';
 import BrandBolt from '@/components/BrandBolt';
 
 export default function GuideTemplate({ guide }) {
   const faqSchema = buildFaqSchema(guide);
   const articleSchema = buildArticleSchema(guide);
+  const breadcrumbSchema = buildBreadcrumbSchema(guide);
+  const related = getRelatedGuides(guide.slug);
 
   return (
     <div className="guide">
@@ -17,6 +19,20 @@ export default function GuideTemplate({ guide }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
+
+      <nav className="guide-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="/guides">Guides</a>
+        <span aria-hidden="true">/</span>
+        <span>{guide.title}</span>
+      </nav>
 
       <div className="guide-hero">
         <BrandBolt sm />
@@ -56,9 +72,18 @@ export default function GuideTemplate({ guide }) {
         </p>
       )}
 
-      {/* Cross-link cluster: every guide links to the Help Hub + the three
-          help articles. This is what makes Google crawl the site as one
-          connected set instead of isolated pages. */}
+      {/* Related guides (topical cluster + universal fallback) — keeps every
+          page linked into a crawlable, topically-connected graph. */}
+      {related.length > 0 && (
+        <nav className="guide-crosslinks" aria-label="Related guides">
+          <span className="guide-crosslinks-label">Related guides:</span>
+          {related.map((r) => (
+            <a key={r.slug} href={`/guides/${r.slug}`}>{r.title}</a>
+          ))}
+        </nav>
+      )}
+
+      {/* Help Hub + core help articles, linked from every guide */}
       <nav className="guide-crosslinks" aria-label="Related help">
         <span className="guide-crosslinks-label">More help:</span>
         <a href="/help">Help Hub</a>
