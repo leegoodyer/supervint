@@ -28,9 +28,11 @@ export async function OPTIONS() {
 
 const MODEL       = 'deepseek-chat';
 const MAX_HISTORY = 12;           // messages of context (6 turns)
-const FREE_DAILY  = 15;           // free plan messages/day
-const TRIAL_DAILY = 50;
-const PAID_DAILY  = 200;
+const FREE_DAILY      = 15;       // free plan messages/day
+const TRIAL_DAILY     = 50;       // = Reseller allowance
+const RESELLER_DAILY  = 50;
+const POWERSELLER_DAILY = 100;
+const EMPIRE_DAILY    = 200;
 const MAX_MSG_LEN = 800;          // per-message char cap
 
 const SYSTEM_PROMPT = `You are the Supervint assistant — an expert on the Supervint Chrome extension AND on Vinted (the UK/Europe second-hand marketplace). You help users get the most from the plugin and from reselling on Vinted.
@@ -99,11 +101,12 @@ DELETING SEARCHES (important): when the user asks you to DELETE / REMOVE / CLEAR
 
 function planDaily(plan) {
   const p = String(plan || '').toLowerCase();
-  if (p === 'free')   return FREE_DAILY;
-  if (p === 'trial')  return TRIAL_DAILY;
-  // reseller, power seller, empire, null/unknown — all paid tiers get the full
-  // paid daily cap (200). Empire is the same AI allowance as Power Seller.
-  return PAID_DAILY;
+  if (p === 'free')        return FREE_DAILY;
+  if (p === 'trial')       return TRIAL_DAILY;
+  if (p === 'reseller')    return RESELLER_DAILY;
+  if (p === 'powerseller') return POWERSELLER_DAILY;
+  if (p === 'empire')      return EMPIRE_DAILY;
+  return FREE_DAILY; // unknown → treat as free
 }
 
 export async function POST(request) {
