@@ -9,7 +9,7 @@ export default function Privacy() {
   return (
     <div className="prose">
       <h1>Privacy Policy for Supervint</h1>
-      <span className="updated">Last Updated: 26 June 2026</span>
+      <span className="updated">Last Updated: 18 August 2026</span>
 
       <p>
         This Privacy Policy describes how Supervint (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) collects, uses, and
@@ -38,6 +38,12 @@ export default function Privacy() {
           <strong>Usage Data:</strong> We store the search terms, settings (such as active hours and daily check
           limits), and items found through your configured searches locally in your browser, and, if you connect Google
           Sheets, in a spreadsheet within your own Google account.
+        </li>
+        <li>
+          <strong>Sold-Price Data:</strong> Using your existing logged-in Vinted session, the Service reads your Vinted
+          sold-order history (item titles and sale prices) and contributes it to an anonymised sold-price database that
+          improves price alerts for all Supervint users. No buyer details, usernames, messages, or payment information
+          are collected or stored.
         </li>
       </ul>
 
@@ -75,6 +81,11 @@ export default function Privacy() {
           <strong>Service Providers:</strong> If you enable email alerts, item and price details relevant to that
           specific alert are passed to a transactional email-sending service in order to deliver the email to the
           address you provided.
+        </li>
+        <li>
+          <strong>Aggregated Sold-Price Database:</strong> Anonymised sold-order data (item titles and sale prices) is
+          contributed to a shared sold-price database that powers price insights for all Supervint users. This database
+          contains no buyer details, usernames, messages, or payment information.
         </li>
         <li>
           <strong>Legal Requirements:</strong> We may disclose information if required to do so by law or in response
