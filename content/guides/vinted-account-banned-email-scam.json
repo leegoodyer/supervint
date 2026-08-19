@@ -13,14 +13,14 @@
       "heading": "The fake \"account banned\" email, word for word",
       "paragraphs": [
         "It usually arrives with a subject line like \"Account banned\", \"Account Deactivated\" or a message about a \"wholesale seller account\" that needs \"one short verification step\" before \"new orders will process\". The email claims your access is limited or your account has been suspended, and pushes you to click a link to \"verify\", \"appeal\" or \"reactivate\" — often with a deadline attached, such as verifying your bank card within 24 hours.",
-        "The link does not go to Vinted. It goes to a fake page that mimics Vinted's login or verification screen and asks for your full bank card details. Real URLs that Vinted users have been sent to include order.form55921.shop and vinted.sale-confirm.info, and the sender addresses are nothing like Vinted's — examples users have posted include support@andracollinsmanagrser.zohodesk.eu. The scammers are after your card number, expiry date and security code, which is everything they need to spend your money.",
+        "The link does not go to Vinted. It goes to a fake page that mimics Vinted's login or verification screen and asks for your full bank card details. The sender addresses are never from @vinted.com — they come from throwaway domains, free webmail accounts, or helpdesk systems that look vaguely official but aren't Vinted's. The scammers are after your card number, expiry date and security code, which is everything they need to spend your money.",
         "The timing is not a coincidence. Multiple users on r/vinted report receiving these emails within minutes of uploading a new listing or paying to bump one, which suggests the scammers watch for activity and strike while you are most likely to believe something is wrong with your account."
       ]
     },
     {
       "heading": "Why otherwise careful people click it",
       "paragraphs": [
-        "The email is designed to look plausible: Vinted-style wording, an official-looking logo, and a threat that sounds exactly like something a marketplace would say. On the r/vinted thread about this scam, several people admitted they clicked the link before realising, and one older user said the email \"looked convincing\" enough that they very nearly typed in their bank details. One victim who did not stop in time lost about $40 across three accounts before locking everything down; in a separate German case, a scammer drained around €1,600 from a victim's Mastercard after she entered her details on a fake Vinted verification page.",
+        "The email is designed to look plausible: Vinted-style wording, an official-looking logo, and a threat that sounds exactly like something a marketplace would say. On the r/vinted threads about this scam, several people admitted they clicked the link before realising, and more than one said the email looked convincing enough that they very nearly typed in their bank details. It is exactly this plausibility that makes the scam work.",
         "It also works because a genuine Vinted suspension is a real thing, and Vinted's own account-ownership process does ask for card information in some situations (more on that below). When an email mixes a plausible threat with a familiar request, it is very easy to react instead of check."
       ]
     },
