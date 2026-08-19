@@ -1,0 +1,84 @@
+{
+  "title": "Vinted \"Account Banned\" Email: Scam or Real? How to Tell and What to Do",
+  "intro": "The \"Account banned\" or \"Account Deactivated\" email that tells you to verify your bank card within 24 hours is a phishing scam, not a message from Vinted. Vinted never bans accounts through an emailed link and never asks for full card details outside its app — if you can still log in normally, your account was never banned.",
+  "meta_description": "The \"Vinted account banned\" email asking you to verify your card within 24 hours is a phishing scam. Learn how to spot it, what to do if you clicked the link, and how to report it to Vinted.",
+  "date_published": "2026-08-19",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Never miss a real deal — and never get caught out by a fake email",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "The fake \"account banned\" email, word for word",
+      "paragraphs": [
+        "It usually arrives with a subject line like \"Account banned\", \"Account Deactivated\" or a message about a \"wholesale seller account\" that needs \"one short verification step\" before \"new orders will process\". The email claims your access is limited or your account has been suspended, and pushes you to click a link to \"verify\", \"appeal\" or \"reactivate\" — often with a deadline attached, such as verifying your bank card within 24 hours.",
+        "The link does not go to Vinted. It goes to a fake page that mimics Vinted's login or verification screen and asks for your full bank card details. Real URLs that Vinted users have been sent to include order.form55921.shop and vinted.sale-confirm.info, and the sender addresses are nothing like Vinted's — examples users have posted include support@andracollinsmanagrser.zohodesk.eu. The scammers are after your card number, expiry date and security code, which is everything they need to spend your money.",
+        "The timing is not a coincidence. Multiple users on r/vinted report receiving these emails within minutes of uploading a new listing or paying to bump one, which suggests the scammers watch for activity and strike while you are most likely to believe something is wrong with your account."
+      ]
+    },
+    {
+      "heading": "Why otherwise careful people click it",
+      "paragraphs": [
+        "The email is designed to look plausible: Vinted-style wording, an official-looking logo, and a threat that sounds exactly like something a marketplace would say. On the r/vinted thread about this scam, several people admitted they clicked the link before realising, and one older user said the email \"looked convincing\" enough that they very nearly typed in their bank details. One victim who did not stop in time lost about $40 across three accounts before locking everything down; in a separate German case, a scammer drained around €1,600 from a victim's Mastercard after she entered her details on a fake Vinted verification page.",
+        "It also works because a genuine Vinted suspension is a real thing, and Vinted's own account-ownership process does ask for card information in some situations (more on that below). When an email mixes a plausible threat with a familiar request, it is very easy to react instead of check."
+      ]
+    },
+    {
+      "heading": "How to tell a real Vinted email from a phishing email in 30 seconds",
+      "paragraphs": [
+        "Check the sender's full email address, not just the display name. Official Vinted emails come from addresses ending in @vinted.com. Anything else — zohodesk.eu addresses, gmail addresses, or domains like .shop and .info — is not Vinted.",
+        "Open the Vinted app and log in. If your account loads normally and you can browse, list and message as usual, the email is fake. Real bans are enforced in the app: you will see the restriction when you log in, along with Vinted's explanation and an appeal option. An email telling you your account is banned while the app lets you straight in is the clearest possible sign of phishing.",
+        "Look for the two classic red flags: urgency and requests for payment details. Vinted does not email you links that demand your card number, and it does not threaten to close your account if you fail to \"verify\" within hours. Real support conversations happen inside the app, and real tracking and payment information live on the order page, not in an email link."
+      ]
+    },
+    {
+      "heading": "You clicked the link and entered your card details — now what?",
+      "paragraphs": [
+        "Freeze your card immediately. Use your bank's app or call the number on the back of the card and tell them the card may be compromised — they will block further payments and issue a replacement. Do this before anything else, because every minute counts.",
+        "Change the passwords on your Vinted account, your email account, and anywhere else you reuse the same password. Turn on two-factor authentication on Vinted and on your email so a stolen password alone is not enough to get in.",
+        "If money has already been taken, contact your bank about a chargeback or fraud claim, and report it to the police — in the UK that means Action Fraud. Keep screenshots of the email, the fake website and any messages as evidence. Vinted's own guidance says it cannot be held responsible for losses caused by phishing, so your bank and the police are the routes that can actually get money back."
+      ]
+    },
+    {
+      "heading": "How to report the phishing email to Vinted",
+      "paragraphs": [
+        "Vinted's official help page \"Recognize spoof and phishing messages\" gives two reporting routes. The fastest is to forward the email to phishing@vinted.com — include screenshots, the sender's email address and the fake link so Vinted can chase the domain. You can also open the Help Centre (in-app: Profile → Help Center; on the web: vinted.com/help), open any help article, and scroll to the bottom, where a \"Contact us\" button opens the support form even when the issue is not about an order.",
+        "Reporting the email matters even if you did not lose money: Vinted can flag the domain and the account behind it, which slows the scam down for everyone else. Just do not expect the report to recover anything — for that, the bank is the route."
+      ]
+    },
+    {
+      "heading": "The confusing part: Vinted sometimes really does ask for card photos",
+      "paragraphs": [
+        "This is what makes the scam so sneaky. Vinted's legitimate account-ownership check (help page \"Confirm that you own this account\") does ask for a photo of the payment card you use on Vinted, held next to a handwritten note with your username and the current date. The photo must show the cardholder's name, the last 4 digits of the card number, the expiry date and the card type — and Vinted's own instructions say to cover the full card number and the CVV/CVC code.",
+        "The difference is in how the request arrives. A genuine request comes from Vinted support inside the app's \"Contact us\" flow, after you have contacted them — never as a link in an unsolicited email. A phishing email sends you to a website to type in your full card details. If an email link is asking for your whole card number, your security code, or your Social Security number, it is a scam, full stop."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is the \"Vinted account banned\" email real?",
+      "answer": "No. It is a phishing email. Vinted notifies you of a genuine ban inside the app with an explanation and an appeal option — it does not email links demanding card verification. If you can still log into the app, your account was never banned."
+    },
+    {
+      "question": "I entered my card details on a fake Vinted page. What do I do?",
+      "answer": "Freeze the card immediately through your bank's app or by phone, then change your Vinted and email passwords and turn on two-factor authentication. If money was taken, ask your bank about a chargeback and report it to Action Fraud in the UK. Forward the email to phishing@vinted.com so Vinted can act on the fake domain."
+    },
+    {
+      "question": "How can I tell if an email is really from Vinted?",
+      "answer": "Official Vinted emails come from addresses ending in @vinted.com. Check the full sender address rather than the display name, never trust urgent links demanding login or card details, and when in doubt, open the Vinted app and check your account there instead of clicking anything."
+    },
+    {
+      "question": "Vinted support asked me for a photo of my card — is that a scam?",
+      "answer": "Not necessarily. Vinted's account-ownership check asks for a card photo next to a handwritten note, but it only needs the last 4 digits, it tells you to cover the full number and CVV, and it happens through the in-app \"Contact us\" flow — never through a link in an unsolicited email."
+    },
+    {
+      "question": "What if my Vinted account really was banned?",
+      "answer": "Open the app and use the appeal option shown with the ban notification. If you cannot find it, go to the Help Centre, open any help article and use the \"Contact us\" button at the bottom — it works even without an order attached. For unresolved legal issues, Vinted's listed legal contact is legal@vinted.com."
+    },
+    {
+      "question": "How do I report a Vinted phishing email?",
+      "answer": "Forward it to phishing@vinted.com with screenshots, the sender's email address and the link it contained. You can also open a ticket via the Help Centre \"Contact us\" button and attach the same evidence."
+    }
+  ]
+}
