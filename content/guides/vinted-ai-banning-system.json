@@ -1,0 +1,80 @@
+{
+  "title": "Vinted Banned Me for No Reason: How the Automated AI Moderation Works and How to Get Unbanned",
+  "intro": "Vinted's automated AI moderation system bans accounts for \"inauthentic items\" or \"fraudulent activity\" with no human review, and genuine sellers and buyers are frequently caught by false positives — the way back is through an appeal, and if the bots keep rejecting you, escalating to Vinted's legal team with proof.",
+  "meta_description": "Vinted's automated AI moderation bans accounts for no reason. Why it happens, how to appeal, and the escalation routes (legal team, GDPR) that actually get a human to review your case.",
+  "date_published": "2026-08-19",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Never miss a real deal — and never get caught out by a fake ban",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What \"banned for no reason\" actually looks like",
+      "paragraphs": [
+        "The pattern is remarkably consistent across r/vinted, Facebook Vinted groups and TikTok: a user — very often a brand-new account or a buyer who has done nothing but buy one item — opens the app and finds their account blocked, with no specific explanation of what they did wrong. New sellers listing their first items are hit especially hard.",
+        "The stated reasons are usually one of a small set: \"inauthentic items\", \"fraudulent activity\", or a generic terms violation. In many of the documented cases the item really was genuine — a Zara handbag with the tag still on, a pair of New Balance trainers with every receipt and label photographed. The AI flags them anyway.",
+        "What makes it feel like \"no reason\" is that the ban notice doesn't tell you the specifics, and the support replies that follow are automated and copy-pasted. Users describe appealing and getting nothing back but bot templates for days or weeks."
+      ]
+    },
+    {
+      "heading": "Why it happens: automated moderation with no human in the loop",
+      "paragraphs": [
+        "Vinted moderates at enormous scale, and that moderation is automated. The AI scans listings and accounts and flags anything its model thinks is counterfeit, suspicious, or against the rules. It is fast and cheap, but it makes mistakes — and crucially, the first line of review after a flag is often more automation, not a person.",
+        "The tell-tale sign is the copy-paste reply. Users report sending detailed evidence and receiving the same generic \"we are investigating\" or \"your appeal has been received\" message back, sometimes word-for-word. That's the signature of a system where no human has looked at your case yet.",
+        "There's also a darker cause some sellers have documented: competitor mass-reporting. Because reports feed the same automated system, a competitor (or a bot) can spam-report a rival's listings, and the reports accumulate into a ban. One seller pulled their account data and found dozens of reports filed within minutes — a pattern that looks like sabotage rather than genuine complaints. This is hard to prove and even harder to get overturned through the normal channel."
+      ]
+    },
+    {
+      "heading": "The appeal process, and why it usually stalls",
+      "paragraphs": [
+        "When you're banned, Vinted gives you an in-app appeal. You submit evidence — photos, receipts, tags, proof of authenticity — and wait. The appeal notice typically says a response can take up to around 120 hours, but users commonly report waiting two to four weeks, and some report never hearing back at all.",
+        "The frustration is that the appeal goes into the same automated queue. You upload proof that the AI was wrong, and the response is another automated message that doesn't acknowledge your evidence. This is why so many people say they \"can't get a human\" — the standard support path is designed to be self-serve and, for these cases, it doesn't work.",
+        "You are typically entitled to only one appeal, so the common advice in the threads is not to fire off a stream of angry messages — that seems to slow the queue down — but to make your single appeal count: attach clear, complete evidence and keep the message calm and specific."
+      ]
+    },
+    {
+      "heading": "How people actually get unbanned",
+      "paragraphs": [
+        "The pattern that emerges from the threads is that the standard support channel rarely resolves a false ban, but two escalation routes do work. The first is emailing Vinted's legal team rather than standard support. This is the route users consistently name as the one where \"real people work there\" — a human reviews the case, and in several documented cases the human admitted the AI made a mistake and lifted the ban.",
+        "The second is invoking your data rights. Because Vinted's decisions are made automatically, some users have successfully argued that a false AI ban violates GDPR Article 22 — the right not to be subject to a decision based solely on automated processing. Citing this in an email to the legal/privacy team is the documented way to force a human to actually look at your account. One widely-shared case involved a seller who proved their ban was a false flag this way, got unbanned, and had the AI immediately ban them again — and ended up escalating to the Lithuanian data regulator (Vinted is based in Lithuania).",
+        "Third-party authentication is the strongest evidence you can hand them. Services that issue a certificate of authenticity for branded items give you a PDF that says, in effect, \"this is genuine\" — and when the AI's only accusation is that the item is fake, that certificate is the proof that breaks the loop."
+      ]
+    },
+    {
+      "heading": "What to do right now if you've been falsely banned",
+      "paragraphs": [
+        "First, use your one appeal carefully. Gather every piece of evidence you have — the original receipt, clear photos of tags and stitching, any proof of authenticity — and submit it in a single, calm, specific appeal. Don't spam the channel; make the one shot count.",
+        "If the appeal comes back with an automated rejection or stalls for more than a week, escalate to Vinted's legal team with a clear summary and your evidence attached. If the item is branded and the accusation is inauthenticity, get third-party authentication first so your evidence is impossible to dismiss.",
+        "If you still get nowhere, mention your data rights. A short, factual note that the decision appears to be solely automated and that you're exercising your rights under GDPR Article 22 (with a request for human review) is the documented trigger that gets a real person onto your case.",
+        "And protect yourself for next time: keep your own records of what you list, photograph everything before you list it, and be aware that mass-reporting exists — if your listings get limited for no clear reason, a competitor may be behind it."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why did Vinted ban me for no reason?",
+      "answer": "Vinted's moderation is automated, and the AI flags accounts for \"inauthentic items\" or \"fraudulent activity\" without human review. Genuine users — especially new accounts and first-time sellers — are frequently caught by false positives, and the ban notice doesn't explain the specifics."
+    },
+    {
+      "question": "Is the Vinted ban permanent or temporary?",
+      "answer": "It varies. The ban notice and the emails Vinted sends should say whether it's temporary or permanent, and a temporary ban usually has a stated duration. Permanent bans can still be overturned on appeal if you can prove the flag was a mistake."
+    },
+    {
+      "question": "How long does a Vinted appeal take?",
+      "answer": "The notice usually says a response can take up to around 120 hours, but users commonly report waiting two to four weeks, and some report never hearing back through the standard channel. Escalating to the legal team tends to be faster because a human reviews it."
+    },
+    {
+      "question": "How do I actually get a human at Vinted to review my ban?",
+      "answer": "The standard support channel is largely automated. The routes that work are emailing Vinted's legal team, and citing GDPR Article 22 (the right not to be subject to a solely automated decision) to request human review. Third-party authentication of the disputed item strengthens your case."
+    },
+    {
+      "question": "Can competitors get my Vinted account banned?",
+      "answer": "Yes, some sellers have documented this. Because reports feed the automated system, a competitor or a bot can spam-report your listings and the accumulated reports trigger a ban. This is hard to prove and hard to overturn through the normal appeal, which is why escalation is sometimes the only route."
+    },
+    {
+      "question": "Can a Vinted sniper tool get my account banned?",
+      "answer": "An alert-only tool like Supervint does not log into your account, does not list items, and does not take any action on Vinted — it only watches public listings and notifies you. The bans discussed here come from Vinted's content moderation of listings and accounts, not from monitoring tools."
+    }
+  ]
+}
