@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Redis } from '@upstash/redis';
 import { isAdminAuthed } from '@/lib/admin-auth';
-import { normalizePlan } from '@/lib/plans';
+import { normalizePlan, PLANS } from '@/lib/plans';
 
 export const runtime = 'nodejs';
 
@@ -57,6 +57,13 @@ export async function GET() {
   for (const uk of usageKeys) {
     usageHashes.push(await kv.hgetall(uk));
   }
+
+  // AI assistant usage: the help-chat route stores a per-day counter at
+  // sv:helpchat:<clientId>:<YYYY-MM-DD> (UTC) and caps it per plan. Read the
+  // current day's count so the admin panel can show "AI used today / cap".
+  const today = new Date().toISOString().slice(0, 10);
+  const aiKeys = keys.map(k => `sv:helpchat:${k.replace('sv:sub:', '')}:${today}`);
+  const aiUsed  = await kv.mget(...aiKeys);
 
   const users = keys
     .map((key, i) => {
@@ -125,6 +132,12 @@ export async function GET() {
         // Feature usage: event -> count hash (panel_opened, sold_search, ...).
         // Null/empty = no tracked usage yet.
         usage:           (usageHashes[i] && Object.keys(usageHashes[i]).length > 0) ? usageHashes[i] : null,
+        // AI assistant usage: { used, daily } — used is today's UTC count from
+        // the help-chat counter, daily is the plan cap (0 for free).
+        aiUsage: {
+          used:  Number(aiUsed[i]) || 0,
+          daily: PLANS[plan]?.aiDaily ?? 0,
+        },
         // Version: heartbeat is live (updated every poll). Fall back to the
         // install record for users who never started a search — they never
         // send heartbeats, so sv:install:<clientId>.version is the only

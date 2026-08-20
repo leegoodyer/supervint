@@ -722,6 +722,17 @@ export default function AdminPanel() {
                   )
                 }
               />
+              <DetailRow
+                label="AI assistant"
+                value={
+                  selected.aiUsage ? (
+                    <span style={{ fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: selected.aiUsage.used >= selected.aiUsage.daily && selected.aiUsage.daily > 0 ? 'var(--red, #dc2626)' : 'inherit' }}>
+                      {selected.aiUsage.used} / {selected.aiUsage.daily} today
+                      {selected.aiUsage.daily === 0 ? ' (off — paid plans only)' : ''}
+                    </span>
+                  ) : '—'
+                }
+              />
             </tbody>
           </table>
 
