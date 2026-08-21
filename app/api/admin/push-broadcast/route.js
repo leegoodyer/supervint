@@ -50,7 +50,15 @@ export async function POST(request) {
   for (const raw of subs) {
     if (!raw) continue;
     let sub;
-    try { sub = JSON.parse(raw); } catch { continue; }
+    // Upstash mget may return the value already parsed (object) or as a JSON
+    // string depending on how it was stored — handle both.
+    if (typeof raw === 'string') {
+      try { sub = JSON.parse(raw); } catch { continue; }
+    } else if (raw && typeof raw === 'object') {
+      sub = raw;
+    } else {
+      continue;
+    }
     if (!sub || !sub.endpoint || !sub.keys?.p256dh || !sub.keys?.auth) continue;
 
     try {
@@ -66,5 +74,5 @@ export async function POST(request) {
     }
   }
 
-  return NextResponse.json({ ok: sent > 0, sent, failed, keyCount: keys.length, keySample: keys.slice(0, 5), rawSample: subs.map(s => String(s).slice(0, 120)).slice(0, 3), failures: failures.slice(0, 20) });
+  return NextResponse.json({ ok: sent > 0, sent, failed, failures: failures.slice(0, 20) });
 }
