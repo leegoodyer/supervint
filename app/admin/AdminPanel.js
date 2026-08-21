@@ -234,6 +234,34 @@ export default function AdminPanel() {
   const [usersOpen, setUsersOpen]             = useState(true);
   const [deletedOpen, setDeletedOpen]         = useState(false);
   const [selectedOpen, setSelectedOpen]       = useState(true);
+  // Push broadcast (Web Push to all subscribed users' computers)
+  const [pushTitle, setPushTitle]   = useState('');
+  const [pushBody, setPushBody]     = useState('');
+  const [pushUrl, setPushUrl]       = useState('');
+  const [pushMsg, setPushMsg]       = useState('');
+  const [pushBusy, setPushBusy]     = useState(false);
+
+  async function handlePushSend(e) {
+    e?.preventDefault();
+    if (pushBusy) return;
+    setPushBusy(true);
+    setPushMsg('');
+    try {
+      const res = await fetch('/api/admin/push-broadcast', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title: pushTitle, body: pushBody, url: pushUrl || undefined }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) { setPushMsg(`Error: ${data.error || res.status}`); return; }
+      setPushMsg(`Sent to ${data.sent} device(s) · ${data.failed} failed.`);
+      setPushTitle(''); setPushBody(''); setPushUrl('');
+    } catch (err) {
+      setPushMsg(`Error: ${err?.message || err}`);
+    } finally {
+      setPushBusy(false);
+    }
+  }
 
   const loadUsers = useCallback(async () => {
     setUE('');
@@ -460,6 +488,44 @@ export default function AdminPanel() {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
         <h1 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--green)' }}>Supervint Admin</h1>
         <button onClick={handleSignOut} className="btn btn-ghost btn-sm">Sign out</button>
+      </div>
+
+      {/* Push broadcast — Web Push notification to all subscribed users' computers */}
+      <div style={{ marginBottom: '1.5rem', border: '1px solid var(--line)', borderRadius: 10, padding: '1rem 1.1rem', background: '#fff' }}>
+        <div style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--gray)', marginBottom: '0.6rem' }}>
+          Push notification (to users' computers)
+        </div>
+        <form onSubmit={handlePushSend} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+            <input
+              value={pushTitle}
+              onChange={e => setPushTitle(e.target.value)}
+              placeholder="Title"
+              required
+              style={{ flex: '1 1 200px', padding: '0.45rem 0.6rem', borderRadius: 7, border: '1px solid var(--line)', fontSize: '0.85rem' }}
+            />
+            <input
+              value={pushUrl}
+              onChange={e => setPushUrl(e.target.value)}
+              placeholder="URL (optional)"
+              style={{ flex: '1 1 200px', padding: '0.45rem 0.6rem', borderRadius: 7, border: '1px solid var(--line)', fontSize: '0.85rem' }}
+            />
+          </div>
+          <textarea
+            value={pushBody}
+            onChange={e => setPushBody(e.target.value)}
+            placeholder="Message body"
+            required
+            rows={2}
+            style={{ padding: '0.45rem 0.6rem', borderRadius: 7, border: '1px solid var(--line)', fontSize: '0.85rem', resize: 'vertical', fontFamily: 'inherit' }}
+          />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
+            <button type="submit" disabled={pushBusy} className="btn btn-sm" style={{ background: 'var(--green)', color: '#fff', border: 'none' }}>
+              {pushBusy ? 'Sending…' : 'Send push'}
+            </button>
+            {pushMsg && <span style={{ fontSize: '0.8rem', color: pushMsg.startsWith('Error') ? '#dc2626' : '#16a34a' }}>{pushMsg}</span>}
+          </div>
+        </form>
       </div>
 
       {deleteMsg && (
