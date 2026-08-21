@@ -28,10 +28,15 @@
 | 23 | PRIMARY: Does Vinted notify when price changes / SECONDARY: What is a Vinted sniper | 2026-08-14 | ✅ Published | content/guides/does-vinted-notify-price-changes.json | — |
 | 24 | How to see sold prices on Vinted | 2026-08-17 | ✅ Published | content/guides/how-to-see-sold-prices-on-vinted.json | GSC: "how to see sold prices on vinted" pos 42 — product-feature match (sold DB) |
 | 25 | vinted sniper (dedicated guide; secondary: vinted sniping / vinted snipe / how to snipe on vinted) | 2026-08-17 | ✅ Published | content/guides/vinted-sniper.json | GSC 90d: "vinted sniper" 11 imp / 1 cl / 14.3 |
+| 26 | PRIMARY: Vinted school uniform alerts (secondary: vinted school uniform, school uniform bundles) | 2026-08-20 | ⏳ Proposed — awaiting approval | seasonal use-case; peak back-to-school week; no alert-tool competition | — |
+| 27 | SECONDARY: Vinted notifications not working (why you miss new listings + fixes) | 2026-08-20 | ⏳ Proposed — awaiting approval | evergreen troubleshooting; Reddit/TikTok/FB pain; thin SERP; direct product fit | — |
 
-## GSC snapshot (90 days to 2026-08-17, from scripts/gsc-report.py)
-- Totals: 26 clicks / 488 impressions / CTR 5.33% / avg pos 9.5 / 52 active days
-- Top opportunity bucket (pos 11–30): vinted sniper (11 imp @ 14.3) is the only query with >3 impressions in that range
-- Price-notify cluster (guide #23, published 08-14): "does vinted notify when price increases" 19 imp @ 9.5 — guide already ranking; long-tails at pos 10–12
-- Nascent (not now): "how to see sold prices on vinted" 1 imp @ 42 (revisit when sold-price feature is marketed); French queries "alerte vinted"/"alertes vinted" 8 imp combined @ pos 37–52 (would need FR pages)
-- Top pages: /guides/vinted-price-alert 291 imp @ 14.2; / 166 imp @ 7.5
+## GSC snapshot (90 days to 2026-08-20, from scripts/gsc-report.py)
+- Totals: 29 clicks / 535 impressions / CTR 5.42% / avg pos 9.5 / 54 active days
+- Opportunity bucket (pos 11–30) has NO uncovered queries: "vinted sniper" 11 imp @ 14.3 (guide #25 now live 08-17 — monitor climb); rest are price-notify long-tails @ 9–12 already served by guide #23
+- "vinted snipe" 2 imp @ 29.5 / "vinted sniping" 2 imp @ 35 — synonyms of #25; do NOT create separate pages (cannibalisation)
+- Price-notify cluster healthy: "does vinted notify when price increases" 20 imp @ 9.4; drop variants 6 imp @ 10.2
+- Nascent (not now): "how to see sold prices on vinted" 1 imp @ 42 (revisit when sold-price feature marketed); French "alerte/alertes vinted" 10 imp combined @ 30–52 (needs FR pages); "vinted chrome" 1 imp @ 38
+- Top pages: /guides/vinted-price-alert 326 imp @ 13.7; / 176 imp @ 7.2; /guides/vinted-alerts-without-the-ban-risk 28 imp @ 16.7; adidas 18 imp @ 6.7
+- Brand queries ("supervint" 20 imp @ 1.0) still the main click source — content not yet ranking for head terms; keep targeting long-tail/use-case
+- Competitor blog audit 08-20: Vinotify (webhooks, tool comparisons), Souk (bots, reselling, Vinted Go), VintiePlus (78 posts: reseller/tax/Netherlands), Telvin-bot (Telegram alerts) — NONE cover school uniform or notification troubleshooting

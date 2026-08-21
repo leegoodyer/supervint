@@ -66,5 +66,5 @@ export async function POST(request) {
     }
   }
 
-  return NextResponse.json({ ok: sent > 0, sent, failed, keyCount: keys.length, keySample: keys.slice(0, 5), failures: failures.slice(0, 20) });
+  return NextResponse.json({ ok: sent > 0, sent, failed, keyCount: keys.length, keySample: keys.slice(0, 5), rawSample: subs.map(s => String(s).slice(0, 120)).slice(0, 3), failures: failures.slice(0, 20) });
 }
