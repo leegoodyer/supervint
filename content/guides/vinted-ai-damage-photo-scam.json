@@ -1,0 +1,83 @@
+{
+  "title": "Vinted Buyer Sent an AI-Generated Damage Photo: How to Spot It and Win the Dispute",
+  "intro": "If a buyer opens an \"arrived damaged\" dispute and the photo they attach doesn't add up — a rip that's in a different place in each picture, a break that's too smooth and rounded, a broken-off piece that doesn't exist — you may be looking at an AI-generated image. The defence that actually works is to demand the item back, ask for multiple angles and video, and use watermark-based AI detection to prove the photo was faked.",
+  "meta_description": "Buyers are using AI-generated photos to fake damage and claim refunds on Vinted. How to spot a fake damage photo, prove it's AI, and win the dispute.",
+  "date_published": "2026-08-21",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Never get caught out by a fake damage claim",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "The new scam: buyers faking \"damage\" with AI photos",
+      "paragraphs": [
+        "A seller sends a hoodie in perfect condition, filmed going into the parcel. The buyer opens a dispute claiming it's damaged and attaches a photo of a huge rip that is \"clearly AI-generated\". Then the seller finds the same hoodie re-listed on the buyer's own profile — undamaged — at a higher price. The buyer wanted a refund and to keep the item to resell. That story, posted on r/vinted, is one of many.",
+        "The pattern is spreading fast. On r/vinted and r/vintedUK alone, sellers have reported it with a jacket (the \"rip\" was in two different places in two different photos), a pair of earrings (claimed to have snapped in the post with a break that couldn't have happened), trading cards, comics and PC parts. It's on the Facebook Vinted seller groups too, and the tactic has even drawn national media coverage — Polish broadcaster TVP World reported fraudsters on Vinted using AI-generated images to claim refunds and warned the tactic is spreading.",
+        "The scam works because of how damage disputes flow on Vinted. Under Buyer Protection, a buyer can request a refund if an item \"arrived damaged\" (Vinted's refund policy, help article 465), and the evidence is photo-based. A buyer who wants to keep the item and get their money back just needs one believable picture. AI tools have made generating that picture trivial — stains, rips, dents and broken parts that never existed. As one seller put it after winning a case: \"Someone tried to scam me with AI generated pictures. Vinted support is really bad. After insisting a lot, I could get my money.\""
+      ]
+    },
+    {
+      "heading": "How to spot an AI-generated damage photo",
+      "paragraphs": [
+        "The threads are full of tells that repeat across cases. The biggest one: the damage moves between photos. In the jacket case, commenters immediately spotted that \"the rip is in two different places in both the photos\" — AI can generate one convincing image, but it struggles to keep the same damage consistent across multiple shots. So ask for more photos from different angles, and compare them side by side.",
+        "Next, think about physics. In the earrings case, the seller pointed out that \"in absolutely no circumstances can metal break perfectly round and smooth\" — the break looked moulded, not snapped. Commenters agreed: \"It definitely doesn't look like the same pair of earrings\" and asked \"where is the piece that was broken off?\" The buyer said they couldn't find it. A genuine break leaves the broken piece with the packaging. If the claimed damage has no corresponding debris, no rough edges, and no consistent position, treat it as fake.",
+        "Look for damage that contradicts how you packed the item. One seller noted the claimed cut was on a sleeve that was folded inside the bag with a gift still in the parcel — \"impossible to get the cut on the sleeve when it's folded inside.\" Check the photo's surroundings too: AI images often get shadows and textures wrong, and edited photos usually lose their metadata — files straight from a phone normally carry EXIF data, and manipulation strips it. And the ultimate tell: ask the buyer for a video. AI video of consistent damage is far harder to produce. One seller reported that Vinted support itself recommended asking the buyer for a video, \"cause it is a lot harder to manipulate with AI.\" Buyers who can't produce one are usually the ones with nothing real to show."
+      ]
+    },
+    {
+      "heading": "Proving it: the AI-detection checks that actually hold up",
+      "paragraphs": [
+        "Be careful with generic \"AI detector\" websites — sellers who have researched this warn they are unreliable, and Vinted may not accept them as proof. The checks that hold up are watermark-based, because the generator itself stamps them into the image. For images made with ChatGPT's image tools, OpenAI publishes a verification tool (openai.com/research/verify) that can confirm whether it generated an image. For Google's Gemini images, you can re-upload the photo into Gemini and ask whether it was AI-altered — the SynthID watermark is very hard to remove. In the jacket thread, a commenter did exactly this and produced confirmation that ChatGPT had made the buyer's photos, then sent it back to the scammer, who stopped responding.",
+        "Treat detector results as supporting evidence, not the whole case. Vinted isn't obliged to accept a third-party tool's verdict — as one commenter noted, \"AI detectors like that aren't reliable\" in general, and the only trustworthy ones detect watermarks left by their own system. Your strongest evidence is still the physical logic (impossible break, no broken piece) plus your own pre-shipping photos and video. Layer them together."
+      ]
+    },
+    {
+      "heading": "The move that ends most of these disputes: demand the item back",
+      "paragraphs": [
+        "The single most repeated piece of advice in every thread: never agree to a refund where the buyer keeps the item. Insist the item is returned for the refund. \"Ask for the item back and all of a sudden they are fine and no longer want a refund lol\" is how one seller summed it up, and the stories back it up — a trading card buyer who \"changed their mind\" the moment a return was demanded, a Pokémon card buyer who suddenly decided the condition \"isn't bad enough to return,\" a blouse buyer who dropped the complaint as soon as they were told the refund would come after they paid to send the item back. \"You'd be surprised how many return requests disappear when they realise you want the item back,\" one reseller said.",
+        "A return also protects you if Vinted gets involved. In the earrings case, Vinted support told the seller to offer the buyer a return — and the seller's worry became what comes back. If the buyer does return something, record the parcel arriving and being opened, on video, before you touch it. Check the item matches what you sent: commenters warned that some buyers send back a pre-damaged version of the same item, keeping yours. If the return is wrong or newly damaged, photograph everything immediately and reopen the dispute in the same order thread."
+      ]
+    },
+    {
+      "heading": "What to send Vinted when you fight the case",
+      "paragraphs": [
+        "Respond inside the order thread — that's where support can see the full history. Attach: your original listing photos from multiple angles; any video of you packing the item (uncut, from item into the parcel to the label going on — the seller in the hoodie case had exactly this and shared it via a Google Drive link, which is how sellers get video to support); screenshots of the buyer's own listing of your item if they've re-listed it; and the side-by-side comparison showing the damage in different positions between their photos. If you used a watermark-based AI check, include that result too.",
+        "Expect the process to be slow, and be persistent. Sellers who won report it took \"forever\" and required \"insisting a lot.\" If support keeps stalling or sides with the buyer on the strength of the fake photo, escalate: Vinted's dispute-resolution help page (help article 1253) lists legal@vinted.com for legal and regulatory issues the normal form can't handle — the same escalation route documented by sellers in false-ban cases. Keep everything factual and calm; a clear, evidence-backed case is far harder to wave away than an angry one."
+      ]
+    },
+    {
+      "heading": "How to protect your next sale",
+      "paragraphs": [
+        "Film yourself packing every item worth protecting — a phone video, uncut, showing the item going into the parcel and the label being applied. Take clear photos from multiple angles with close-ups of any unique marks, tags or serial numbers before you ship, and keep the courier receipt with the parcel weight. Don't ship in the item's original branded box; a plain outer box keeps the contents invisible to every handler along the route.",
+        "And size up the buyer before you ship. New accounts with no reviews buying high-value items are the most common target pattern, and buyers who report damage suspiciously fast — or who refuse to send the item back — are the ones to watch. If the worst happens, remember the pattern that wins: stay in the order thread, demand the return, and let the physics of the fake image do the talking."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can a Vinted buyer really fake damage with AI photos?",
+      "answer": "Yes. Sellers on r/vinted and r/vintedUK have documented buyers claiming items arrived damaged using AI-generated photos — rips, breaks and stains that never existed — to get refunds while keeping the item. The tactic has also been reported in Facebook Vinted groups and covered by Polish broadcaster TVP World, which warned it is spreading."
+    },
+    {
+      "question": "How do I know if a damage photo is AI-generated?",
+      "answer": "Common tells: the damage appears in different places across multiple photos, breaks look too smooth and rounded to be real, broken-off pieces are missing and can't be produced, and the damage contradicts how you packed the item. Edited photos also usually lose their metadata (EXIF). For confirmation, use watermark-based checks — OpenAI's verify tool for ChatGPT images, or re-uploading into Gemini to test Google's SynthID watermark."
+    },
+    {
+      "question": "What should I do if a buyer claims my item arrived damaged with a fake photo?",
+      "answer": "Don't agree to a refund where they keep the item. Insist the item is returned for a refund — most fake claims disappear at that point. Meanwhile respond in the order thread with your packing video, original listing photos, side-by-side comparisons of their photos, and any AI-detection results. Ask for multiple photos from different angles and a video; AI can't keep damage consistent across them."
+    },
+    {
+      "question": "Will Vinted side with me if I prove the photo is AI?",
+      "answer": "It can take a fight. Sellers who won report Vinted support being slow and requiring repeated insistence, and in at least one widely-shared case Vinted sided with the buyer despite the evidence. Persistence plus layered proof (packing video, physical impossibilities, watermark checks) is what wins — and if support won't budge, escalate to Vinted's legal team via legal@vinted.com, listed on Vinted's dispute-resolution help page (article 1253)."
+    },
+    {
+      "question": "Do I have to refund the buyer if they claim damage?",
+      "answer": "Buyer Protection does let a buyer request a refund for an item that arrived damaged (Vinted help article 465), so the claim needs a proper response. But the standard resolution is a return, not a keep-it-and-refund: Vinted's help article 272 (\"Returning an item\") covers the return flow, and in practice demanding the item back makes most AI-based claims collapse."
+    },
+    {
+      "question": "What evidence should I keep before shipping to protect myself?",
+      "answer": "An uncut video of you packing the item, clear photos from multiple angles including unique marks and serial numbers, and the courier receipt showing the parcel weight. Keep the video shareable (a Google Drive link works for sending it to support). Film the return parcel being opened too, in case the buyer sends back a different or newly damaged item."
+    }
+  ]
+}
