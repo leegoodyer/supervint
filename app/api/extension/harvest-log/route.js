@@ -3,6 +3,7 @@ import { Redis } from '@upstash/redis';
 import { isAdminAuthed } from '@/lib/admin-auth';
 
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 const kv = Redis.fromEnv();
 
@@ -12,8 +13,14 @@ const kv = Redis.fromEnv();
 // client ran it, how many orders it found vs harvested, and any error (e.g.
 // logged-out/auth-blip). POST is open (the /api/sold family already trusts
 // extension clients); GET is admin-only for reading the log.
+//
+// Storage: one key per harvest entry (sv:harvest:entry:<ts>:<clientId>), read
+// back via keys()+mget(). This is the SAME pattern the working sold-stats
+// endpoint uses. The original list-based (lpush/lrange) approach silently
+// failed the write→read round-trip, so the log always showed empty even
+// though the harvest itself ran fine — this fixes that observability gap.
 
-const KEY = 'sv:harvest:log';
+const PREFIX = 'sv:harvest:entry:';
 const MAX = 50;
 
 export async function POST(request) {
@@ -27,8 +34,9 @@ export async function POST(request) {
   const error     = typeof body?.error === 'string' ? body.error.slice(0, 200) : '';
 
   const entry = { clientId, found, harvested, skipped, error, ts: Date.now() };
-  await kv.lpush(KEY, JSON.stringify(entry));
-  await kv.ltrim(KEY, 0, MAX - 1);
+  // Timestamp-sortable key; clientId suffix prevents a collision if two
+  // clients report in the same millisecond.
+  await kv.set(`${PREFIX}${entry.ts}:${clientId}`, JSON.stringify(entry), { ex: 90 * 24 * 3600 });
 
   return NextResponse.json({ ok: true });
 }
@@ -37,7 +45,23 @@ export async function GET() {
   const ok = await isAdminAuthed();
   if (!ok) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const raw = await kv.lrange(KEY, 0, MAX - 1);
-  const entries = raw.map(r => { try { return JSON.parse(r); } catch { return null; } }).filter(Boolean);
+  const keys = await kv.keys(`${PREFIX}*`);
+  // Newest first: sort keys descending by timestamp prefix.
+  keys.sort((a, b) => {
+    const ta = Number(a.split(':')[2]) || 0;
+    const tb = Number(b.split(':')[2]) || 0;
+    return tb - ta;
+  });
+
+  const limited = keys.slice(0, MAX);
+  const raws = limited.length ? await kv.mget(...limited) : [];
+  const entries = raws
+    .map(r => {
+      if (!r) return null;
+      if (typeof r === 'string') { try { return JSON.parse(r); } catch { return null; } }
+      return r;
+    })
+    .filter(Boolean);
+
   return NextResponse.json({ ok: true, entries });
 }
