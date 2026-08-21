@@ -261,6 +261,15 @@ purged).
 - Activation tracker cron 5d710b601600, 9am daily: silent unless a nudged
   user starts monitoring → 🎉 report.
 
+## Feature Update Email (2026-08-20)
+- v1.2.15 published to Store; sent "What's new in Supervint" broadcast to
+  all 17 users (via /api/admin/broadcast, from alerts@supervint.com).
+- Covered: AI assistant (plain-English snipes), bulk link create, sold-price
+  helper. Kept minimal (no emojis, teal header, Lee's style).
+- NOTE: did NOT mention the popup "Update available" button (extension shows
+  that banner automatically when behind latest-version). Revisit if users
+  report not seeing the new features — they may need a manual update nudge.
+
 ## Known Pending Items
 - **TIER GATE (Lee, 2026-08-17)**: tier limits LOCKED (see brain/PROJECT-NOTES
   tiers section) but **DO NOT deploy the tier limit changes until the newest
