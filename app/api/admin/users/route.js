@@ -121,6 +121,12 @@ export async function GET() {
               enabled: h.enabled !== undefined ? !!h.enabled : !!b.enabled,
               lastPollTime: h.lastPollTime ?? b.lastPollTime ?? null,
               lastPollResult: h.lastPollResult ?? b.lastPollResult ?? null,
+              // Search health diagnostics (trackedItemCount = how many items the
+              // search actually returns; newItemsLastCount = how many were new
+              // last poll). These settle "is this search finding anything?" at a
+              // glance instead of guessing from a bare no_new/new_items result.
+              trackedItemCount:  h.trackedItemCount  ?? b.trackedItemCount  ?? null,
+              newItemsLastCount: h.newItemsLastCount ?? b.newItemsLastCount ?? null,
               // Active hours + baseline (heartbeat now sends them; the server
               // backup is the fallback for older builds).
               activeHoursStart: h.activeHoursStart ?? b.activeHoursStart ?? null,
