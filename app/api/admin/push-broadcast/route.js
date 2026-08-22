@@ -47,7 +47,8 @@ export async function POST(request) {
   let failed = 0;
   const failures = [];
 
-  for (const raw of subs) {
+  for (let i = 0; i < keys.length; i++) {
+    const raw = subs[i];
     if (!raw) continue;
     let sub;
     // Upstash mget may return the value already parsed (object) or as a JSON
@@ -70,18 +71,12 @@ export async function POST(request) {
     } catch (err) {
       failed++;
       const status = err?.statusCode;
-      const msg = String(err?.message || err);
       // Prune permanently-broken subscriptions so they stop failing every run:
       // - 404/410 = expired/gone
       // - 400/undefined = invalid/garbage sub (web-push throws client-side with
       //   NO statusCode for a bad p256dh key — e.g. the fake dev test entry).
       if (status === 404 || status === 410 || status === 400 || status === undefined) {
-        // Find the key for this endpoint and delete it.
-        const k = keys.find(kk => {
-          const v = subs[keys.indexOf(kk)];
-          try { const s = typeof v === 'string' ? JSON.parse(v) : v; return s && s.endpoint === sub.endpoint; } catch { return false; }
-        });
-        if (k) await kv.del(k);
+        await kv.del(keys[i]);
       }
       failures.push({ endpoint: sub.endpoint.slice(0, 60), error: String(err?.statusCode || err?.message || err) });
     }
