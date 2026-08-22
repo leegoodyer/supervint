@@ -234,10 +234,11 @@ export default function AdminPanel() {
   const [usersOpen, setUsersOpen]             = useState(true);
   const [deletedOpen, setDeletedOpen]         = useState(false);
   const [selectedOpen, setSelectedOpen]       = useState(true);
-  // Push broadcast (Web Push to all subscribed users' computers)
+  // Push broadcast (Web Push to all subscribed users' computers, or one user)
   const [pushTitle, setPushTitle]   = useState('');
   const [pushBody, setPushBody]     = useState('');
   const [pushUrl, setPushUrl]       = useState('');
+  const [pushClientId, setPushClientId] = useState('');
   const [pushMsg, setPushMsg]       = useState('');
   const [pushBusy, setPushBusy]     = useState(false);
 
@@ -250,11 +251,20 @@ export default function AdminPanel() {
       const res = await fetch('/api/admin/push-broadcast', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title: pushTitle, body: pushBody, url: pushUrl || undefined }),
+        body: JSON.stringify({
+          title: pushTitle,
+          body: pushBody,
+          url: pushUrl || undefined,
+          clientId: pushClientId.trim() || undefined,
+        }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) { setPushMsg(`Error: ${data.error || res.status}`); return; }
-      setPushMsg(`Sent to ${data.sent} device(s) · ${data.failed} failed.`);
+      if (pushClientId.trim()) {
+        setPushMsg(data.sent > 0 ? `Sent to that user.` : `No subscription found for that clientId.`);
+      } else {
+        setPushMsg(`Sent to ${data.sent} device(s) · ${data.failed} failed.`);
+      }
       setPushTitle(''); setPushBody(''); setPushUrl('');
     } catch (err) {
       setPushMsg(`Error: ${err?.message || err}`);
@@ -483,7 +493,7 @@ export default function AdminPanel() {
   ];
 
   return (
-    <main style={{ maxWidth: 960, margin: '0 auto', padding: '3rem 2rem' }}>
+    <main style={{ width: '100%', maxWidth: 'none', margin: '0 auto', padding: '2rem 2.5rem' }}>
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
         <h1 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--green)' }}>Supervint Admin</h1>
@@ -509,6 +519,12 @@ export default function AdminPanel() {
               onChange={e => setPushUrl(e.target.value)}
               placeholder="URL (optional)"
               style={{ flex: '1 1 200px', padding: '0.45rem 0.6rem', borderRadius: 7, border: '1px solid var(--line)', fontSize: '0.85rem' }}
+            />
+            <input
+              value={pushClientId}
+              onChange={e => setPushClientId(e.target.value)}
+              placeholder="Client ID (optional — send to ONE user only)"
+              style={{ flex: '1 1 260px', padding: '0.45rem 0.6rem', borderRadius: 7, border: '1px solid var(--line)', fontSize: '0.85rem', fontFamily: 'monospace' }}
             />
           </div>
           <textarea

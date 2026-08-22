@@ -9,8 +9,9 @@ const kv = Redis.fromEnv();
 
 // ─── Admin push broadcast ────────────────────────────────────────────────────
 // POST /api/admin/push-broadcast — send a Web Push notification to every user
-// who has registered a subscription (via /api/extension/push-subscribe).
-// Body: { title, body, url? }
+// who has registered a subscription (via /api/extension/push-subscribe), OR to
+// a single user when `clientId` is provided.
+// Body: { title, body, url?, clientId? }
 // Admin-only. Used for functional notices (e.g. "update available"), NOT spam.
 // Chrome Web Store policy: notifications must not be ads/spam/phishing — keep
 // this to rare, functional, product-related messages.
@@ -33,6 +34,7 @@ export async function POST(request) {
   const title = typeof body?.title === 'string' ? body.title.trim() : '';
   const msg   = typeof body?.body  === 'string' ? body.body.trim()  : '';
   const url   = typeof body?.url   === 'string' ? body.url.trim()   : 'https://supervint.com';
+  const targetClientId = typeof body?.clientId === 'string' ? body.clientId.trim() : '';
 
   if (!title || !msg) {
     return NextResponse.json({ error: 'title and body are required.' }, { status: 400 });
@@ -40,7 +42,14 @@ export async function POST(request) {
 
   webpush.setVapidDetails(VAPID_SUBJECT, VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY);
 
-  const keys = await kv.keys(`${KEY_PREFIX}*`);
+  // If a clientId is given, target just that one subscription.
+  let keys;
+  if (targetClientId) {
+    const k = `${KEY_PREFIX}${targetClientId}`;
+    keys = (await kv.get(k)) ? [k] : [];
+  } else {
+    keys = await kv.keys(`${KEY_PREFIX}*`);
+  }
   const subs = keys.length ? await kv.mget(...keys) : [];
 
   let sent = 0;
