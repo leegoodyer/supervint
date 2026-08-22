@@ -70,9 +70,10 @@ export async function POST(request) {
     } catch (err) {
       failed++;
       const status = err?.statusCode || 0;
-      // 404/410 = subscription expired/gone — delete it so it stops failing.
-      // (Also removes the fake test subscription that lingers from dev.)
-      if (status === 404 || status === 410) {
+      // 404/410 = subscription expired/gone; 400 = invalid/garbage sub (e.g. a
+      // dev test entry with a fake p256dh key). Both are permanently broken —
+      // delete them so they stop failing on every broadcast.
+      if (status === 404 || status === 410 || status === 400) {
         // Find the key for this endpoint and delete it.
         const k = keys.find(kk => {
           const v = subs[keys.indexOf(kk)];
