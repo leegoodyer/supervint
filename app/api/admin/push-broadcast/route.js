@@ -69,7 +69,17 @@ export async function POST(request) {
       sent++;
     } catch (err) {
       failed++;
-      // 404/410 = subscription expired/gone — leave it, pruning happens on next subscribe.
+      const status = err?.statusCode || 0;
+      // 404/410 = subscription expired/gone — delete it so it stops failing.
+      // (Also removes the fake test subscription that lingers from dev.)
+      if (status === 404 || status === 410) {
+        // Find the key for this endpoint and delete it.
+        const k = keys.find(kk => {
+          const v = subs[keys.indexOf(kk)];
+          try { const s = typeof v === 'string' ? JSON.parse(v) : v; return s && s.endpoint === sub.endpoint; } catch { return false; }
+        });
+        if (k) await kv.del(k);
+      }
       failures.push({ endpoint: sub.endpoint.slice(0, 60), error: String(err?.statusCode || err?.message || err) });
     }
   }
