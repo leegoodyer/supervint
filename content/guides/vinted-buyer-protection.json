@@ -1,0 +1,108 @@
+{
+  "title": "Vinted Buyer Protection: How It Works, What It Covers and How to Claim (UK)",
+  "intro": "Vinted's Buyer Protection is a fee added at checkout that covers refunds when an item doesn't arrive or isn't as described. This guide explains exactly what you're paying for, what's covered and what isn't, and the step-by-step process for raising and winning a claim.",
+  "meta_description": "Vinted Buyer Protection explained: how much it costs, what it covers (and doesn't), how refunds work, and how to raise a claim if your item never arrives or isn't as described.",
+  "date_published": "2026-08-23",
+  "author": "Supervint Team",
+  "pillar_page": "/guides/how-to-sell-on-vinted",
+  "pillar_page_anchor_text": "Read the full guide to selling on Vinted",
+  "cta_text": "Shop smarter on Vinted — try Supervint free",
+  "cta_href": "/#pricing",
+  "hero_image": {
+    "src": "/guides/buyer-protection-hero.png",
+    "alt": "Illustration of a shield with a tick, protecting a parcel",
+    "caption": "Buyer Protection is added to the buyer's total — sellers never pay it."
+  },
+  "body": [
+    {
+      "heading": "What is Vinted Buyer Protection?",
+      "paragraphs": [
+        "Vinted Buyer Protection is a fee added to the buyer's total at checkout — roughly 5% of the item price plus a flat £0.70, with a minimum of £0.70. It is the buyer's fee, not the seller's: sellers receive the full price they set, with nothing deducted.",
+        "In return, the buyer gets a refund guarantee. If an item never arrives, arrives damaged, or turns out to be significantly different from how it was described (wrong size, wrong brand, counterfeit), the buyer can raise a claim and get their money back.",
+        "Buyer Protection is mandatory on Vinted — you can't opt out of it — and it's one of the reasons Vinted can charge sellers zero fees while still guaranteeing buyers a refund route."
+      ]
+    },
+    {
+      "heading": "How much does Buyer Protection cost?",
+      "paragraphs": [
+        "The fee is approximately 5% of the item price plus £0.70, with a minimum of £0.70. On a £10 item it's around £1.20; on a £50 item it's around £3.20. The exact amount is shown clearly at checkout before you pay, so there are no surprises.",
+        "Shipping is a separate cost, added on top of the item price and Buyer Protection. So the total a buyer pays is: item price + shipping + Buyer Protection.",
+        "As a seller, you never pay any of this. The price you set is the price you receive, which is what makes [selling on Vinted genuinely free](/guides/how-to-sell-on-vinted)."
+      ]
+    },
+    {
+      "heading": "What Buyer Protection covers",
+      "paragraphs": [
+        "Buyer Protection covers four main situations:",
+        "• The item never arrives — no tracking update, lost in transit, or never shipped.",
+        "• The item arrives damaged — different from how it was described or photographed.",
+        "• The item isn't as described — wrong size, wrong brand, different colour, or a fake when it was listed as genuine.",
+        "• The item is counterfeit — Vinted's verification process can be triggered for higher-value or brand-flagged items.",
+        "In all these cases, the remedy is a refund to the buyer (and, for the first three, the buyer usually returns the item to the seller)."
+      ]
+    },
+    {
+      "heading": "What Buyer Protection does NOT cover",
+      "paragraphs": [
+        "It's important to know the limits, because not every disappointment is a claim. Buyer Protection does not cover:",
+        "• Items that simply don't fit, or that you changed your mind about — Vinted has no automatic returns for buyer's remorse, though many sellers accept returns voluntarily.",
+        "• Items bought outside Vinted's system — any sale completed via bank transfer or a third-party chat has zero protection.",
+        "• Claims raised after the confirmation window has closed — once you mark the item as received and everything is okay, the protection window ends.",
+        "• Normal wear that was already disclosed in the listing — if a flaw was described and photographed, it's not a valid \"not as described\" claim.",
+        "For a fuller picture of what can go wrong and how to stay safe, read our [guide to Vinted scams](/guides/vinted-scams-buyer-protection)."
+      ]
+    },
+    {
+      "heading": "How to raise a Buyer Protection claim",
+      "paragraphs": [
+        "If something's wrong, act before the order auto-completes. Vinted gives buyers a window (usually a few days after delivery) to report a problem, and once that window closes the payment is released to the seller and the claim route closes with it.",
+        "To raise a claim: go to the order, select \"I have an issue\", and choose the reason (not received, damaged, not as described, or suspected counterfeit). Upload clear photos as evidence — photos of the item, the packaging, the label, and any damage are what Vinted's team uses to decide the case.",
+        "Vinted then contacts the seller, and the two of you may be asked to resolve it between you first. If you can't agree, Vinted steps in and makes a decision based on the evidence. If your claim is upheld, you're refunded to your original payment method.",
+        "If a dispute isn't going your way, the [contact Vinted support route](/guides/how-to-contact-vinted-support) and escalation paths are worth knowing in advance."
+      ]
+    },
+    {
+      "heading": "How refunds work",
+      "paragraphs": [
+        "When a claim is upheld, the refund goes back to the buyer's original payment method, usually within a few days. For \"not as described\" and \"damaged\" cases, the buyer normally has to return the item first, and the seller pays return postage.",
+        "For \"never arrived\" cases, there's nothing to return — Vinted refunds once the courier investigation confirms the parcel is lost or was never shipped.",
+        "For sellers, the important lesson is that good evidence and honest descriptions are your best protection against false claims. Photograph everything as you pack it, and describe flaws accurately so a \"not as described\" claim can't stick.",
+        "This is why our [selling guide](/guides/how-to-sell-on-vinted) hammers honesty: a buyer who knows about a flaw before buying doesn't open a claim after."
+      ]
+    },
+    {
+      "heading": "Buyer Protection vs. paying outside Vinted",
+      "paragraphs": [
+        "The single biggest protection you have is staying inside Vinted's system. Buyer Protection only works when the transaction goes through Vinted — pay by bank transfer or move to WhatsApp, and you lose everything.",
+        "Any buyer or seller who asks to complete the sale outside the platform is almost certainly running a scam. There's no legitimate reason for a genuine Vinted transaction to leave the app.",
+        "Treat off-platform payment as an instant red flag. [Vinted's automated moderation](/guides/vinted-ai-banning-system) also bans accounts that arrange off-platform sales, so staying inside the system protects both sides."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much is Vinted Buyer Protection?",
+      "answer": "Roughly 5% of the item price plus £0.70, with a minimum of £0.70. It's added to the buyer's total at checkout and shown clearly before payment. Sellers never pay it — they receive the full price they set."
+    },
+    {
+      "question": "Does Vinted Buyer Protection cover items that don't fit?",
+      "answer": "No. Buyer Protection covers items that never arrive, arrive damaged, or aren't as described (including counterfeits). It does not cover items that simply don't fit or that you changed your mind about, though many sellers accept voluntary returns."
+    },
+    {
+      "question": "How long do I have to raise a claim on Vinted?",
+      "answer": "You have a limited window after delivery — usually a few days — before the order auto-completes and the payment is released to the seller. Once that window closes, the claim route closes with it, so report any problem immediately."
+    },
+    {
+      "question": "Do I have to return the item to get a refund?",
+      "answer": "For \"not as described\" and \"damaged\" claims, yes — you normally return the item to the seller, and the seller pays return postage. For \"never arrived\" claims there's nothing to return, and Vinted refunds once the courier confirms the parcel is lost."
+    },
+    {
+      "question": "Is Vinted Buyer Protection refundable?",
+      "answer": "Yes — when a claim is upheld, the Buyer Protection fee is refunded along with the item price. It's part of the refund, not kept by Vinted."
+    },
+    {
+      "question": "Is Vinted safe to buy from?",
+      "answer": "Yes, provided you stay inside Vinted's system. Buyer Protection covers non-delivery, damage, and not-as-described items, and payment is held until you confirm receipt. The main risk is paying outside the platform — never send bank transfers or move a sale to another app. See [is Vinted safe to sell on](/guides/is-vinted-safe-to-sell-on) for the full safety picture."
+    }
+  ]
+}
