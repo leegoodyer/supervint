@@ -11,12 +11,12 @@
   first, not auto-purchasing — consistent with alert-only positioning.
 
 ## Live Content
-- Pillar 1: /guides/vinted-alerts-without-the-ban-risk
+- Pillar 1: /guides/vinted-ban-risk
 - Pillar 2 (hub): /guides/vinted-price-alert
-- Spoke: /guides/vinted-alerts-nike-trainers
-- Spoke: /guides/vinted-alerts-carhartt-workwear
-- Spoke: /guides/vinted-alerts-vintage-denim
-- Spoke: /guides/vinted-adidas-trainers-alert
+- Spoke: /guides/nike-on-vinted
+- Spoke: /guides/carhartt-on-vinted
+- Spoke: /guides/vintage-denim-on-vinted
+- Spoke: /guides/adidas-on-vinted
 - All guides use GuideTemplate.js, output Article + FAQPage schema,
   link to exactly one pillar page + the pricing CTA.
 
