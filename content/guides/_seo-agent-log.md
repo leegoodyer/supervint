@@ -30,6 +30,11 @@
 | 25 | vinted sniper (dedicated guide; secondary: vinted sniping / vinted snipe / how to snipe on vinted) | 2026-08-17 | ✅ Published | content/guides/vinted-sniper.json | GSC 90d: "vinted sniper" 11 imp / 1 cl / 14.3 |
 | 26 | PRIMARY: Vinted school uniform alerts (secondary: vinted school uniform, school uniform bundles) | 2026-08-20 | ⏳ Proposed — awaiting approval | seasonal use-case; peak back-to-school week; no alert-tool competition | — |
 | 27 | SECONDARY: Vinted notifications not working (why you miss new listings + fixes) | 2026-08-20 | ⏳ Proposed — awaiting approval | evergreen troubleshooting; Reddit/TikTok/FB pain; thin SERP; direct product fit | — |
+| 28 | How to sell on Vinted (ultimate guide) | 2026-08-23 | ✅ Published | content/guides/how-to-sell-on-vinted.json | KP: "how to sell on vinted" 1k–10k / Low |
+| 29 | How to get more views on Vinted | 2026-08-23 | ✅ Published | content/guides/how-to-get-more-views-on-vinted.json | KP: 100–1k / Low |
+| 30 | Vinted buyer protection | 2026-08-23 | ✅ Published | content/guides/vinted-buyer-protection.json | KP: 100–1k / Low |
+| 31 | Vinted vs eBay comparison | 2026-08-23 | ✅ Published | content/guides/vinted-vs-ebay.json | autocomplete cluster "vinted vs ebay for selling/fees/sellers" |
+| 32 | Vinted alternatives (hub) | 2026-08-23 | ⏳ Next — planned | hub linking vs-depop/vs-ebay + Souk/Poshmark | autocomplete "vinted alternatives uk/europe/reddit" |
 
 ## GSC snapshot (90 days to 2026-08-20, from scripts/gsc-report.py)
 - Totals: 29 clicks / 535 impressions / CTR 5.42% / avg pos 9.5 / 54 active days
