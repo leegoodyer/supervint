@@ -1,6 +1,31 @@
 import { buildArticleSchema, buildFaqSchema, buildBreadcrumbSchema, getRelatedGuides } from '@/lib/guides';
 import BrandBolt from '@/components/BrandBolt';
 
+// Renders markdown-style links [text](url) inside a paragraph as <a> tags.
+// Plain text passes through unchanged, so existing guides are unaffected.
+function renderRichText(text) {
+  if (typeof text !== 'string') return null;
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (m) {
+      const [, label, href] = m;
+      return <a key={i} href={href}>{label}</a>;
+    }
+    return part;
+  });
+}
+
+function GuideImage({ image }) {
+  if (!image || !image.src) return null;
+  return (
+    <figure className="guide-figure">
+      <img src={image.src} alt={image.alt || ''} loading="lazy" />
+      {image.caption && <figcaption>{image.caption}</figcaption>}
+    </figure>
+  );
+}
+
 export default function GuideTemplate({ guide }) {
   const faqSchema = buildFaqSchema(guide);
   const articleSchema = buildArticleSchema(guide);
@@ -40,13 +65,16 @@ export default function GuideTemplate({ guide }) {
       </div>
       <p className="guide-intro">{guide.intro}</p>
 
+      {guide.hero_image && <GuideImage image={guide.hero_image} />}
+
       <div className="guide-body">
         {guide.body?.map((section, i) => (
           <div className="guide-section" key={i}>
             <h2>{section.heading}</h2>
             {section.paragraphs?.map((paragraph, j) => (
-              <p key={j}>{paragraph}</p>
+              <p key={j}>{renderRichText(paragraph)}</p>
             ))}
+            {section.image && <GuideImage image={section.image} />}
           </div>
         ))}
       </div>
