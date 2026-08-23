@@ -28,8 +28,8 @@
 | 23 | PRIMARY: Does Vinted notify when price changes / SECONDARY: What is a Vinted sniper | 2026-08-14 | ✅ Published | content/guides/does-vinted-notify-price-changes.json | — |
 | 24 | How to see sold prices on Vinted | 2026-08-17 | ✅ Published | content/guides/how-to-see-sold-prices-on-vinted.json | GSC: "how to see sold prices on vinted" pos 42 — product-feature match (sold DB) |
 | 25 | vinted sniper (dedicated guide; secondary: vinted sniping / vinted snipe / how to snipe on vinted) | 2026-08-17 | ✅ Published | content/guides/vinted-sniper.json | GSC 90d: "vinted sniper" 11 imp / 1 cl / 14.3 |
-| 26 | PRIMARY: Vinted school uniform alerts (secondary: vinted school uniform, school uniform bundles) | 2026-08-20 | ⏳ Proposed — awaiting approval | seasonal use-case; peak back-to-school week; no alert-tool competition | — |
-| 27 | SECONDARY: Vinted notifications not working (why you miss new listings + fixes) | 2026-08-20 | ⏳ Proposed — awaiting approval | evergreen troubleshooting; Reddit/TikTok/FB pain; thin SERP; direct product fit | — |
+| 26 | School uniforms on Vinted (re-angled from "school uniform alerts" to search intent) | 2026-08-20 | ✅ Published | content/guides/school-uniforms-on-vinted.json | seasonal; back-to-school peak |
+| 27 | Vinted notifications not working (why you miss new listings + fixes) | 2026-08-20 | ✅ Published | content/guides/vinted-notifications-not-working.json | evergreen troubleshooting; direct product fit |
 | 28 | How to sell on Vinted (ultimate guide) | 2026-08-23 | ✅ Published | content/guides/how-to-sell-on-vinted.json | KP: "how to sell on vinted" 1k–10k / Low |
 | 29 | How to get more views on Vinted | 2026-08-23 | ✅ Published | content/guides/how-to-get-more-views-on-vinted.json | KP: 100–1k / Low |
 | 30 | Vinted buyer protection | 2026-08-23 | ✅ Published | content/guides/vinted-buyer-protection.json | KP: 100–1k / Low |

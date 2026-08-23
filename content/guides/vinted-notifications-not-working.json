@@ -1,0 +1,88 @@
+{
+  "title": "Vinted Notifications Not Working? Why You're Missing New Listings and How to Fix It",
+  "intro": "If you're not getting Vinted notifications — or they arrive late — you're missing the new listings that sell fastest. This guide walks through the most common causes (app permissions, battery optimisation, saved-search settings) and the fixes, plus a reliable alternative when Vinted's own notifications just won't behave.",
+  "meta_description": "Vinted notifications not working? The common causes and fixes — app permissions, battery saver, saved searches — plus how to make sure you never miss a new listing.",
+  "date_published": "2026-08-23",
+  "author": "Supervint Team",
+  "pillar_page": "/guides/vinted-price-alert",
+  "pillar_page_anchor_text": "Learn how Vinted price alerts work",
+  "cta_text": "Never miss a listing again — try Supervint free",
+  "cta_href": "/#pricing",
+  "hero_image": {
+    "src": "/guides/notifications-hero.png",
+    "alt": "Illustration of a phone with a crossed-out notification bell",
+    "caption": "Missed notifications mean missed listings — here's how to fix them."
+  },
+  "body": [
+    {
+      "heading": "Why Vinted notifications matter for buyers",
+      "paragraphs": [
+        "On Vinted, the best deals sell within minutes. A sought-after item at a good price gets snapped up almost as soon as it's listed — so if your notifications are delayed or not arriving at all, you're effectively invisible in the race for the items everyone wants.",
+        "Notifications are how buyers learn a new listing matches their saved search, or that a favourited item has been updated. When they stop working, you go back to manually checking the app, which means you're always hours or days behind.",
+        "There are a few distinct problems people hit: no notifications at all, notifications that arrive late, notifications for some things but not others, and saved searches that never trigger. Each has a different fix."
+      ]
+    },
+    {
+      "heading": "1. Check app notification permissions",
+      "paragraphs": [
+        "The most common cause of silent Vinted is the simplest: notification permissions got turned off, either accidentally or after an app or OS update. On iPhone, go to Settings → Notifications → Vinted and make sure Allow Notifications is on. On Android, go to Settings → Apps → Vinted → Notifications and enable them.",
+        "Also check that the specific notification types you want are enabled. Vinted separates notifications by category (messages, favourites, saved searches, etc.), and it's possible to have some on and others off. Turn on everything you care about, then send yourself a test by favouriting an item.",
+        "If permissions are on but you still get nothing, try toggling them off and back on, then restarting the app — this clears a surprising number of stuck-permission states."
+      ]
+    },
+    {
+      "heading": "2. Turn off battery optimisation for the app",
+      "paragraphs": [
+        "Battery saver and app-sleep features are the second-biggest culprit, especially on Android. When the OS decides Vinted is using too much battery in the background, it restricts it — and background-restricted apps don't deliver push notifications promptly.",
+        "On Android, go to Settings → Apps → Vinted → Battery and set it to \"Unrestricted\" or \"Don't optimise\". On iPhone, Low Power Mode reduces background activity, so turn it off if you're actively hunting for a specific item.",
+        "This is also why notifications often 'work' when you have the app open but stop when it's closed — the app is only allowed to run when it's in the foreground. Setting it to unrestricted fixes the background delivery."
+      ]
+    },
+    {
+      "heading": "3. Check your saved searches are set up correctly",
+      "paragraphs": [
+        "A saved search that never triggers is usually a setup problem, not a bug. Saved searches only notify you of *new* listings that match your filters — if the filters are too narrow (a specific brand, size and price that rarely appears), you'll get nothing simply because nothing new matches.",
+        "The fix is to widen the search: drop a filter or two, or save several broader searches instead of one narrow one. A search for \"Carhartt jacket\" will trigger far more often than \"Carhartt jacket size M, £20–25\".",
+        "Remember that [Vinted's saved searches only alert you to new listings, not price drops](/guides/does-vinted-notify-price-changes) — so if you're waiting for a notification that an existing item got cheaper, it won't come. That's a limitation of Vinted itself, not a bug on your end."
+      ]
+    },
+    {
+      "heading": "4. Check your notification settings inside the app",
+      "paragraphs": [
+        "Vinted has its own in-app notification settings, separate from your phone's. Open the app, go to your profile settings, and check that notifications are enabled for the things you want — messages, favourites, saved searches, and order updates.",
+        "Also check whether you've accidentally muted specific chats or saved searches. A muted conversation won't notify you, and an item you've muted won't alert you to updates.",
+        "Finally, make sure you're logged in to the right account — a surprisingly common cause of 'missing' notifications is being signed into a different account than the one with your saved searches."
+      ]
+    },
+    {
+      "heading": "5. The reliable fix: don't rely on Vinted notifications alone",
+      "paragraphs": [
+        "Even when Vinted's notifications are working, they have real limits: they only fire for *new* listings matching a saved search, they can be delayed, and they depend on the app being allowed to run in the background. For anyone seriously hunting specific items, that's a fragile system.",
+        "A dedicated [Vinted alert tool](/guides/vinted-price-alert) monitors listings independently and notifies you the moment a new match appears — without depending on the app's push notifications at all. If you've missed a deal because a notification arrived late or never came, this is the fix that actually solves the underlying problem.",
+        "If you're a seller rather than a buyer, missing notifications has a different cost — a message from a buyer you don't answer quickly can lose the sale. The same principle applies: [respond fast](/guides/how-to-sell-on-vinted) and don't let a notification setting cost you money."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why am I not getting Vinted notifications?",
+      "answer": "The most common causes are notification permissions being off (check Settings → Notifications → Vinted), battery optimisation restricting the app in the background (especially on Android), or saved searches that are too narrow to trigger. Check permissions first, then battery settings."
+    },
+    {
+      "question": "Why are my Vinted notifications late?",
+      "answer": "Late notifications are almost always battery optimisation or Low Power Mode restricting background activity. Set the app to \"Unrestricted\" or \"Don't optimise\" in battery settings, and turn off Low Power Mode if you're actively hunting for an item."
+    },
+    {
+      "question": "Do Vinted saved searches notify you of new listings?",
+      "answer": "Yes, but only for *new* listings that match your filters — not for price drops on existing items. If your search is too narrow, it may never trigger. Widen your filters or save several broader searches, and remember [Vinted doesn't notify price drops](/guides/does-vinted-notify-price-changes)."
+    },
+    {
+      "question": "Why is my Vinted saved search not notifying me?",
+      "answer": "Usually because the filters are too narrow and nothing new matches, or because you're not signed in to the right account. Widen the filters, check you're in the right account, and confirm notifications for saved searches are enabled in your in-app settings."
+    },
+    {
+      "question": "How do I make sure I never miss a new Vinted listing?",
+      "answer": "Don't rely on Vinted's notifications alone — they only fire for new listings, can be delayed, and depend on the app running in the background. A dedicated [alert tool](/guides/vinted-price-alert) monitors listings independently and notifies you the moment a match appears, without depending on app push notifications."
+    }
+  ]
+}
