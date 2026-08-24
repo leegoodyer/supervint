@@ -34,9 +34,9 @@
 | 29 | How to get more views on Vinted | 2026-08-23 | ✅ Published | content/guides/how-to-get-more-views-on-vinted.json | KP: 100–1k / Low |
 | 30 | Vinted buyer protection | 2026-08-23 | ✅ Published | content/guides/vinted-buyer-protection.json | KP: 100–1k / Low |
 | 31 | Vinted vs eBay comparison | 2026-08-23 | ✅ Published | content/guides/vinted-vs-ebay.json | autocomplete cluster "vinted vs ebay for selling/fees/sellers" |
-| 32 | Vinted alternatives (hub) | 2026-08-23 | ⏳ Proposed — awaiting approval | hub linking vs-depop/vs-ebay + Souk/Poshmark | autocomplete "vinted alternatives uk/europe/reddit" |
-| 33 | PRIMARY: LEGO on Vinted (buy cheap sets / retiring sets, alert angle) | 2026-08-24 | ⏳ Proposed — awaiting approval | Evergreen category pick; Reddit/FB/Mumsnet demand, AFOL blog coverage; zero alert-competitor coverage | GSC 90d: no query yet (new keyword) |
-| 34 | SECONDARY: Halloween costumes on Vinted (seasonal, publish now for Oct peak) | 2026-08-24 | ⏳ Proposed — awaiting approval | Seasonal playbook same as school uniforms (08-20); TikTok discover + Vinted catalog demand; publish late Aug → index by mid-Sept | GSC 90d: no query yet (new keyword) |
+| 32 | Vinted alternatives (hub) | 2026-08-23 | ✅ Published | content/guides/vinted-alternatives.json | autocomplete "vinted alternatives uk/europe/reddit" |
+| 33 | LEGO on Vinted (buy cheap sets / retiring sets, spot fakes) | 2026-08-24 | ✅ Published | content/guides/lego-on-vinted.json | Evergreen; Reddit/FB/Mumsnet demand |
+| 34 | Halloween costumes on Vinted (seasonal, Oct peak) | 2026-08-24 | ✅ Published | content/guides/halloween-costumes-on-vinted.json | Seasonal; publish late Aug → index by mid-Sept |
 | 35 | QUEUED (not proposed yet): How to spot fake Moncler/Canada Goose on Vinted | 2026-08-24 | ⏳ Queued for late Sept | Trust/safety angle; Reddit pain point ("bought a fake Canada Goose"); winter seasonal peak Oct–Dec; needs auth research before drafting | — |
 
 ## GSC snapshot (90 days to 2026-08-24, from scripts/gsc-report.py)
