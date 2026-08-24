@@ -34,14 +34,17 @@
 | 29 | How to get more views on Vinted | 2026-08-23 | ✅ Published | content/guides/how-to-get-more-views-on-vinted.json | KP: 100–1k / Low |
 | 30 | Vinted buyer protection | 2026-08-23 | ✅ Published | content/guides/vinted-buyer-protection.json | KP: 100–1k / Low |
 | 31 | Vinted vs eBay comparison | 2026-08-23 | ✅ Published | content/guides/vinted-vs-ebay.json | autocomplete cluster "vinted vs ebay for selling/fees/sellers" |
-| 32 | Vinted alternatives (hub) | 2026-08-23 | ⏳ Next — planned | hub linking vs-depop/vs-ebay + Souk/Poshmark | autocomplete "vinted alternatives uk/europe/reddit" |
+| 32 | Vinted alternatives (hub) | 2026-08-23 | ⏳ Proposed — awaiting approval | hub linking vs-depop/vs-ebay + Souk/Poshmark | autocomplete "vinted alternatives uk/europe/reddit" |
+| 33 | PRIMARY: LEGO on Vinted (buy cheap sets / retiring sets, alert angle) | 2026-08-24 | ⏳ Proposed — awaiting approval | Evergreen category pick; Reddit/FB/Mumsnet demand, AFOL blog coverage; zero alert-competitor coverage | GSC 90d: no query yet (new keyword) |
+| 34 | SECONDARY: Halloween costumes on Vinted (seasonal, publish now for Oct peak) | 2026-08-24 | ⏳ Proposed — awaiting approval | Seasonal playbook same as school uniforms (08-20); TikTok discover + Vinted catalog demand; publish late Aug → index by mid-Sept | GSC 90d: no query yet (new keyword) |
+| 35 | QUEUED (not proposed yet): How to spot fake Moncler/Canada Goose on Vinted | 2026-08-24 | ⏳ Queued for late Sept | Trust/safety angle; Reddit pain point ("bought a fake Canada Goose"); winter seasonal peak Oct–Dec; needs auth research before drafting | — |
 
-## GSC snapshot (90 days to 2026-08-20, from scripts/gsc-report.py)
-- Totals: 29 clicks / 535 impressions / CTR 5.42% / avg pos 9.5 / 54 active days
-- Opportunity bucket (pos 11–30) has NO uncovered queries: "vinted sniper" 11 imp @ 14.3 (guide #25 now live 08-17 — monitor climb); rest are price-notify long-tails @ 9–12 already served by guide #23
-- "vinted snipe" 2 imp @ 29.5 / "vinted sniping" 2 imp @ 35 — synonyms of #25; do NOT create separate pages (cannibalisation)
-- Price-notify cluster healthy: "does vinted notify when price increases" 20 imp @ 9.4; drop variants 6 imp @ 10.2
-- Nascent (not now): "how to see sold prices on vinted" 1 imp @ 42 (revisit when sold-price feature marketed); French "alerte/alertes vinted" 10 imp combined @ 30–52 (needs FR pages); "vinted chrome" 1 imp @ 38
-- Top pages: /guides/vinted-price-alert 326 imp @ 13.7; / 176 imp @ 7.2; /guides/vinted-ban-risk 28 imp @ 16.7; adidas 18 imp @ 6.7
-- Brand queries ("supervint" 20 imp @ 1.0) still the main click source — content not yet ranking for head terms; keep targeting long-tail/use-case
-- Competitor blog audit 08-20: Vinotify (webhooks, tool comparisons), Souk (bots, reselling, Vinted Go), VintiePlus (78 posts: reseller/tax/Netherlands), Telvin-bot (Telegram alerts) — NONE cover school uniform or notification troubleshooting
+## GSC snapshot (90 days to 2026-08-24, from scripts/gsc-report.py)
+- Totals: 33 clicks / 709 impressions / CTR 4.65% / avg pos 9.6 / 59 active days
+- Opportunity bucket (pos 11–30) has NO uncovered queries: "vinted sniper" 11 imp @ 14.3 (guide #25 page itself now 10 imp @ 6.6 — climbing, monitor); rest are price-notify long-tails @ 9–13 already served by guide #23
+- "does vinted show sold items" 3 imp @ 11.0 — variant of #24 (sold prices page strong: 95 imp @ 7.3); do NOT create separate page
+- "vinted snipe" 2 imp @ 29.5 / "vinted sniping" 2 imp @ 35 — synonyms of #25; do NOT create separate pages
+- French "alerte/alertes vinted" 11 imp combined @ 40–54 — still nascent, needs FR pages (not now)
+- Top pages: /guides/vinted-price-alert 369 imp @ 13.7; / 200 imp @ 7.1; /guides/how-to-see-sold-prices-on-vinted 95 imp @ 7.3; ban-risk 31 imp @ 16.0
+- Brand queries ("supervint" 27 imp @ 1.0) still the main click source — keep targeting long-tail/use-case
+- Competitor blog check 08-24: Vinotify/VintiePlus/Telvin/Lobstr all publishing tool-comparison listicles ("best vinted alert services 2026") — comparison space getting crowded; category-specific gaps remain (LEGO, Halloween costumes, fake designer coats)
