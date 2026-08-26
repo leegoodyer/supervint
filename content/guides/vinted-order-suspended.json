@@ -28,7 +28,7 @@
       "paragraphs": [
         "First, don't panic-refund. The single worst move is refunding the buyer out of fear — in the threads that resolved well, the seller refused, provided evidence, and got the money released. Vinted's help pages are blunt: if you cancel the order yourself, you won't receive your payment or any compensation.",
         "Second, open \"View issue details\", read the claim, and gather evidence: the shipping receipt, packing photos or video, and the courier's tracking. Keep the shipping receipt until the sale completes — it's your proof of shipping.",
-        "Third, if you don't agree with the claim, dispute it. You have 14 days from the moment the transaction is suspended to dispute — but only if you haven't already agreed to a refund or requested a return through the options in the conversation screen. Read every button carefully — one wrong click closes your dispute window.",
+        "Third, if you don't agree with the claim, dispute it. You have 14 days from the suspension to dispute — but only if you haven't already agreed to a refund or requested a return in the conversation screen. Read every button carefully — one wrong click closes your dispute window.",
         "The evidence that repeatedly wins cases is courier proof of delivery. In a recent thread, a seller whose buyer claimed a parcel never arrived got the proof-of-delivery photo from the courier's customer service — the buyer suddenly \"found\" the item minutes later. If tracking shows delivered, ask the courier for the delivery photo or geolocation and submit it in the dispute thread."
       ]
     },
@@ -50,7 +50,7 @@
     {
       "heading": "How long does a suspended order take to resolve?",
       "paragraphs": [
-        "Realistically: a few days to over a month. Cases where one side provides clear courier evidence often resolve quickly — the seller who produced the delivery photo got their money released the same day. Cases where Vinted has to chase the courier take weeks; users report two weeks to two months for lost-parcel and wrong-item disputes, sometimes with the payout described as a \"gesture of goodwill\".",
+        "Realistically: a few days to over a month. Cases where one side provides clear courier evidence often resolve quickly — the seller who produced the delivery photo got their money released the same day. Cases where Vinted has to chase the courier take weeks; users report two weeks to two months for lost-parcel and wrong-item disputes, sometimes with the payout called a \"gesture of goodwill\".",
         "When a parcel is confirmed lost, Vinted covers it: the buyer is refunded and the seller may receive compensation. The money is never simply gone while a case is open — it's in pending balance — but it can sit there a long time, so respond fast, keep receipts, and escalate politely but persistently."
       ]
     },
@@ -81,7 +81,7 @@
     },
     {
       "question": "The buyer says the parcel wasn't delivered but tracking shows it was — what now?",
-      "answer": "Ask the courier for the proof-of-delivery photo, geolocation or safe-place details and submit them in the dispute thread. Claimed non-deliveries have been \"found\" within minutes of a delivery photo being produced."
+      "answer": "Ask the courier for the proof-of-delivery photo, geolocation or safe-place details and submit them in the dispute thread. Claimed non-deliveries get \"found\" within minutes of a delivery photo being produced."
     },
     {
       "question": "Vinted support has ignored my suspended order for weeks — how do I escalate?",
