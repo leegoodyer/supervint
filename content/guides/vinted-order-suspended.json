@@ -1,6 +1,6 @@
 {
   "title": "Vinted Order Suspended: What It Means and How to Get Your Money Released",
-  "intro": "A suspended Vinted order means a delivery problem or a \"not as described\" claim has been opened, and Vinted is holding the payment in your pending balance until it's resolved. Your money isn't gone — it's frozen — and in most cases it's released once the case is decided or you respond with evidence. Here's what the pop-up means, how the 2-day auto-refund messages work, and how to get a response when support goes quiet.",
+  "intro": "A suspended Vinted order means a delivery problem or a \"not as described\" claim has been opened, and Vinted is holding the payment in your pending balance until it's resolved. Your money isn't gone — it's frozen — and it's released once the case is decided or you respond with evidence. Here's what the pop-up means, how the 2-day auto-refund messages work, and how to get a response when support goes quiet.",
   "meta_description": "Your Vinted order is suspended and the money is stuck in pending balance. What 'order suspended' means, how the 2-day auto-refund warning works, and how to get your money released.",
   "date_published": "2026-08-26",
   "author": "Supervint Team",
@@ -19,7 +19,7 @@
     {
       "heading": "The 2-day automatic refund warning, explained",
       "paragraphs": [
-        "The message that scares most people is the automated one: respond with evidence in 2 days, or the order will be automatically refunded. Sellers report receiving it even after submitting their evidence — sometimes multiple times. One seller described the loop: they provided evidence, were told Vinted would look into it, then got another automated message saying they had 2 days to respond or the order would be auto-refunded.",
+        "The scariest message is the automated one: respond with evidence in 2 days, or the order will be automatically refunded. Sellers report receiving it even after submitting their evidence — sometimes multiple times. One seller described the loop: they provided evidence, were told Vinted would look into it, then got another automated message saying they had 2 days to respond or the order would be auto-refunded.",
         "Here's what's happening: Vinted's automated flow gives each side a short window to respond. If either side goes silent, the system auto-resolves the case — usually against the silent party. The fix is simple: reply anyway, inside the window, with a short summary of your evidence — even if you've already sent it. Treat every automated deadline as real."
       ]
     },
@@ -27,24 +27,24 @@
       "heading": "Sellers: what to do when an order is suspended",
       "paragraphs": [
         "First, don't panic-refund. The single worst move is refunding the buyer out of fear — in the threads that resolved well, the seller refused, provided evidence, and got the money released. Vinted's help pages are blunt: if you cancel the order yourself, you won't receive your payment or any compensation.",
-        "Second, open \"View issue details\", read what the buyer is claiming, and gather evidence: the shipping receipt, packing photos or video, and the courier's tracking. Keep the shipping receipt until the sale completes — it's your proof of shipping.",
+        "Second, open \"View issue details\", read the claim, and gather evidence: the shipping receipt, packing photos or video, and the courier's tracking. Keep the shipping receipt until the sale completes — it's your proof of shipping.",
         "Third, if you don't agree with the claim, dispute it. You have 14 days from the moment the transaction is suspended to dispute — but only if you haven't already agreed to a refund or requested a return through the options in the conversation screen. Read every button carefully — one wrong click closes your dispute window.",
-        "The evidence that repeatedly wins cases is proof of delivery from the courier. In a recent thread, a seller whose buyer claimed a parcel never arrived got the proof-of-delivery photo from the courier's customer service — the buyer suddenly \"found\" the item minutes later. If tracking shows delivered, ask the courier for the delivery photo or geolocation and submit it in the dispute thread."
+        "The evidence that repeatedly wins cases is courier proof of delivery. In a recent thread, a seller whose buyer claimed a parcel never arrived got the proof-of-delivery photo from the courier's customer service — the buyer suddenly \"found\" the item minutes later. If tracking shows delivered, ask the courier for the delivery photo or geolocation and submit it in the dispute thread."
       ]
     },
     {
       "heading": "Buyers: what to do when your order is suspended",
       "paragraphs": [
-        "The same discipline applies in reverse. Report delivery problems within 2 days of the delivery date — that window is what protects your refund under Buyer Protection. When Vinted asks for evidence, provide exactly what they ask for: photos of the packaging, photos of what you received, and a denial of receipt if they request one. If a requested link or reply never arrives, keep chasing in the same conversation thread rather than opening new tickets.",
+        "The same discipline applies in reverse. Report delivery problems within 2 days of the delivery date — that window protects your refund under Buyer Protection. When Vinted asks for evidence, provide exactly what they ask for: photos of the packaging, photos of what you received, and a denial of receipt if they request one. If a requested link never arrives, keep chasing in the same conversation thread rather than opening new tickets.",
         "Never agree to settle outside Vinted — keep everything inside the order chat so Buyer Protection still applies. For SNAD claims, Vinted only refunds if the item is sent back (or the seller fails to provide a return address), and the buyer pays return shipping unless you agree otherwise."
       ]
     },
     {
       "heading": "Vinted support isn't responding — how to escalate",
       "paragraphs": [
-        "Silence for weeks is the most common complaint across every suspended-order thread. Users report waiting 22 days, 36 days, a month, even two months for a resolution — and when support does reply, it's often the same automated line: under investigation, please don't open more tickets. One buyer's case sat untouched for months after Vinted promised support would \"automatically step in\" on a set date — a date that came and went with no action.",
+        "Silence for weeks is the most common complaint in every suspended-order thread. Users report waiting 22 days, 36 days, a month, even two months for a resolution — and when support does reply, it's often the same automated line: under investigation, please don't open more tickets. One buyer's case sat untouched for months after Vinted promised support would \"automatically step in\" on a set date — a date that came and went with no action.",
         "If you're getting nowhere, here are the verified routes. In the app: open the conversation, tap the info \"i\" icon, choose Help, pick any topic, and scroll to the bottom of the article — a \"Contact us\" button appears there with the order attached. On the web: vinted.com/help lets you select your order so details attach automatically, and every help article has a contact button at the end.",
-        "Don't open a new ticket every day — the system explicitly asks you not to, and multiple tickets can reset the queue. Reply in the existing thread. If a meaningful amount of money has been stuck for weeks and the normal form is going nowhere, legal@vinted.com is Vinted's listed address for legal and regulatory issues — a last resort."
+        "Don't open a new ticket every day — the system explicitly asks you not to, and multiple tickets can reset the queue. Reply in the existing thread. If meaningful money has been stuck for weeks and the normal form is going nowhere, legal@vinted.com is Vinted's listed address for legal and regulatory issues — a last resort."
       ]
     },
     {
@@ -57,8 +57,8 @@
     {
       "heading": "How to make suspensions less likely (and win them faster)",
       "paragraphs": [
-        "Record yourself packing the item — a short uncut phone video of the item going in, the parcel being sealed, and the label applied. Photograph the packaging and shipping receipt, and use couriers that provide delivery photos. If you're selling something you can't afford frozen for a month, factor that into where you sell it.",
-        "The pattern from every resolved thread is the same: the side with evidence wins, the side that panics or goes silent loses. Respond to every automated message within its window, keep everything in the order thread, and escalate if weeks pass with no reply."
+        "Record yourself packing the item — a short uncut video of the item going in, the parcel being sealed, and the label applied. Photograph the packaging and shipping receipt, and use couriers that provide delivery photos. If you're selling something you can't afford frozen for a month, factor that into where you sell it.",
+        "The pattern from every resolved thread is the same: the side with evidence wins; the side that panics or goes silent loses. Respond to every automated message within its window, keep everything in the order thread, and escalate if weeks pass with no reply."
       ]
     }
   ],
@@ -69,11 +69,11 @@
     },
     {
       "question": "Will I still get paid if my Vinted order is suspended?",
-      "answer": "Yes, in most cases. Completed orders release the payment to the seller; cancelled orders refund the buyer, with possible compensation for the seller when the item or order was lost or damaged. The money isn't gone — it's in pending balance until the case closes."
+      "answer": "Yes, in most cases. Completed orders release payment to the seller; cancelled orders refund the buyer, with possible seller compensation when the item or order was lost or damaged. The money isn't gone — it's in pending balance until the case closes."
     },
     {
       "question": "I got a message saying the order will be refunded in 2 days if I don't respond — what should I do?",
-      "answer": "Reply inside the window with a short summary of your evidence, even if you've already sent it. Ignore the deadline and the case is auto-resolved in the buyer's favour. If you disagree with the claim, dispute it within 14 days of the suspension, provided you haven't already agreed to a refund or return."
+      "answer": "Reply inside the window with a short evidence summary, even if you've already sent it. Ignore the deadline and the case is auto-resolved in the buyer's favour. If you disagree with the claim, dispute it within 14 days of the suspension, provided you haven't already agreed to a refund or return."
     },
     {
       "question": "Can I cancel a suspended order myself?",
@@ -85,7 +85,7 @@
     },
     {
       "question": "Vinted support has ignored my suspended order for weeks — how do I escalate?",
-      "answer": "In the app, tap the info \"i\" icon in the conversation, choose Help, and use the \"Contact us\" button at the bottom of the article. On the web, use the contact button at the end of a vinted.com/help page with your order selected. legal@vinted.com is Vinted's listed last-resort address for legal or regulatory issues."
+      "answer": "In the app: info \"i\" icon in the conversation → Help → \"Contact us\" at the bottom of the article. On the web: the contact button at the end of a vinted.com/help page with your order selected. legal@vinted.com is the listed last resort for legal or regulatory issues."
     }
   ]
 }
