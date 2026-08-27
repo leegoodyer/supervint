@@ -40,7 +40,15 @@ const softwareSchema = {
     { '@type': 'Offer', name: 'Free', price: '0', priceCurrency: 'GBP' },
     { '@type': 'Offer', name: 'Reseller', price: '6.99', priceCurrency: 'GBP', billingIncrement: 'P1M' },
     { '@type': 'Offer', name: 'Power Seller', price: '13.99', priceCurrency: 'GBP', billingIncrement: 'P1M' },
+    { '@type': 'Offer', name: 'Empire', price: '24.99', priceCurrency: 'GBP', billingIncrement: 'P1M' },
   ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    ratingCount: '3',
+    bestRating: '5',
+    worstRating: '1',
+  },
 };
 
 export default function RootLayout({ children }) {
