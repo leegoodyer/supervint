@@ -8,13 +8,13 @@ const inter = Inter({ subsets: ['latin'], display: 'swap' });
 export const metadata = {
   metadataBase: new URL('https://supervint.com'),
   title: 'Vinted Price Alerts & Sniper Tool — Free Chrome Extension | Supervint',
-  description: 'Get instant Vinted alerts the moment a matching listing goes live — no auto-buy, no ban risk. Free Chrome extension.',
+  description: 'Get instant Vinted price alerts the moment a matching listing goes live. See what sells, check sold prices & search your own listings — no auto-buy, no ban risk. Free Chrome extension.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Vinted Price Alerts & Sniper Tool — Free Chrome Extension | Supervint',
-    description: 'Get instant Vinted alerts the moment a matching listing goes live — no auto-buy, no ban risk. Free Chrome extension.',
+    description: 'Get instant Vinted price alerts the moment a matching listing goes live. See what sells, check sold prices & search your own listings — no auto-buy, no ban risk. Free Chrome extension.',
     url: 'https://supervint.com',
     type: 'website',
     images: [{ url: 'https://supervint.com/og-image.png' }],
@@ -22,7 +22,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Vinted Price Alerts & Sniper Tool — Free Chrome Extension | Supervint',
-    description: 'Get instant Vinted alerts the moment a matching listing goes live — no auto-buy, no ban risk. Free Chrome extension.',
+    description: 'Get instant Vinted price alerts the moment a matching listing goes live. See what sells, check sold prices & search your own listings — no auto-buy, no ban risk. Free Chrome extension.',
     images: ['https://supervint.com/og-image.png'],
   },
 };

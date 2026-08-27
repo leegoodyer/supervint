@@ -413,6 +413,12 @@ purged).
   user's PRIVATE sold history (Vinted has NO public sold channel), so it's user
   data, not public info. Disclosed in privacy policy + store listing = defensible;
   "invisible + auto" is the risk. Lee chose disclosure-over-consent-button.
+- **NEVER advertise sold-DB size/count publicly (Lee 2026-08-27).** Do NOT put
+  "1,944 sold listings" / "largest sold-price database" / any crowd-sourced DB
+  size number in site copy, marketing, or homepage. The DB is harvested from
+  users' private order history — broadcasting its size invites Vinted ToS/data
+  scrutiny. Advertise the *capability* ("see what items actually sold for"), never
+  the *volume*. This applies to the homepage rewrite and all future copy.
 
 ## Queued for v1.2.14 (Lee 2026-08-18)
 - **Per-search item-count display (admin panel).** Every poll already computes
@@ -424,6 +430,13 @@ purged).
   question from diagnosing Archie's 39 "no_new" searches).
 
 ## Access/Environment Notes
+- **Homepage visual TODO (Lee 2026-08-27):** current app "screenshots" are
+  pixel-faithful HTML/CSS mockups (`.mock-*` classes in globals.css, scenes in
+  `app/page.js`). Lee will supply REAL app screenshots later — when they land,
+  replace the mockup divs with `<img>` tags. The three scenes needed: (1) sold
+  prices dropdown, (2) alerts list with a notification coming in, (3) own
+  wardrobe with lots of clothing. Match the real popup: teal #007782 header,
+  white cards, #e5e7eb borders, ~380px width.
 - supervint-web (website) and Supervint (extension) are SEPARATE
   to one cannot read the other. Always confirm working directory
   matches the task before starting.

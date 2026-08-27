@@ -6,34 +6,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is Supervint?',
+      name: 'How do I see sold prices on Vinted?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Supervint is a Chrome extension that monitors Vinted searches in real time and sends you an instant desktop alert the moment a matching listing appears — so you can snipe the deal before anyone else.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is Supervint different from refreshing Vinted manually?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Supervint checks continuously in the background, even when you\'re away from the keyboard. Manual refreshing means you\'re always behind buyers who already have an alert running. Good listings on Vinted sell within minutes.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does Supervint work on any Vinted search?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Paste any Vinted search URL into Supervint and it monitors it for you. You can run multiple searches simultaneously on paid plans — trainers, jackets, consoles, whatever you\'re hunting.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is there a free version?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — Supervint is free to install with 5 active searches and desktop alerts included. Every new account also gets 7 days of Trial free, with no card required. Upgrade to Reseller (£6.99/month), Power Seller (£13.99/month) or Empire (£24.99/month) for more searches, Google Sheets logging, email price alerts, and priority support.',
+        text: "Vinted doesn't show sold prices. Supervint's crowd-sourced sold-price database shows what similar items actually sold for, so you know a fair price before you buy or list.",
       },
     },
     {
@@ -41,15 +17,39 @@ const faqSchema = {
       name: 'Will Supervint get my Vinted account banned?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Supervint is designed to be account-safe — it uses randomised check intervals, respects the active hours you set, and pauses automatically if Vinted returns any rate-limit signals. No automated buying, posting, or account actions are ever involved.',
+        text: 'No. Supervint is alert-only — it never logs into your Vinted account, never auto-buys, and never takes any automated action. You always buy manually.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Does it work on mobile?',
+      name: 'Is Supervint free?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No — Supervint is a desktop Chrome extension and only runs while Chrome is open on a Mac or Windows computer. It does not work on Chrome for iPhone or Android (mobile Chrome does not support extensions).',
+        text: 'Yes — free to install with 5 active searches and desktop alerts. Every new account also gets 7 days of Trial free, with no card required. Upgrade to Reseller (£6.99/month), Power Seller (£13.99/month) or Empire (£24.99/month) for more searches and extra tools.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Supervint auto-buy items for me?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Supervint only notifies you. You review the listing and buy it yourself on Vinted — no automated buying, posting, or account actions are ever involved.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I search my own Vinted listings?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Supervint lets you search your own listings by keyword, so you can spot what\u2019s underpriced, what\u2019s not moving, and what to re-price — without scrolling your whole wardrobe.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What\u2019s the difference between Supervint and Vinted\u2019s own favourites?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Vinted favourites notify you when a favourited item drops 5%+. Supervint alerts you the moment a brand-new matching listing goes live — before it\u2019s gone.',
       },
     },
     {
@@ -57,15 +57,15 @@ const faqSchema = {
       name: 'Do I need a Vinted tab open for it to work?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. As long as Chrome is open and you are signed in to Vinted, Supervint checks your searches in the background on its own — you don\u2019t need a Vinted tab open, and you can use other apps while it monitors. The only requirements are: Chrome open, signed in to Vinted, and your computer not asleep.',
+        text: 'No. As long as Chrome is open and you\u2019re signed in to Vinted, Supervint checks your searches in the background on its own — no Vinted tab needed. The only requirements: Chrome open, signed in to Vinted, and your computer not asleep.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Will battery saver or power saving mode stop it working?',
+      name: 'Does it work on mobile?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — it can. Low power mode, battery saver, or Chrome\u2019s energy saver can pause background apps, which pauses your Supervint alerts. For alerts to keep coming through, turn off low battery / power saving mode (on Windows: disable Battery Saver; on Mac: disable Low Power Mode) and keep the laptop plugged in where possible.',
+        text: 'Supervint is a desktop Chrome extension for Mac and Windows. Alerts also arrive by email, so you can act from your phone the moment a deal drops.',
       },
     },
   ],
@@ -90,7 +90,7 @@ export default function Home() {
               <a href="#pricing">Pricing</a>
             </nav>
             <a
-              href="#pricing"
+              href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo"
               className="btn btn-primary btn-sm"
               onClick={() => fbq('track', 'Lead', { content_name: 'Chrome Web Store Click' })}
             >
@@ -101,51 +101,87 @@ export default function Home() {
       </header>
 
       <section className="hero">
-        <p className="eyebrow">The Vinted Product Sniper &amp; Price Alert</p>
-        <h1>Never miss a Vinted deal again. <span className="hero-accent">Flip for profit, before anyone else.</span></h1>
-        <p className="hero-kw">Supervint is the Chrome extension that watches every Vinted search you set — 24/7, in the background — and fires an instant desktop alert the second a matching listing goes live. While other buyers are still scrolling, you&apos;re already on the listing.</p>
-        <p className="hero-sub">Good listings on Vinted sell in minutes, not hours. Supervint checks continuously, not when you remember to hit refresh — so you see the item the moment it drops, at the price you wanted, before someone else grabs it.</p>
+        <p className="eyebrow">Sold prices · Instant alerts · Search your own listings</p>
+        <h1>Find out what it actually sold for — <span className="hero-accent">before you buy.</span></h1>
+        <p className="hero-kw">Supervint shows you the real sold price of any Vinted item, then fires an instant desktop alert the second a matching listing goes live — so you know a genuine bargain from a listing that just looks cheap.</p>
+        <p className="hero-sub">Vinted hides sold prices. We built the database. And while other buyers are still scrolling, you&apos;re already on the listing.</p>
         <a
-          href="#pricing"
+          href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo"
           className="btn btn-primary btn-lg"
           onClick={() => fbq('track', 'Lead', { content_name: 'Hero CTA Click' })}
         >
           Add Supervint to Chrome — it&apos;s free
         </a>
-        <p className="hero-fine">No credit card required · Set up in 2 minutes · No Vinted login details ever</p>
+        <p className="hero-fine">No credit card required · Set up in 2 minutes · Alert-only — never logs into your Vinted account</p>
 
-        <div className="product-shot">
-          <div className="shot-bar">
-            <span className="shot-dot"></span>
-            <span className="shot-dot"></span>
-            <span className="shot-dot"></span>
-            <span className="shot-title">Supervint — live searches</span>
+        <div className="mock-app">
+          <div className="mock-app-head">
+            <span className="m-brand">Supervint</span>
+            <span className="m-count">Sold prices</span>
           </div>
-          <div className="shot-rows">
-            <div className="shot-row"><span className="name">Nike trainers UK 9</span><span className="shot-tag tag-new">3 new</span></div>
-            <div className="shot-row"><span className="name">Carhartt jacket M</span><span className="shot-tag tag-idle">watching</span></div>
-            <div className="shot-row"><span className="name">N64 console</span><span className="shot-tag tag-idle">watching</span></div>
+          <div className="mock-app-body">
+            <div className="mock-sold-head">What it actually went for</div>
+            <div className="mock-sold-item"><span className="mock-sold-thumb">🧥</span><span className="mock-sold-title">Carhartt WIP Detroit Jacket · M</span><span className="mock-sold-price">£48</span></div>
+            <div className="mock-sold-item"><span className="mock-sold-thumb">👟</span><span className="mock-sold-title">Nike P-6000 · UK 9</span><span className="mock-sold-price">£32</span></div>
+            <div className="mock-sold-item"><span className="mock-sold-thumb">🧸</span><span className="mock-sold-title">Lego Star Wars set</span><span className="mock-sold-price">£4.50</span></div>
+            <div className="mock-sold-item"><span className="mock-sold-thumb">🧥</span><span className="mock-sold-title">Barbour Wax Jacket</span><span className="mock-sold-price">£38</span></div>
           </div>
         </div>
       </section>
 
-      <section className="problems">
-        <div className="sec-head"><h2>The deal&apos;s gone before you&apos;ve even opened the tab.</h2></div>
-        <div className="problem-grid">
-          <div className="problem">
-            <span className="problem-no">01</span>
-            <h3>Good listings sell in minutes</h3>
-            <p>On Vinted, a genuine bargain — a £40 Carhartt jacket listed for £12, a working N64 for a tenner — is gone in under ten minutes. If you only check when you think of it, you&apos;re always the buyer who arrives after it&apos;s sold.</p>
+      <section className="trust-strip" aria-label="Trusted by resellers">
+        <div className="trust-strip-inner">
+          <span className="trust-item"><strong>5.0</strong> ★ rated by resellers on the Chrome Web Store</span>
+          <span className="trust-sep">·</span>
+          <span className="trust-item">Alert-only — <strong>never logs into your Vinted account</strong></span>
+          <span className="trust-sep">·</span>
+          <span className="trust-item"><strong>No auto-buy, no ban risk</strong></span>
+          <span className="trust-sep">·</span>
+          <span className="trust-item"><strong>Free</strong> to start</span>
+        </div>
+      </section>
+
+      <section className="section-alt">
+        <div className="sec-head">
+          <p className="eyebrow">Why Supervint</p>
+          <h2>The reseller&apos;s edge, all in one place.</h2>
+        </div>
+        <div className="feature-grid">
+          <div className="feature-card">
+            <h3>Know what it sold for</h3>
+            <p>Asking price is a guess. Sold price is the truth. See what identical items actually went for — so you never overpay and you know exactly what to list it at.</p>
           </div>
-          <div className="problem">
-            <span className="problem-no">02</span>
-            <h3>You can&apos;t watch ten searches at once</h3>
-            <p>Trainers, jackets, consoles, baby gear, vintage denim — the stuff worth flipping is spread across a dozen searches. Your eyes can only be on one tab at a time. Supervint&apos;s can be on all of them, every minute of the day.</p>
+          <div className="feature-card">
+            <h3>Get there first</h3>
+            <p>Supervint watches your searches 24/7 and alerts you the instant a matching listing goes live. Good listings sell in minutes — you&apos;ll be on it in seconds.</p>
           </div>
-          <div className="problem">
-            <span className="problem-no">03</span>
-            <h3>The big one never waits</h3>
-            <p>The listing that pays for your whole week lands at 2pm on a Tuesday while you&apos;re at work — or asleep, or on the school run. Someone needs to be watching when you can&apos;t be.</p>
+          <div className="feature-card">
+            <h3>Search your own listings</h3>
+            <p>Got hundreds of items up? Type a keyword and find the one you&apos;re after in a second. No more scrolling your whole wardrobe to locate a single jacket.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how">
+        <div className="sec-head">
+          <p className="eyebrow">Setup</p>
+          <h2>Set it once. Let it snipe.</h2>
+        </div>
+        <div className="how-steps">
+          <div className="how-step">
+            <span className="how-no">1</span>
+            <h3>Paste a search — or just describe it</h3>
+            <p>Search Vinted like you normally would and copy the link, or tell the AI what you&apos;re hunting in plain English — &ldquo;Nike Dunks under £40, size 8&rdquo; — and it builds the search for you.</p>
+          </div>
+          <div className="how-step">
+            <span className="how-no">2</span>
+            <h3>Name it, set your alert</h3>
+            <p>Give it a label, pick the hours you want it checking, and set a &ldquo;steal price&rdquo; if you want an email when something drops below a threshold. Everything else runs itself.</p>
+          </div>
+          <div className="how-step">
+            <span className="how-no">3</span>
+            <h3>Get on with your day</h3>
+            <p>Supervint works in the background while you do literally anything else. When a match goes live you get a desktop alert with the photo and price — click it and you&apos;re on the listing.</p>
           </div>
         </div>
       </section>
@@ -153,21 +189,122 @@ export default function Home() {
       <section id="features" className="section-alt">
         <div className="sec-head">
           <p className="eyebrow">What Supervint does</p>
-          <h2>Everything you need to snipe the drop.</h2>
+          <h2>Know the real price. Then get there first.</h2>
         </div>
 
         <div className="showcase">
           <div className="showcase-copy">
+            <h3>See what it actually sold for.</h3>
+            <p>
+              Vinted doesn&apos;t publish sold prices — so most buyers are guessing. Supervint shows what
+              identical items really went for, so you can <a href="/guides/how-to-see-sold-prices-on-vinted">see how much similar items sold for</a> before you buy.
+            </p>
+            <ul>
+              <li>Real sale prices, not asking prices</li>
+              <li>Average sold price for the exact item you&apos;re hunting</li>
+              <li>Spot flips instantly — buy low, sell at true market value</li>
+            </ul>
+          </div>
+          <div className="showcase-visual">
+            <div className="mock-app">
+              <div className="mock-app-head">
+                <span className="m-brand">Supervint</span>
+                <span className="m-count">Sold prices</span>
+              </div>
+              <div className="mock-app-body">
+                <div className="mock-sold-head">What it actually went for</div>
+                <div className="mock-sold-item"><span className="mock-sold-thumb">🧥</span><span className="mock-sold-title">Carhartt WIP Detroit Jacket · M</span><span className="mock-sold-price">£48</span></div>
+                <div className="mock-sold-item"><span className="mock-sold-thumb">👟</span><span className="mock-sold-title">Nike P-6000 · UK 9</span><span className="mock-sold-price">£32</span></div>
+                <div className="mock-sold-item"><span className="mock-sold-thumb">🧸</span><span className="mock-sold-title">Lego Star Wars set</span><span className="mock-sold-price">£4.50</span></div>
+                <div className="mock-sold-item"><span className="mock-sold-thumb">🧥</span><span className="mock-sold-title">Barbour Wax Jacket</span><span className="mock-sold-price">£38</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="showcase reverse">
+          <div className="showcase-copy">
+            <h3>Get alerted the second your grail goes live.</h3>
+            <p>
+              Supervint watches every search you set — 24/7, in the background — and fires a desktop
+              notification the moment a matching listing appears. While other buyers are still
+              refreshing, you&apos;re already on the listing. That&apos;s <a href="/guides/vinted-price-alert">how Vinted price alerts work</a>.
+            </p>
+            <ul>
+              <li>Instant desktop alert with the photo and price</li>
+              <li>Email &ldquo;steal price&rdquo; alerts when something drops below your threshold</li>
+              <li>Watch trainers, jackets, consoles — all at once</li>
+            </ul>
+          </div>
+          <div className="showcase-visual">
+            <div className="mock-app">
+              <div className="mock-app-head">
+                <span className="m-brand">Supervint</span>
+                <span className="m-count">5 searches · 3 new</span>
+              </div>
+              <div className="mock-app-body">
+                <div className="mock-search"><span className="mock-dot active"></span><span className="mock-search-label">Nike trainers UK 9</span><span className="mock-tag new">3 new</span></div>
+                <div className="mock-search"><span className="mock-dot active"></span><span className="mock-search-label">Carhartt jacket M</span><span className="mock-tag new">1 new</span></div>
+                <div className="mock-search"><span className="mock-dot active"></span><span className="mock-search-label">N64 console</span><span className="mock-tag watching">watching</span></div>
+                <div className="mock-search"><span className="mock-dot hibernating"></span><span className="mock-search-label">Vintage Levi&apos;s denim</span><span className="mock-tag watching">hibernating</span></div>
+                <div className="mock-notif">
+                  <span className="mock-notif-thumb">🔔</span>
+                  <span className="mock-notif-body">
+                    <span className="mock-notif-title">New listing — Carhartt WIP Detroit Jacket</span>
+                    <span className="mock-notif-sub">£48 · Medium · just now</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="showcase">
+          <div className="showcase-copy">
+            <h3>Find any item in your own closet, instantly.</h3>
+            <p>
+              Got hundreds of items listed? Type a keyword and Supervint finds the one you&apos;re after
+              in a second — no more scrolling your whole wardrobe to locate a single jacket.
+            </p>
+            <ul>
+              <li>Keyword search across your entire listing history</li>
+              <li>Built for high-volume sellers with hundreds of items</li>
+              <li>Zero scrolling — type it, find it</li>
+            </ul>
+          </div>
+          <div className="showcase-visual">
+            <div className="mock-app">
+              <div className="mock-app-head">
+                <span className="m-brand">Supervint</span>
+                <span className="m-count">My items</span>
+              </div>
+              <div className="mock-app-body">
+                <div className="mock-wardrobe-search">⌕ jacket</div>
+                <div className="mock-wardrobe-grid">
+                  <div className="mock-wardrobe-card"><div className="mock-wardrobe-img">🧥</div><div className="mock-wardrobe-name">Vintage Levi&apos;s Denim</div><div className="mock-wardrobe-tag">found</div></div>
+                  <div className="mock-wardrobe-card"><div className="mock-wardrobe-img">🧥</div><div className="mock-wardrobe-name">Barbour Wax · M</div><div className="mock-wardrobe-tag">found</div></div>
+                  <div className="mock-wardrobe-card"><div className="mock-wardrobe-img">🧥</div><div className="mock-wardrobe-name">Carhartt Detroit · L</div><div className="mock-wardrobe-tag">found</div></div>
+                  <div className="mock-wardrobe-card"><div className="mock-wardrobe-img">🧥</div><div className="mock-wardrobe-name">North Face Puffer</div><div className="mock-wardrobe-tag">found</div></div>
+                  <div className="mock-wardrobe-card"><div className="mock-wardrobe-img">👕</div><div className="mock-wardrobe-name">Stone Island Crew</div><div className="mock-wardrobe-tag">found</div></div>
+                  <div className="mock-wardrobe-card"><div className="mock-wardrobe-img">🧥</div><div className="mock-wardrobe-name">Patagonia Fleece</div><div className="mock-wardrobe-tag">found</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="showcase reverse">
+          <div className="showcase-copy">
             <h3>Tell the AI what you&apos;re hunting. It builds the search.</h3>
             <p>
-              No more fiddling with filters. Describe the item in plain English — brand, size, price, the
-              lot — and the AI assistant turns it into a live, monitored Vinted search in seconds.
+              No more fiddling with filters or pasting URLs. Describe the item in plain English —
+              brand, size, price, the lot — and the AI assistant turns it into a live, monitored
+              Vinted search in seconds.
             </p>
             <ul>
               <li>Sets brand, size, colour and price cap automatically</li>
               <li>Paste a whole list of links and it adds them all at once</li>
               <li>Ask it anything about selling — what to charge, what sells fast</li>
-              <li>Tell it to remove searches and it cleans them up for you</li>
             </ul>
           </div>
           <div className="showcase-visual">
@@ -182,58 +319,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="showcase reverse">
-          <div className="showcase-copy">
-            <h3>Know what it actually sold for.</h3>
-            <p>
-              Asking price is a guess. Sold price is the truth. Supervint shows what items really went for
-              on Vinted, so you know a genuine bargain from a listing that just looks cheap.
-            </p>
-            <ul>
-              <li>Real sale prices, not asking prices</li>
-              <li>Average sold price for the exact item you&apos;re hunting</li>
-              <li>Spot flips instantly — buy low, sell at true market value</li>
-            </ul>
-          </div>
-          <div className="showcase-visual">
-            <div className="sold-panel">
-              <div className="sold-panel-title">Sold prices — what it actually went for</div>
-              <div className="sold-row"><span>&amp;honey Shampoo</span><strong>£11</strong></div>
-              <div className="sold-row"><span>Carhartt Jacket · M</span><strong>£45</strong></div>
-              <div className="sold-row"><span>Lego Star Wars set</span><strong>£4.50</strong></div>
-              <div className="sold-row"><span>Barbour Wax Jacket</span><strong>£38</strong></div>
-            </div>
-          </div>
-        </div>
-
-        <div className="showcase">
-          <div className="showcase-copy">
-            <h3>Find any item in your own closet, instantly.</h3>
-            <p>
-              Got hundreds of items listed? Type a keyword and Supervint finds the one you&apos;re after in
-              a second — no more scrolling your whole wardrobe to locate a single jacket.
-            </p>
-            <ul>
-              <li>Keyword search across your entire listing history</li>
-              <li>Built for high-volume sellers with hundreds of items</li>
-              <li>Zero scrolling — type it, find it</li>
-            </ul>
-          </div>
-          <div className="showcase-visual">
-            <div className="wardrobe">
-              <div className="wardrobe-search">jacket</div>
-              <div className="wardrobe-row"><span>Vintage Levi&apos;s Denim Jacket</span><span className="shot-tag tag-new">found</span></div>
-              <div className="wardrobe-row"><span>Barbour Wax Jacket · M</span><span className="shot-tag tag-new">found</span></div>
-              <div className="wardrobe-row"><span>Carhartt Detroit Jacket · L</span><span className="shot-tag tag-new">found</span></div>
-            </div>
-          </div>
-        </div>
-
         <div className="support-grid">
-          <div className="support-card">
-            <h3>Instant alerts, the second it&apos;s live</h3>
-            <p>A real desktop notification with the photo and price, the moment a new listing matches.</p>
-          </div>
           <div className="support-card">
             <h3>Email price alerts</h3>
             <p>Set a lower &ldquo;urgent&rdquo; price and get emailed only when something drops below it.</p>
@@ -253,26 +339,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how">
-        <div className="sec-head">
-          <p className="eyebrow">Setup</p>
-          <h2>Set it once. Let it snipe.</h2>
-        </div>
-        <div className="how-steps">
-          <div className="how-step">
-            <span className="how-no">1</span>
-            <h3>Paste a search</h3>
-            <p>Search Vinted like you normally would — brand, size, price range, whatever filters you use — then copy the link and drop it into Supervint. Or skip straight past this and let the AI build it from a sentence.</p>
-          </div>
-          <div className="how-step">
-            <span className="how-no">2</span>
-            <h3>Name it, set your alert</h3>
-            <p>Give it a label, pick the hours you want it checking, and set a &ldquo;steal price&rdquo; if you want an email when something drops below a threshold. Everything else runs itself.</p>
-          </div>
-          <div className="how-step">
-            <span className="how-no">3</span>
-            <h3>Get on with your day</h3>
-            <p>Supervint works in the background while you do literally anything else. When a match goes live you get a desktop alert with the photo and price — click it and you&apos;re on the listing. That&apos;s the whole job.</p>
+      <section className="safety">
+        <div className="safety-inner">
+          <h2>Your account stays yours.</h2>
+          <p>
+            Supervint is <strong>alert-only</strong>. It never logs into your Vinted account, never
+            auto-buys, never posts, never takes any automated action. We tell you when a deal drops —
+            you buy it yourself, at your own pace. No ban risk, no fine print. That&apos;s the whole
+            difference.
+          </p>
+          <div className="safety-points">
+            <span>✓ Read-only — never logs in as you</span>
+            <span>✓ No automated buying or posting</span>
+            <span>✓ No Vinted credentials stored</span>
+            <span>✓ Pauses automatically if Vinted rate-limits</span>
           </div>
         </div>
       </section>
@@ -339,47 +419,67 @@ export default function Home() {
         <p className="pricing-note">Free accounts are optionally asked for an email inside the extension — to back up your searches across devices and for account updates. Never required to start.</p>
       </section>
 
+      <section className="guides-block">
+        <div className="sec-head">
+          <h2>Popular guides</h2>
+          <p className="guides-block-sub">Everything you need to sell smarter on Vinted.</p>
+        </div>
+        <div className="guides-links">
+          <a href="/guides/vinted-price-alert">How Vinted price alerts work</a>
+          <a href="/guides/how-to-see-sold-prices-on-vinted">See sold prices on Vinted</a>
+          <a href="/guides/vinted-sniper">Vinted sniper — find deals first</a>
+          <a href="/guides/how-to-sell-on-vinted">How to sell on Vinted</a>
+          <a href="/guides/how-to-get-more-views-on-vinted">Get more views on Vinted</a>
+          <a href="/guides/vinted-ban-risk">Is it safe? Account ban risk explained</a>
+          <a href="/help">Help &amp; support</a>
+        </div>
+      </section>
+
       <section id="faq" className="section-alt">
         <div className="sec-head">
           <h2>Common questions</h2>
         </div>
         <div className="faq-list">
           <div className="faq-item">
-            <h3>What is Supervint?</h3>
-            <p>Supervint is a Chrome extension that monitors Vinted searches in real time and sends you an instant desktop alert the moment a matching listing appears — so you can snipe the deal before anyone else.</p>
-          </div>
-          <div className="faq-item">
-            <h3>How is Supervint different from refreshing Vinted manually?</h3>
-            <p>Supervint checks continuously in the background, even when you&apos;re away from the keyboard. Manual refreshing means you&apos;re always behind buyers who already have an alert running. Good listings on Vinted sell within minutes.</p>
-          </div>
-          <div className="faq-item">
-            <h3>Does Supervint work on any Vinted search?</h3>
-            <p>Yes. Paste any Vinted search URL into Supervint and it monitors it for you. You can run multiple searches simultaneously on paid plans — trainers, jackets, consoles, whatever you&apos;re hunting.</p>
-          </div>
-          <div className="faq-item">
-            <h3>Is there a free version?</h3>
-            <p>Yes — Supervint is free to install with 5 active searches and desktop alerts included. Every new account also gets 7 days of Trial free, with no card required. Upgrade to Reseller (£6.99/month), Power Seller (£13.99/month) or Empire (£24.99/month) for more searches, Google Sheets logging, email price alerts, and priority support.</p>
+            <h3>How do I see sold prices on Vinted?</h3>
+            <p>Vinted doesn&apos;t show sold prices. Supervint&apos;s crowd-sourced sold-price database shows what similar items actually sold for, so you know a fair price before you buy or list.</p>
           </div>
           <div className="faq-item">
             <h3>Will Supervint get my Vinted account banned?</h3>
-            <p>Supervint is designed to be account-safe — it uses randomised check intervals, respects the active hours you set, and pauses automatically if Vinted returns any rate-limit signals. No automated buying, posting, or account actions are ever involved.</p>
+            <p>No. Supervint is alert-only — it never logs into your Vinted account, never auto-buys, and never takes any automated action. You always buy manually.</p>
           </div>
           <div className="faq-item">
-            <h3>Does it work on mobile?</h3>
-            <p>No — Supervint is a desktop Chrome extension and only runs while Chrome is open on a Mac or Windows computer. It does not work on Chrome for iPhone or Android (mobile Chrome does not support extensions).</p>
+            <h3>Is Supervint free?</h3>
+            <p>Yes — free to install with 5 active searches and desktop alerts. Every new account also gets 7 days of Trial free, with no card required. Upgrade to Reseller (£6.99/month), Power Seller (£13.99/month) or Empire (£24.99/month) for more searches and extra tools.</p>
+          </div>
+          <div className="faq-item">
+            <h3>Does Supervint auto-buy items for me?</h3>
+            <p>No. Supervint only notifies you. You review the listing and buy it yourself on Vinted — no automated buying, posting, or account actions are ever involved.</p>
+          </div>
+          <div className="faq-item">
+            <h3>Can I search my own Vinted listings?</h3>
+            <p>Yes. Supervint lets you search your own listings by keyword, so you can spot what&apos;s underpriced, what&apos;s not moving, and what to re-price — without scrolling your whole wardrobe.</p>
+          </div>
+          <div className="faq-item">
+            <h3>What&apos;s the difference between Supervint and Vinted&apos;s own favourites?</h3>
+            <p>Vinted favourites notify you when a favourited item drops 5%+. Supervint alerts you the moment a brand-new matching listing goes live — before it&apos;s gone.</p>
           </div>
           <div className="faq-item">
             <h3>Do I need a Vinted tab open for it to work?</h3>
-            <p>No. As long as Chrome is open and you&apos;re signed in to Vinted, Supervint checks your searches in the background on its own — no Vinted tab needed, and you can use other apps while it monitors. The only requirements: Chrome open, signed in to Vinted, and your computer not asleep.</p>
+            <p>No. As long as Chrome is open and you&apos;re signed in to Vinted, Supervint checks your searches in the background on its own — no Vinted tab needed. The only requirements: Chrome open, signed in to Vinted, and your computer not asleep.</p>
+          </div>
+          <div className="faq-item">
+            <h3>Does it work on mobile?</h3>
+            <p>Supervint is a desktop Chrome extension for Mac and Windows. Alerts also arrive by email, so you can act from your phone the moment a deal drops.</p>
           </div>
         </div>
       </section>
 
       <section className="final">
-        <h2>Stop refreshing. Start sniping.</h2>
-        <p className="final-sub">Every minute you spend manually checking Vinted is a minute someone else is already on the listing. Install Supervint free, set your searches once, and let it do the watching for you.</p>
+        <h2>Stop guessing. Start sniping.</h2>
+        <p className="final-sub">Know the real sold price before you buy, and get the alert before anyone else. Install Supervint free, set your searches once, and let it do the watching for you.</p>
         <a
-          href="#pricing"
+          href="https://chromewebstore.google.com/detail/supervint/aaogigmdemlphihidefipnckmmpoakpo"
           className="btn btn-primary btn-lg"
           onClick={() => fbq('track', 'Lead', { content_name: 'Chrome Web Store Click' })}
         >
