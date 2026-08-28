@@ -38,13 +38,15 @@
 | 33 | LEGO on Vinted (buy cheap sets / retiring sets, spot fakes) | 2026-08-24 | ✅ Published | content/guides/lego-on-vinted.json | Evergreen; Reddit/FB/Mumsnet demand |
 | 34 | Halloween costumes on Vinted (seasonal, Oct peak) | 2026-08-24 | ✅ Published | content/guides/halloween-costumes-on-vinted.json | Seasonal; publish late Aug → index by mid-Sept |
 | 35 | QUEUED (not proposed yet): How to spot fake Moncler/Canada Goose on Vinted | 2026-08-24 | ⏳ Queued for late Sept | Trust/safety angle; Reddit pain point ("bought a fake Canada Goose"); winter seasonal peak Oct–Dec; needs auth research before drafting | — |
+| 36 | Vinted empty box scam (backfill — found in live folder, not previously logged; published 2026-08-12) | 2026-08-12 | ✅ Published | content/guides/vinted-empty-box-scam.json | — |
+| 37 | Vinted "insufficient packaging" claim (backfill — published 2026-08-24) | 2026-08-24 | ✅ Published | content/guides/vinted-insufficient-packaging-claim.json | — |
+| 38 | Vinted order suspended / money stuck in pending (backfill — published 2026-08-26) | 2026-08-26 | ✅ Published | content/guides/vinted-order-suspended.json | — |
+| 39 | PROPOSED 08-27: PRIMARY "Is it safe to buy an iPhone on Vinted?" / SECONDARY "Vinted vs Facebook Marketplace" | 2026-08-27 | ⏳ Awaiting approval | iPhone = trust/safety + electronics category, SERP gap (Reddit/Vinted help only), strong alert fit; vs Marketplace = completes comparison cluster (Depop, eBay, alternatives done). Christmas gifts on Vinted noted as next seasonal candidate (publish window late Sept) | — |
 
-## GSC snapshot (90 days to 2026-08-24, from scripts/gsc-report.py)
-- Totals: 33 clicks / 709 impressions / CTR 4.65% / avg pos 9.6 / 59 active days
-- Opportunity bucket (pos 11–30) has NO uncovered queries: "vinted sniper" 11 imp @ 14.3 (guide #25 page itself now 10 imp @ 6.6 — climbing, monitor); rest are price-notify long-tails @ 9–13 already served by guide #23
-- "does vinted show sold items" 3 imp @ 11.0 — variant of #24 (sold prices page strong: 95 imp @ 7.3); do NOT create separate page
-- "vinted snipe" 2 imp @ 29.5 / "vinted sniping" 2 imp @ 35 — synonyms of #25; do NOT create separate pages
-- French "alerte/alertes vinted" 11 imp combined @ 40–54 — still nascent, needs FR pages (not now)
-- Top pages: /guides/vinted-price-alert 369 imp @ 13.7; / 200 imp @ 7.1; /guides/how-to-see-sold-prices-on-vinted 95 imp @ 7.3; ban-risk 31 imp @ 16.0
-- Brand queries ("supervint" 27 imp @ 1.0) still the main click source — keep targeting long-tail/use-case
-- Competitor blog check 08-24: Vinotify/VintiePlus/Telvin/Lobstr all publishing tool-comparison listicles ("best vinted alert services 2026") — comparison space getting crowded; category-specific gaps remain (LEGO, Halloween costumes, fake designer coats)
+## GSC snapshot (90 days to 2026-08-27, from scripts/gsc-report.py)
+- Totals: 41 clicks / 916 impressions / CTR 4.48% / avg pos 9.5 / 61 active days (up from 33 cl / 709 imp on 08-24)
+- Opportunity bucket (pos 11–30) STILL has NO uncovered queries: "vinted sniper" 16 imp @ 12.2 (page itself now 40 imp @ 7.9 — climbed from 10 imp @ 6.6, monitor); "vinted sniping" 5 imp @ 20.8 = synonym of #25, no new page; sold-prices variants @ 7–11 served by #24 (page: 233 imp @ 7.3); price-notify long-tails @ 9–13 served by #23
+- Page 2+ (imp ≥ 5): only French "alerte/alertes vinted" 12 imp @ 40–54 — still nascent, needs FR pages (not now)
+- Top pages: /guides/how-to-see-sold-prices-on-vinted 233 imp @ 7.3; /guides/vinted-price-alert 393 imp @ 13.7; / 208 imp @ 7.5; /guides/vinted-sniper 40 imp @ 7.9; ban-risk (old slug) 34 imp @ 15.5
+- Brand queries ("supervint" 30 imp @ 1.0) still the main click source — keep targeting long-tail/use-case
+- Competitor blog check 08-27: Vinotify (alerts/deal-finding), VintiePlus (automation/AutoBuy — they DO auto-buy, we don't; good differentiation), Lobstr (API), Telvin (Trustpilot) — none cover iPhone/electronics safety or Vinted vs Facebook Marketplace; comparison-listicle space remains crowded per 08-24 check
