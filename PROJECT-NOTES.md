@@ -140,6 +140,18 @@ anywhere, clean SVG line icons, brand teal #007782, works for ALL users)
   START_SEARCH immediately — no "press Start" second step. This was the
   activation killer: 9 of 15 installed users created searches but never
   started them.
+- **Poll watchdog (2026-08-29 fix — "new users never poll")**: fresh installs
+  create searches but the initial poll alarm was lost to an MV3 SW kill and
+  the ONLY recovery path was the offscreen-doc keepalive, which never came
+  alive for 12/22 users — searches sat at "starting up"/"idle" with
+  version=None, lastSeen=never forever. Added `sv_poll_watchdog` (3-min
+  periodic alarm, independent of offscreen) that runs
+  restoreAlarmsForEnabledSearches + autoStartNeverPolledSearches (starts any
+  search that has a URL, is enabled:false, never polled, and wasn't
+  deliberately stopped; respects plan searchLimit via 10-min-cached
+  /subscription/status fetch). Also broadened START_ALL_SEARCHES/Start All to
+  target enabled-but-never-polled searches (`!s.lastPollTime`) — "Start All
+  does nothing" was skipping those.
 - **Sold panel persistence**: openSoldPanels/openSoldPanelsLoaded/
   openSoldPanelsFetching Sets + openSoldPanelsHtml cache (Map of rendered
   HTML). The popup's 2s setInterval re-renders the list and wipes panel DOM;
