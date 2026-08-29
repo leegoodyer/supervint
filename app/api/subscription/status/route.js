@@ -37,6 +37,7 @@ export async function POST(request) {
     // a real signal that its plan moved elsewhere.
     const deletedRecord = await kv.get(`sv:deleted:${clientId}`);
     const invalidated = !!deletedRecord?.mergedInto;
+    const mergedInto = deletedRecord?.mergedInto ?? null;
 
     // Nothing persisted yet, and this clientId was never merged away either
     // — a genuinely fresh install. Nothing is usable without an email on
@@ -54,6 +55,7 @@ export async function POST(request) {
       trialExpiresAt: null,
       email:          null,
       invalidated,
+      mergedInto,
     }, { headers: CORS });
   }
 
