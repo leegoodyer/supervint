@@ -21,10 +21,16 @@ export const runtime = 'nodejs';
 const HARVEST_ENABLED = true;
 const HARVEST_MAX_ORDERS = 0;
 const HARVEST_INTERVAL_MIN = 24 * 60; // 24h — how often a harvest is due (remote knob)
+const HARVEST_PAGE_DELAY_MS = 12000;  // 12s between my_orders page fetches — anti-flag pacing
 
 export async function GET() {
   return NextResponse.json(
-    { harvestEnabled: HARVEST_ENABLED, harvestMaxOrders: HARVEST_MAX_ORDERS, harvestIntervalMin: HARVEST_INTERVAL_MIN },
+    {
+      harvestEnabled: HARVEST_ENABLED,
+      harvestMaxOrders: HARVEST_MAX_ORDERS,
+      harvestIntervalMin: HARVEST_INTERVAL_MIN,
+      harvestPageDelayMs: HARVEST_PAGE_DELAY_MS,
+    },
     { headers: { 'Cache-Control': 'no-store' } },
   );
 }
