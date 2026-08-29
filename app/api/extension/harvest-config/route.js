@@ -19,7 +19,7 @@ export const runtime = 'nodejs';
 // crowd-source ramp. Default ships at 50 (cautious first run on every account).
 
 const HARVEST_ENABLED = true;
-const HARVEST_MAX_ORDERS = 50;
+const HARVEST_MAX_ORDERS = 0;
 
 export async function GET() {
   return NextResponse.json(
