@@ -42,6 +42,7 @@
 | 37 | Vinted "insufficient packaging" claim (backfill — published 2026-08-24) | 2026-08-24 | ✅ Published | content/guides/vinted-insufficient-packaging-claim.json | — |
 | 38 | Vinted order suspended / money stuck in pending (backfill — published 2026-08-26) | 2026-08-26 | ✅ Published | content/guides/vinted-order-suspended.json | — |
 | 39 | PROPOSED 08-27: PRIMARY "Is it safe to buy an iPhone on Vinted?" / SECONDARY "Vinted vs Facebook Marketplace" | 2026-08-27 | ⏳ Awaiting approval | iPhone = trust/safety + electronics category, SERP gap (Reddit/Vinted help only), strong alert fit; vs Marketplace = completes comparison cluster (Depop, eBay, alternatives done). Christmas gifts on Vinted noted as next seasonal candidate (publish window late Sept) | — |
+| 40 | RE-PROPOSED 08-31 (same as #39, still no approval): PRIMARY "Is it safe to buy an iPhone on Vinted?" / SECONDARY "Vinted vs Facebook Marketplace" | 2026-08-31 | ⏳ Awaiting approval | Fresh checks 08-31: SERP for iPhone-on-Vinted still Reddit/FB/news-horror-story (MEN £850 iPhone bait-and-switch) + Avira/Norton scam blogs — NO dedicated buyer guide; Vinta.app covers SELLING electronics only; Vinted itself offers an Electronics Verification service (seen on vinted.ie — VERIFY market availability at draft time). Vinted vs FB Marketplace SERP still Reddit/Mumsnet/Yahoo/Crosslist only. Vinotify blog re-checked: webhooks/autobuy-comparisons/listicles — nothing on electronics safety or vs-Marketplace. Our category series (buy X on Vinted) remains competitor-free. Queue intact: #35 Moncler/Canada Goose fakes (late Sept, winter peak) + Christmas gifts (late Sept publish window) | — |
 
 ## GSC snapshot (90 days to 2026-08-27, from scripts/gsc-report.py)
 - Totals: 41 clicks / 916 impressions / CTR 4.48% / avg pos 9.5 / 61 active days (up from 33 cl / 709 imp on 08-24)
@@ -50,3 +51,11 @@
 - Top pages: /guides/how-to-see-sold-prices-on-vinted 233 imp @ 7.3; /guides/vinted-price-alert 393 imp @ 13.7; / 208 imp @ 7.5; /guides/vinted-sniper 40 imp @ 7.9; ban-risk (old slug) 34 imp @ 15.5
 - Brand queries ("supervint" 30 imp @ 1.0) still the main click source — keep targeting long-tail/use-case
 - Competitor blog check 08-27: Vinotify (alerts/deal-finding), VintiePlus (automation/AutoBuy — they DO auto-buy, we don't; good differentiation), Lobstr (API), Telvin (Trustpilot) — none cover iPhone/electronics safety or Vinted vs Facebook Marketplace; comparison-listicle space remains crowded per 08-24 check
+
+## GSC snapshot (90 days to 2026-08-31, from scripts/gsc-report.py)
+- Totals: 51 clicks / 1,359 impressions / CTR 3.75% / avg pos 9.4 / 65 active days (up from 41 cl / 916 imp on 08-27)
+- Opportunity bucket (pos 11–30) still has NO uncovered queries: "vinted sniping" 10 imp @ 15.3 = synonym of #25 (its page now 85 imp @ 8.4, climbed from 40 imp @ 7.9 — monitor); sold-prices variants @ 7–14 served by #24 (page: 470 imp @ 7.5); price-notify long-tails @ 9–13 served by #23; order-suspended variants @ 7–11 served by #38 (page live)
+- Page 2+ (imp ≥ 5): only French "alerte/alertes vinted" (8 imp @ 53.5 / 6 imp @ 40) — nascent, needs FR pages (not now)
+- Top pages: /guides/how-to-see-sold-prices-on-vinted 470 imp @ 7.5; /guides/vinted-price-alert 408 imp @ 13.8; / 240 imp @ 7.0; /guides/vinted-sniper 85 imp @ 8.4; ban-risk (old slug) 37 imp @ 15.0
+- Brand queries ("supervint" 21 cl / 40 imp @ 1.0) still the main click source — keep targeting long-tail/use-case
+- Competitor blog check 08-31 (Vinotify blog index): webhooks / autobuy-vs-alerts / "best Vinted alert services (2026)" listicle / reselling — STILL no category-specific "buy X on Vinted" guides, no electronics-safety, no Vinted vs Facebook Marketplace. VintiePlus/Resold/Lobstr = autobuy-focused (differentiation: alert-only). Vinta.app blog covers SELLING electronics (not buying)
