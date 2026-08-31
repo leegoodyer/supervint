@@ -64,6 +64,11 @@ function fmtAttribution(a) {
 // Human-friendly poll status — "12 new items found", "no new items",
 // "stopped", "error (HTTP 429)" — never the raw internal token.
 function friendlyPollResult(u) {
+  // Not running now → the last poll is stale, so label it as paused with the
+  // last-poll age rather than a misleading "no new items".
+  if (u.runningNow === false && u.lastPollTime) {
+    return `paused (last poll ${fmtAge(u.lastPollTime)})`;
+  }
   const r = (u.lastPollResult || '').toLowerCase();
   const when = u.lastPollTime ? ` ${fmt(u.lastPollTime)}` : '';
   const n = u.newItemsLastCount;
@@ -97,9 +102,17 @@ function insideActiveHours(s) {
 }
 
 // Poll status for a single search row (compact).
-function friendlySearchStatus(s) {
+function friendlySearchStatus(s, runningNow) {
   const r = (s.lastPollResult || '').toLowerCase();
   const n = s.newItemsLastCount;
+  // Not running right now (Chrome closed / machine asleep) — the last poll
+  // result is STALE, so never show a misleading "no new" / "N new". This is
+  // the "things don't match up" fix: "no new items" used to display even when
+  // the browser had been closed for hours.
+  if (runningNow === false) {
+    if (!r && !s.needsBaseline) return 'not started';
+    return s.lastPollTime ? `paused (${fmtAge(s.lastPollTime)})` : 'paused';
+  }
   // Enabled but outside active hours = hibernating, regardless of the last
   // poll result (the server may not have a fresh "hibernating" sync yet).
   if (s.enabled && !insideActiveHours(s)) return `hibernating (resumes ${s.activeHoursStart || '08:00'})`;
@@ -117,6 +130,17 @@ function friendlySearchStatus(s) {
     case 'error':     return 'error';
     default:          return r || 'starting up';
   }
+}
+
+// Compact "3h ago" age label from an epoch-ms timestamp.
+function fmtAge(ms) {
+  if (!ms) return '';
+  const mins = Math.round((Date.now() - ms) / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins}m ago`;
+  const hrs = Math.round(mins / 60);
+  if (hrs < 24) return `${hrs}h ago`;
+  return `${Math.round(hrs / 24)}d ago`;
 }
 
 // Color for a search row's status — green only when it's genuinely running
@@ -657,8 +681,10 @@ export default function AdminPanel() {
                         {u.version ?? 'unknown'}
                       </td>
                       <td style={{ padding: '0.65rem 0.9rem', whiteSpace: 'nowrap' }}>
-                        {u.active24h ? (
-                          <span style={{ color: 'var(--green)', fontWeight: 600 }}>● Active</span>
+                        {u.runningNow ? (
+                          <span style={{ color: 'var(--green)', fontWeight: 600 }}>● Running</span>
+                        ) : u.active24h ? (
+                          <span style={{ color: '#d97706', fontWeight: 600 }}>◐ Offline</span>
                         ) : u.active7d ? (
                           <span style={{ color: '#d97706', fontWeight: 600 }}>◐ Seen 7d</span>
                         ) : (
@@ -835,8 +861,8 @@ export default function AdminPanel() {
                       </td>
                       <td style={{ padding: '0.4rem 0.7rem', textAlign: 'left', whiteSpace: 'nowrap', width: 170 }}>
                         {s.enabled
-                          ? <span style={{ color: searchStatusColor(s), fontWeight: 600 }}>● {friendlySearchStatus(s)}</span>
-                          : <span style={{ color: 'var(--gray)' }}>○ {friendlySearchStatus(s)}</span>}
+                          ? <span style={{ color: searchStatusColor(s), fontWeight: 600 }}>● {friendlySearchStatus(s, selected.runningNow)}</span>
+                          : <span style={{ color: 'var(--gray)' }}>○ {friendlySearchStatus(s, selected.runningNow)}</span>}
                       </td>
                     </tr>
                   ))}

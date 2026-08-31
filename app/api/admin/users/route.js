@@ -156,6 +156,11 @@ export async function GET() {
           : null,
         active24h:       heartbeats[i]?.at ? (now - heartbeats[i].at) < 86_400_000 : false,
         active7d:        heartbeats[i]?.at ? (now - heartbeats[i].at) < 7 * 86_400_000 : false,
+        // "runningNow" = the extension has pinged within the last ~10 min. This
+        // is the real "is Chrome open right now" signal — the heartbeat fires on
+        // a keepalive cadence, so anything older means the browser is closed,
+        // asleep, or the machine is off. Distinct from active24h (seen today).
+        runningNow:      heartbeats[i]?.at ? (now - heartbeats[i].at) < 10 * 60_000 : false,
       };
     })
     .filter(Boolean)
