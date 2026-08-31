@@ -4,30 +4,32 @@ import { isAdminAuthed } from '@/lib/admin-auth';
 
 const kv = Redis.fromEnv();
 
-// Admin-only sold-DB audit (2026-08-17): count records + list any with
-// probe-like titles so we can confirm cleanup and that genuine sales are intact.
+// Admin-only sold-DB audit. Counts distinct sold items WITHOUT a full key scan:
+// `sv:sold:recent` is a zset (soldAt -> itemId) maintained on every sale, so
+// ZCARD gives the total instantly. The old `kv.keys('sv:sold:item:*')` scan
+// broke once the DB grew past Upstash's "too many keys" limit — do NOT go back
+// to a key scan. Probe detection (test/junk records) samples a bounded slice of
+// the titles zset instead.
 export async function GET() {
   const ok = await isAdminAuthed();
   if (!ok) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  const keys = await kv.keys('sv:sold:item:*');
+
+  // Distinct sold item count = cardinality of the recency zset.
+  const total = await kv.zcard('sv:sold:recent');
+
+  // Probe/junk scan: sample titles from the lexicographic titles zset.
+  // zrange returns members as "lowercased-title||itemId". Bound it so we don't
+  // page through the whole DB.
   const probes = [];
-  let total = 0, emptyTitle = 0, withPrice = 0;
-  const CHUNK = 100;
-  for (let i = 0; i < keys.length; i += CHUNK) {
-    const chunk = keys.slice(i, i + CHUNK);
-    const recs = await kv.mget(...chunk);
-    for (let j = 0; j < recs.length; j++) {
-      const r = recs[j];
-      if (!r) continue;
-      total++;
-      if (!r.title) emptyTitle++;
-      if (r.price > 0) withPrice++;
-      const t = String(r.title || '');
-      if (/probe|^z$|^q$|^probe[0-9x]?$/.test(t)) {
-        const itemId = String(chunk[j]).split(':').pop();
-        probes.push({ itemId, title: t, price: r.price });
+  try {
+    const sample = await kv.zrange('sv:sold:titles', 0, 199);
+    for (const member of sample) {
+      const [title, itemId] = String(member).split('||');
+      if (/^(probe|z|q|probe[0-9x]?)$/i.test(title || '')) {
+        probes.push({ itemId, title, member });
       }
     }
-  }
-  return NextResponse.json({ ok: true, total, emptyTitle, withPrice, probeCount: probes.length, probes: probes.slice(0, 20) });
+  } catch { /* best effort — probe scan is informational only */ }
+
+  return NextResponse.json({ ok: true, total, probeCount: probes.length, probes: probes.slice(0, 20) });
 }
