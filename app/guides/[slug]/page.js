@@ -22,6 +22,17 @@ export async function generateMetadata({ params }) {
       description: guide.meta_description || guide.intro,
       url: `https://supervint.com/guides/${slug}`,
       type: 'article',
+      ...(guide.hero_image?.src
+        ? { images: [{ url: `https://supervint.com${guide.hero_image.src}` }] }
+        : { images: [{ url: 'https://supervint.com/og-image.png' }] }),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${guide.title} — Supervint`,
+      description: guide.meta_description || guide.intro,
+      ...(guide.hero_image?.src
+        ? { images: [`https://supervint.com${guide.hero_image.src}`] }
+        : { images: ['https://supervint.com/og-image.png'] }),
     },
   };
 }
