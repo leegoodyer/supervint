@@ -1,0 +1,88 @@
+{
+  "title": "Vinted InPost QR Code Says \"This Parcel Requires a Label\" — What to Do",
+  "intro": "If your InPost locker tells you \"This parcel requires a label, do not send without a label attached\" even though Vinted only gave you a QR code, you have a digital-label mismatch: Vinted generated a digital label (QR code) for a shipment that the locker is reading as one that must arrive with a printed label already attached. You cannot convert the label once it has been generated, so the reliable fix is to cancel the order and ask the buyer to repurchase with a printable label. Before you cancel, though, try an InPost shop that can print a label from your QR code, and contact InPost directly if the locker or shop printer itself is faulty.",
+  "meta_description": "Vinted gave you an InPost QR code but the locker demands a printed label? Here's why it happens, the InPost-shop workaround, and the cancel-and-re-order fix that actually works.",
+  "date_published": "2026-09-11",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Get alerted the moment items you want are listed",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What \"this parcel requires a label\" actually means",
+      "paragraphs": [
+        "You are not doing anything wrong, and you are not the only person hitting this. When you sell on Vinted and press \"Get shipping label\" in the chat with your buyer, Vinted lets you choose between two things: a printable label you print at home and stick to the parcel, or a digital label, which is a QR code you scan at the locker or show to staff at a branch (Vinted's own InPost help page sets this out).",
+        "With a QR code, Vinted's guidance is explicit: you do not need to print anything at home, at the locker, or at the shop — at a 24/7 locker you scan the code to open a compartment, and at an InPost shop the staff print and stick a label on the parcel for you. So a QR code is a legitimate, label-free way to send.",
+        "The error message — \"This parcel requires a label, do not send without a label attached\" — means the machine is reading your shipment as one that must already carry a printed label, so it will not let you drop the parcel off with just a QR. Sellers describe standing at the locker, code in hand, with the deadline counting down and no way to make the locker accept it."
+      ]
+    },
+    {
+      "heading": "Why the QR code and the locker disagree",
+      "paragraphs": [
+        "The two label types map to two different flows, and they do not always line up. Locker and shop pick-up normally accepts a QR code. InPost Home Delivery — which moves a parcel from a locker or shop to the buyer's home — and some international routes are the ones where the \"needs a printed label\" rule tends to bite.",
+        "In mid-2026 sellers reported a wave of exactly this problem. Several threads in r/vinted and r/vintedUK describe the same sequence: a digital label is generated as usual, the seller travels to a locker, and the screen refuses the QR with the \"requires a label\" message. A number of those sellers had buyers in Australia at the time, and others had Home Delivery selected, which is where the reports clustered — though not everyone's case fitted that pattern.",
+        "The complication is that you cannot simply switch the label type inside the order. Vinted's \"Shipping label not received or not working\" help page states that once the shipping label has been generated, you cannot swap it for a different carrier's label or a different drop-off method. The label you were issued is the label you have — which is why the workaround routes below matter."
+      ]
+    },
+    {
+      "heading": "Try this first, before you cancel anything",
+      "paragraphs": [
+        "Take the QR code to an InPost shop rather than a 24/7 locker. Vinted's help page confirms that when you drop off using a code, shop staff will print and stick the label for you. Use InPost's own store locator to find a branch that handles parcels — a generic Post Office counter is not the same thing and will not print an InPost label.",
+        "Be aware that this does not always work either. Some sellers reported the in-shop printer producing a blank label — sometimes several times in a row — after which the code stopped working. If that happens, the fault is on InPost's side, not something you can fix from the Vinted app.",
+        "If the locker or the shop is the thing that is broken, contact InPost directly. InPost's published UK customer service line is 0330 335 0950, open Monday to Friday 7am to 10pm and Saturday to Sunday 8am to 8pm. If you are still standing at the machine, phoning from there is worth doing — InPost staff have been able to open a locker remotely when a code was not working.",
+        "Finally, if neither you nor the buyer is in a rush, leaving it a day can clear a transient glitch. Vinted's label troubleshooting page itself advises waiting a few hours and trying again when there is a technical problem generating or using a label — just keep an eye on your send deadline."
+      ]
+    },
+    {
+      "heading": "The fix that actually works: cancel and re-order with a printable label",
+      "paragraphs": [
+        "Vinted's own remedy for a label that will not work at the drop-off point is to try a different drop-off point first, and if it still fails, to cancel the order and ask the buyer to start a new order. That is also the fix sellers keep landing on in the threads: once the buyer repurchases and a different shipping option or pick-up point is chosen, a printable label is generated and the parcel sends without trouble.",
+        "When you ask the buyer to re-order, ask them to select a different shipping option or pick-up point from before — Vinted explicitly recommends this so a new, usable label is produced. Sellers who did this reported that the replacement printable label generated and shipped successfully; those who simply re-selected the same digital option hit the same wall again.",
+        "Message your buyer before you cancel and explain what is happening. Vinted states plainly that informing the buyer helps you avoid automatic negative feedback, and a seller-side cancellation is recorded against your account — so treat cancelling as the last resort, not the first move. While you sort it out, remember Vinted expects the order to be sent within five business days of purchase, so do not let the clock run out while you wait."
+      ]
+    },
+    {
+      "heading": "If you can never print a label, stop the wrong option appearing",
+      "paragraphs": [
+        "If you rely on QR codes because you do not own a printer, the durable fix is to control which shipping options buyers can pick. In Vinted you can manage your shipping options under Profile, then Settings, then Postage, and turn off any option you cannot fulfil. That reduces — but does not fully remove — the chance a buyer selects a delivery route that expects a printed label.",
+        "Sellers report that even with an option switched off, Vinted sometimes still lets a buyer choose it, so it is worth double-checking the actual order before you travel to a locker: open the sale and confirm whether the app is showing you a QR code or a link to download a printable label. If it is a printable label and you have no printer, a local library, a print shop or a friend's printer can save the sale.",
+        "If the order is already placed and you genuinely cannot get a printed label, the same cancel-and-re-order route applies — this time steering the buyer toward locker or shop pick-up, which is the flow that accepts a QR code."
+      ]
+    },
+    {
+      "heading": "The other half of the problem: your code will not open the locker",
+      "paragraphs": [
+        "The same InPost friction shows up at the other end of the sale — collection. Buyers report lockers that will not open despite a valid code or PIN, including screens saying the QR or barcode is not recognised, and an in-app message that the collection point is simply not working.",
+        "The fixes that keep recurring are worth knowing for both sides of the sale. The InPost app shows both a QR code and a separate collection code, so it is worth checking both rather than relying on one. Buyers who phoned InPost customer service from the locker — giving the locker number and order number — had the compartment opened remotely. And some users noted that Vinted's in-app option for reporting a locker problem only appears when you are physically at the locker.",
+        "If the parcel cannot be collected, it is usually returned to the seller and the order is cancelled, with the buyer refunded — meaning both sides lose the sale. Until the item is genuinely in hand, do not press \"Everything is OK\" on a delivery that has not actually happened, and keep the order conversation open so the problem is on record."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Vinted gave me an InPost QR code but the locker says I need a printed label — what do I do?",
+      "answer": "Try an InPost shop that can print a label from your QR code first, and contact InPost if the locker or printer is faulty. If it still will not work, cancel the order and ask the buyer to repurchase choosing a different shipping option or pick-up point, so a printable label is generated."
+    },
+    {
+      "question": "Can Vinted convert my QR code into a printable label?",
+      "answer": "No. Vinted's help page states that once a shipping label has been generated, you cannot swap it for a different carrier's label or a different drop-off method. The only way to get a printable label is to cancel the order and have the buyer re-order with that option."
+    },
+    {
+      "question": "Where can I get an InPost label printed if I do not have a printer?",
+      "answer": "An InPost shop can print and attach a label from your QR code when you drop off — Vinted confirms this. A generic Post Office counter will not print InPost labels, so use InPost's own store locator to find a branch that handles parcels. Public libraries and print shops can also print a downloadable label."
+    },
+    {
+      "question": "Will I get negative feedback if I cancel the order?",
+      "answer": "A seller-side cancellation is recorded against your account, so it is a last resort. Vinted advises messaging the buyer first and explaining the situation — doing so helps you avoid automatic negative feedback — and asking them to repurchase with a different shipping option."
+    },
+    {
+      "question": "How do I contact InPost in the UK?",
+      "answer": "InPost's published UK customer service number is 0330 335 0950, open Monday to Friday 7am–10pm and Saturday to Sunday 8am–8pm. If a locker will not open, calling from the locker with your locker and order numbers lets staff try to open it remotely."
+    },
+    {
+      "question": "Why does this keep happening on parcels going to Australia?",
+      "answer": "In mid-2026 a wave of sellers reported the \"requires a label\" error specifically on InPost shipments to Australia and on InPost Home Delivery orders. The underlying mismatch has not been officially explained, so the practical answer remains the same: try a shop that prints the label, escalate to InPost, and otherwise cancel and re-order with a printable label."
+    }
+  ]
+}
