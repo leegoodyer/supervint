@@ -1,0 +1,89 @@
+{
+  "title": "Vinted ID Verification Stuck in a Loop: Why It Keeps Failing and How to Unfreeze Your Wallet",
+  "intro": "If your Vinted ID verification is stuck in a loop — you upload your passport or driving licence, get a silent or instant rejection, and your Vinted Balance stays frozen — the cause is almost always one of three things: a detail mismatch between your document and your account (most often your date of birth or your middle names), an upload that never actually reached the payment provider, or a document that was expired, cropped or incomplete. The fix that works for most people is to submit again from the phone app with every detail matching exactly; if the upload form has locked you out after repeated failures, only a human at Vinted or the payment provider can reset it, and that means escalating.",
+  "meta_description": "Vinted ID verification stuck in a loop or saying 'verification failed' with your wallet frozen? Why uploads get rejected, the app-vs-desktop fix, how to match your details, and how to escalate.",
+  "date_published": "2026-09-16",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Get alerted the moment the pieces you want are listed — no time wasted in app queues",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What the \"verification loop\" actually looks like",
+      "paragraphs": [
+        "The pattern is instantly recognisable. You reach a payment or withdrawal threshold, Vinted asks for a photo of your passport or driving licence, you upload it — and nothing happens. No confirmation, no rejection reason, no change in status. Or the emailed link says \"verification failed\" while the upload page insists your document was received.",
+        "It's one of the most repeated complaints across r/vinted, r/vintedUK and the Facebook Vinted selling groups, and it hits every kind of seller: personal sellers clearing out a few hundred pounds of old clothes, and Vinted Pro business accounts whose whole balance is held. Many report being stuck for weeks, some for months, with support sending the same template reply each time.",
+        "The money matters, because a failed KYC check doesn't just stop one withdrawal. Vinted's help centre states the payment provider can suspend access to your Vinted Balance until the check is completed — it can't be used as a payment method and withdrawals are prevented. Sellers confirm both. And after several failed uploads, the form can stop accepting documents altogether."
+      ]
+    },
+    {
+      "heading": "Why it keeps failing: three causes, in order of likelihood",
+      "paragraphs": [
+        "1. A detail mismatch between your document and your account. The classic automated rejection reads: \"the date of birth in your identity form is different from the date of birth in your document.\" One seller reported the message quoting their correct date of birth straight back at them — proof the mismatch sits in the stored account data. On business accounts it appears as \"the registration proof you provided doesn't match the registered legal representative.\" Middle names, initials and MR/MS prefixes break the string match: sellers report instant rejection for \"J DOE\" where the account said \"JOHN DOE\", while \"MR JOHN DOE\" passed.",
+        "2. Your upload never reached the payment provider. Vinted's help centre is explicit: \"We don't store or have access to the documents you provide. They go directly to the payment service provider.\" So when support says no identity document was ever provided, that can be a genuine technical failure — the file never landed with the provider that runs the check.",
+        "3. The document itself was rejected. The requirements are that it must be clearly visible, complete (both sides) and not expired. An instant rejection with no explanation usually means one of those. One seller's valid passport was rejected instantly with no reason, while an expired licence was rejected with a stated reason; they resolved it by renewing the licence."
+      ]
+    },
+    {
+      "heading": "The fix that works for most people: submit from the phone app, not the desktop site",
+      "paragraphs": [
+        "The single most repeated working fix in the threads is a change of device. One seller stuck in constant rejections despite their ID matching their details exactly wrote: \"I had been uploading my ID's from the desktop site… I finally thought to upload the exact same ID image from my phone to the phone app, and it verified within minutes.\" A second seller confirmed: \"Using the phone app is what finally made it work for me.\" Nothing changed except where they uploaded from.",
+        "So try the app before spending money on a new passport or licence. Use the in-app camera capture rather than a saved photo where you can, keep the whole document in frame with the edges visible, and upload both sides if asked. The likely reason is that the app submits straight to the payment provider in the format it expects, while the browser flow can fail silently."
+      ]
+    },
+    {
+      "heading": "Then make every detail match, character for character",
+      "paragraphs": [
+        "The app still has to pass the same automated comparison, so fix the data first. Your full legal name, including middle names, must be identical on your ID document, on your Vinted account details and on the verification form. Don't use a nickname or shortened first name anywhere in the chain. Your date of birth must match too — if your profile holds an old or incorrect date, correct it before uploading. Sellers repeatedly rejected for a \"date of birth mismatch\" fixed it by correcting the stored details, not by taking better photos.",
+        "The document must also be valid; expired documents are rejected. In the UK, Vinted's help pages state a provisional driving licence is accepted, so if your passport has lapsed that can be faster than a renewal.",
+        "Never edit, retouch or fabricate a document. Vinted warns that suspicious or fake documents can get withdrawals permanently blocked or the account banned, and the same goes for uploading someone else's ID.",
+        "And don't hammer the form. After several rejections the system can block further submissions while the balance stays frozen. Diagnose the mismatch, switch to the app, then submit once. If you're already locked out, only a human can reset the verification."
+      ]
+    },
+    {
+      "heading": "How to escalate when support just repeats itself",
+      "paragraphs": [
+        "Keep one case and stop opening new ones — multiple tickets collapse into the same \"your case is already open\" reply, often the last thing people get for weeks. Put your case reference in every message and keep your own timeline and screenshots.",
+        "Get onto the real support form. Vinted's \"Contact us\" page at vinted.com/help/615 has a dedicated section for bank account, balance activation and withdrawal problems, with the contact button at the end of the page. Our guide to [contacting Vinted support](/guides/how-to-contact-vinted-support) covers the in-app workaround when the contact option seems to be missing.",
+        "Use the legal channel. Vinted's \"Contacts for dispute resolution\" page lists legal@vinted.co.uk for UK issues and legal@vinted.com internationally, for legal or regulatory matters the normal form can't handle, and points UK users to the Centre for Effective Dispute Resolution (CEDR) when a dispute can't be settled directly.",
+        "Complain to the payment provider, not just Vinted — this is the detail most people miss. The KYC decision belongs to the payment provider: in the UK that's Vinted Pay Limited (regulated by the Financial Conduct Authority) or Mangopay SA (registered in Luxembourg, regulated by the CSSF), while US payments go through Adyen. A formal complaint to the provider, quoting your case reference and listing every document you've submitted, is what several sellers report finally getting a real person onto their case. In the US, sellers report filing complaints with the Consumer Financial Protection Bureau over held funds.",
+        "If your ID involves biometrics, Vinted notes that Vinted Pay may process the facial image from your selfie and ID, and that you can contact dataprotection@vintedpay.com if you object. If funds are still stuck after you've provided everything, the next step is a formal letter before action or small claims — see our guide to [taking Vinted to small claims court](/guides/vinted-small-claims-court)."
+      ]
+    },
+    {
+      "heading": "How to avoid getting stuck in the first place",
+      "paragraphs": [
+        "Verify early, not at payout time. In the US, Vinted's help centre says to activate and verify your Vinted Wallet within 5 business days of your first sale, before sending the item, or the order can be cancelled. The UK pages describe the checks being triggered when you reach withdrawal limits set by the payment provider, or when activity looks suspicious to them. Keep your profile details identical to your ID from day one: full legal name with middle names, correct date of birth, current address.",
+        "Sellers report the request appearing when they try to withdraw a larger lump sum, so don't let a big balance build up before testing the flow. One small withdrawal early, while the amounts are low, is a cheap way to prove payout works.",
+        "Business sellers face a longer, stricter document list than personal KYC. Vinted's \"Why you may be asked for your ID\" page sets out what sole traders, non-profits and companies each need: proof of registration showing the legal representative's name and a visible date, the certificate of incorporation, articles and memorandum of association, and a UBO declaration for companies. Sellers report that every name must match, and that combining the required files into a single PDF was what finally got them verified."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why does Vinted keep rejecting my ID verification?",
+      "answer": "The three most common causes are a mismatch between the details on your document and your Vinted account (usually the date of birth, middle names or initials), an upload that never reached the payment provider handling the check, and a document that was expired, cropped or incomplete. Vinted requires the document to be clearly visible, complete on both sides and not expired."
+    },
+    {
+      "question": "Should I upload my ID on the Vinted website or in the phone app?",
+      "answer": "Try the phone app. Sellers repeatedly report being stuck in rejection loops while uploading from the desktop site, then having the exact same document verify within minutes when uploaded through the app. The app also lets you capture the document directly with the camera rather than uploading a saved photo."
+    },
+    {
+      "question": "What does \"the date of birth in your identity form is different from the date of birth in your document\" mean?",
+      "answer": "It means the automated check is comparing the date of birth held on your Vinted account with the date on the ID you uploaded and finding they don't match. One seller even reported the message quoting their correct date of birth back at them, which points to the stored account data being wrong. Check your profile details and correct them before submitting again."
+    },
+    {
+      "question": "Can I withdraw or spend my balance while identity verification is pending?",
+      "answer": "No. Vinted's help centre states that when the KYC check isn't completed, the payment provider can suspend access to your Vinted Balance entirely — it can't be used as a payment method and withdrawals are prevented. Sellers confirm the balance is unusable for both withdrawals and purchases until the check clears."
+    },
+    {
+      "question": "My upload form has stopped accepting documents after several failures. What now?",
+      "answer": "Once the form is locked, you can't fix it from your side — the verification has to be reset manually by a human. Keep a single support case open (new tickets merge into the old one), use the contact form on Vinted's Contact us page, and then escalate to Vinted's legal team or the payment provider that runs the check. Some sellers report that a formal complaint naming the payment provider is what finally got a person to look at their case."
+    },
+    {
+      "question": "Is it safe to send a photo of my passport to Vinted?",
+      "answer": "Vinted states that it doesn't store or have access to the documents you provide — they go directly to the regulated payment service provider that runs the check, such as Vinted Pay Limited (FCA-regulated) or Mangopay (CSSF-regulated) in the UK, or Adyen in the US. Vinted Pay may process the facial image from your selfie and ID, and Vinted's help page says you can contact dataprotection@vintedpay.com if you don't agree to the processing of your biometric data. Never submit an edited or fabricated document: Vinted warns this can permanently block withdrawals or get the account banned."
+    }
+  ]
+}
