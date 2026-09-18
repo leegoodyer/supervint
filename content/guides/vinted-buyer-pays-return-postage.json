@@ -1,0 +1,87 @@
+{
+  "title": "Vinted Wants Me to Pay Return Postage for a Not-As-Described Item — Can I Get Out of It?",
+  "intro": "By default, yes — you pay return postage on Vinted even when the item arrived significantly not as described, and buyers report that once the seller selects \"buyer pays\", Vinted support says it can't be changed. But you're not stuck: your refund still covers the item price, the Buyer Protection fee and the original shipping you paid, counterfeit items don't have to be sent back at all, an item damaged in transit is reported differently and is often refunded without a return, and if the seller refuses, Vinted support can order them to release the refund without you returning anything.",
+  "meta_description": "Buyer has to pay return postage on Vinted even when the item was not as described? The seller's \"buyer pays\" choice can't be changed — but these routes can still get you refunded.",
+  "date_published": "2026-09-18",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Vinted help & scam guides",
+  "cta_text": "Never miss a mispriced listing again — get instant alerts for the items you want on Vinted",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "Why you're being asked to pay return postage on a faulty item",
+      "paragraphs": [
+        "Vinted's rule is simple and, for buyers, deeply annoying: the buyer pays to send an item back unless the seller chooses to cover it. Vinted's \"Returning an item\" page states that when returning an item the buyer pays for return shipping, adding only that you can discuss it with the seller because they may offer to cover the cost. Its refund policy repeats it: buyers pay for return shipping as part of the Terms and Conditions, though sellers may choose to cover it by providing a Vinted-generated label.",
+        "So the person who decides who pays is the same person who sold you the wrong item. Threads on r/vinted and r/vintedUK describe this constantly: a tracksuit advertised as size L that arrived with an XL jacket, a top that turned up covered in stains the listing never showed, shorts shipped instead of the hoodie that was ordered, a print so off-centre it was unwearable. In each case the buyer reported the item as significantly not as described (SNAD) — and the seller came back with \"buyer pays\" selected.",
+        "The most repeated complaint in these threads is the one you're probably asking: what is the Buyer Protection fee for if I still pay to fix the seller's mistake? Vinted's answer, when buyers press support, is that the default is the default. But the blanket \"you pay\" story is only half the picture — several routes take the cost off you entirely, and most buyers never use them because nobody mentions they exist."
+      ]
+    },
+    {
+      "heading": "What your refund actually includes — and what it doesn't",
+      "paragraphs": [
+        "Before deciding whether to return, do the maths, because the refund is more generous than it first looks. Vinted's return page sets out exactly what comes back: the price of the returned item, the Buyer Protection fee for it, and the initial shipping fee you paid for the order. If you kept part of a bundle, the fee is recalculated on what you kept and the difference refunded.",
+        "So you're not losing the item's price or the fee — you're out the cost of posting it back. On a cheap item that can swallow the whole refund and make returning pointless; on anything expensive it's usually still worth doing because every other element is returned. If the return parcel is lost or damaged while you packed it properly, Vinted's refund policy says you won't be charged for the return shipping."
+      ]
+    },
+    {
+      "heading": "Can the \"buyer pays\" choice be changed once it's set?",
+      "paragraphs": [
+        "This is the question in almost every thread, and the answer buyers keep getting back is no. One buyer whose seller had admitted the mistake reported Vinted support confirming that the buyer normally pays return postage even when the item is significantly not as described, and that once the seller selects \"buyer pays\", Vinted can't change it. Other threads repeat the same outcome from both sides — sellers who clicked the wrong option and buyers who disagree are both told the selection stands.",
+        "There's a second lock that catches buyers out. Vinted's return flow warns that once you confirm your return option — an integrated Vinted label, a Vinted-generated label from a provider, or your own tracked return — you can't change your selection or cancel the refund request. So read that screen before you tap. If you intend to ask the seller to cover postage, do it in the order chat first.",
+        "One more thing nearly every experienced commenter mentions: you can't leave feedback on an order once you've returned it. That matters if you wanted to warn other buyers about the seller."
+      ]
+    },
+    {
+      "heading": "Four routes that can take the return postage cost off you",
+      "paragraphs": [
+        "1. Ask the seller directly — it works more often than the threads suggest. The choice is theirs, so send a polite, factual message in the order chat: the item doesn't match the listing, here are the photos, I'd like to return it, could you cover the return postage since it wasn't as described? Buyers report plenty of sellers agreeing once it's clear the listing was wrong, precisely because they know it. It costs nothing to ask before you commit.",
+        "2. Counterfeit items don't need to be returned. Vinted's refund policy is explicit that items confirmed counterfeit don't need to be sent back to receive a refund. If the reason you're returning is that the item is a fake, make that the claim and supply photos showing why — you may get a refund without ever paying postage. This is the most useful detail missing from most of the complaint threads.",
+        "3. Damage in transit is a different claim — and often a return-free refund. If the item was damaged on the way to you, report it as damaged in transit, not as not-as-described. Vinted investigates with the shipping company, and its policy says that if the order had a single item (or every item in a bundle was damaged), you'll be refunded without needing to return it. Buyers who label it SNAD instead can find themselves asked to post back a broken item they shouldn't have to send anywhere.",
+        "4. Escalate to Vinted and let them order the refund. If you can't agree with the seller, open \"View issue details\", press \"Contact us\", read the refund terms and submit. Vinted's return page says support replies within 48 hours, and that it may require the seller to act within the next 2 days: either request a return, or release the refund so the order is cancelled and you're refunded without returning the item. If the seller disputes, Vinted reviews the evidence from both sides — so this route genuinely can end with money back and no return postage."
+      ]
+    },
+    {
+      "heading": "The deadlines that decide whether you get anything back",
+      "paragraphs": [
+        "Miss a window and the system resolves against you automatically, so treat every deadline as hard.",
+        "You have 2 calendar days from Vinted notifying you that the item should have arrived to press \"I have an issue\" and start the refund request. If nothing is reported in that window — or you tap \"Everything is OK\" — the order completes, your payment goes to the seller, and Vinted says it can no longer help. Keep the packaging until the case closes: Vinted may ask for extra photos of the item and the outer and inner packaging and may not refund without them.",
+        "Once the seller requests a return, you have 5 business days to send the parcel. Miss it and your refund request closes and the payment is released to the seller — buyers in the threads describe cases dying exactly this way after a deadline they hadn't registered. After the seller receives the return, they have 2 days to confirm it's OK, and your refund follows once they confirm or the 2 days pass.",
+        "If it goes wrong, Vinted's official dispute-resolution page asks you to contact Vinted first and to avoid opening disputes with your payment provider. legal@vinted.com is the listed address for legal or regulatory issues the normal form can't resolve — a last resort, but a real one."
+      ]
+    },
+    {
+      "heading": "If you're the seller — and how to avoid the trap next time",
+      "paragraphs": [
+        "When a refund request lands, you have three options: offer a full refund and let the buyer keep the item, offer a partial refund, or ask for a return. For a low-value item, a partial refund is often cheaper than the postage, the dispute and the review. The threads are not flattering about sellers who misdescribe an item and then select \"buyer pays\" to punish the buyer for noticing — and the sellers who behave well come out ahead, because covering the postage when the fault is yours protects your feedback. If you ask for a return, note Vinted's conditions: the buyer must send within 5 business days, it must come back in the condition reported with all tags and accessories, and the default is that they pay the return shipping.",
+        "For buyers, because the seller controls who pays, the only reliable protection is not needing to return the item. Check measurements rather than trusting the size label — ask for pit-to-pit and length on anything fitted. Ask for extra photos of labels, tags and any flaw before buying; sellers who won't send them are telling you something. Factor return postage into the price: on a cheap item, treat the money as spent the moment you buy it. And keep everything in the order chat, because agreeing a refund by bank transfer outside Vinted means Buyer Protection no longer applies — buyers in the threads describe being ghosted the moment the transaction completed."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Do I have to pay return postage on Vinted if the item was not as described?",
+      "answer": "By default, yes. Vinted's return page states the buyer pays for return shipping and that you can discuss it with the seller, who may offer to cover the cost. The seller is the one who chooses — Vinted's refund policy confirms buyers pay return shipping as part of the Terms and Conditions, though sellers may cover it by providing a Vinted-generated label."
+    },
+    {
+      "question": "Can the seller or Vinted change the \"buyer pays\" option once selected?",
+      "answer": "Buyers who have asked report that Vinted support says it can't be changed once the seller selects it. That's why you should ask the seller to cover postage in the order chat before confirming anything — Vinted also warns that once you confirm your return option, you can't change your selection or cancel the refund request."
+    },
+    {
+      "question": "What does my refund actually cover if I return a not-as-described item?",
+      "answer": "Vinted's return page lists the price of the returned item, the Buyer Protection fee for it, and the initial shipping fee you paid. The return postage is the part you're out. If the return is lost or damaged while packed properly, you won't be charged for the return shipping."
+    },
+    {
+      "question": "Is there any way to get a refund without returning the item?",
+      "answer": "Yes, in three situations. Items confirmed counterfeit don't need to be returned to get a refund. Items damaged in transit are refunded without a return when the order was a single item (or every item in a bundle was damaged). And if the seller won't agree, Vinted support can require them to release the refund so the order is cancelled and you're refunded without returning the item."
+    },
+    {
+      "question": "How long do I have to report the problem and send the item back?",
+      "answer": "You have 2 calendar days from Vinted notifying you the item should have arrived to press \"I have an issue\". If the seller requests a return, you then have 5 business days to send the parcel or the case closes and payment is released to the seller. The seller then has 2 days to confirm the returned item is OK."
+    },
+    {
+      "question": "Can I leave feedback if I return the item?",
+      "answer": "No. On Vinted you can't leave feedback on an order once you've returned it, which is why buyers with a genuinely bad seller weigh that up before deciding. If you keep the item instead, you retain the ability to leave a review."
+    }
+  ]
+}
