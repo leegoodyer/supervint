@@ -1,0 +1,97 @@
+{
+  "title": "Vinted Banned My Account But Won't Let Me Withdraw My Balance \u2014 What Actually Works",
+  "intro": "Yes \u2014 this is a known, recurring situation, and sellers are getting their money released. When Vinted permanently bans an account, the Vinted Wallet can be locked at the same time, so the \u201cWithdraw to bank account\u201d button stops working and support replies with a generic \u201cthe decision is final\u201d message that never answers the actual money question. The route sellers report working is: appeal once through the official link, put the money request in writing to Vinted's legal team, send a Letter Before Action with a 14-day deadline, and then file a small claim \u2014 several sellers report their wallet unlocking the day the formal letter landed, and others report payment only after a court claim was filed.",
+  "meta_description": "Vinted banned your account and locked your wallet? Why the funds are stuck, which money Vinted can legally hold, and the escalation route sellers report working \u2014 legal email, Letter Before Action and small claims.",
+  "date_published": "2026-09-21",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Selling on Vinted and tired of chasing support? Get alerted the moment genuine listings appear so your funds and your time stay with honest users",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "The pattern: banned out of nowhere, wallet locked with it",
+      "paragraphs": [
+        "Read r/vinted, r/vintedUK and r/LegalAdviceUK for a week and the same post keeps appearing. A seller is blocked without warning \u2014 sometimes mid-sale, sometimes after months of nothing \u2014 and the block takes the Vinted Wallet with it. The \u201cWithdraw to bank account\u201d button is gone or throws an error; the app shows the balance but won't release it; logging in on the web refreshes straight to an account-locked screen.",
+        "Balances in these threads range from a few hundred to five figures. The complaint is almost never about the ban itself any more \u2014 it's the money. Sellers say the same thing in almost identical words: \u201cI don't care about the account, I just want the funds I'm owed.\u201d",
+        "Then comes the second wall. Vinted support replies with a templated message that the decision stands and the review is final \u2014 without ever answering the question that was asked. Sellers describe conversations being closed the moment they raise it, and repeated messages to the legal inbox getting the same generic reply each time."
+      ]
+    },
+    {
+      "heading": "First, work out which pot of money you're actually chasing",
+      "paragraphs": [
+        "This matters, because part of the \u201cstuck\u201d money isn't stuck at all \u2014 it simply isn't withdrawable yet, by Vinted's rules.",
+        "Vinted's own help page \u201cHow to withdraw earnings\u201d states plainly that you can only withdraw earnings from completed orders, and that funds still sitting in your pending balance can't be withdrawn. So if the buyer hasn't confirmed receipt, or the order is still in transit, that portion stays in pending until it completes \u2014 with or without a ban.",
+        "The genuine problem is the available balance. That's money from completed orders that should be releasable, and sellers report being unable to withdraw it once the account is blocked \u2014 sometimes with the balance shrinking over time rather than growing. In several threads the explanation given by other sellers is that Vinted refunded buyers on orders the seller had already shipped, which drains the pending balance. If your ban is tied to a counterfeit or \u201cfraudulent activity\u201d finding, expect part of the balance to be clawed back into those refunds.",
+        "Split your total into available, pending on shipped orders, and pending on orders not yet sent. Only the first is a straight withholding fight. The second will clear on its own timeline. The third is at risk if you can't ship."
+      ]
+    },
+    {
+      "heading": "Step 1: use the official appeal once \u2014 and separate the money from the ban",
+      "paragraphs": [
+        "Vinted's \u201cContact us\u201d page states that Vinted always notifies members why a listing was removed or an account was banned, and provides a way to make an appeal. Vinted's \u201cContacts for dispute resolution\u201d page sets the rules: the appeal link sits in the Vinted inbox message or the email containing the moderation decision, appeals must be made within 6 months of that decision, and a decision can only be appealed once. Sellers in the threads report the link sometimes simply isn't there \u2014 no email, no inbox message, nothing to click.",
+        "If you can't find the appeal link, open the Help Centre, pick any article that's even vaguely related, and use the \u201cContact us\u201d / \u201cI still need help\u201d button at the very bottom of that article. That opens a support form without needing an order attached.",
+        "Then use the wording that sellers report getting through. Keep the message to one issue, and make that issue the wallet, not the ban. One seller who eventually regained access used a subject line that was essentially just a statement of the technical fact \u2014 that the withdraw button doesn't work \u2014 and explicitly wrote that they were not asking to be unbanned, only for access to funds already earned. That framing removes the easiest excuse for a scripted \u201cthe ban is final\u201d reply, because it isn't a request to overturn the ban.",
+        "Do this once, through the official appeal channel, and keep a copy of everything. Then stop arguing inside the app and move to writing."
+      ]
+    },
+    {
+      "heading": "Step 2: put the money request in writing to Vinted's legal team",
+      "paragraphs": [
+        "Vinted's \u201cContacts for dispute resolution\u201d page names the escalation address for legal or regulatory issues: legal@vinted.com on the global site, and legal@vinted.co.uk on the UK site. This is a published route, not a guess \u2014 it's the same page that tells you how moderation appeals work.",
+        "Write a factual, unemotional email. State the order numbers, the amounts, the dates, what you've already tried, and attach your screenshots, sale records and support replies. Frame it as a request for funds owed on completed orders, not a plea to be reinstated. Keep repeating that one line: you are not asking them to reverse the ban, you are asking them to release the balance.",
+        "Sellers who got their money back describe this step as the one that needed volume. One reported being unblocked after roughly a fortnight of sustained messages to both support and the legal address; another said the decisive move was simply continuing to send the same single-issue demand until an actual person read it. Treat the legal inbox as a paper trail you're deliberately building, not a magic button."
+      ]
+    },
+    {
+      "heading": "Step 3: the Letter Before Action \u2014 the point where accounts reportedly unlock",
+      "paragraphs": [
+        "A Letter Before Action (LBA) is a formal written notice that you intend to start court proceedings unless the matter is settled within a set deadline. Sellers use 14 days. You don't need a solicitor \u2014 the people writing these in the threads wrote their own, quoting the order numbers, the amounts, the evidence and the fact that the funds are owed on orders that completed.",
+        "This is the step that shows up again and again as the turning point. In one thread a seller's LBA had been met with the same generic \u201cban is final\u201d response, and they reported that the account was quietly changed the day the letter was received so that withdrawal worked again. Another described sending an LBA and being unbanned soon after, with no explanation offered.",
+        "Send it to the legal address on Vinted's dispute-resolution page, keep proof of sending and of the deadline, and be genuinely prepared to follow through. The letter only carries weight if the next step is real."
+      ]
+    },
+    {
+      "heading": "Step 4: small claims court \u2014 where the money actually moves",
+      "paragraphs": [
+        "If the deadline passes with a refusal or silence, the route that recovers the balance is a county court money claim. In England and Wales that's the government's \u201cMake a court claim for money\u201d service (Money Claim Online); in Scotland it's the Simple Procedure at the sheriff court. Sellers report the filing fee for a claim of a few hundred pounds at roughly \u00a335, and describe the form itself as quick to complete \u2014 the timeline is the main work.",
+        "What sellers report about the results is unusually consistent. Vinted frequently doesn't defend the claim, so it's won by default after around 28 days. One seller with an active claim for several hundred pounds held in their Vinted Wallet after a ban said they expected no response from Vinted at all. Another who filed over counterfeit shoes reported Vinted refunding the full amount plus the court fee once the claim was in.",
+        "Where the money is a wallet balance rather than a disputed refund, the claim is even simpler in principle: the funds are agreed to be yours, and the argument is about access. We cover the full step-by-step filing process, costs and the Letter Before Action wording in our separate guide to taking Vinted to small claims court."
+      ]
+    },
+    {
+      "heading": "Two moves from the threads worth knowing",
+      "paragraphs": [
+        "The first is the payment-provider angle. Vinted's help pages state that its payment service provider is Adyen N.V., and that Adyen provides and manages the Vinted Wallet. One seller reported contacting the payment provider's published complaints channel, being told there was no restriction on their side, then quoting that confirmation back to Vinted and having their account unlocked the next day. If both Vinted and its payment provider point at each other, get that in writing and put it in front of Vinted.",
+        "The second is the blunt lesson running through every one of these threads: withdraw early and often. Multiple sellers say they now move money out the moment it becomes available, precisely so a surprise block can never freeze a large balance. That advice doesn't help you today, but it is the reason the experienced sellers in these threads are never the ones posting about a five-figure wallet they can't reach.",
+        "One honest caveat: if the ban relates to counterfeit goods, the picture is harder. Sellers banned for counterfeit report that buyers get refunded even after receiving the item. The escalation routes still work \u2014 but the sums recoverable may be smaller than the balance you saw when the ban landed."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I still withdraw my balance if Vinted bans my account?",
+      "answer": "Some sellers report they can. Others report the wallet locking with the account, with the withdraw button failing or an account-locked screen on web. Vinted doesn't publish a promise either way. What is clear from Vinted's help pages is that only completed orders are withdrawable at all \u2014 pending balance can't be withdrawn \u2014 so separate your available balance from funds still tied to in-transit orders."
+    },
+    {
+      "question": "Vinted keeps replying that the decision is final and won't answer my money question. What next?",
+      "answer": "Stop arguing in the app and put it in writing. Email the address listed on Vinted's \u201cContacts for dispute resolution\u201d page \u2014 legal@vinted.com on the global site, legal@vinted.co.uk on the UK site. Keep the request to one issue: funds owed on completed orders, not the ban itself. Then send a Letter Before Action with a 14-day deadline, and be prepared to file a small claim if it passes unanswered."
+    },
+    {
+      "question": "Is there an appeal link for a banned Vinted account?",
+      "answer": "Vinted's help pages state that members are always notified why a listing was removed or an account was banned, and are given a way to appeal \u2014 normally a link in the moderation message in your inbox or email. Appeals must be made within 6 months and can only be made once. Sellers report the link sometimes not arriving, in which case the \u201cContact us\u201d button at the bottom of any Help Centre article is the way in."
+    },
+    {
+      "question": "Why is my Vinted balance going down while I'm banned?",
+      "answer": "Sellers in these threads report that when an account is banned Vinted may refund buyers on orders that were already shipped, and those refunds are taken from the balance. If your ban relates to counterfeit or a \u201cfraudulent activity\u201d finding, expect part of the pending balance to drain into refunds. Pending funds also can't be withdrawn until the underlying order completes in the normal way."
+    },
+    {
+      "question": "Do I need a solicitor to get my Vinted balance back?",
+      "answer": "For the escalation path, no. Sellers in the threads wrote their own Letter Before Action and filed county court claims themselves through the government's money claim service. A solicitor becomes worth considering for very large sums or if fraud is alleged against you personally, because that accusation carries consequences beyond the balance."
+    },
+    {
+      "question": "Does Vinted actually pay out when you file a court claim?",
+      "answer": "Sellers report that Vinted frequently doesn't respond to claims, so they're won by default, and that payment follows. Others report the wallet being unlocked the day a formal letter was received, before any claim was issued. In several accounts the payout came only after the claim was filed or served \u2014 which is why the deadline in the Letter Before Action has to be real."
+    }
+  ]
+}
