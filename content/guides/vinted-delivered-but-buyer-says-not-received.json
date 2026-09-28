@@ -1,0 +1,93 @@
+{
+  "title": "Vinted Says Delivered But the Buyer Claims It Never Arrived \u2014 What Sellers Can Actually Do",
+  "intro": "If your Vinted order shows as delivered but the buyer says they never received it, do not refund them yourself and do not press any refund or cancel button \u2014 tell the buyer to raise the issue through Vinted, which then investigates with the carrier. If the parcel is confirmed lost, Vinted's own policy says you'll be compensated and the buyer refunded; if the tracking confirms delivery, the money is released to you. The genuinely hard cases are the ones where Vinted refunds the buyer despite a delivery scan \u2014 and there are real escalation routes for those too.",
+  "meta_description": "Vinted tracking shows delivered but the buyer says it never arrived? What Vinted's rules actually say, how to submit delivery proof, and how to challenge an unfair refund.",
+  "date_published": "2026-09-28",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Get alerted the moment genuine listings appear \u2014 and spend less time fighting problem orders",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "\u201cIt says delivered but the buyer says it never arrived\u201d \u2014 the seller\u2019s side",
+      "paragraphs": [
+        "It is one of the most repeated seller posts on r/vinted, r/vintedUK, r/VintedAdvice and the big Facebook groups: the order is marked delivered, then a message arrives from the buyer saying they can\u2019t find it \u2014 or the order quietly flips to suspended. New sellers describe the same panic every time: am I about to lose both the item and the money?",
+        "The first thing to understand is that three very different things sit behind that one message, and you often can\u2019t tell them apart at the start.",
+        "The first is a genuine courier fault. Threads describe parcels marked delivered while still at the depot or post office, delivered to the wrong house number, left with a neighbour or in a \u201csafe place\u201d, or taken from a doorstep \u2014 including a buyer who found their parcel at the post office days later after being told it had already arrived.",
+        "The second is a scanning glitch. Buyers report InPost locker orders flipping to \u201ccollected\u201d when they never collected, and Evri or Royal Mail scans firing early at a depot rather than at the door. The status says delivered when, in reality, the parcel is still moving.",
+        "The third is a deliberate non-receipt claim \u2014 a buyer who wants the item and the money back. The blunt version is described in a r/vintedUK dispute where the buyer claimed non-delivery on the grounds that they were \u201cout of the country\u201d, on an order that had already passed Vinted Verification. You don\u2019t get to assume which one you\u2019re dealing with. What you do get is one correct first move."
+      ]
+    },
+    {
+      "heading": "What Vinted\u2019s own rules actually say",
+      "paragraphs": [
+        "Vinted\u2019s help page \u201cParcel didn\u2019t arrive\u201d (help 657) sets out two clocks depending on how you shipped. With a Vinted-generated label (integrated shipping), and tracking stuck both on Vinted and the carrier\u2019s own site, you wait up to 25 business days from the day the order was marked shipped. Vinted then asks the buyer to confirm: if the parcel arrived they press \u201cEverything is OK\u201d and your payment is released; if not, they press \u201cI have an issue\u201d to cancel the order \u2014 and Vinted states plainly that you\u2019ll then receive compensation and the buyer will be refunded.",
+        "Custom (non-integrated) shipping works differently: after 21 business days the order is automatically marked delivered, and the buyer must report any issue within 2 days or the order completes and the payment is released to you. Vinted adds that if the carrier confirms the parcel was lost in transit, you should contact them for the next steps.",
+        "Once a parcel is delivered, the buyer has 2 days to raise an issue before the order auto-completes and your money is released (14 days for Pro-seller orders). A separate page (help 1522) covers the opposite problem \u2014 the buyer has the item but the order hasn\u2019t updated. Ask the buyer to press \u201cMark as received\u201d; sellers can\u2019t do it for them, but if the buyer won\u2019t respond, Vinted can update the order manually.",
+        "The single most important detail running through all of it: tracking through Vinted\u2019s own label is what proves you shipped. That is the evidence the whole system is built on."
+      ]
+    },
+    {
+      "heading": "What to do the moment the buyer messages you",
+      "paragraphs": [
+        "Reply once \u2014 politely, in the Vinted chat, never off-platform. Say you posted it, you have the tracking and proof of postage, and the best route is for them to raise the issue with Vinted through the order. Keep it short; you are not the courier. Sellers who over-explain, or apologise their way into offering a refund, are the ones who end up out of pocket.",
+        "Do not refund the buyer directly, and do not press \u201cEverything is OK\u201d, \u201cResolve this issue\u201d, or any cancel/refund option. Once you push the money out you have handed over your only leverage. This is the one piece of advice every experienced seller repeats in these threads: leave it to Vinted.",
+        "Let the buyer open the case. Vinted will contact the carrier, and buyers who go through it properly report being refunded while the seller is compensated \u2014 that\u2019s Buyer Protection doing its job, and it doesn\u2019t cost you your payout when the loss is genuine.",
+        "Start collecting your own evidence straight away, while it still exists: the drop-off receipt, screenshots of the delivered scan, the label and tracking number, photos of the parcel packed and sealed, and the whole chat. Sellers report losing access to order details and messages once a case is closed, so save everything to your own device now.",
+        "If you want to be proactive, open the order conversation, press the information (i) button and use \u201cHelp\u201d to contact Vinted with your proof attached. A clear, factual message \u2014 dates, tracking number, drop-off location \u2014 beats a long emotional one."
+      ]
+    },
+    {
+      "heading": "Getting the delivery proof that actually matters",
+      "paragraphs": [
+        "The strongest thing you can put in front of Vinted is the carrier\u2019s own proof of delivery: the delivery photo and, where available, the GPS coordinates of the scan. If the GPS pin lands on a different street or a different house number, you now know what happened \u2014 and it reframes the case as a courier fault rather than your mistake.",
+        "Getting it can be fiddly. Royal Mail\u2019s proof-of-delivery page typically needs the recipient\u2019s postcode, which sellers often don\u2019t have; one seller found it via the \u201cFind invoicing information\u201d option in the order chat. InPost home-delivery photo proof is only viewable in the InPost app tied to the recipient\u2019s number, so the buyer may have to look it up. Some carriers, including USPS, don\u2019t capture delivery photos at all.",
+        "Ask the carrier directly for a trace and the delivery evidence, and hand whatever you get to Vinted in the case. If the carrier confirms the parcel is genuinely lost, that confirmation is exactly what Vinted asks for in help 657 to move your compensation forward."
+      ]
+    },
+    {
+      "heading": "If Vinted refunds the buyer anyway \u2014 how to challenge it",
+      "paragraphs": [
+        "This is the scenario that burns sellers, and it really does happen. One r/vintedUK seller had a posted scan, a delivered scan, and a proof of delivery that existed \u2014 and still had the transaction cancelled and the buyer refunded a couple of days after the issue was raised, with the buyer then blocking them. Sellers on r/vinted report the same outcome: Vinted siding with a buyer who simply said they didn\u2019t receive the item, even with \u201cdelivered\u201d tracking in front of them.",
+        "If that happens to you, escalate with evidence, not emotion. Vinted\u2019s \u201cContacts for dispute resolution\u201d page (help 1253) lists legal@vinted.com for specific legal or regulatory issues that the normal support form can\u2019t handle. Send a short, numbered timeline \u2014 date posted, date delivered, drop-off location, tracking number, screenshots, and the buyer\u2019s messages \u2014 and ask for a human review.",
+        "Sellers who recovered money describe going further when the standard channels stall: a formal letter before action, then a small claims court / Money Claim Online claim if it isn\u2019t resolved. It is slow and it is work, but it is the route that has actually produced refunds in the threads we reviewed \u2014 worth understanding in advance if your loss is significant.",
+        "One caution: a chargeback through your payment provider is not the seller\u2019s tool, and Vinted asks members to contact them before opening payment disputes. Use the legal contact and the courts instead."
+      ]
+    },
+    {
+      "heading": "How to protect yourself on the next sale",
+      "paragraphs": [
+        "Prevention is cheap and it is the only thing fully in your control. Always ship with Vinted\u2019s integrated label so a tracked scan exists \u2014 sellers who shipped untracked describe having almost no defence in a non-receipt claim. Keep the drop-off receipt until the order completes.",
+        "Photograph the item, then the item boxed, then the sealed parcel with the label visible, and save the tracking number against that order. For anything valuable, film the packing. It takes a minute and turns \u201cI think I posted it\u201d into evidence Vinted can act on.",
+        "Accept that a small number of sales will end this way, and that you cannot personally prevent a courier misdelivering a parcel or a buyer deciding to try it on. What you can do is make sure the tracking, the receipt and the delivery proof are already on your side when it happens \u2014 so the system resolves in your favour, or your escalation route is ready if it doesn\u2019t."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Vinted says delivered but the buyer says it never arrived \u2014 do I have to refund them?",
+      "answer": "No. Don\u2019t refund them directly and don\u2019t press any refund or cancel button on the order. Tell the buyer to raise the issue with Vinted through the order so it can be investigated with the carrier. If the parcel is confirmed lost you\u2019ll be compensated and the buyer refunded; if delivery is confirmed, the money is released to you."
+    },
+    {
+      "question": "What does Vinted actually do when a buyer reports a parcel as not received?",
+      "answer": "Per Vinted\u2019s \u201cParcel didn\u2019t arrive\u201d page (help 657), with an integrated Vinted label you can wait up to 25 business days from dispatch, after which Vinted asks the buyer to confirm. If the buyer says it hasn\u2019t arrived, the order is cancelled and Vinted states you\u2019ll receive compensation while the buyer is refunded. On custom shipping, the order auto-marks delivered after 21 business days and the buyer must report within 2 days."
+    },
+    {
+      "question": "Will I still get paid if the tracking shows delivered but the buyer disputes it?",
+      "answer": "Usually yes \u2014 once the 2-day confirmation window passes, the order completes and your payment is released. But sellers do report cases where Vinted refunded the buyer despite a delivered scan and existing proof of delivery. So keep your proof of postage, tracking screenshots and any delivery photo, and escalate with evidence if Vinted rules against you."
+    },
+    {
+      "question": "The buyer has my item but the order hasn\u2019t updated to delivered \u2014 what now?",
+      "answer": "Vinted\u2019s help page 1522 covers this: ask the buyer to press \u201cMark as received\u201d. Sellers can\u2019t do it on the buyer\u2019s behalf. If the buyer received the parcel but won\u2019t confirm or reply, contact Vinted and they can update the order status manually, after which the buyer gets 2 days to accept or raise an issue."
+    },
+    {
+      "question": "How do I get proof of delivery to send to Vinted?",
+      "answer": "Ask the carrier for the delivery photo and GPS coordinates of the scan. Royal Mail\u2019s proof-of-delivery page usually needs the recipient\u2019s postcode; InPost\u2019s home-delivery photo is viewable only in the InPost app tied to the recipient\u2019s number; some carriers such as USPS don\u2019t take delivery photos at all. If the GPS pin isn\u2019t your buyer\u2019s address, that points to a courier fault and supports your case."
+    },
+    {
+      "question": "Can I challenge it if Vinted refunds the buyer anyway?",
+      "answer": "Yes. Escalate with a short, factual timeline and screenshots. Vinted\u2019s \u201cContacts for dispute resolution\u201d page (help 1253) lists legal@vinted.com for legal or regulatory issues the normal form can\u2019t resolve. Sellers who recovered money describe following up with a formal letter before action and, if needed, a small claims court / Money Claim Online claim."
+    }
+  ]
+}
