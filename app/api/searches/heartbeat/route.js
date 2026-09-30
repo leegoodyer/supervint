@@ -52,6 +52,7 @@ export async function POST(request) {
     newItemsLastCount: s?.newItemsLastCount ?? null,
     lastPollRawCount:  s?.lastPollRawCount ?? null,
     lastPollDropReasons: s?.lastPollDropReasons ?? null,
+    lastPollSample:    s?.lastPollSample ?? null,
   })).filter(s => s.id);
   // Store the offscreen session-warm diagnostics (if the extension sent any)
   // so the monitor can see WHY the session warm is/isn't holding.
