@@ -1,0 +1,89 @@
+{
+  "title": "Vinted Shipping Label Failed: Why Your Label Won't Generate (and How to Fix It)",
+  "intro": "If Vinted says \"shipping label failed\", \"unable to create shipping labels\", or the \"Get shipping label\" button just spins and produces nothing, it is almost always a temporary Vinted-side fault or a problem with the order's buyer address — not something wrong with your account. Wait a few hours and try again, try a different device or the web browser, and check the order for an address error. Most importantly: do not ship with your own label and do not cancel in a panic. You have 5 business days to send, a non-Vinted label gets the order auto-cancelled with automatic negative feedback, and cancelling is the last resort, not the first move.",
+  "meta_description": "Vinted says \"shipping label failed\" or the label won't generate? Why it happens, the fixes that actually work (web browser, retry, address error), what NOT to do, and how to protect the order inside the 5-business-day deadline.",
+  "date_published": "2026-09-30",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Get alerted the moment items are listed — and keep your selling flow moving when Vinted doesn't",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "\"Shipping label failed\" — the error sellers are hitting in waves",
+      "paragraphs": [
+        "It is one of the most repeated complaints across r/vinted, r/vintedUK and the big Facebook seller groups, and it always describes the same handful of screens. You make a sale, press \"Get shipping label\", and either an endless loading spinner flickers and dies, or you get a blunt error: \"shipping label failed\", \"unable to create shipping labels\", or \"we couldn't generate your label right now\".",
+        "What makes it feel designed to stress you out is that it rarely happens to one person. Threads fill up within minutes with the same message — \"same here\", \"me too\", \"got several orders to go out and labels are not generating\" — and a wave of sellers discover they cannot print a label right when they have orders waiting. It is repeated often enough that sellers describe it as \"once a month\" or \"the third time this month\", and it clusters around weekends and evenings.",
+        "In most of these cases the fault is on Vinted's side, not yours. There is nothing in your account settings that you broke — which is exactly why the first instinct to cancel the order and ask the buyer to rebuy usually makes things worse, not better."
+      ]
+    },
+    {
+      "heading": "Two very different causes — work out which one you have",
+      "paragraphs": [
+        "Before you try anything, separate the fault into one of two buckets, because the right fix is different for each.",
+        "The first is a temporary, often site-wide technical fault. The label generator is a service on Vinted's end; when it is overloaded, updating, or simply broken, every seller hits the same wall at the same time. The clues: you sold several items and none will generate, other sellers are posting the same complaint right now, and it sometimes clears on its own within minutes or hours. Vinted has even begun showing buyers a banner that labels are temporarily unavailable while it works on a fix.",
+        "The second is an order-specific problem, and the most common of those is an address error. Vinted's own help page on labels states plainly that the shipping label may not be generated if the buyer's information is incorrect, and that if you see an error that the buyer's address is incorrect, you should cancel the order and ask the buyer to update their details before ordering again. If the message specifically names the buyer's address, that is the bucket you are in — retrying will not fix it.",
+        "A third, rarer pattern is carrier-specific: sellers report the failure hitting just one provider (Royal Mail and InPost come up most in the UK, USPS in the US) while other carriers still generate fine. It is worth checking whether every order is failing or only the ones on a particular carrier — that tells you whether this is your problem at all."
+      ]
+    },
+    {
+      "heading": "The fixes that actually work, in the order to try them",
+      "paragraphs": [
+        "Start with the simplest: wait a few hours and try again. This is Vinted's own advice for a technical label fault, and for a genuine outage it is often all it takes. Retry on a different device or in a web browser — Vinted's own help page lists \"try downloading the shipping label using a different device or web browser\" as a fix, and sellers frequently confirm that the label generates on a laptop or in a browser when the app refuses. Many report it does eventually work, sometimes after persisting with the button a number of times.",
+        "Check your own details are complete. Vinted asks you to make sure your email address, shipping address (including house number and postcode) and phone number are correct, because a missing field on your side can stop a label being created. Your shipping address sits in Profile, then Settings, then Shipping.",
+        "Read the error text carefully. If it flags the buyer's address, stop retrying — that order needs the cancel-and-update route described below. If it is a generic technical error, keep to the retry-and-browser loop and give it time.",
+        "Basic housekeeping is worth a minute: update the app, clear its cache, and switch to reliable Wi-Fi, then try once more. If nothing works, contact Vinted support from the order with a screenshot of the exact error — Vinted asks for a screenshot specifically, and it is what lets support see which bucket your case is in."
+      ]
+    },
+    {
+      "heading": "What NOT to do — the two mistakes that cost sellers money",
+      "paragraphs": [
+        "Do not ship the parcel with your own label or with a label from a different carrier. Vinted tracks only the Vinted-generated label, and its label help page is blunt about the consequence: sending an order without the Vinted-generated label can result in the order being cancelled automatically and automatic negative feedback landing on your profile. No sale is worth that.",
+        "Do not cancel the order as a reflex. Cancelling is a seller-side action recorded against your account, it kills the sale, and if the buyer repurchases there is no guarantee the next label generates either. Treat cancelling as the last resort after the retry and browser fixes have genuinely been exhausted — with one important exception below.",
+        "There is a useful nuance here. Vinted's shipping help page notes that if a provider you had disabled is the only delivery option available to a buyer, it may still show at checkout — and in that case you can cancel the order without receiving negative feedback. So if the failing order is stuck on a carrier you never wanted to offer, that is the route that lets you cancel cleanly rather than at a cost. And before any cancellation, message the buyer to explain: Vinted explicitly says informing the buyer is what helps you avoid automatic negative feedback."
+      ]
+    },
+    {
+      "heading": "The one case where you do cancel — the invalid buyer address",
+      "paragraphs": [
+        "When the error says the buyer's address is incorrect or invalid, the label physically cannot be created until that is fixed, so this is the situation where cancelling is the correct move rather than a last resort. Vinted's guidance is to cancel the order and inform the buyer to update their information, after which they can order the item again.",
+        "When you ask them to repurchase, tell them to pick a different shipping option or pick-up point from before — Vinted recommends this so a fresh, usable label is generated. Sellers who did exactly this report the replacement label coming through without trouble. Keep the request friendly and specific; a buyer who understands the cause is far likelier to re-order than one who just sees a cancelled sale.",
+        "Afterwards, review which carriers you offer in Profile, then Settings, then Shipping, and switch off any option you know causes trouble — though sellers note Vinted sometimes still lets a buyer select a disabled option, so always check the actual order before you set off to drop it at."
+      ]
+    },
+    {
+      "heading": "Buying time: the 5-business-day clock and how to pause it",
+      "paragraphs": [
+        "While you are fighting the label, remember the deadline running in the background: Vinted gives you 5 business days from purchase to send the item, and if there is no tracking update or confirmation within that window, the order is cancelled automatically the next business day. Do not let a label outage quietly cost you the sale.",
+        "You are not powerless over that clock. Vinted's help page \"I can't send the item on time\" lets you ask the buyer to agree to extend the shipping deadline by 3 or 5 additional business days — use the \u24d8 symbol in the conversation with the buyer, choose \"Extend shipping deadline\", pick the extra days and press \"Request for extension\". You can send that request before or after the label generates, and the buyer can accept or decline.",
+        "Two more levers from the same page: if you cannot pack and ship for a while, vacation mode hides your listings for up to 90 days so no new orders land on you; and once the label comes back, send the parcel as soon as you can. Through all of it, keep the buyer informed — a short, honest message (\"the label system is failing right now, I'll ship the moment it clears\") keeps nearly every buyer on side, because the delay is clearly not your doing."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Vinted says \"shipping label failed\" — is something wrong with my account?",
+      "answer": "Almost certainly not. It is usually a temporary Vinted-side fault, or an incorrect buyer address on that specific order. Wait a few hours and retry on a different device or the web browser, check your own details are complete, and read the error text — if it names the buyer's address, the order needs to be cancelled and re-ordered."
+    },
+    {
+      "question": "What should I do if my Vinted label won't generate and the buyer's address is wrong?",
+      "answer": "Cancel the order and ask the buyer to update their information, then re-order. Vinted's label help page states the label may not be generated if the buyer's information is incorrect, and that the fix is for the buyer to correct their details and order again — ideally choosing a different shipping option or pick-up point so a fresh label is created."
+    },
+    {
+      "question": "Can I just print my own label and ship the item anyway?",
+      "answer": "No. Vinted only tracks its own Vinted-generated label, and its help page warns that sending an order without it can get the order cancelled automatically and earn you automatic negative feedback. Never ship on your own label to work around the glitch."
+    },
+    {
+      "question": "How long does the shipping label outage usually last?",
+      "answer": "There is no fixed duration — some sellers get the label minutes later, others have waited hours or up to a day or two, and Vinted's own advice is to wait a few hours and try again, or try the next day. The one hard limit is that you must send the order within 5 business days of purchase, so keep an eye on that clock."
+    },
+    {
+      "question": "How do I get more time to ship while the label is failing?",
+      "answer": "Ask the buyer to extend the shipping deadline. In the conversation with the buyer, press the \u24d8 symbol and choose \"Extend shipping deadline\", then select 3 or 5 additional business days and send the request — you can do this before or after generating the label, and the buyer can accept or decline. If you cannot ship for a long stretch, use vacation mode (up to 90 days)."
+    },
+    {
+      "question": "Should I cancel and ask the buyer to re-buy when the label won't generate?",
+      "answer": "Only as a last resort for a technical glitch, and always message the buyer first so you avoid automatic negative feedback. It is the correct move specifically when the error flags the buyer's address, since the label cannot be created until they fix it. When they re-order, ask them to choose a different shipping option or pick-up point."
+    }
+  ]
+}
