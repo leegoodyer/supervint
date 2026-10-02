@@ -1,0 +1,91 @@
+{
+  "title": "Vinted Hid My Listing: Why It Happened and How to Get It Back",
+  "intro": "If Vinted hid your listing, you don't appeal it — a hidden listing just needs the flagged element fixed and it becomes visible again; only a removed listing has an appeal, and the link to make that appeal sits in the Vinted moderation message in your inbox. Sellers landing in r/vinted with \"they took my listing down for copyright\" or \"they say the photos aren't mine\" are usually stuck because they can't tell which of the two they're dealing with, or because the message gave them no link to respond. This guide explains what actually triggered it, the exact difference between hidden and removed, and the steps that bring a listing back.",
+  "meta_description": "Vinted hid or removed your listing for \"low-quality photos\", \"photos not your own\" or copyright? What actually happened, why a hidden listing has no appeal, and how to get it back.",
+  "date_published": "2026-10-02",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Track the listings that matter before someone else does",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "Hidden vs removed: the difference that decides what you do next",
+      "paragraphs": [
+        "Vinted uses two separate actions, and mixing them up is why so many sellers waste their one shot. A hidden listing is one Vinted has taken out of the feed so you can correct it. A removed listing is one Vinted has deleted, which is the version that can be appealed.",
+        "Vinted's own help page (\"Listing was hidden or removed\", help 62) is explicit: if your listing is hidden you need to update it to follow the Catalog Rules, and once you make the requested changes it becomes visible again. It adds the line that trips people up — \"You don't need to contact us or submit an appeal for a hidden listing.\" So if you were told your listing was hidden and you fire off an appeal demanding a human, you're pushing a door that isn't there.",
+        "Appeals only apply to removed content. Vinted states you can appeal a moderation decision using the link inside the Vinted inbox message with the official decision, that you have up to 6 months to do it, and that a decision can only be appealed once. The critical caveat: if there's no appeal link in the message you received, Vinted says you cannot appeal that decision through Vinted at all."
+      ]
+    },
+    {
+      "heading": "Why genuine listings get flagged in the first place",
+      "paragraphs": [
+        "The pattern across r/vinted is that the moderation is automated and image-based, and it fires on things honest sellers do all the time. The reason sellers quote most often is a variant of \"low-quality photos, screenshots, or images from other users\" — a wording Vinted's prohibited list backs up, since it names \"pictures taken from another website, including stock photos\" and content that \"violates copyright or any other intellectual property (IP) rights\".",
+        "In practice the flags hit listings that are clearly the seller's own. One seller described photographing every item under natural and artificial light — 10 to 12 real photos — and still getting listings hidden because one AI-generated styling image sat in the gallery. Another had a listing taken down for \"copyrighted images\" when the photos were her own mirror selfies that she'd also posted to Instagram. Others report a simple background remover triggering a flag, or the first photo (background removed) being read as a website screenshot while the listing itself is genuine.",
+        "There's a second, less-discussed cause: mass reporting. Because reports feed the same automated system, listings can be hidden after a burst of user reports. One seller downloaded their reports file and found a single account reporting an \"insane amount\" of their listings in the space of about an hour, mostly on the grounds that the photos \"are from the internet\". Another described every listing being hidden and vetted the same day. Vinted does not tell you whether a flag came from the bot or from reports — the message reads the same either way."
+      ]
+    },
+    {
+      "heading": "What the \"copyright\" or \"photos not your own\" message actually means",
+      "paragraphs": [
+        "When the notice cites copyright, screenshots or images \"from other users\", it is not accusing you of theft — it is the automated wording for \"this photo looks like it came from somewhere else\". That matters, because the fix is different from what most sellers assume.",
+        "Vinted doesn't ask you to prove ownership by pleading; it asks you to make the listing comply. The prohibited-photo categories to check against are stock and internet images, screenshots, other people's photos, and anything that looks like third-party marketing imagery. If a photo in your gallery is an AI-generated image, a mock-up, or a heavily edited layout, that is the most common trigger — even when every other photo is a real one of the actual item.",
+        "You may also be handed a temporary listing restriction alongside the hidden item — sellers report windows of around 3 days and up to 5 days during which they can't upload or edit listings. That restriction is separate from the hidden listing and lifts on its own; it isn't something a support message speeds up."
+      ]
+    },
+    {
+      "heading": "What to do if your listing was hidden (fix, don't appeal)",
+      "paragraphs": [
+        "Step 1 — read the notice for the specific reason. Vinted says it will always notify you by inbox message about why a listing was hidden or removed, so the reason is in there even though it can feel boilerplate. Match it to the categories above.",
+        "Step 2 — change the listing, not the argument. Remove or replace the photo the flag is most likely aimed at. If you used an AI-generated image, a stock-looking cover, or a background-removed first photo, swap it for a plain photo of the actual item taken on your phone, with tags and labels visible. If the wording mentions misleading details, fix the price, condition, size or hashtags so they match the item exactly.",
+        "Step 3 — save the edit and wait. Because hidden listings aren't appealed, editing the listing to comply is the mechanism that restores visibility. Sellers report listings coming back after the change is picked up — sometimes within a day, sometimes longer when the queue is busy.",
+        "Step 4 — if it's still hidden after the edit, open the Help Centre, find a vaguely related article, and use the \"Contact us\" button at the very bottom of the page (Vinted's contact page is help 615). Ask, in one calm message, for a human to review the listing now that you've made the requested changes. Point to the edit you made."
+      ]
+    },
+    {
+      "heading": "What to do if your listing was removed (appeal, once)",
+      "paragraphs": [
+        "A removed listing is the only version with a formal appeal, and the appeal lives in the moderation message in your Vinted inbox. If the message contains an appeal link, use it: explain why you believe the decision was wrong and attach your supporting evidence in one submission, because Vinted allows a decision to be appealed only once and within 6 months.",
+        "If the message contains no appeal link, Vinted's help is equally clear — you cannot appeal that particular decision through Vinted. In that situation the listing is final, and the right move is to correct the issue and relist a compliant version rather than keep chasing an appeal you were never given.",
+        "Two practical warnings from the threads. First, a hidden listing being edited does not use up your appeal — only removed content does, so don't panic-appeal a hidden item. Second, Vinted states it can't refund paid services such as Item Bumps for items that have been hidden or removed, so don't bump a listing you're fighting a flag on.",
+        "Sellers also report that repeated violations of the Catalog Rules lead to temporary or permanent account bans — which is why each flag is worth handling carefully rather than ignoring.",
+        "If you have a genuine legal or regulatory complaint that the standard routes can't resolve — for example, a decision you believe is wrong and has no appeal path — Vinted lists a legal contact for exactly those cases: legal@vinted.com, published on its \"Contacts for dispute resolution\" page (help 1253). Treat it as an escalation route, not a shortcut, and include the facts and any evidence."
+      ]
+    },
+    {
+      "heading": "How to keep your listings from getting flagged",
+      "paragraphs": [
+        "Use your own plain photos as the cover image. Natural-light photos of the actual item — with the care label, brand tag and any serial or date code clearly shown — are the safest format. Keep AI-generated or heavily styled images out of the gallery entirely; the AI detection that flags them isn't going to distinguish a styling mock-up from a stock photo.",
+        "Don't reuse photos across listings in a way that looks templated. Repeated identical backgrounds and layouts are what gets a background-removed shot read as a screenshot. If you list the same style in multiple sizes or colours, follow Vinted's own advice: clear photos of each item's label, and name the colour in the description.",
+        "Match the description to the item. Inaccurate or unclear price, condition and size are their own hidden-listing triggers, and adding the wrong brand or unrelated hashtags makes it worse. Keep one item per listing unless you're genuinely selling the set.",
+        "Keep your own record of every listing. Sellers who found someone mass-reporting their items did it by downloading the reports file for their account, which is how you tell an automated flag apart from a targeted reporting burst. Screenshot your original photos as you upload so you can prove they're yours if a listing is later questioned."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why did Vinted hide my listing?",
+      "answer": "Vinted's help page (help 62) hides listings that go against its Catalog Rules — most commonly \"low-quality photos\", photos taken from another website or stock photos, inaccurate price/condition/size/hashtags, an item in the wrong category, or a duplicate listing. The exact reason is in the Vinted inbox message it sends you."
+    },
+    {
+      "question": "Can I appeal a hidden Vinted listing?",
+      "answer": "No. Vinted states you don't need to contact them or submit an appeal for a hidden listing — you update it to follow the Catalog Rules and it becomes visible again. Only removed listings have an appeal."
+    },
+    {
+      "question": "How do I appeal a removed Vinted listing?",
+      "answer": "Use the appeal link inside the Vinted inbox message with the moderation decision. You have up to 6 months to appeal and a decision can only be appealed once. If there's no appeal link in the message, Vinted says you cannot appeal that decision through Vinted."
+    },
+    {
+      "question": "Vinted says my photos are \"not mine\" or \"copyrighted\" but they're my own — what can I do?",
+      "answer": "The notice is the automated wording for a photo that looks like it came from elsewhere. Replace the most suspect image — usually an AI-generated, stock-looking or background-removed shot — with a plain phone photo of the actual item showing tags and labels, and edit the listing to comply. That is the fix that restores a hidden listing."
+    },
+    {
+      "question": "Why was I restricted from uploading or editing listings?",
+      "answer": "Sellers report temporary listing restrictions of around 3 to 5 days issued alongside hidden or removed items. It's separate from the listing itself and lifts when the window ends; messaging support doesn't usually shorten it."
+    },
+    {
+      "question": "How do I contact a real person at Vinted about a hidden or removed listing?",
+      "answer": "Open the Help Centre, choose a loosely related article, and use the \"Contact us\" button at the bottom of the page (Vinted's contact page is help 615). For genuine legal or regulatory issues that the standard routes can't resolve, Vinted lists legal@vinted.com on its dispute-resolution page (help 1253)."
+    }
+  ]
+}
