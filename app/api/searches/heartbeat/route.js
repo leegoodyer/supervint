@@ -48,6 +48,7 @@ export async function POST(request) {
     enabled:        !!s?.enabled,
     lastPollTime:   s?.lastPollTime ?? null,
     lastPollResult: s?.lastPollResult ?? null,
+    lastPollError:  s?.lastPollError ?? null,
     trackedItemCount:  s?.trackedItemCount ?? null,
     newItemsLastCount: s?.newItemsLastCount ?? null,
     lastPollRawCount:  s?.lastPollRawCount ?? null,
