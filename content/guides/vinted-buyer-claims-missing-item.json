@@ -1,0 +1,102 @@
+{
+  "title": "Vinted Buyer Says an Item Was Missing From My Parcel — What Can I Do?",
+  "intro": "If a Vinted buyer claims an item was missing from your parcel or bundle, do not accept the first automated decision and do not keep arguing in the chat. Missing-item claims are handled as \"significantly not as described\" (SNAD) — which means you get options the damage route never gives you: refund the missing item only, offer a full refund, or require the buyer to return what they received. Your job is to get your evidence in front of a human before the case closes, because sellers report the default outcome hands the buyer the refund while they lose the item.",
+  "meta_description": "A Vinted buyer says an item was missing from your parcel or bundle? How missing-item claims work, the options you get as a seller, what evidence wins, and how to escalate.",
+  "date_published": "2026-10-05",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Vinted help & scam guides",
+  "cta_text": "Never miss a mispriced listing again — get instant alerts for the items you want on Vinted",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What a Vinted \"item missing from parcel\" claim actually is",
+      "paragraphs": [
+        "A missing-item claim is when the buyer says they received the parcel but one or more things that should have been inside it weren't. It's not the same as the empty-box scam (where the buyer claims the whole parcel arrived empty) and it's not the same as a damage claim. It sits in its own category — and that category matters, because of what it lets you do as a seller.",
+        "Vinted's refund policy (help article 465) has a dedicated section called \"Item missing from bundle\". It says a buyer can request a refund if they bought a bundle of multiple items and one or more are missing. Its \"significantly not as described\" definition (help article 1090) lists the same thing twice: \"Bundles with missing items\" and \"Missing item parts and/or accessories that weren't detailed in the listing description or photos\".",
+        "The clock is the same as any other issue: the buyer has 2 calendar days from the moment Vinted notifies them the order should have arrived to press \"I have an issue\". Once they do, the order is suspended and your payment is held until the case is resolved.",
+        "This is why the claim is so common on r/vinted, r/vintedUK and the Facebook seller groups right now — in recent threads buyers describe opening a \"Missing Item\" dispute the moment a bundle lands with one thing short, and sellers describe being told to sort out a refund they never agreed to."
+      ]
+    },
+    {
+      "heading": "Why sellers get caught by it",
+      "paragraphs": [
+        "There are two versions of the same event, and honestly you often can't tell which one you're in.",
+        "The first is a genuine loss in transit. Parcels get torn, opened and repackaged by couriers, and items do fall out. In one widely-read thread a seller described a buyer whose items went missing because the courier had cut the packaging, taken some of the contents and resealed it — the buyer was telling the truth. When nothing is deliberate, the fair outcome is that Vinted refunds the buyer and compensates the seller, because neither of you caused it.",
+        "The second is a false claim — and the threads show exactly how it's played. Sellers repeatedly describe a buyer paying for a bundle, then claiming after delivery that the single most expensive item \"wasn't in the bag\" while the cheap ones were. In one case a buyer's photo of what they said arrived included an item that wasn't even from the same seller, which commenters immediately flagged as a tell. Others describe buyers writing detailed essays blaming the packaging before mentioning the missing item — a pattern experienced sellers read as a script.",
+        "The reason it works is the default. Vinted's system balances two people's word against each other, and buyers are quicker to open the case. Unless you put evidence in front of a human, the easiest automated resolution is often to refund the buyer and leave you with the loss."
+      ]
+    },
+    {
+      "heading": "The options you actually get as a seller (and when to use each)",
+      "paragraphs": [
+        "The one advantage of a missing-item claim being treated as SNAD rather than damage is that you usually get a menu of choices instead of a verdict. Vinted's refund policy describes them: for a single listing, \"the seller may offer a full refund and let you keep the item(s)\", or \"offer a partial refund and let you keep the item(s)\", or the buyer may need to return everything to get a refund. For a bundle order, the buyer needs to return the reported item(s) to get a refund.",
+        "Here's how sellers use those options in practice:",
+        "If it's a genuine loss and the amounts are small, a partial refund for the missing item — with the buyer keeping the rest of the bundle — is the clean, fast answer. Vinted's policy supports it, the partial refund is calculated relative to the item price, and it ends the case without either side losing more than the missing item. This is also the right time to raise it with Vinted as a transit issue, because you may both be compensated.",
+        "If something about it doesn't add up and you think the buyer has the \"missing\" item, don't reach for the partial refund. Instead require the return flow: the refund is only released once the buyer sends the items back and everything checks out. Sellers report that a surprising number of claims collapse at this point, because a buyer who never actually lost the item has to physically post it back to get paid — and a scammer who intended to keep it won't.",
+        "Whatever you choose, decide it deliberately rather than clicking through the prompt. Sellers who lost describe doing the opposite — pressing a button under pressure and giving up the only leverage they had."
+      ]
+    },
+    {
+      "heading": "What to do the moment the claim lands",
+      "paragraphs": [
+        "Do not accuse the buyer of lying in the chat. Everything you type becomes part of the case file, and an angry thread reads worse than a calm one. Keep it factual and neutral.",
+        "Gather your evidence and put it all in one message. The things that count in these threads: your original listing photos; any photos or video of the item going into the parcel and the parcel sealed; the drop-off receipt, which normally shows the parcel weight; and screenshots of the tracking. If the parcel weight at drop-off matches what the buyer received, that is strong evidence something didn't simply fall out along the way.",
+        "Ask the buyer — politely — for photos of what they actually received: the packaging inside and out, any damage to it, and the shipping label. Vinted's own missing-item process asks buyers for photos of \"the item(s) you received, the outer and inner packaging, and any visible damage to the packaging\", so this is a normal request, not an accusation. In the threads, the buyers who can't or won't produce them are the ones who go quiet.",
+        "Check the weight. If the parcel the buyer received weighed the same as what you shipped, the missing item was almost certainly taken after delivery, not lost in transit — so weigh and photograph every bundle before posting.",
+        "Then reply inside the order thread, ask explicitly for the case to be escalated to a human, and do not let it close until your evidence has been reviewed. Keep everything inside Vinted — never agree to settle privately, because once you pay or refund outside the app you lose your Buyer Protection and any claim you had."
+      ]
+    },
+    {
+      "heading": "If the item genuinely went missing in transit",
+      "paragraphs": [
+        "If your evidence shows the item left you and the loss happened on the carrier's side, say so plainly and ask for it to be handled as a transit loss rather than a seller fault. Vinted's refund policy treats \"never shipped or lost\" as a refundable issue, and it maintains compensation for sellers when shipping with integrated labels. Investigations can take several weeks, but your payment stays held and safe while the order is suspended — so there's no benefit to rushing a bad decision."
+      ]
+    },
+    {
+      "heading": "If Vinted still rules against you: escalation routes",
+      "paragraphs": [
+        "The single most repeated complaint in these threads is the wall of templated replies. There is a way past it, and it's the same route sellers use for other unfair decisions.",
+        "Open the Help Centre (in-app: Profile → Help Center; web: vinted.com/help), open any article roughly related to the issue, and scroll to the very bottom — a \"Contact us\" / \"I still need help\" button opens the support form without needing an order attached. On the web, vinted.com/help/615 is Vinted's official \"Contact us\" page.",
+        "For legal or regulatory issues the normal form can't resolve, Vinted's \"Contacts for dispute resolution\" page (help article 1253) lists legal@vinted.com. State the facts, attach your evidence, and give a deadline.",
+        "As a last resort, sellers report that a formal letter before action — threatening small claims court — is what finally gets these cases reviewed, and often paid out, because it isn't worth defending. Try it only after the in-app route, with your evidence folder already built."
+      ]
+    },
+    {
+      "heading": "How to protect your next bundle",
+      "paragraphs": [
+        "Prevention is the only reliable defence, because once a missing-item claim lands you're reacting. The habits sellers adopt after getting burned:",
+        "Film the packing. One uncut phone video of the whole bundle going into the parcel, the parcel being sealed, and the label going on is the gold standard.",
+        "Weigh and photograph. Put the parcel on the scales before you post and snap the reading next to the label. The drop-off receipt often records the weight too — keep it.",
+        "Photograph the sealed, labelled parcel at the counter. This shows what left your hands and that the packaging was intact when you posted it.",
+        "Be cautious with large high-value bundles from buyers with few reviews. Multiple sellers flagged buying a big bundle then claiming the priciest piece missing as the classic setup; some now avoid large bundles from brand-new accounts."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "What happens if a Vinted buyer claims an item was missing from my parcel?",
+      "answer": "The claim is treated as \"significantly not as described\" (Vinted help article 1090 lists \"bundles with missing items\"). The buyer has 2 days from the delivery notification to open it, the order is suspended, and your payment is held. You then get options — refund the missing item only, offer a full refund, or require the buyer to return what they received."
+    },
+    {
+      "question": "Do I have to give a partial refund if the buyer says an item was missing?",
+      "answer": "No — it's a choice. Vinted's refund policy says sellers may choose to refund the buyer for the missing items and let them keep the rest of the bundle, or the buyer may need to return the items to get a refund. If you think the claim is false, requiring the return is the option that protects you, because the refund is only released once the items are back."
+    },
+    {
+      "question": "How do I prove the item was in the parcel?",
+      "answer": "Use the drop-off receipt and any weight reading you recorded — if the parcel weighed the same as what you shipped, the item didn't simply fall out. Add your listing photos, any packing photos or video, and a photo of the sealed labelled parcel at the counter. Vinted may also ask the buyer for photos of the packaging they received."
+    },
+    {
+      "question": "What should I ask the buyer for?",
+      "answer": "Politely ask for photos of what they received: the outer and inner packaging, any visible damage to it, and the shipping label. Vinted's missing-item process asks buyers for exactly these anyway. Buyers who can't produce them are, in the threads, the ones who drop the claim."
+    },
+    {
+      "question": "What if the item was genuinely lost in transit?",
+      "answer": "Say so and ask for it to be handled as a transit loss rather than a seller fault. Vinted's refund policy covers orders that are lost, and it maintains compensation for sellers. Investigations can take several weeks, and your payment stays held and safe while the order is suspended."
+    },
+    {
+      "question": "Can I appeal if Vinted sides with the buyer?",
+      "answer": "Yes. Reply in the order thread with your full evidence and ask for a human review, then escalate via the \"Contact us\" button at the bottom of any help-centre article (or vinted.com/help/615). For legal and regulatory issues, legal@vinted.com is listed on Vinted's dispute-resolution page (help article 1253). Sellers report that a formal letter before action is what finally forces a re-review."
+    }
+  ]
+}
