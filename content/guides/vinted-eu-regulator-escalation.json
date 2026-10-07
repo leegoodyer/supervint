@@ -1,0 +1,99 @@
+{
+  "title": "Vinted Support Won't Help or Banned Me for No Reason — How EU Users Escalate to the Regulators That Force a Response",
+  "intro": "Yes — if you're in the EU or EEA, you can take a Vinted dispute outside the app. Vinted is operated by Vinted, UAB, a company registered in Lithuania, so its consumer watchdog (VVTAT) and its data-protection authority (VDAI) both handle complaints from users — and under the EU Digital Services Act every member state has a Digital Services Coordinator you can complain to about account decisions. The order that works is: exhaust Vinted's own appeal first, then escalate to a regulator. One important update: the old EU ODR platform was discontinued on 20 July 2025, so ignore any post that still tells you to file there.",
+  "meta_description": "Stuck with Vinted's bots, an unexplained ban or frozen funds? EU and EEA users can escalate to Lithuania's consumer authority (VVTAT), its data-protection authority (VDAI), the DSA and your national Digital Services Coordinator. The verified playbook — and why the old EU ODR platform no longer works.",
+  "date_published": "2026-10-07",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Tired of fighting disputes instead of finding deals? Supervint alerts you the moment genuine listings appear",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "The pattern: bot replies, “final decisions” and bans with no reason",
+      "paragraphs": [
+        "Scroll r/vinted, r/vintedUK or any Facebook Vinted group and the same frustrations repeat. Support replies arrive as copy-paste templates that ignore the evidence you sent. Appeals stall for weeks, or come back with a variation of “our decision is final”. Accounts get blocked for “fraudulent activity” or “inauthentic items” with no specific explanation, and money sits stuck in the Vinted wallet.",
+        "What makes it so maddening is that it isn't one bug — it's the everyday experience of trying to reach a human when the automated system has already decided against you. Across the threads, the cases that end well almost never end inside the app. They end when the user stops arguing with the bot and puts the facts in front of an authority that Vinted is obliged to answer to."
+      ]
+    },
+    {
+      "heading": "First, exhaust Vinted's own routes (they matter later)",
+      "paragraphs": [
+        "You should still use Vinted's own channels first — not because they usually work, but because the outside bodies will ask whether you did. Vinted's “Contacts for dispute resolution” page (help article 1253) sets out the routes.",
+        "Appeal a moderation decision using the link in the Vinted inbox message or email that told you about it. Note the two hard rules on that same page: an appeal must be made within 6 months of the decision, and a decision can only be appealed once — so make the one shot count and attach complete evidence.",
+        "For orders and refunds, open the Help Centre (vinted.com/help), select the order so the details attach automatically, and use the “Contact us” button at the end of the article (help article 615). For legal or regulatory issues, Vinted lists its legal team address as legal@vinted.com.",
+        "Keep everything in one written thread, stay factual, and save copies — those messages become your evidence pack."
+      ]
+    },
+    {
+      "heading": "Why Lithuania: Vinted answers to the Lithuanian authorities",
+      "paragraphs": [
+        "Vinted is operated by Vinted, UAB, a company registered in Lithuania. That matters, because it means users in the EU and EEA can escalate a dispute to two Lithuanian regulators — and the track record shows they act. In July 2024, Lithuania's data-protection authority fined Vinted €2,385,276 for GDPR breaches that included “shadow blocking” (restricting users without informing them) and mishandling people's access and erasure requests.",
+        "This is the part the app never tells you: when Vinted's own support won't engage, these are the bodies with real leverage."
+      ]
+    },
+    {
+      "heading": "Route 1 — VVTAT: the consumer-rights complaint",
+      "paragraphs": [
+        "The State Consumer Rights Protection Authority (VVTAT) handles consumer disputes. If your problem is a refund, money lost through a failed order, or a charge you can prove was wrong, this is your route. It's free to file. VVTAT's site (vvtat.lrv.lt, “How to submit a request”) explains the process, and its consultation email is tarnyba@vvtat.lt.",
+        "Write it like a case file: order numbers and dates, what happened, what evidence you hold, what you already asked Vinted for, and the outcome you want. A neutral timeline beats an angry paragraph every time."
+      ]
+    },
+    {
+      "heading": "Route 2 — VDAI and GDPR: for bans and automated decisions",
+      "paragraphs": [
+        "If the problem is an account ban or a listing removed by automated moderation, the strongest framing is a data-protection one, because Vinted's decisions about your account are made by automated processing.",
+        "Start by exercising your rights directly with Vinted. A subject access request (GDPR Article 15) asks for the personal data and decision records held about you; you can also state that you believe a decision was made solely by automated means and ask for human review, invoking Article 22. Under GDPR, a controller has one month to respond.",
+        "If Vinted ignores or refuses you, complain to Lithuania's State Data Protection Inspectorate (VDAI) at vdai.lrv.lt — its official contact is ada@ada.lt. Users who have done this report the authority opening the case and the pressure forcing Vinted to engage."
+      ]
+    },
+    {
+      "heading": "Route 3 — the DSA: contesting account and content decisions",
+      "paragraphs": [
+        "Under the EU Digital Services Act, platforms must explain decisions that restrict you (a statement of reasons) and provide an internal complaints system. If that fails, every member state has a Digital Services Coordinator (DSC) you can complain to — users who have gone this route report their national coordinator accepting the complaint, issuing a case number and escalating it for review.",
+        "There's also a route built specifically for platform decisions: certified out-of-court dispute settlement bodies under Article 21 of the DSA. The European Commission publishes the official list, and these bodies handle disputes about content moderation and account restrictions without going to court."
+      ]
+    },
+    {
+      "heading": "Two widely-shared routes that are now out of date",
+      "paragraphs": [
+        "The EU Online Dispute Resolution (ODR) platform is gone — it was discontinued on 20 July 2025 under Regulation (EU) 2024/3228, and new complaints could no longer be filed even before that. Older posts that tell you to resolve a Vinted dispute through the ODR platform are pointing at a closed door.",
+        "The European Consumer Centres (ECC-Net) are still real, but they only help with cross-border consumer disputes — you in one EU country, the other party in another. If your issue is with Vinted itself rather than another user, the regulators above are the right target."
+      ]
+    },
+    {
+      "heading": "What actually moves these cases (and a reality check)",
+      "paragraphs": [
+        "Assemble a clean evidence pack before you file: order numbers, dates, screenshots of every support message (including the automated ones), the photos or video you took when packing, the tracking, and a one-page timeline. State exactly what outcome you want — your money released, the ban reviewed, the listing reinstated.",
+        "It's free to complain, but it isn't instant. Expect weeks to months, and treat it as a paper trail you build in parallel, not a hotline. This is general information, not legal advice; for a high-value loss, consider a consumer-law adviser in your own country.",
+        "The consistent lesson from the threads is simple: the users who get a human to look at their case are the ones who stop replying to the bot and put the facts in front of an authority that Vinted has to answer to."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I report Vinted to a regulator if I'm in the EU or EEA?",
+      "answer": "Yes. Vinted is operated by Vinted, UAB, which is registered in Lithuania, so consumer disputes can be escalated to Lithuania's State Consumer Rights Protection Authority (VVTAT) and data-protection or automated-decision issues to its State Data Protection Inspectorate (VDAI). You can also complain to your own country's Digital Services Coordinator under the DSA."
+    },
+    {
+      "question": "Should I complain to VVTAT or VDAI?",
+      "answer": "VVTAT handles consumer disputes — refunds, lost money, unresolved orders. VDAI handles data-protection issues, which is the right framing for automated bans and moderation decisions and for getting access to the data held about you. Both are free to file, and VVTAT's consultation email is tarnyba@vvtat.lt while VDAI's official contact is ada@ada.lt."
+    },
+    {
+      "question": "Is the EU ODR platform still available?",
+      "answer": "No. The European Online Dispute Resolution platform was discontinued on 20 July 2025 under Regulation (EU) 2024/3228, and new complaints could no longer be submitted before that. Ignore older guides that point you there — use the DSA out-of-court dispute settlement bodies or the regulators instead."
+    },
+    {
+      "question": "Do I have to contact Vinted first before escalating?",
+      "answer": "Yes, in practice. Use Vinted's appeal (once, within 6 months of the decision) and the Help Centre contact form, and email legal@vinted.com for legal or regulatory issues. Outside bodies expect you to show you tried the company's own channels first."
+    },
+    {
+      "question": "Can a regulator force Vinted to unban me or pay me?",
+      "answer": "Regulators can investigate, require answers and apply pressure — and Lithuania's data authority has already fined Vinted €2,385,276 over GDPR failings. Outcomes vary case by case, so treat filing as building a record rather than an instant fix, and allow weeks to months."
+    },
+    {
+      "question": "I'm in the UK — does this EU route work for me?",
+      "answer": "The Lithuanian and EU/EEA regulators above cover users in the EU and EEA. UK users have a separate route, including taking a money claim to the small claims court, which is covered elsewhere in the Supervint Help Hub."
+    }
+  ]
+}
