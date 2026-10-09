@@ -1,0 +1,93 @@
+{
+  "title": "Vinted Banned My Account and I Can't Dispute an Order — Will I Lose the Money?",
+  "intro": "Vinted can ban or lock your account in the middle of a live order, and when it does, buyers report they can no longer open a dispute, reply to a claim, message anyone, or even see the order — while sellers report the order flipping to \"manually cancelled by Vinted\", the buyer being refunded, and items being handed over without a return. It's one of the most repeated worst-case threads on r/vinted and r/vintedUK, and it comes in two mirrored versions: a buyer whose parcel arrives full of junk but whose account is blocked, and a seller who shipped in good faith and then gets locked out of defending the sale. You are not automatically stuck — the appeal, Vinted's legal contact route, and (if it comes to it) a card chargeback are the levers that actually move these cases. This guide explains what happens, what Vinted's own rules say, and the exact steps to protect your money.",
+  "meta_description": "Vinted banned or locked your account mid-order and now you can't open a dispute? What to do as a buyer or seller, what Vinted's rules say about appeals and payouts, and how to recover your money.",
+  "date_published": "2026-10-09",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Get alerted the moment genuine listings appear — and spend less time fighting frozen orders",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What's actually happening when a ban freezes an order",
+      "paragraphs": [
+        "A Vinted ban doesn't just stop you logging in to browse — it can cut off the order screen itself. Users describe losing access to the order, the inbox, the tracking and the balance. Vinted's own help says that even permanently banned members can still contact Vinted and withdraw earnings from their Vinted Wallet, and that it should still be possible to message buyers — but people who have actually been through it report the opposite: the account is simply inaccessible, and the ban notice doesn't say which item or action triggered it.",
+        "That gap matters because of the clock. Buyers have a 2-day window after delivery to report a problem, and sellers are given limited options and a short deadline to respond to a claim. A locked account means you can miss your own window without being able to do anything about it — and once a window closes, the order completes and the payment is released.",
+        "So a mid-order ban isn't just an inconvenience. It can decide the outcome of a transaction by default."
+      ]
+    },
+    {
+      "heading": "If you're the buyer: your dispute clock is still running",
+      "paragraphs": [
+        "The buyer-side thread is brutally consistent. One account was banned on the very day of a purchase; when the parcel arrived it contained a block of foam and a pack of staples instead of the item — roughly £400 of order — and with the account blocked there was no way to raise an issue before the funds were released two days later. The order timer doesn't pause because you're banned.",
+        "There's a newer, nastier variant doing the rounds. Sellers have been reported to mass-report a buyer's profile immediately after payment, triggering an automated suspension, and then ship something worthless. Because the now-blocked buyer can't open a dispute inside the 48-hour window, the funds auto-release to the seller. Buyers describe it in near-identical terms, and one reported receiving a cheap book instead of an expensive graphics card. Commenters add that the same trick has surfaced on other marketplaces too. Treat a sudden ban landing right after a purchase as a stop signal, not a coincidence.",
+        "First moves as a buyer: if the parcel has arrived, film the unboxing before you open it and photograph the packaging, label and contents. Appeal the ban straight away (see below). If the money has already been released and Vinted won't act, talk to your bank — a chargeback is the realistic route once the platform has taken your access away."
+      ]
+    },
+    {
+      "heading": "If you're the seller: the banned-account refund loophole",
+      "paragraphs": [
+        "Sellers describe a specific and painful sequence: the item is shipped and often already sitting at the pickup point, the account is suddenly blocked (frequently over a different listing entirely), the order flips to \"cancelled\" or \"manually cancelled by Vinted\", and the buyer is refunded — while the seller can no longer see the order, contact the buyer, or protect the payment. One seller had sold a coat, tracking was already showing \"ready for pickup\", and then the account was banned over an unrelated bag they'd resold; the coat order was manually cancelled by Vinted and the buyer refunded.",
+        "It can be worse than a single order. One seller who was permanently blocked reported losing over €1,000 worth of items because, during the block, buyers raised issues, were refunded, and were told they didn't need to return the items. Commenters describe the same experience — buyers refunded while they were allowed to keep the goods — and one sums it up bluntly: buyers effectively win any dispute against a banned user, because the banned party can't contest it.",
+        "The one piece of hope in the threads: it isn't always final. A seller whose order was cancelled and buyer refunded later had the ban overturned, the account reopened, and the money for the shipped item paid out after Vinted admitted the block was a mistake. Persistence and escalation do occasionally work — but you have to push."
+      ]
+    },
+    {
+      "heading": "What Vinted's own rules actually say",
+      "paragraphs": [
+        "Vinted's help page \"My account was banned (I want to appeal the decision)\" sets out the formal position. A temporary ban lifts automatically after 7–30 days depending on the reason, and you'll see the end date when you log in. You can appeal the moderation decision once, within 6 months of receiving it, using the appeal link in the Vinted inbox message or the moderation email. Permanently banned members can still contact Vinted and withdraw earnings from the Vinted Wallet — but Vinted warns that withdrawals may not be possible where the ban is due to a risk of fraud, as determined by its payment provider.",
+        "There's a real gap between that page and what users report. Even though the help says blocked members should still be able to message buyers, sellers in the threads describe being unable to access the account at all — not the inbox, not the order, not the balance. If you're relying on the \"you can still message\" line, don't; assume you may have no access and act through other channels.",
+        "Vinted's \"Contacts for dispute resolution\" page adds two useful things: it lists a legal contact for specific legal or regulatory issues (legal@vinted.com), and it asks buyers to contact Vinted first and to \"avoid opening disputes with your payment service provider\" — i.e. chargebacks — for refunds. That last point is worth remembering when Vinted later offers you a deal to close a dispute you've opened with your bank."
+      ]
+    },
+    {
+      "heading": "What to do right now if you're locked out of an order",
+      "paragraphs": [
+        "As a buyer: submit your single appeal, then email Vinted's legal team (legal@vinted.com, listed on the dispute-resolution page) with the order number, screenshots of the listing and messages, and your unboxing photos or video. Keep everything factual and in one thread rather than scattering messages. If the funds are released anyway and Vinted won't reverse it, contact your bank or card provider about a chargeback; in the UK, a credit card purchase over £100 may also be protected under Section 75.",
+        "As a seller: keep the tracking number and any proof of posting safe before anything else. Email Vinted's legal team asking for the order to be reinstated or the item returned, and state clearly that the ban reason is unrelated to that order — that's the argument that has actually worked in the threads. If the buyer keeps the item and gets a refund, escalate beyond Vinted: EU/EEA users have their national consumer authority and the European Consumer Centre, and Vinted's own terms point to certified out-of-court dispute settlement bodies and national courts. UK sellers can use small claims.",
+        "The trap to avoid: if Vinted offers to unban you and refund you provided you close your bank dispute, do not close it on that promise alone. At least one user reported doing exactly that and then getting neither the refund nor the account back. Keep your chargeback open until the money is actually in your pocket."
+      ]
+    },
+    {
+      "heading": "Why the ban and the order collapse together",
+      "paragraphs": [
+        "Vinted's dispute system is automated and leans toward the party who reports first and the party who keeps responding. A ban removes one side's ability to respond at all, so the machine resolves the case for the other side — sometimes in the buyer's favour with no return, sometimes by releasing funds to a seller while the blocked buyer watches. It isn't a loophole anyone designed on purpose, but it is one that scammers and opportunists now exploit, which is exactly why the same story keeps appearing week after week.",
+        "The practical lesson is speed and record-keeping: the earlier you can get a human or an external authority involved, the less the automated default can hurt you."
+      ]
+    },
+    {
+      "heading": "How to protect yourself next time",
+      "paragraphs": [
+        "Film or photograph every stage — packing the item you send, unboxing the parcel you receive — and keep the footage until the order completes. Keep every tracking number and drop-off receipt. Screenshot the listing you bought or sold, including the photos and description, before anything goes wrong.",
+        "Never press \"Everything is OK\" until you've actually checked the item, and keep all communication on Vinted. And if your account is suddenly banned right after a purchase or a big sale, treat it as urgent: start the appeal and the legal-team email on day one, because the 2-day dispute window keeps ticking whether you can log in or not."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can Vinted ban me while I still have an order in progress?",
+      "answer": "Yes, and it's one of the most reported worst-case situations on r/vinted. Users describe bans landing mid-transaction, which can leave a buyer unable to open a dispute and a seller unable to defend a claim — even though Vinted's help says blocked members can still contact support and message buyers."
+    },
+    {
+      "question": "If Vinted bans me, does the buyer automatically get refunded?",
+      "answer": "Sellers report that in some cases the order is cancelled and the buyer refunded, sometimes without having to return the item, because a banned seller can't contest the claim. It isn't universal — some cases get reversed — but it's the pattern that keeps appearing in the threads."
+    },
+    {
+      "question": "Will I get my money back if my account was banned?",
+      "answer": "It varies. Some users report being paid after Vinted admitted the ban was a mistake and reopened the account; others lost both the money and the item. The routes that work are the one-time appeal, Vinted's legal contact for legal/regulatory issues, and — if the platform won't act — a chargeback with your bank or card provider."
+    },
+    {
+      "question": "Should I close my bank dispute if Vinted promises to refund me and unban me?",
+      "answer": "No. At least one user reported closing their bank dispute on exactly that promise and then receiving neither the refund nor the account back, with no way to reopen the claim. Don't cancel a chargeback until the money is actually with you."
+    },
+    {
+      "question": "Can someone get me banned on purpose to scam me?",
+      "answer": "Buyers report exactly this: a seller mass-reports the account right after a purchase to trigger an automated suspension, then ships something worthless, because the blocked buyer can't open a dispute before the 48-hour window closes and the funds auto-release. Treat a sudden ban immediately after a purchase as a red flag."
+    },
+    {
+      "question": "How do I contact Vinted about an order when my account is blocked?",
+      "answer": "Vinted's help says blocked members can still contact support and withdraw earnings. The routes that reach a person are the appeal link in your moderation email or inbox message, and the legal contact listed on Vinted's Contacts for dispute resolution page (legal@vinted.com) for specific legal or regulatory issues."
+    }
+  ]
+}
