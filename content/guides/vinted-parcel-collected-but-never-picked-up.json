@@ -1,0 +1,97 @@
+{
+  "title": "Vinted Says Your Parcel Was Collected But You Never Picked It Up — Someone Else Took It From the Locker",
+  "intro": "If Vinted or the carrier shows your order as \"collected\" or \"delivered\" but you never actually picked it up, you are not automatically out of luck — this is usually a locker mis-scan, a wrong compartment, or somebody else opening your door, not a lost cause. Act fast: do not press \"Everything is OK\", raise an issue on the order straight away, go back to the pickup point in person, and ask the carrier to check the locker's camera footage. Buyers who did all of that report being refunded under Buyer Protection even when the parcel itself never turns up.",
+  "meta_description": "Vinted says your parcel was collected but you never picked it up? Why this happens, who actually took it, and how to report it within the 2-day window to get refunded.",
+  "date_published": "2026-10-14",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Get alerted the moment items you want are listed",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What is actually going on when the tracking says \"collected\"",
+      "paragraphs": [
+        "This is one of the most alarming things that can happen on Vinted: you get a notification that your parcel has arrived, you haven't collected it yet, and then the tracking flips to \"collected\" or \"delivered\" without you ever having entered a code or opened a locker. Buyers describe the exact same moment again and again — a \"ready to collect\" message, then a confusing second update saying the order has been collected, sometimes followed by a cheerful \"enjoy your order\" even though nothing is in their hands.",
+        "There are a handful of explanations the threads keep landing on. The most common is a false status update: the locker or the shop scanner marks the parcel as collected when it has not left the pickup point at all. Buyers sent to a locker report the door never opening for their code, or a code that simply errors out. Others are told point-blank by the carrier that the parcel \"had already been collected\" — and they have no idea who took it.",
+        "The second explanation is a genuine wrong-door or relabelling fault inside the locker network: a parcel is placed in the wrong compartment, two parcels share one door, or a courier mixes the labels, and somebody else's item ends up tagged with your tracking number. When that happens the system can register a collection that never involved the real buyer.",
+        "A third, blunter possibility is doorstep or locker theft — somebody reaching into an open compartment, or a door that a previous user failed to close. The one thread of hope in all of it: in the ordinary case this is a carrier or system fault, not something you did wrong, and that is what decides whether you get your money back."
+      ]
+    },
+    {
+      "heading": "The first thing you must NOT do",
+      "paragraphs": [
+        "Do not press \"Everything is OK\". That single button confirms receipt and releases your payment to the seller, and it is very hard to reverse afterwards. If the status has already flipped to collected, treat the order as live and disputed until it is genuinely resolved.",
+        "Also do not accept a private settlement or pay or receive anything outside Vinted. The moment you move a refund off-platform you lose the Buyer Protection that is doing the work for you here. Keep every message inside the order conversation so there is a full record.",
+        "And do not wait to \"see if it turns up\". The clock here is brutally short, and buyers in these threads repeatedly describe missing it because they were confused about what the status even meant."
+      ]
+    },
+    {
+      "heading": "Go back to the pickup point — it is often still there",
+      "paragraphs": [
+        "This sounds too simple, but it is the single most repeated piece of advice from people who lived through it: a parcel marked \"collected\" or \"delivered\" is very often still sitting at the pickup point. Buyers report the item being at the shop next to the locker, still behind the counter, or inside the locker because the door never actually opened.",
+        "So physically go back — to the locker, the shop, or the post office — and ask a human to look. Take your ID and the tracking number. Ask directly whether the parcel is still on-site and whether it can be released to you by hand. Several buyers report exactly that outcome once someone actually looked.",
+        "If the locker is the issue, ring the number shown on the locker screen's own Help Centre display — Vinted Go's official guidance points pick-up and drop-off problems to that number. Have your tracking number to hand, explain that the status says collected but you never collected it, and ask them to check their logs for what actually opened your compartment and when."
+      ]
+    },
+    {
+      "heading": "Ask the carrier to check the camera",
+      "paragraphs": [
+        "Lockers have cameras, and the footage is the piece of evidence that settles what happened. The catch, which users report over and over, is that the recording is often only pulled when somebody officially asks for it — so make that ask in writing and keep the reference.",
+        "Open a case with the carrier directly (InPost, Vinted Go, DPD or Evri are the names that come up most) as well as raising it with Vinted. Say clearly: the tracking says collected on this date, I did not collect it, and I am requesting the locker camera footage for the relevant time window. If the carrier confirms someone else accessed the compartment, that confirmation is exactly what moves your Vinted claim forward.",
+        "Save everything as you go: screenshots of the tracking status, the \"ready to collect\" notification, any collection code you were given, the error you saw at the locker, and your messages to both the carrier and the seller. Vinted systems and order details can become hard to reach once a case is closed, so keep your own copies on your device now."
+      ]
+    },
+    {
+      "heading": "How to report it to Vinted — and the 2-day clock",
+      "paragraphs": [
+        "Vinted's help page \"Package didn't arrive\" (help 658) is the route that applies here. It states plainly: if you can't find the package at the pickup point, press \"Contact us\" at the end of that page and provide the details. Once the order is suspended this way, Vinted says it looks into the issue and may ask the carrier to investigate further.",
+        "You can also raise it from the order itself: open the conversation with the seller, press the information (ⓘ) button in the top-right, choose \"Help\", then pick the problem that fits — not received, or missing at the pickup point — and attach your proof.",
+        "Timing is everything. Vinted's rules give you a 2-day window to report an issue after a delivery status update before the order auto-completes and your payment is released to the seller. If you miss that window, the sale is marked complete and the money is gone. Orders placed with Pro sellers are different: Vinted's help gives Pro orders an extended 14-day window to raise an issue, so if the seller is a Pro account, say so.",
+        "Write your first message factually and briefly: the order number, the date the status changed to collected, the fact that you never collected the parcel, and what you have already done (visited the point, contacted the carrier, requested the camera). Short and specific beats long and emotional."
+      ]
+    },
+    {
+      "heading": "If the order completes before you can act",
+      "paragraphs": [
+        "Sometimes the status update and the auto-completion land so close together that the order closes out from under you. Buyers describe being asked to reply within a window that has already expired, or finding the money has already been released to the seller with the carrier insisting delivery was confirmed.",
+        "When the normal order flow has closed, escalate. Vinted's \"Contacts for dispute resolution\" page (help 1253) lists legal@vinted.com for specific legal or regulatory issues that the standard support form cannot handle. Send a short, numbered timeline — the order, the dates, the tracking status, the fact you never collected, and your screenshots — and ask for a human review.",
+        "One caution from Vinted's own guidance: for refunds they ask members to contact them first and avoid opening disputes with a payment service provider. Chargebacks are a genuine last resort, not a first move, and using one without going through Vinted first can complicate your account standing.",
+        "Where the loss is significant and every channel has stalled, buyers who recovered their money describe two further routes: a formal letter before action, and ultimately a small claims / Money Claim Online claim. It is slow and it is work, but it is the path that has actually produced refunds in the cases people describe."
+      ]
+    },
+    {
+      "heading": "If you are the seller and your buyer says someone else collected it",
+      "paragraphs": [
+        "For sellers the reflex is to panic and refund, or to assume the buyer is lying. Do neither. Do not refund from your own balance and do not push any refund or cancel button — that hands over your only leverage. Tell the buyer, politely, in the Vinted chat, to raise the issue through the order so Vinted can investigate with the carrier.",
+        "Keep your own proof ready: the drop-off receipt, photos of the packed and labelled parcel, the tracking number, and the whole chat. Buyers describe cases where the parcel genuinely never made it into the buyer's hands and Vinted ended up refunding both sides, because the fault was recognised as the carrier's. Your job is simply to make sure the tracking and your proof are on the record while the case is open."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Vinted says my parcel was collected but I never collected it — will I get a refund?",
+      "answer": "Usually yes, if you act inside the window. Raise the issue on the order within 2 days of the status update, press \"Contact us\" at the end of Vinted's \"Package didn't arrive\" page (help 658), and ask the carrier to check the locker camera. Buyers who did exactly that report being refunded under Buyer Protection even when the parcel itself never turned up."
+    },
+    {
+      "question": "Someone else collected my parcel from the locker — who is responsible?",
+      "answer": "In the ordinary case this is a carrier or locker-system fault, not your mistake, and that is what decides who ends up out of pocket. Report it to the carrier as well as to Vinted and ask for the locker camera footage — it is often only pulled when someone officially requests it. Vinted can then investigate with the carrier and refund you."
+    },
+    {
+      "question": "How long do I have to report a Vinted parcel that shows as collected but never arrived?",
+      "answer": "You have 2 days from the delivery status update to raise an issue before the order auto-completes and your payment is released to the seller. Pro-seller orders get an extended 14-day window. Once the order completes, the sale is closed and you have to escalate through Vinted's dispute-resolution contacts instead."
+    },
+    {
+      "question": "The locker never opened but the tracking says collected — could the parcel still be there?",
+      "answer": "Very often yes. Buyers repeatedly report a parcel marked collected or delivered still sitting at the locker, the shop next door, or behind the counter. Go back in person with your ID and tracking number and ask a human to look, and ring the number on the locker's Help Centre screen to check what actually opened your compartment."
+    },
+    {
+      "question": "Should I press \"Everything is OK\" if the tracking says collected but I don't have the parcel?",
+      "answer": "No. That confirms receipt and releases your payment to the seller, and it is very hard to undo. Leave the order open and raise an issue instead. If the parcel does turn up later, tell Vinted in the order thread so the refund is handled cleanly."
+    },
+    {
+      "question": "What if the order already completed before I could report it?",
+      "answer": "Escalate. Vinted's \"Contacts for dispute resolution\" page (help 1253) lists legal@vinted.com for legal or regulatory issues the normal form can't handle — send a short numbered timeline with screenshots. Vinted asks you to contact them before opening a chargeback with your payment provider; that and a small claims route are genuine last resorts."
+    }
+  ]
+}
