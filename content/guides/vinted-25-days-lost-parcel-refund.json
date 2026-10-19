@@ -1,0 +1,88 @@
+{
+  "title": "Vinted Says Wait 25 Days for a Lost Parcel — Can You Get a Refund Sooner?",
+  "intro": "No — not normally. Vinted's rule is to wait up to 25 business days from the day the order was marked \"shipped\" before you can cancel it and get your money back, and 25 business days is closer to five calendar weeks than 25 days. The one real shortcut is written confirmation from the carrier that the parcel is lost: Vinted's own help page says to contact them as soon as the carrier confirms it. This guide explains exactly how the clock works, what to do while you wait, and the two-day window at the end that people keep missing.",
+  "meta_description": "Vinted telling you to wait 25 days for a lost parcel? Why it's 25 business days, the carrier-confirmation shortcut, and the 2-day window you must not miss.",
+  "date_published": "2026-10-19",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Stop wasting time on listings that never arrive — get alerted the moment genuine items are posted",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "Why Vinted is telling you to wait 25 days",
+      "paragraphs": [
+        "Vinted's help article \"Parcel didn't arrive\" sets out the rule in plain terms. If the tracking looks stuck on both Vinted and the carrier's own website, you should wait up to 25 business days from the day the order was marked as \"shipped\". After that, if the parcel has arrived you press \"Everything is OK\" and the seller is paid; if it hasn't, you press \"I have an issue\", the order is cancelled, you're refunded, and the seller is compensated.",
+        "The detail almost everyone misses is that these are business days. Twenty-five business days is five working weeks once weekends and bank holidays are stripped out. That's why the threads read like this: \"a full month before I can request a refund\", \"they say they will investigate after 25 days\", \"Vinted is showing their boilerplate 'if it isn't delivered in 25 days'\". Vinted does at least tell you the exact date — its help page says you can find it in the conversation screen, so you don't have to count it yourself.",
+        "There are two variations that change the maths. If the order used custom shipping rather than a Vinted-generated label, the wait is 21 business days — and at that point the order is automatically marked as delivered, leaving you only 2 days to report a problem before the payment is released. Orders from Pro sellers run on a separate 14-day Pro Refund Policy and complete automatically after 14 calendar days."
+      ]
+    },
+    {
+      "heading": "This is the shipping complaint of the moment",
+      "paragraphs": [
+        "The same scenario is filling r/vintedUK and the Facebook Vinted groups right now. A parcel stops scanning, or the carrier's tracking flips to something like \"contact retailer\". The buyer or seller asks Vinted what happens next and gets the same line back about waiting 25 days. One seller described a custom wig commission stuck in the system and being told it could take up to 25 days just to be returned; another described a Relay parcel two weeks late with the investigation not starting until day 25.",
+        "The frustration isn't really the delay — it's the helplessness. The carrier won't deal with the buyer or seller because, on a Vinted label, Vinted is the carrier's customer. Vinted won't move before the deadline because the deadline is the process. And the replies people get back read like boilerplate, which is exactly how they describe them in the threads.",
+        "There is some comfort in the same threads: a lot of these parcels do turn up inside the window. Buyers and sellers describe items arriving days after being written off, and one commenter's parcel that triggered the \"contact retailer\" status was delivered the next day. That's the reason the wait exists at all — the carrier needs time to finish tracing before anyone declares the parcel gone."
+      ]
+    },
+    {
+      "heading": "The one real shortcut: a written lost-parcel confirmation",
+      "paragraphs": [
+        "Vinted's help page contains an exception that most people never scroll far enough to see: \"If the carrier confirms that the parcel has been lost during transit, please contact us for further assistance and next steps.\" That is the only route that can realistically beat the 25-day clock.",
+        "What counts is a written confirmation, not a phone conversation. Open a chat or email with the carrier — InPost, Evri, Yodel, DPD, Royal Mail or Relay — and ask them to confirm in writing that the parcel is lost, not just delayed. Screenshot the reply. If the tracking says \"contact retailer\", ask them to put that status and its meaning in writing too, because it's the carrier telling you it will only deal with the retailer.",
+        "Then contact Vinted through the help centre. Open the \"Parcel didn't arrive\" article and use the \"Contact us\" / \"I still need help\" button at the bottom of the page — that opens the support form without needing a live order attached. Attach the carrier's written confirmation, the tracking number and a screenshot of the tracking history, and ask for the order to be reviewed as a confirmed loss rather than a delay.",
+        "Expect the first replies to repeat the 25-day line even with the confirmation attached. Asking explicitly for a human review, repeatedly, in the same thread is what eventually gets the case looked at — so keep one thread and add to it."
+      ]
+    },
+    {
+      "heading": "What to do on day 25 — and the 2-day window after it",
+      "paragraphs": [
+        "Put the exact date from the conversation screen in your phone calendar, with a reminder for that morning and one for the day after. On the day, check the carrier's tracking first, not just Vinted's copy. If the parcel has arrived, open it before confirming: if it's fine, press \"Everything is OK\"; if it's damaged or wrong, raise the issue instead of confirming.",
+        "If it hasn't arrived, open the order, press \"I have an issue\", choose that the item hasn't arrived, and submit the refund request. Per Vinted's help page, the order is then cancelled, you're refunded, and the seller is compensated — you do not need the seller's agreement and you should not accept a private settlement in the chat instead.",
+        "If you're the seller, the same rule protects you: do not refund the buyer out of your own pocket while the parcel is in limbo. The lost-parcel outcome is what triggers your compensation. Keep the drop-off receipt and the tracking screenshots until the case is closed, because they're what proves you shipped it if the automatic system gets it wrong.",
+        "Custom shipping is the trap to watch. At 21 business days the order is marked delivered automatically and you get just 2 days to report the problem. If you're near that date, diarise both days — missing the second one releases the payment and there is no refund afterwards."
+      ]
+    },
+    {
+      "heading": "What if the parcel turns up after the refund?",
+      "paragraphs": [
+        "This happens often enough that it has its own threads. A buyer is refunded for a lost parcel, then the parcel arrives days later. Commenters point out that on the standard lost-parcel route the seller has already been paid by Vinted, so nobody is out of pocket — which is why many sellers tell the buyer to keep it.",
+        "Vinted's help page doesn't spell out what happens if a parcel declared lost later arrives, so don't assume a clawback is coming and don't panic. The sensible move is to tell the seller and Vinted in the order chat so there's a record. If you want to pay for the item anyway, do it through a new Vinted listing from the same seller, never by bank transfer — an off-platform payment gives you no protection at all.",
+        "If you're the seller and the parcel is returned to you after you've been compensated, tell Vinted rather than treating it as a bonus. The threads include sellers asking exactly this question, and the honest answer is that the policy is silent — so get Vinted's position in writing before you rely on it."
+      ]
+    },
+    {
+      "heading": "How to take the sting out of the next one",
+      "paragraphs": [
+        "Screenshot the tracking the day it's marked shipped, not the day it goes quiet. The wait is counted from that date, and the exact deadline shown in the conversation screen is your anchor. Keep the drop-off receipt — it's the difference between \"lost in transit\" and \"never sent\", and those two outcomes pay out very differently. If you have the choice at checkout, a Vinted-generated label gives you the clearer 25-business-day route.",
+        "For anything you can't afford to lose, ship it on a platform with a phone line. The recurring lesson in these threads isn't that Vinted loses parcels — every courier does — it's that when something goes wrong you're dealing with a timer and a template rather than a person."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is the Vinted 25-day wait calendar days or business days?",
+      "answer": "Business days. Vinted's \"Parcel didn't arrive\" help article says to wait up to 25 business days from the day the order was marked as \"shipped\", which works out at roughly five calendar weeks once weekends and bank holidays are excluded. Vinted says the exact date is shown in the order conversation."
+    },
+    {
+      "question": "Can I get a refund before the 25 business days if the courier says the parcel is lost?",
+      "answer": "That's the only route that can beat the clock. Vinted's help page says that if the carrier confirms the parcel was lost in transit, you should contact Vinted for next steps. Get the confirmation in writing, then use the \"Contact us\" button at the bottom of the \"Parcel didn't arrive\" article and attach it. Support often still quotes the 25-day line first, so ask for a human review in the same thread."
+    },
+    {
+      "question": "What happens after the 25 business days pass?",
+      "answer": "If the parcel has arrived, press \"Everything is OK\" to release payment. If it hasn't, press \"I have an issue\" to cancel the order — Vinted says you'll then be refunded and the seller will be compensated. Both outcomes are described on Vinted's own \"Parcel didn't arrive\" page."
+    },
+    {
+      "question": "My tracking says \"contact retailer\" — what does that mean?",
+      "answer": "It means the carrier will only deal with the company that bought the label, which on a Vinted-generated label is Vinted. You can't open a claim as the recipient or the sender. Ask the carrier to confirm that status and the reason in writing, then send it to Vinted as evidence of a lost parcel."
+    },
+    {
+      "question": "I used custom shipping — does the 25-day rule still apply?",
+      "answer": "No. Vinted's page says custom shipping runs on 21 business days, after which the order is automatically marked as delivered. From that point you have only 2 days to report an issue; miss it and the order completes and the payment is released to the seller."
+    },
+    {
+      "question": "The parcel arrived after I was already refunded — what should I do?",
+      "answer": "Tell the seller and Vinted in the order chat so there's a record. On the standard lost-parcel route the seller has already been compensated, so nobody is out of pocket and many sellers are happy for you to keep it. If you do want to pay, buy a new listing from the seller inside Vinted rather than sending money directly."
+    }
+  ]
+}
