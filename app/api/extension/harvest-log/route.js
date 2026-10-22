@@ -14,14 +14,17 @@ const kv = Redis.fromEnv();
 // logged-out/auth-blip). POST is open (the /api/sold family already trusts
 // extension clients); GET is admin-only for reading the log.
 //
-// Storage: one key per harvest entry (sv:harvest:entry:<ts>:<clientId>), read
-// back via keys()+mget(). This is the SAME pattern the working sold-stats
-// endpoint uses. The original list-based (lpush/lrange) approach silently
-// failed the write→read round-trip, so the log always showed empty even
-// though the harvest itself ran fine — this fixes that observability gap.
+// STORAGE (FIXED 2026-10-21): the original read used kv.keys('sv:harvest:entry:*')
+// + mget — the SAME key-scan pattern that broke sold-stats once the sold DB grew
+// past Upstash's "too many keys" limit, which is why this GET returned HTTP 500
+// for weeks while the harvest itself worked fine. Switched to a zset index
+// (sv:harvest:recent, score = ts) exactly like the working sold-stats endpoint.
+// Each entry is still stored as a value at sv:harvest:entry:<ts>:<clientId> so
+// mget can read the bodies; the zset only holds the ordered key list.
 
 const PREFIX = 'sv:harvest:entry:';
-const MAX = 50;
+const ZSET   = 'sv:harvest:recent';
+const MAX    = 50;
 
 export async function POST(request) {
   let body;
@@ -36,7 +39,10 @@ export async function POST(request) {
   const entry = { clientId, found, harvested, skipped, error, ts: Date.now() };
   // Timestamp-sortable key; clientId suffix prevents a collision if two
   // clients report in the same millisecond.
-  await kv.set(`${PREFIX}${entry.ts}:${clientId}`, JSON.stringify(entry), { ex: 90 * 24 * 3600 });
+  const key = `${PREFIX}${entry.ts}:${clientId}`;
+  await kv.set(key, JSON.stringify(entry), { ex: 90 * 24 * 3600 });
+  // Index the key in the recency zset so GET never has to key-scan.
+  await kv.zadd(ZSET, { score: entry.ts, member: key });
 
   return NextResponse.json({ ok: true });
 }
@@ -45,23 +51,28 @@ export async function GET() {
   const ok = await isAdminAuthed();
   if (!ok) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const keys = await kv.keys(`${PREFIX}*`);
-  // Newest first: sort keys descending by timestamp prefix.
-  keys.sort((a, b) => {
-    const ta = Number(a.split(':')[2]) || 0;
-    const tb = Number(b.split(':')[2]) || 0;
-    return tb - ta;
-  });
-
-  const limited = keys.slice(0, MAX);
-  const raws = limited.length ? await kv.mget(...limited) : [];
-  const entries = raws
-    .map(r => {
-      if (!r) return null;
-      if (typeof r === 'string') { try { return JSON.parse(r); } catch { return null; } }
-      return r;
-    })
-    .filter(Boolean);
+  // Newest-first: read the tail of the ascending zset (highest score = newest),
+  // then reverse. Bounded to MAX, so no unbounded key scan.
+  let entries = [];
+  try {
+    const size  = await kv.zcard(ZSET);
+    if (size > 0) {
+      const start   = Math.max(0, size - MAX);
+      const members = await kv.zrange(ZSET, start, size - 1); // ascending
+      const newestFirst = members.reverse();
+      const raws = newestFirst.length ? await kv.mget(...newestFirst) : [];
+      entries = raws
+        .map(r => {
+          if (!r) return null;
+          if (typeof r === 'string') { try { return JSON.parse(r); } catch { return null; } }
+          return r;
+        })
+        .filter(Boolean);
+    }
+  } catch (err) {
+    // Never 500 the whole read on a transient index hiccup — return what we have.
+    return NextResponse.json({ ok: true, entries: [], error: String(err?.message || err).slice(0, 120) });
+  }
 
   return NextResponse.json({ ok: true, entries });
 }
