@@ -53,7 +53,7 @@
     {
       "heading": "What happens to your money and your parcels while you're locked out",
       "paragraphs": [
-        "Two things freeze at once, and they need different handling. Your balance stays attached to the account, so it is not lost — but you cannot withdraw it until you have access again. Do not panic-withdraw through a new account; that creates a second problem. If the balance is large and support is slow, say so in your first message so the case is prioritised rather than sitting in a queue.",
+        "Two things freeze at once, and they need different handling. Your balance stays attached to the account, so it is not lost — but you cannot withdraw it until you have access again. Do not panic-withdraw through a new account; that creates a second problem. If the balance is large, say so in your first message so the case is prioritised.",
         "Orders you have already shipped will still move, and buyers can still confirm receipt, but you cannot answer messages or resolve a dispute while locked out. That matters, because a buyer who opens an issue on an order you cannot respond to can have the case decided without your side. Once support confirms the compromise, ask in the same ticket for the affected orders to be flagged so any auto-resolution is paused.",
         "If you are on the buyer side — you paid an account that has since been taken over — open a case on the order itself and tell your bank. Payment sent outside Vinted has no platform protection behind it."
       ]
@@ -68,7 +68,7 @@
     {
       "heading": "How to make sure it doesn't happen twice",
       "paragraphs": [
-        "Once you are back in, spend five minutes on the settings that would have made this much harder. Go to your profile icon, then Settings > Security > 2-step verification and add your phone number — Vinted sends a code to it on login. Then open Settings > Security > Login activity and check the devices listed; log out anything you don't recognise, and remember locations can look odd because of how IP addresses route.",
+        "Once you are back in, spend five minutes on the settings that would have made this much harder. Go to your profile icon, then Settings > Security > 2-step verification and add your phone number — Vinted sends a code to it on login. Then open Settings > Security > Login activity, check the devices listed, and log out anything you don't recognise.",
         "Use a password you have never used on another site. Accounts that get taken over are usually the ones sharing a password with an old email or forum login that leaked years ago. If you signed up with Apple ID and Hide My Email, keep track of which alias you used — it is a common reason people can never reset a password.",
         "Treat any message asking you to change your account email, share your email address, or move to another app to complete a sale as hostile. There is no legitimate reason for a buyer to need your email, or for a sale to be completed anywhere but Vinted checkout."
       ]
