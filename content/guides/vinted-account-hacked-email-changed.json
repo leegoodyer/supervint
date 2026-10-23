@@ -1,0 +1,103 @@
+{
+  "title": "Vinted Account Hacked and Email Changed: Why You're Locked Out and How to Get It Back",
+  "intro": "If you were suddenly logged out of Vinted and the password reset won't work, someone has changed the email address on your account — and Vinted only tells you after the change has already gone through. You are not banned and your account has not been deleted, but you cannot recover it yourself: the reset link now goes to the attacker's inbox. The fix is to report it as a compromised account through Vinted's Help Centre and prove the account is yours, usually with a bank statement showing your name and your Vinted transactions.",
+  "meta_description": "Logged out of Vinted, password reset not working, and your email has been changed? This is account takeover. Here's exactly how to report it, prove ownership and get your account and balance back.",
+  "date_published": "2026-10-23",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Protect your account and never miss a real deal",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What actually happened to your account",
+      "paragraphs": [
+        "The pattern is almost identical every time it gets posted on r/vinted and r/vintedUK. You open the app and you are logged out. Your password is rejected. You request a reset and nothing arrives, or the link is dead. Then you find the email from Vinted, usually already in your inbox, saying the email address attached to your account has been changed. It is not an address you recognise — often a random-looking one in a different country.",
+        "Someone got into your account and changed the email address and password to their own. Because the login email is now theirs, every recovery tool Vinted offers routes to them instead of you: resets go to their inbox, and Google, Facebook or Apple ID logins fail because the account is no longer linked to those. From the outside it looks like your account vanished, but the profile is usually still live — people often report a friend can still find it online.",
+        "This is not the same as a ban. A banned account gives you a message in the app explaining the restriction and an appeal route. Here you get nothing at all, which is why it is so confusing."
+      ]
+    },
+    {
+      "heading": "Why there was no warning email before the change",
+      "paragraphs": [
+        "This is the part people find hardest to accept, and it comes up in almost every thread: the only notification arrives after the damage is done. Users describe being kicked out without any alert about a new device logging in, and receiving no request on their old email address to approve the change. The single email that does arrive confirms the address has already been switched.",
+        "You cannot rely on a warning email to save you. Once the change has gone through, your only route back is Vinted support, not the app's self-service tools, so don't waste hours re-requesting password resets — they will keep going to the wrong inbox."
+      ]
+    },
+    {
+      "heading": "Do these five things first, before you contact anyone",
+      "paragraphs": [
+        "① Secure the email account itself. If someone changed your Vinted email, assume your email password may be exposed too. Change it from a device you trust and turn on two-factor authentication there. If your Vinted account was created with an Apple ID using Hide My Email, note that logging in with your regular address and password may not work — Vinted's own help page flags this trap.",
+        "② Check your payment and withdrawal details if you can still get in through a linked login. Unexplained changes to withdrawal details are one of the signs Vinted lists for a compromised account. If a payout has been redirected, contact your bank the same day.",
+        "③ Do not create a second account. It feels like the fastest way to warn your buyers, but it is a separate rule breach and complicates recovery of the original one.",
+        "④ Screenshot everything: the email confirming the change, the timestamp you were logged out, your order list, your balance, and anything a friend can see on your still-live profile. Support will ask for a timeline.",
+        "⑤ Find your proof of ownership now, not later. This is the single thing that decides how quickly you get back in."
+      ]
+    },
+    {
+      "heading": "How to report it so Vinted actually acts",
+      "paragraphs": [
+        "Open Vinted's help article \"Report a hacked or compromised account\" (vinted.com/help/1242-report-a-hacked-or-compromised-account) and use the \"Contact us\" button at the bottom. The page splits the situation in two: if you can still access the account, it tells you to report it and then go to Settings > Security to check whether your email address has been changed and to review Login activity and log out unknown devices. If you cannot access the account, it tells you to try a password reset, then contact support through the same button.",
+        "You are in the second group, so the reset won't work — go straight to the contact form. If the button isn't appearing, open any help article in the Help Centre and scroll to the very bottom, where the same \"Contact us\" option opens the support form without needing an order attached.",
+        "When you write the message, lead with facts rather than frustration: my account email was changed without my authorisation on this date, I can no longer log in, the new address is not mine, here are screenshots of the change confirmation, and here is proof the account is mine. Vinted's guidance says that once it confirms an account was compromised it temporarily locks it to stop further damage — so expect the profile to go dark for a period.",
+        "In the r/vinted threads where recovery worked, the proof that unlocked it was a bank statement showing the person's name alongside their Vinted transactions. Have that ready. One user described support replying within roughly half a day and then reattaching the original email address after that check."
+      ]
+    },
+    {
+      "heading": "The scam listings — and why your account might get restricted",
+      "paragraphs": [
+        "The reason this matters beyond your own login is what the attacker does next. In the threads describing this takeover, the account is usually used to post listings almost immediately, with the scam built into the description: the buyer is told to pay outside Vinted — typically by PayPal Friends and Family, or a link sent in a message — so there is no buyer protection and no order record.",
+        "Those buyers get burned, and the reports land on your account. That is how people end up simultaneously locked out and flagged. If a friend's login lets you see the account and there are listings you didn't create, screenshot them all with timestamps before you report — strong evidence the activity was not yours. Vinted's phishing guidance is explicit that genuine updates come from its official account with the badge, and that it never asks you to confirm a payment by leaving the app."
+      ]
+    },
+    {
+      "heading": "What happens to your money and your parcels while you're locked out",
+      "paragraphs": [
+        "Two things freeze at once, and they need different handling. Your balance stays attached to the account, so it is not lost — but you cannot withdraw it until you have access again. Do not panic-withdraw through a new account; that creates a second problem. If the balance is large and support is slow, say so in your first message so the case is prioritised rather than sitting in a queue.",
+        "Orders you have already shipped will still move, and buyers can still confirm receipt, but you cannot answer messages or resolve a dispute while locked out. That matters, because a buyer who opens an issue on an order you cannot respond to can have the case decided without your side. Once support confirms the compromise, ask in the same ticket for the affected orders to be flagged so any auto-resolution is paused.",
+        "If you are on the buyer side — you paid an account that has since been taken over — open a case on the order itself and tell your bank. Payment sent outside Vinted has no platform protection behind it."
+      ]
+    },
+    {
+      "heading": "If support goes quiet",
+      "paragraphs": [
+        "Most recoveries in the threads resolved once the ownership check was done, but a minority stall in automated replies. If you are going in circles, reply in the same ticket thread rather than opening new ones — multiple tickets get merged or closed and can reset your position in the queue. Keep every message factual and dated.",
+        "For unresolved legal or regulatory issues that the normal support flow cannot handle, Vinted's help centre lists legal@vinted.com as its dispute-resolution contact. In the UK, some sellers escalate payment-related complaints to the Financial Ombudsman Service because Vinted's payments run through an authorised payment institution; in the EU, the equivalent route is your national consumer authority. Those routes are for money actually lost, not for speeding up a password reset."
+      ]
+    },
+    {
+      "heading": "How to make sure it doesn't happen twice",
+      "paragraphs": [
+        "Once you are back in, spend five minutes on the settings that would have made this much harder. Go to your profile icon, then Settings > Security > 2-step verification and add your phone number — Vinted sends a code to it on login. Then open Settings > Security > Login activity and check the devices listed; log out anything you don't recognise, and remember locations can look odd because of how IP addresses route.",
+        "Use a password you have never used on another site. Accounts that get taken over are usually the ones sharing a password with an old email or forum login that leaked years ago. If you signed up with Apple ID and Hide My Email, keep track of which alias you used — it is a common reason people can never reset a password.",
+        "Treat any message asking you to change your account email, share your email address, or move to another app to complete a sale as hostile. There is no legitimate reason for a buyer to need your email, or for a sale to be completed anywhere but Vinted checkout."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "My Vinted email was changed and I can't log in — does that mean I'm banned?",
+      "answer": "No. A ban shows up as a message inside the app with an explanation and an appeal option. If you have been logged out, your password no longer works, and the password reset never arrives, the email on the account has been changed by someone else. That is account takeover, not a ban, and it is recovered through Vinted support."
+    },
+    {
+      "question": "How do I prove the Vinted account is mine if I can't log in?",
+      "answer": "Report it through the \"Report a hacked or compromised account\" help article and use the Contact us button. In the cases that resolved on r/vinted, the proof that worked was a bank statement showing the person's name together with their Vinted transactions, which support used to verify ownership before reattaching the original email address."
+    },
+    {
+      "question": "Can I just make a new Vinted account while I wait?",
+      "answer": "Don't. A second account is a separate rule breach and it muddies the recovery of the original. It also strands your existing balance, your reviews and your open orders. Report the compromise and work the original account back instead."
+    },
+    {
+      "question": "Is my money safe while my Vinted account is locked?",
+      "answer": "Your balance stays attached to the account, so it is not lost — you simply cannot withdraw it until access is restored. What you should check immediately is whether the withdrawal or payout details were changed, since unexplained changes there are one of the signs Vinted lists for a compromised account. If they were, contact your bank the same day."
+    },
+    {
+      "question": "Will Vinted warn me before someone changes my email?",
+      "answer": "In the cases users describe, no. The only email that arrives is the one confirming the address has already been changed, with no new-device alert and no request to approve the change on the old address. That is why two-step verification under Settings > Security matters more than the notification emails."
+    },
+    {
+      "question": "What should I do if the hacker posted listings on my account?",
+      "answer": "Screenshot every listing with a timestamp before you report, along with any messages sent from the account. Those listings usually ask buyers to pay outside Vinted — often by PayPal Friends and Family — so they generate reports against your account. Include the screenshots in your compromise report as evidence the activity was not yours."
+    }
+  ]
+}
