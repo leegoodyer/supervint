@@ -65,6 +65,12 @@ export async function GET() {
   const aiKeys = keys.map(k => `sv:helpchat:${k.replace('sv:sub:', '')}:${today}`);
   const aiUsed  = await kv.mget(...aiKeys);
 
+  // Google Sheets usage: sv:sheets:<clientId> holds { connected, linkedEmail,
+  // ts } — reported fire-and-forget by the extension on connect/disconnect.
+  // Merge so admin can see which paying users actually use the Sheets perk.
+  const sheetsKeys = keys.map(k => `sv:sheets:${k.replace('sv:sub:', '')}`);
+  const sheetsStates = await kv.mget(...sheetsKeys);
+
   const users = keys
     .map((key, i) => {
       const record = records[i];
@@ -144,6 +150,9 @@ export async function GET() {
           used:  Number(aiUsed[i]) || 0,
           daily: PLANS[plan]?.aiDaily ?? 0,
         },
+        // Google Sheets usage: { connected, linkedEmail, ts } — null = never
+        // reported (user hasn't connected/disconnected Sheets since this shipped).
+        sheets:         sheetsStates[i] ?? null,
         // Version: heartbeat is live (updated every poll). Fall back to the
         // install record for users who never started a search — they never
         // send heartbeats, so sv:install:<clientId>.version is the only
