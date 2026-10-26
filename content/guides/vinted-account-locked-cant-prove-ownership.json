@@ -1,0 +1,94 @@
+{
+  "title": "Vinted Locked My Account for \"Suspicious Activity\" and I Can't Prove I Own It",
+  "intro": "If Vinted has locked your account for \"suspicious activity\" and the unlock form wants proof you genuinely don't have — a photo of a card you never linked, or a statement showing a payout you never received — you're stuck in a badly designed check, not a dead end. Vinted's \"Confirm that you own this account\" page accepts exactly two documents: a photo of the payment card you use on Vinted, or a bank statement showing previous Vinted charges or withdrawals. The people who get unlocked send the closest equivalent, explain in one message why the original can't exist, and escalate when the automated loop rejects it anyway.",
+  "meta_description": "Vinted locked your account for \"suspicious activity\" and you can't prove you own it? The two documents Vinted accepts, what to send if you have neither, and how to escalate an automated rejection loop.",
+  "date_published": "2026-10-26",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Stop losing time to locked accounts — get alerted the moment the items you want are listed",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What \"account locked for suspicious activity\" actually means",
+      "paragraphs": [
+        "This is not the same as a ban, or as the ID verification loop. Vinted's help page on banned accounts states it may lock an account automatically if it notices suspicious activity, to stop someone else using your account — and warns you may not be able to log in while it's locked.",
+        "The unlock route is a separate page, \"Confirm that you own this account\" (help article 363), and it is deliberately narrow: either a photo of the payment card you use on Vinted, or a photo or screenshot of a bank statement showing previous Vinted charges or withdrawals. Send one and the account is unlocked.",
+        "The problem is that the check assumes something about your history: that you have bought with a card, or already been paid out to a bank account. Plenty of users have done neither. That gap is where people get trapped for weeks."
+      ]
+    },
+    {
+      "heading": "The catch-22 people keep hitting",
+      "paragraphs": [
+        "The seller who has never bought anything. One user was asked for a bank statement showing funds withdrawn, or an image of the card used to purchase on Vinted — and had neither, because they had only ever sold and had not yet withdrawn to an account they could access. Their orders were, in their words, \"rotting on a platform i cannot access\". Another blocked user was asked for a linked card when they had never linked one, plus an IBAN statement showing a Vinted payout they had never received.",
+        "The seller who changed banks. One user changed the bank account connected to Vinted, was immediately locked, and found the new IBAN had no Vinted history at all. Another switched IBAN earlier in the year, so the new account was empty of Vinted activity while their only payout sat on the old one — uploading both statements plus photo ID was still rejected repeatedly.",
+        "The payment selected for review. This arrives as a message saying a recent payment has been \"selected for review\", asking you to verify your payment source within a set window — commonly described as 48 hours — with a photo or screenshot of the charge on your bank statement, plus your username and registration email, and warning the account will be banned if proof doesn't arrive. The impossibility is obvious: a charge made a day or two ago isn't on a monthly statement yet. One buyer sent a previous statement, a photo of the card with their username and date, and card-app screenshots of the charge — and was permanently banned anyway."
+      ]
+    },
+    {
+      "heading": "Exactly what Vinted accepts",
+      "paragraphs": [
+        "Card option: a photo of the card next to a handwritten note with your username and the current date, clearly showing the cardholder's name, the card issuer's name, the last four digits, the expiry date and the card type. Cover the full card number and the CVV/CVC — Vinted tells you to remove anything it hasn't asked for.",
+        "For the statement option: a photo or screenshot of a bank statement showing previous Vinted charges or withdrawals, including your full name matching the name on your Vinted Wallet, your account number, the date, and the amount. Cover unrelated transactions and any full card numbers. You don't need both documents — if a card exists, the card photo is easier, because it doesn't depend on your bank's statement cycle."
+      ]
+    },
+    {
+      "heading": "What to send when you think you have neither",
+      "paragraphs": [
+        "Start with your banking app, not a statement. Open the individual transaction and export or share it as a PDF, or screenshot a view showing the date, amount and reference. Don't search only for \"Vinted\" — users report the charge appearing under a payment processor's reference, so search by amount and date. A transaction detail view with your name and account number visible satisfies the spirit of the request even when it isn't a formal statement.",
+        "If the charge is too recent to appear anywhere, make that the argument: say a statement for that date cannot exist yet, and attach the pending transaction, card authorisation or the bank's confirmation. Vinted asks for a charge \"on your bank statement\" — not necessarily a monthly statement.",
+        "If the account is closed or the card has been replaced, ask your bank for a transaction history or a statement covering the period; banks can normally produce this even for closed accounts, and it arrives with your name and account number on it. If the old card's last four digits differ from your current card, say so rather than letting a reviewer find the mismatch.",
+        "Never edit or fabricate a document. Vinted warns that suspicious or fake documents can permanently block withdrawals or get an account banned."
+      ]
+    },
+    {
+      "heading": "Submit it so a person actually reads it",
+      "paragraphs": [
+        "Send the documents through the \"Contact us\" button, which is what Vinted's own page tells you to use. The Help Centre's contact page has a bank account and withdrawal section, with the button at the end. Our guide to contacting Vinted support covers the in-app workaround when it seems missing.",
+        "Put everything in one message, in one thread: username, registration email, dates and amounts, and a plain statement of why the requested document doesn't exist — for example, \"I have only ever sold on this account, so there is no purchase card and no payout statement; attached is the statement for the account my sales are paid into.\" That framing matters, because the scripted reply is designed for people who simply haven't sent the file. Attach PDFs rather than screenshots of screenshots, and don't open a second ticket — multiple tickets collapse into the same \"your case is already open\" response and you lose the thread holding your evidence."
+      ]
+    },
+    {
+      "heading": "When the automated loop keeps rejecting you",
+      "paragraphs": [
+        "Expect at least one rejection. Users describe proof refused with no reason, tickets closed within minutes, and support replying there is \"no way to confirm\" they're talking to the account owner. One reinstated seller said it took a month of attempts and an old card dug out of storage — and found out days later from an order notification.",
+        "If the lock came with an official moderation decision, use the appeal link in that inbox message or email. Appeals must be made within 6 months and can only be made once, so make it count: attach the documents and explain the gap in your account history in the same message.",
+        "For legal or regulatory issues the normal form can't resolve, Vinted's \"Contacts for dispute resolution\" page lists legal@vinted.com, and confirms you can also take a moderation dispute to a certified out-of-court dispute settlement body or to the national courts.",
+        "It also helps to know who holds the documents. Vinted states it doesn't store or have access to the documents you provide — they go to the payment service provider running the check. That's why support keeps saying it can't see what you sent, and why a formal complaint to that provider is a route sellers report using when support goes quiet.",
+        "If the money matters more than the account, our guides to releasing a balance after a ban and to taking Vinted to small claims set out the written-demand and court routes."
+      ]
+    },
+    {
+      "heading": "How to make sure this never traps you again",
+      "paragraphs": [
+        "The check is easiest to pass when your account has a transaction history to point at. If you only sell, make one small purchase with a card you'll keep; if you only buy, make one small withdrawal once you have a balance. Keep a PDF of any statement showing a Vinted payout reachable from your phone, don't change bank details while a sale is in flight or a withdrawal is pending, and withdraw regularly so a lock never freezes a balance you can't afford to wait on."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why was my Vinted account locked for \"suspicious activity\"?",
+      "answer": "Vinted's help pages state it may lock an account automatically when it notices suspicious activity, to prevent someone else using your account or personal information. Triggers users report include changing the bank account linked to Vinted, a payment being selected for review, or unusual login and payment patterns. The lock is an ownership check, not necessarily a ban."
+    },
+    {
+      "question": "What documents does Vinted accept to unlock the account?",
+      "answer": "Either a photo of the payment card you use on Vinted, taken next to a handwritten note with your username and the current date and showing the cardholder name, issuer, last four digits, expiry and card type — or a photo or screenshot of a bank statement showing previous Vinted charges or withdrawals, with your full name, account number, date and amount. You need only one, and you should cover your full card number and CVV."
+    },
+    {
+      "question": "I've never bought anything on Vinted, so I have no card to photograph. What do I send?",
+      "answer": "Use the statement route. Send a bank statement or transaction history for the account your sales are paid into, showing your name and account number, and explain in the same message that the account has only ever sold and has no purchase card attached. If you haven't withdrawn yet either, say so and attach the transaction view for any pending or completed payout."
+    },
+    {
+      "question": "I changed my bank account and now the statement shows no Vinted activity. Am I stuck?",
+      "answer": "Not necessarily. Send the statement from the old account that does show the Vinted payout, plus a statement for the new account confirming it's yours, and explain the change in one message. Ask your bank for a transaction history if the old account is closed. Users report mixed results, but both documents plus a stated reason is the version that gets reviewed rather than auto-rejected."
+    },
+    {
+      "question": "Vinted says my payment was \"selected for review\" and gives me 48 hours. What do I do?",
+      "answer": "Treat it as urgent. Send the card photo if you have the card, since it doesn't depend on a statement cycle. If you only have the statement route, send the pending transaction or card authorisation alongside a previous statement, and state clearly that a statement covering a charge from the last day or two cannot exist yet. Don't let the deadline pass — Vinted's message warns the account can be banned if proof isn't received in time."
+    },
+    {
+      "question": "Can I still withdraw my money while my account is locked?",
+      "answer": "Usually not while the lock is active — users report losing access to the wallet, orders and inbox together. Once unlocked, withdraw promptly rather than leaving a balance sitting there. If the lock becomes a ban and the balance stays frozen, the route is a written demand followed by a small claim; our guide to a locked wallet after a ban covers that in detail."
+    }
+  ]
+}
