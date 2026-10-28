@@ -1,0 +1,92 @@
+{
+  "title": "Vinted Size Filter Not Working? Why You Keep Seeing the Wrong Sizes",
+  "intro": "It isn't your imagination and it isn't your phone: the size filter and your saved size preferences show the wrong sizes because Vinted remapped clothing sizes in November 2025 and now groups them into ranges (M / UK 12-14, L / UK 16-18, XL / UK 20-22). Listings uploaded before 10 November 2025 were reassigned automatically, and Vinted's own help page warns those sizes \"may be incorrect\" and asks sellers to check them. So a UK 12 garment can sit in the L / UK 16-18 bucket, a size-14 top can display as 20-22, and a feed set to your size will show you someone else's.",
+  "meta_description": "Vinted showing you the wrong sizes? Why the 2025 size remapping broke the size filter and your feed, what the new ranges actually mean, and how to search by your real size.",
+  "date_published": "2026-10-28",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Vinted help & scam guides",
+  "cta_text": "Stop scrolling through the wrong sizes — get alerts the moment your size is listed",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What's actually wrong with the Vinted size filter",
+      "paragraphs": [
+        "Two things are going on, and they get blamed on each other. The first is documented: Vinted rebuilt how clothing sizes are labelled. A UK numeric size used to carry a single letter (M / UK 10, L / UK 12, XL / UK 14); now each letter covers a two-number range (M / UK 12-14, L / UK 16-18, XL / UK 20-22). Vinted's Help Centre article \"Guide to clothing size system updates\" publishes the old-versus-new table and states that women's fashion listings uploaded before 10 November 2025 \"may be incorrect\" and should be reviewed by the seller.",
+        "The second is filter behaviour. Because sizes are ranges, the filter no longer offers every number — buyers on r/vinted describe losing the ability to pick a size 6 or 8 on its own, being pushed into 4-6 and 8-10, with one user complaining there was no 6-8 option at all. Stack a wrong listing size on top and the filter returns garments two sizes off while hiding the ones that are right.",
+        "You're not alone. BBC News covered it on 11 November 2025 under \"Vinted users outraged by sizing changes\", reporting items listed as the wrong size and sellers manually editing whole wardrobes. The r/vinted threads — \"I hate hate haaaaate what they did to size selection filter\", \"I'm going crazy, all sizes are wrong all of the time!\" — describe the same mechanism."
+      ]
+    },
+    {
+      "heading": "The conversion that catches everyone out",
+      "paragraphs": [
+        "This explains almost every \"why is my size 12 showing as a large?\" thread. Under the new system XS covers UK 4-6, S covers UK 8-10, M covers UK 12-14, L covers UK 16-18, XL covers UK 20-22, XXL covers UK 24-26 and XXXL covers UK 28-30. Under the old guide M meant UK 10, L meant UK 12, XL meant UK 14 and XXL meant UK 16.",
+        "So a seller who listed a UK 12 jumper under \"L\" now owns a listing reading L / UK 16-18 — the letter survived, the number attached to it moved four sizes. Sellers in the threads describe exactly that: everything listed as a 12 converted to Large 16-18, everything listed as a 10 to Medium 12-14. BBC News reported the same, including a seller whose size-14 garments were showing as 20-22.",
+        "Vinted's position is that the new mapping is more accurate internationally, and its help article gives sellers the route to fix a listing. It does not fix thousands of listings for them — that work is left to the seller, which is why buyers keep meeting a \"UK 14\" filed under 20-22 and why items genuinely in their size never surface."
+      ]
+    },
+    {
+      "heading": "Why your home feed ignores the sizes you saved",
+      "paragraphs": [
+        "\"Categories and sizes\" under Personalisation is not a hard filter — it is a recommendation input. Vinted's help article on personalising your feed describes it as shaping what you get recommended, and the difference matters. In a long r/vinted thread (\"Anyone else's home page no longer sticking to their selected sizes?\"), buyers reported the feed drifting completely: adults shown kids' clothing, a size 3 shoe shown size 8 shoes, and several people saying the setting had stopped accepting sizes or opened blank.",
+        "Two causes compound. The preference you saved months ago may now point at a different numeric bucket after the remap — which is why Vinted's guidance tells buyers to update size preferences as part of the transition. And the feed is engagement-driven, so anything you click or linger on influences it, size or no size. One commenter found a workaround worth trying: open a few listings genuinely in your size and the feed starts serving that size again. User-reported, not a setting, but it costs nothing."
+      ]
+    },
+    {
+      "heading": "Why the size filter sometimes hides options entirely",
+      "paragraphs": [
+        "Beyond the ranges, size options sometimes vanish from the filter. In one r/vinted thread a buyer searching for a blouse found \"Large\" missing from the size list while Large versions of that exact item sat in the results underneath. Two months later another user said they had found \"a wealth of boots\" that seemed suppressed whenever they filtered by size — discovered on a search that turned out to be applying brand only.",
+        "That is one user's account, not a platform rule — but the pattern is solid: saved searches and filters don't always carry the size you think, and the size list changes with the search. If a result set looks suspiciously empty, re-run it with the size filter off and compare."
+      ]
+    },
+    {
+      "heading": "If you're a seller: the ten-minute audit that stops wrong-size sales",
+      "paragraphs": [
+        "If you listed women's fashion before 10 November 2025, assume your sizes need checking — Vinted says so directly. Go to your Profile, open an item, tap the three dots (…) and choose Edit, then scroll to Size and compare what Vinted assigned against the care label. If a UK 12 top sits in L / UK 16-18, select M / UK 12-14 instead.",
+        "Vinted's rule of thumb: if the garment is labelled with a number, pick the range containing that number (a 14 goes in M / UK 12-14); if it's labelled with a letter, pick that letter. Either way, put the label size in the description and photograph the size tag. That photo decides a wrong-size dispute later, and sellers in the threads say it is how they proved their listing was accurate.",
+        "The commercial argument is blunt. Sellers in the r/vinted thread about old listings being silently changed concluded it was \"likely why all your old stuff wasn't selling\" — a size 12 filed under 16-18 is invisible to buyers filtering for 12 and disappointing to buyers filtering for 16-18."
+      ]
+    },
+    {
+      "heading": "If you've already bought something in the wrong size",
+      "paragraphs": [
+        "Be clear which problem you have, because Vinted treats them very differently. If the item matches its description and simply doesn't fit, Vinted's Refund Policy says it is \"not eligible for a return or refund\" — accepting a return is the seller's choice. The \"Returning an item\" page adds that a fit-based return is arranged with the seller and you'll usually pay return shipping.",
+        "If the item does not match what the listing said — the description stated UK 12 and the tag says 16, or the tag photo shows another size — that is significantly not as described and it is covered. You have 2 calendar days from Vinted's delivery notification to press \"I have an issue\" in the order chat. Report it as not as described rather than \"doesn't fit\", with photos of the tag next to the listing text you're comparing it to. The refund covers item price, Buyer Protection fee and original shipping; return postage is normally yours, and you have 5 business days to send once the seller requests the return.",
+        "One warning that saves an argument: an item shown as \"XL / UK 20-22\" whose inner label says 14 is not automatically misdescription if the seller put the true label size in the description or tag photos. That is why Vinted tells buyers to check the tag picture rather than trusting the category."
+      ]
+    },
+    {
+      "heading": "How to search so the filter actually works",
+      "paragraphs": [
+        "Filter by range, not number. If you're a UK 12, filter M / UK 12-14 and expect to sift: the range holds genuine 12s, genuine 14s and, after the remap, some mislabelled items. Rebuild saved searches created before the change — one made under the old sizing can keep pointing at a bucket that no longer means what it did. Put the size in the search text too (\"Levi's 501 UK 12\").",
+        "And use the seller. \"What's the size on the label, and what's the pit-to-pit?\" takes one message and settles more wrong-size buys than any filter setting."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why does Vinted show me the wrong size?",
+      "answer": "Because Vinted replaced single numeric sizes with letter-plus-range sizing, and listings uploaded before 10 November 2025 had their sizes reassigned automatically. Vinted's help article on size system updates says those listings \"may be incorrect\" and asks sellers to review them. Under the new mapping UK 12 sits in L / UK 16-18 and UK 14 sits in XL / UK 20-22, so a correctly-labelled garment can appear several sizes out."
+    },
+    {
+      "question": "Did Vinted change the sizes on my existing listings?",
+      "answer": "Yes — sellers report that listings already uploaded were converted, not just new ones. In the threads, items listed as a UK 12 had become Large 16-18 and items listed as a UK 10 had become Medium 12-14, which matches the old-to-new table in Vinted's help article. Any active women's fashion listing uploaded before 10 November 2025 is worth checking."
+    },
+    {
+      "question": "How do I change the size on an old Vinted listing?",
+      "answer": "Go to your Profile, open the item, tap the three dots (…) and choose Edit, then scroll to Size and pick the option matching the label. Vinted's guidance is to choose the range containing the number on the tag (a UK 12 goes in M / UK 12-14) or the letter the garment is labelled with. Add the tag size to the description and include a photo of the size label."
+    },
+    {
+      "question": "Why can't I filter by my exact size on Vinted anymore?",
+      "answer": "Because the filter now works in ranges rather than single numbers — buyers report only being offered options like 4-6 and 8-10 instead of a standalone 6 or 8, and in some versions no 6-8 option at all. Filter the range containing your size and check the tag photo, since a range can hold garments whose real label is a size either side of yours."
+    },
+    {
+      "question": "I bought something that's the wrong size — can I return it?",
+      "answer": "Only if it's not as described. Vinted's Refund Policy says an item that matches its description but doesn't fit is not eligible for a return or refund, and a fit-based return is at the seller's discretion with the buyer usually paying postage. If the description or tag photo showed a different size to what arrived, report it as significantly not as described within 2 calendar days of the delivery notification."
+    },
+    {
+      "question": "Is the Vinted size filter broken, or is this a deliberate change?",
+      "answer": "Mostly deliberate. The remapping to ranges is a documented change with its own Help Centre article, which Vinted describes as making sizes more accurate across international brands. What sits on top of it — a feed that stops respecting your saved sizes, and size options that disappear from a search — is reported by users as buggy rather than policy, and Vinted has not published an explanation for it."
+    }
+  ]
+}
