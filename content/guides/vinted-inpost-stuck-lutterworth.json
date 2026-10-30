@@ -1,0 +1,88 @@
+{
+  "title": "InPost Parcel Stuck at Lutterworth? What Vinted Buyers and Sellers Can Actually Do",
+  "intro": "If your tracking has been frozen on \"Lutterworth\" for days or weeks, your parcel is not necessarily lost — but nothing on the Vinted order page will move for weeks either. Lutterworth in Leicestershire is the InPost hub that Vinted users report nearly every InPost parcel passing through, and when it backs up, the scans stop. Vinted's rule is to wait 25 business days from the day the order was marked \"shipped\" before it will cancel and refund, unless the carrier confirms the parcel is lost first. This is what the threads about this specific hub describe, and what actually helps.",
+  "meta_description": "InPost tracking stuck at Lutterworth for days or weeks? Why the hub stalls, how to get InPost to confirm whether your parcel is lost, and what Vinted will do before day 25.",
+  "date_published": "2026-10-30",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Get alerted the moment genuine listings appear — and stop losing time to parcels that never move",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What \"stuck at Lutterworth\" actually means",
+      "paragraphs": [
+        "The stalled tracking almost always reads the same way: arrived at sort facility, Lutterworth, GB — and then nothing, for a week, two weeks, in one thread since 21 July. Lutterworth is where InPost's UK network consolidates parcels, and Vinted users describe it as the point every parcel passes through. One commenter, after a parcel posted in London was routed to Glasgow, put it plainly: \"every single parcel I've ordered has gone through Lutterworth.\"",
+        "The scan proves InPost took possession. It does not prove where the parcel is now. A missing next scan can mean a backlog, a misroute, a full destination locker, or a genuine loss — and the tracking cannot tell you which. That ambiguity is the whole problem."
+      ]
+    },
+    {
+      "heading": "Why it happens, according to the threads",
+      "paragraphs": [
+        "InPost has not published an explanation for Lutterworth delays, and Vinted's help pages do not mention hub problems at all. What buyers and sellers comparing notes across r/vinted, r/vintedUK and the Facebook Vinted groups describe is consistent.",
+        "The most repeated cause is a driver shortage in particular areas. One buyer with five parcels stuck was told by InPost to report two of them to whoever generated the labels and to wait on the rest while the last scan was within 72 hours; later they heard locally that there were no drivers for their area — second-hand information, but it matches other reports of parcels piling up because the regional van is not collecting.",
+        "The second is locker capacity. Buyers describe three nearest lockers showing as full, or a locker going non-operational, leaving the parcel in the network with nowhere to go. The third is misrouting: parcels sent to the wrong depot usually reappear, just late."
+      ]
+    },
+    {
+      "heading": "Step one: find out whether it is delayed or lost",
+      "paragraphs": [
+        "Check the parcel number on InPost's own tracking at inpost.co.uk/tracking rather than the Vinted mirror, and note the last scan, location and date. Then ask InPost in writing through the contact and claims form at inpost.co.uk/customer/claim/form: give the parcel number, say the last scan was at Lutterworth on a specific date, and ask two questions — has the parcel had any physical scan since, and is it being treated as lost. A written answer is the only version you can forward to Vinted.",
+        "Buyers report InPost's reply is often the useful part. In one thread a buyer was told by email that, given how long it had been since the last scan, InPost had been unable to locate the parcel in its network. That is effectively a lost-parcel confirmation, even if it is not worded as one. Keep the whole email.",
+        "Sellers tend to get more detail, because on a Vinted label they are the one who handed the parcel over. If you are the buyer, ask the seller once, politely, in the order chat, to chase InPost and forward the reply."
+      ]
+    },
+    {
+      "heading": "Step two: what Vinted will do, and when",
+      "paragraphs": [
+        "Vinted's \"Parcel didn't arrive\" page (help 658) sets the timetable. Most parcels arrive in 5 business days, or 10 for international. If tracking is stuck on both Vinted and the carrier's site, you wait up to 25 business days from the day the order was marked \"shipped\"; Vinted says the exact deadline is shown in the conversation screen, so screenshot that date.",
+        "At the end there are two buttons. \"Everything is OK\" completes the order and releases payment; \"I have an issue\" cancels it, refunds the buyer and compensates the seller. You do not need the seller's agreement, and a private refund in the chat takes the case outside the process that protects both sides.",
+        "The shortcut is on the same page: \"If the carrier confirms that the parcel has been lost during transit, please contact us for further assistance and next steps.\" Send the InPost email, parcel number and tracking screenshots through the \"Contact us\" button at the bottom of the help article and ask for the order to be reviewed as a confirmed loss. Expect the first reply to quote the 25-day line anyway — keep replying in the same thread and ask for a human review.",
+        "One more deadline people miss: once Vinted notifies you that a parcel seems lost, help page 1127 says you have 2 days to press \"I have an issue\". Miss it, or press \"Everything is OK\" to be nice, and the order completes and the payment is released."
+      ]
+    },
+    {
+      "heading": "If it is \"delivered\" to a locker that is not yours",
+      "paragraphs": [
+        "In one thread the parcel finally moved after more than a week at Lutterworth — to a locker an hour away. When the buyer called, InPost said it would not be brought to the correct locker, that the pickup would be allowed to expire, and that the parcel would then return to the sender.",
+        "Collect it if the journey is cheaper than another two weeks, and check the parcel before leaving the locker. If you cannot get there, let the pickup expire so it goes back to the seller and tell them in the order chat. Either way, do not press \"Everything is OK\". Help 658 says that if an item is missing at the pick-up point you should use the \"Contact us\" button at the end of the page; if tracking says delivered and you do not have it, report within 2 days with the tracking showing the wrong locker."
+      ]
+    },
+    {
+      "heading": "If you are the seller, do nothing dramatic",
+      "paragraphs": [
+        "The instinct when a buyer asks \"where is my parcel\" for the fifth time is to refund them and argue with InPost later. Do not. Vinted's suspended-order page (help 176) says a seller who cancels an order receives neither payment nor compensation, while on the lost-parcel route the buyer is refunded and the seller compensated — so refunding privately turns a covered loss into an uncovered one.",
+        "Keep the drop-off receipt and your packing photos, and answer in the order chat with facts: posted on this date, last scan at Lutterworth on that date, InPost reference, and the deadline shown on the order. That thread is the case file. And say what you are doing rather than promising a date you cannot control — \"InPost has not scanned it since the 12th, I have asked in writing whether it is lost, Vinted's deadline is the 6th\" is a message buyers accept."
+      ]
+    },
+    {
+      "heading": "Making the next one less likely",
+      "paragraphs": [
+        "If you are picking a locker at checkout, check it is working first: InPost's app and site show live compartment availability, and a full or out-of-service locker is a parcel that stays in the network. Choosing a different locker, or a shop or home delivery option, removes the most common failure point.",
+        "For anything expensive or time-sensitive, weigh the cheaper InPost option against five weeks of limbo. Screenshot the tracking the day it changes, not the day it stops: the 25-day clock runs from \"shipped\", the 2-day claim window runs from Vinted's lost-parcel notification. If the parcel turns up after a refund, tell the seller and Vinted in the order chat — it happens often enough that it has its own threads."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "How long do Vinted parcels stay stuck at Lutterworth?",
+      "answer": "It varies from a few days to several weeks. Threads describe parcels moving after 5–7 days, parcels stuck for two weeks, and one that had not scanned since 21 July. Vinted's rule is to wait up to 25 business days from the day the order was marked \"shipped\" before it will cancel and refund; the exact date is shown in the order conversation."
+    },
+    {
+      "question": "Is my parcel lost if it has been at Lutterworth for a week?",
+      "answer": "Not necessarily. A missing scan means the parcel has not been processed onto the next leg, which can be a backlog, a misroute, a driver shortage or a full locker, as well as a loss. Check InPost's own tracking at inpost.co.uk/tracking and ask in writing whether there has been any scan since Lutterworth and whether the parcel is being treated as lost."
+    },
+    {
+      "question": "Can I get a refund before the 25 business days are up?",
+      "answer": "Only if the carrier confirms the parcel is lost. Vinted's \"Parcel didn't arrive\" page says to contact Vinted if the carrier confirms a loss in transit. Get that in writing — an email saying InPost has been unable to locate the parcel is enough — then use the \"Contact us\" button at the bottom of the help article and attach it with the tracking history."
+    },
+    {
+      "question": "My parcel was delivered to the wrong locker — can InPost move it?",
+      "answer": "Buyers report InPost refusing to move a parcel between lockers once delivered, saying the pickup will be allowed to expire so it returns to the sender. Collect it if you can, or let it expire and tell the seller. If tracking shows delivered and you cannot get it, report within 2 days and explain it went to a locker you did not choose."
+    },
+    {
+      "question": "Should I refund my buyer while the parcel is stuck at Lutterworth?",
+      "answer": "No. Vinted's suspended-order page says a seller who cancels an order gets neither payment nor compensation, whereas on the lost-parcel route the buyer is refunded and the seller compensated. Keep your drop-off receipt and packing photos, and keep the facts in the order chat until the deadline passes or InPost confirms the loss."
+    }
+  ]
+}
