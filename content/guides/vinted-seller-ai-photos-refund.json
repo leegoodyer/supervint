@@ -1,0 +1,96 @@
+{
+  "title": "Vinted Seller Used AI Photos? What's Allowed — and Can You Get a Refund",
+  "intro": "AI photos are not banned outright on Vinted, but using them to mislead is — and that is the line that decides whether you have a claim. Vinted's own statement is that members must upload real photos and that AI used as a visual enhancement (background removal, for example) is allowed only if the photo \"remains an accurate representation of the item\"; its Catalog Rules separately say photos \"have to represent the item as it is — no image editing is allowed\" and forbid \"photos that you didn't take, aren't of the actual item, or don't accurately represent the item you're selling\". So if the AI image was the only picture and the item that arrived looks nothing like it, you have a significantly-not-as-described claim: press \"I have an issue\" in the order chat within 2 calendar days of Vinted telling you the order was delivered, attach your own photos next to the AI one, and report the listing separately.",
+  "meta_description": "Vinted seller used AI-generated photos? What Vinted actually allows, how to report an AI or edited listing, and how to claim a refund when the item doesn't match the AI image.",
+  "date_published": "2026-11-02",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Vinted help & scam guides",
+  "cta_text": "Skip the listings with AI cover photos — get alerts only for real photos of the item you want",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What Vinted actually says about AI photos",
+      "paragraphs": [
+        "Two pieces of Vinted's own wording don't say quite the same thing — which is why this argument keeps happening in the order chat.",
+        "Asked about the rise in AI images, a Vinted spokesperson told Newsquest in October 2026 that \"Vinted members are required to upload real photos of their items\", that \"the use of AI as a visual enhancement tool (e.g. background removal) is not prohibited in itself, the photo must remain an accurate representation of the item\", and that \"using AI to mislead, such as misrepresenting an item's condition in listings or during disputes, is not allowed\" — with action including \"the removal of listings or the suspension of accounts\".",
+        "The Catalog Rules are blunter. Under \"Requirements for the item's photos\" they state that pictures \"have to represent the item as it is - no image editing is allowed\", \"have to be taken by you with the purpose of using the photos on Vinted\", and \"cannot be replaced with stock photos, photos from ads and watermarked images\". Under prohibited commercial activity Vinted lists \"intentionally misleading buyers\" and names \"using photos that you didn't take, aren't of the actual item, or don't accurately represent the item you're selling\".",
+        "Read together, the practical rule is: a cleaned-up background is tolerated, a re-imagined garment is not. The moment the photo stops being an accurate picture of the physical item in the seller's hands, it breaks both pages."
+      ]
+    },
+    {
+      "heading": "What buyers in the threads are actually seeing",
+      "paragraphs": [
+        "The recurring complaint is not \"I dislike AI art\". It is that the AI image shows a different garment from the one that arrives. In one r/vinted thread a buyer asked a seller for non-AI photos of someone wearing the item and the seller added them; the fit, the sleeve length and the skirt length were all different between the two sets. The buyer's question — \"how is this not Significantly not as described?\" — is the whole article in one sentence.",
+        "The second pattern is condition. One member wrote about listings where the AI cover showed a perfectly ironed jumper, while the real photos at the end of the carousel showed \"some tatty, faded and creased jumper that in no way resembles the AI slop they generated\". The photo isn't lying about the brand or the size — it is lying about what the item will look like in your hands.",
+        "The third is volume. Buyers describe single accounts running dozens or hundreds of listings from one generated image, sometimes the same photo reused against different backgrounds across accounts. One member had a seller's listings taken down, then found them back up days later under different photos, with a repeat report refused because action had already been taken. That is why people give up reporting."
+      ]
+    },
+    {
+      "heading": "The in-app disclosure option, and why reports sometimes fail",
+      "paragraphs": [
+        "Vinted's listing flow now carries an AI disclosure control. A member in r/vintedUK posted the explanatory text that appears behind its \"when to use this?\" link: \"If you used AI tools to create or manipulate images, we recommend indicating that your listing includes AI-generated images to be transparent with buyers. This won't affect your listing's visibility. Your listing must still show the item's real condition.\"",
+        "That wording explains the frustration. It is a recommendation, not a prohibition, and it promises sellers their visibility won't suffer for disclosing. A seller who ticks the box and keeps a genuine photo of the actual item is broadly within the rules as Vinted describes them — and a report against that listing is likely to come back as no action taken. Members report that split: reporting works when the AI image stands in for the item, and goes nowhere when real photos sit alongside it.",
+        "Where a listing is reportable, the route is in Vinted's \"Report a member or listing\" help page: open the listing, tap the three-dot (or flag) symbol, choose Report, pick the reason, add details, Submit. Vinted's reportable list includes \"listings with intentionally misleading information — photos, price, condition, size, or similar\", and the in-app reasons include pictures that aren't real or were taken from the web. Members say one report per seller usually triggers a review of that seller's listings."
+      ]
+    },
+    {
+      "heading": "Reporting gets the listing looked at. It does not get your money back",
+      "paragraphs": [
+        "These are two separate processes and mixing them up is how buyers run out of time. A report goes to moderation and may end with the listing hidden or removed; Vinted's published penalties are that a listing needing amendments is made invisible with 24 hours to fix it, a prohibited listing is removed, and repeat breaches can lead to suspension or a block. None of that refunds an order you have paid for.",
+        "The refund runs through the order. Vinted's Refund Policy covers an order that is \"significantly not as described\", and the clock is short: 2 calendar days from the moment Vinted notifies you that the order should have been delivered to press \"I have an issue\" in the conversation with the seller. The same window appears on the \"seller shipped the wrong item\" page, which adds that once the order completes automatically, your money is released to the seller.",
+        "That deadline is the single biggest reason AI-photo complaints fail. Buyers scroll back to a listing days later, realise the cover image was generated, and find the order already completed — at which point the refund process is closed and what's left is between you and the seller."
+      ]
+    },
+    {
+      "heading": "How to build a claim that survives review",
+      "paragraphs": [
+        "Screenshot the listing before you do anything else, in full: the AI cover, the description, the size and condition fields, and any real photos further down the carousel. Sellers can edit or delete a listing, and a screenshot taken after the edit is worth much less.",
+        "Then photograph what arrived: the whole item flat, the label, the fabric close up, and specifically whatever the AI image got wrong — the length, the fit, the fade, the missing detail. Vinted's refund page asks for photos of the item and the issue plus the outer and inner packaging, and warns it cannot refund without them. Keep the packaging until the claim is resolved.",
+        "In the issue description, name the mismatch rather than the technology. \"The listing's main photo is an AI-generated image of this style of dress; the item received is a different cut, with different sleeve and skirt lengths, as shown in photos 1–4\" is a not-as-described claim. \"The seller used AI\" on its own is a moderation complaint, and moderation does not adjudicate your order.",
+        "One step worth trying first because it is fast: message the seller and ask for real photos of the actual item. In the thread that produced the clearest evidence of this problem, the seller simply added them — and the difference was the entire case."
+      ]
+    },
+    {
+      "heading": "What happens after you press \"I have an issue\"",
+      "paragraphs": [
+        "The order is suspended and your payment is held while the claim is open. On a single listing the seller can offer a full refund and let you keep the item, offer a partial refund, or require the item back; on a bundle the reported item normally has to go back. Say what outcome you want when you open the claim — the seller sees it and can agree directly.",
+        "If a return happens, buyers pay return shipping under Vinted's Terms, though a seller can choose to cover it with a Vinted-generated label. Items go back in the condition reported, with their tags and accessories, properly packed, within 5 business days of the seller requesting the return. A refund covers the item price, the Vinted fee, the original shipping, sales tax and any customs tax — minus return postage if you paid it.",
+        "If you cannot agree, the case goes to Vinted's support team, which reviews the details and decides. If the order completed before you noticed the AI image, the 2-day window has passed and the payout has been released."
+      ]
+    },
+    {
+      "heading": "If you sell: where the line sits",
+      "paragraphs": [
+        "The safe pattern is boring and it works. Your first photo is a real photo of the actual item, whole item in frame, taken by you. Any AI-assisted image — a model shot, a styled flat-lay, a cleaned-up background — goes later in the carousel, is disclosed with the toggle, and doesn't change the garment's shape, colour, length or condition. Background removal that leaves the item untouched is the version Vinted tolerates.",
+        "The unsafe pattern is the one generating all the threads: an AI cover as the first and often only image, with a real photo buried at the end, or no real photo at all. That is the setup that produces a not-as-described claim you will lose."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Are AI-generated photos allowed on Vinted?",
+      "answer": "Partly. Vinted told Newsquest in October 2026 that members are required to upload real photos, that using AI as a visual enhancement tool such as background removal \"is not prohibited in itself\", but that the photo \"must remain an accurate representation of the item\". Its Catalog Rules are stricter, saying photos must \"represent the item as it is - no image editing is allowed\" and must be taken by the seller. Using AI to misrepresent an item's condition — in a listing or in a dispute — is not allowed."
+    },
+    {
+      "question": "Can I get a refund if the seller used AI photos?",
+      "answer": "Yes, but only if the item is significantly not as described — not simply because AI was involved. If the AI cover showed a different cut, length, colour or condition from what arrived, open a claim by pressing \"I have an issue\" in the order chat within 2 calendar days of Vinted's delivery notification. Attach your own photos beside the AI image and describe the specific mismatch."
+    },
+    {
+      "question": "How do I report an AI photo listing on Vinted?",
+      "answer": "Open the listing, tap the three-dot symbol (or the flag on desktop), choose Report, select the reason — Vinted's own list includes listings with intentionally misleading information about photos, price, condition or size, and the in-app options include pictures that aren't real or were taken from the web — add details and press Submit. Reporting triggers a moderation review of the listing or seller; it does not refund an order, so do both if you have already bought."
+    },
+    {
+      "question": "The seller had real photos too, just not as the first picture. Is that not as described?",
+      "answer": "It's a weaker claim. Vinted's position is that an AI image is acceptable when the listing still shows the item's real condition, and members report that reports against listings with genuine photos in the carousel often come back as no action taken. Your claim gets much stronger if the AI image was the only picture, or if the real photos were added only after you asked and show something materially different from what you received."
+    },
+    {
+      "question": "How long do I have to report the item after it arrives?",
+      "answer": "2 calendar days. Vinted's Refund Policy and its \"seller shipped the wrong item\" page both state that the \"I have an issue\" button must be pressed within 2 days of the order updating to Delivered, otherwise the order completes automatically and the money is released to the seller. If your item arrived but the order never updated, use \"Mark as received\" in the tracking details first — then the 2-day window starts."
+    },
+    {
+      "question": "What if the order already completed before I noticed the AI photo?",
+      "answer": "Vinted's refund process is then closed, because the 2-day reporting window has passed and the payment has been released. Your remaining options are a direct agreement with the seller, or — where the listing genuinely misrepresented the item — contacting your card provider. Vinted's dispute-resolution page asks members to contact Vinted first and treat payment-provider disputes as a last resort."
+    }
+  ]
+}
