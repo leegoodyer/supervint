@@ -1,0 +1,88 @@
+{
+  "title": "Vinted SpeedX Tracking Not Updating After Drop-Off — Why It's Stuck and What to Do",
+  "intro": "If you dropped off a SpeedX parcel and the tracking still says \"label created\" or shows nothing at all, don't just wait. Vinted gives tracking 48 hours to appear after drop-off, and sellers have 5 business days to ship. If you tap \"I confirm that I've sent this order\" and tracking still hasn't appeared 4 business days later, Vinted cancels the order automatically and refunds the buyer — while the parcel is still sitting in a shop. Contact Vinted before that deadline and ask them to suspend the order.",
+  "meta_description": "SpeedX tracking stuck on \"label created\" after drop-off? Vinted's 48-hour and 4-business-day rules, the auto-cancel deadline, and what to send support before it hits.",
+  "date_published": "2026-11-06",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Tired of chasing parcels? Get alerted the moment genuine items are listed",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What SpeedX actually is",
+      "paragraphs": [
+        "SpeedX is one of the carriers Vinted uses for US orders. Vinted's help article on missing tracking details names it alongside USPS, and says that for international shipments using either carrier you should check the tracking page of their cross-border partner, Pro Carrier. It is a real Vinted shipping option, not a label someone sent you.",
+        "It runs as a last-mile network using third-party drop-off points — sellers describe handing parcels over at convenience stores, pharmacies, pizza shops and sometimes residential addresses. One was told by the shop owner that the SpeedX driver had not been in for a month.",
+        "The key point: a scan at the counter is not a scan inside SpeedX's network. Vinted only registers a parcel as shipped when SpeedX's own system reports it. If that never happens, Vinted has no way of knowing you did anything — and it starts counting."
+      ]
+    },
+    {
+      "heading": "The deadline you are actually racing",
+      "paragraphs": [
+        "Vinted's tracking article sets out a sequence most sellers discover only after it has gone wrong. Tracking should appear within 48 hours of drop-off. Sellers then have 5 business days to ship; if you cannot make that, you can request a 3 or 5 day extension from the conversation screen, but it only applies once the buyer accepts.",
+        "If 48 hours pass with no tracking, the article tells you to press \"I confirm that I've sent this order\". That button feels like a formality. It is not. Vinted then gives tracking 4 more business days, and states plainly that if it does not appear in that time, the order will be cancelled automatically.",
+        "That is the trap. The parcel is in a shop, you did what Vinted asked, and the sale cancels because a third party never scanned a barcode. Sellers describe exactly that ending — buyer refunded, item gone, no payment. The exit is to contact support before the deadline, when Vinted may temporarily suspend the order."
+      ]
+    },
+    {
+      "heading": "What to do in the first 48 hours",
+      "paragraphs": [
+        "Assume the scan will fail and build evidence at the counter. Ask for a receipt. If the location does not issue one — and sellers report that theirs did not — photograph the parcel on the counter with the label facing the camera, then photograph the shopfront. A timestamped photo inside that shop beats anything taken at home.",
+        "Save the tracking number from the label before handing anything over, and screenshot it. If the parcel disappears, that number is how you and Vinted chase it.",
+        "Message the buyer the same day with the tracking number and drop-off location. A buyer who can see a tracking number is less likely to open a claim in week one. Do not re-drop the parcel elsewhere — if you use a carrier other than the one the buyer chose, Vinted cancels and refunds."
+      ]
+    },
+    {
+      "heading": "The message to send Vinted before the deadline",
+      "paragraphs": [
+        "Vinted asks for photos of the package and its packaging with the shipping label clearly visible, plus proof of shipping such as a receipt or email confirmation. Add the rest of the timeline yourself, in one message, in one thread.",
+        "Include the drop-off address, the date and time you handed the parcel over, whether staff scanned it in front of you, the tracking number, and the exact deadline shown in your conversation screen. Then ask directly for the order to be suspended while they investigate.",
+        "Use the Help Centre contact form rather than replying to an automated email, and keep one ticket — a new one for each reply resets context. If the deadline is inside 48 hours, put that in the first line; Vinted's article tells sellers to reach out at that point specifically to avoid automatic cancellation."
+      ]
+    },
+    {
+      "heading": "If the order has already been cancelled",
+      "paragraphs": [
+        "The buyer is refunded and the sale closes. You are left without the item and without the money — the outcome sellers describe most often, with several saying Vinted told them they would not be compensated.",
+        "The route back is the lost-parcel route, not the cancellation route. Vinted's \"Package didn't arrive\" article says that if the carrier confirms the parcel was lost in transit, contact Vinted for next steps. Chase that written confirmation from SpeedX support and keep every reply.",
+        "If tracking later moves — even weeks later — screenshot it. A tracking event proves the parcel entered SpeedX's network, which undermines any suggestion you never shipped it. If Vinted closes the case without compensating you, escalate in writing: formal complaint, then their legal contact, then your card issuer or national consumer authority."
+      ]
+    },
+    {
+      "heading": "Turning SpeedX off — and why it keeps appearing",
+      "paragraphs": [
+        "You can remove SpeedX from your own checkout options: Profile, Settings, Postage, then under \"Shipping as a seller\" choose \"From your address\" or \"From a drop-off point\" and use the toggles.",
+        "Two limits catch people out. Some options cannot be disabled — Vinted keeps at least one available, and those toggles are greyed out. And a disabled option can still show if it is that buyer's only way to complete a purchase.",
+        "That has a consequence most sellers miss: if a disabled provider is your only option and you cannot ship with it, Vinted says you can cancel without receiving negative feedback. That is legitimate, but it has to happen before you ship and should be explained to the buyer.",
+        "Changes only apply to future orders, and a sold item's shipping option cannot be changed — only cancelled and repeated. Sellers also report toggles that refused to switch off once and worked later, so re-check."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "How long should SpeedX tracking take to update on Vinted?",
+      "answer": "Vinted says tracking should appear within 48 hours of drop-off. If it hasn't, press \"I confirm that I've sent this order\" and contact Vinted. Tracking then has 4 business days to appear before automatic cancellation. Sellers have 5 business days to ship, with a possible 3 or 5 day extension if the buyer accepts."
+    },
+    {
+      "question": "Will Vinted compensate me if my SpeedX parcel is lost?",
+      "answer": "You may be eligible, but it is not automatic. Vinted says a seller may be eligible for compensation if the package is lost, and its \"Package didn't arrive\" article says to contact them once the carrier confirms the loss in transit. Get that confirmation from SpeedX in writing — without it, Vinted treats the order as never shipped."
+    },
+    {
+      "question": "Can I turn SpeedX off completely?",
+      "answer": "Not always. You can disable it under Profile, Settings, Postage, then Shipping as a seller, but Vinted keeps some options permanently enabled so at least one is always available, and those toggles are greyed out. A disabled option may also still appear if it is the buyer's only way to complete the purchase."
+    },
+    {
+      "question": "My SpeedX tracking only updated when the parcel was delivered — is that normal?",
+      "answer": "Common enough that sellers describe it repeatedly. SpeedX uses third-party drop-off points and last-mile contractors, so scans are inconsistent and tracking can sit on an early status for the whole journey. That is why a photo of the parcel on the counter and a drop-off receipt matter more than tracking."
+    },
+    {
+      "question": "The order was cancelled but the buyer received the parcel. What now?",
+      "answer": "Tell Vinted in the same support thread and ask how they want to handle it — do not arrange a private repayment with the buyer. Vinted may reverse the refund or ask you to relist so the buyer can pay again. Keep the conversation on the platform so there is a record."
+    },
+    {
+      "question": "Should I cancel a SpeedX sale and ask the buyer to reorder with USPS?",
+      "answer": "Only as a last resort and with the buyer's agreement. Vinted says the shipping option on a sold item cannot be changed; the only way is to cancel and repeat the order. If a disabled provider was the buyer's only option and you genuinely cannot ship with it, Vinted says you can cancel without negative feedback."
+    }
+  ]
+}
