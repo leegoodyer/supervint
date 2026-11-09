@@ -1,0 +1,92 @@
+{
+  "title": "Vinted Payment Failed — Why You Can't Buy and What Actually Fixes It",
+  "intro": "\"Payment failed\" on Vinted almost never means your card is broken. Vinted's own help page lists three causes — a temporary technical issue, a problem with your payment method, or pending identity verification — and the one buyers miss is the third: if your account, or the seller's account, is waiting on verification, checkout can be paused no matter which card you use. That is why the same card works on one listing and fails on another, and why support keeps telling you it's your bank when your bank says it isn't.",
+  "meta_description": "Vinted payment failed and you can't buy? Why \"purchase unsuccessful\" hits only some sellers, the verification cause nobody mentions, and the fixes that work.",
+  "date_published": "2026-11-09",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Get alerted the moment genuine items are listed",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "The four messages that all mean the same thing",
+      "paragraphs": [
+        "Buyers describe the same wall in slightly different words. The most common is the plain one: \"Payment Failed — Sorry we couldn't process your payment. Payment error. Please try again. If the problem reoccurs, contact us.\" Others get \"The purchase you are attempting requires additional verification\", or a checkout that ends in \"purchase unsuccessful\" after the bank app never asks them to approve anything. Some see \"Currently, you cannot purchase from this seller\", and some just find the Buy button missing with an amber banner saying there are problems with payments.",
+        "The thread that keeps repeating is not the message — it is the list of things people try before giving up. Over 24 hours, one buyer tried a different card, deleted and re-added every card, deleted and reinstalled the app, paid through the browser instead, and tried a second device. Every attempt failed. Another tried for four days. A third was still stuck a week later while continuing to sell normally on the same account, which is the detail that rules out a simple card problem.",
+        "What makes it worse is timing. These are people who have already found the thing they wanted. One described losing an item they had been searching for for years. Another watched their liked items — \"good price\" ones — sell to someone else while checkout refused to complete. If you buy on alerts, a payment failure is not an inconvenience, it is the whole opportunity gone."
+      ]
+    },
+    {
+      "heading": "Check your own verification status first",
+      "paragraphs": [
+        "Vinted's help article \"My payment has failed\" is unusually direct about this, and most buyers scroll past it. Alongside retrying later and using a different payment method, it says to \"check whether you need to complete identity or business verification. If verification is required, you will see a banner on the main page and in your Vinted Wallet. If the verification is in progress, some payments may be paused until it's completed.\"",
+        "So before you touch your card details, open the app and look at the main page and your Vinted Wallet. If there is a verification banner, that is your answer. Complete it and the checkout usually clears once it is approved. Buyers who spent days swapping cards describe exactly this: support repeatedly blamed the bank, while the actual block sat on their own account.",
+        "This is the same identity check that trips sellers at payout. If you have recently hit a withdrawal or payment threshold, been asked to confirm your name, date of birth or address, or had a document rejected, assume checkout is affected until that is resolved."
+      ]
+    },
+    {
+      "heading": "When it only fails on one seller's listing",
+      "paragraphs": [
+        "This is the pattern that produces the most confusion, because it proves the problem is not your card. Buyers report paying for one item without issue and then failing on a different listing minutes later, with the identical card and the identical account. Support tells them their card details are wrong; they are not.",
+        "The explanation that recurs in the threads is verification on the seller's side. In one case the buyer knew the seller personally, was certain they had not been blocked, and had tried every shipping option — then the seller was asked by Vinted to verify their account. The seller said they had been unable to sell to anyone while it was pending. Once they completed it, the buyer's payment went through immediately with no other change.",
+        "There is a second, more ordinary cause of the same symptom: the item is already being bought by someone else. Vinted's \"My payment is stuck\" page explains that while a payment is pending, \"the item is reserved for you\", and that it can take 30 minutes to 6 hours for the payment provider to respond. During that window the listing can still look available to everyone else and still refuse their payments. One buyer was told plainly in the replies that someone was already buying the item and the delayed payment meant they had lost it — the listing simply had not updated yet.",
+        "A third cause is compatibility rather than money: a shipping option that does not cover the route between you and that seller. If every payment method fails on one listing and the seller is in another country, ask them which delivery options they have enabled before assuming fraud on either side."
+      ]
+    },
+    {
+      "heading": "The fix order that wastes the least time",
+      "paragraphs": [
+        "Work down this list rather than randomly swapping cards, because each step rules out a different layer:",
+        "1. Check for a verification banner on the main page and in your Vinted Wallet. This is the only step that explains a failure across every card, device and browser.",
+        "2. Wait and retry with the app or browser window left open on a stable connection, as Vinted advises. If a payment is genuinely stuck, the item is held for you for up to 6 hours — retrying repeatedly does not speed it up.",
+        "3. Switch between the app and the browser. Vinted explicitly recommends trying the other one, and it does clear some failures. Clearing cache and cookies has fixed it for some buyers, though not reliably.",
+        "4. Try a different payment method — a different card, or Apple Pay or Google Pay if you have not used them. If every method fails, you are back to step 1 or a seller-side block.",
+        "5. Message the seller and ask whether their account is pending verification or whether they have restricted shipping. They can see things you cannot, and in the documented cases it was the seller who had to act.",
+        "6. Only then contact Vinted, and attach a screenshot of the exact error. Vinted's own guidance is to attach \"a screenshot of the error message, or the screen you see when trying to pay\". Without it you will get the generic bank reply."
+      ]
+    },
+    {
+      "heading": "The money that leaves your account when the payment \"fails\"",
+      "paragraphs": [
+        "This is the part that frightens people, and Vinted does document it. \"If your payment fails, the money may still be charged to or reserved on your payment account. If this happens, please allow up to 5 business days for the amount to be refunded. In rare cases, this can take up to 15 business days.\"",
+        "The refund page repeats it: if a payment fails, the money might still be taken or held as pending, but \"you will always be fully refunded\", and if you accidentally pay twice you get the second payment back. Refund timing depends on how you paid — hours for Vinted Wallet, up to 5 working days for a card, Apple Pay or Google Pay — and working days exclude weekends and public holidays.",
+        "So a failed checkout is not money lost, but it is money temporarily gone, which matters if you are trying to buy something else in the meantime. Do not pay a second time through a different route to \"fix\" it; you can end up with two pending charges and a longer wait. Take a screenshot of the failed attempt and the bank transaction, note the time, and keep both."
+      ]
+    },
+    {
+      "heading": "How to stop losing the item while you troubleshoot",
+      "paragraphs": [
+        "The hard truth from the threads is that some of these failures are not fixable from your side and resolve only when Vinted's system catches up. The buyers who kept the item were the ones who talked to the seller. Ask them to reserve it for you — sellers can do that — and explain that checkout is failing with a screenshot. Several buyers report exactly this working: the seller held the listing while the payment issue cleared, instead of selling it to the next person.",
+        "If the seller will not reserve, do not sit refreshing checkout for an hour. Vinted's payment page says a stuck payment can take up to 6 hours to resolve, so hammering the button mostly adds failed attempts to your account history. Try once more in a couple of hours, from the browser, and keep the listing saved.",
+        "And if the item is rare enough that losing it matters, treat the alert as the start rather than the finish. Have your payment method already saved and verified, keep your identity verification current before you need it, and message the seller within the first minute so a hold is possible. The buyers who lose out in these threads are almost always the ones who discovered the verification problem at the moment they tried to pay."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why does my Vinted payment fail on one item but work on another?",
+      "answer": "Because the block is usually attached to the account or the listing, not your card. Vinted pauses some payments while identity or business verification is pending, and that can apply to the seller rather than you — buyers report a listing that refused every payment method until the seller completed their verification. The other common cause is that someone else's payment is already pending on that item, which reserves it for up to 6 hours while the listing still looks available."
+    },
+    {
+      "question": "What does \"the purchase you are attempting requires additional verification\" mean?",
+      "answer": "It is Vinted asking you to complete an identity or business check before it will process the payment. Vinted's \"My payment has failed\" help page says that if verification is required you will see a banner on the main page and in your Vinted Wallet, and that while verification is in progress \"some payments may be paused until it's completed\". Complete the check and the payment normally goes through once it is approved."
+    },
+    {
+      "question": "Will I be charged if Vinted says the payment failed?",
+      "answer": "Possibly, temporarily. Vinted states that if a payment fails the money may still be charged to or reserved on your payment account, and that you should allow up to 5 business days for the refund — up to 15 business days in rare cases. Vinted also says you will always be fully refunded, and that a duplicate payment is returned automatically. Working days exclude weekends and public holidays."
+    },
+    {
+      "question": "How long does a stuck Vinted payment take to resolve?",
+      "answer": "Vinted's \"My payment is stuck\" page says it can take 30 minutes to 6 hours for the payment provider to respond, and that you should contact Vinted if it has been stuck for longer than 6 hours. While it is pending the item is reserved for you, so it should not be sold to someone else during that window even though the listing may still appear available."
+    },
+    {
+      "question": "What should I send Vinted support so they don't just blame my bank?",
+      "answer": "A screenshot of the exact error message or the screen you see when trying to pay — Vinted's own help page asks for that — plus the listing, the time of the attempt, the payment methods you tried, and confirmation that your bank has checked the card and found no block. Buyers who sent only \"payment failed\" describe getting the same generic bank reply repeatedly."
+    },
+    {
+      "question": "Why can't I purchase from this seller?",
+      "answer": "The most commonly reported reason is that the seller's account is pending verification, which can stop them receiving any payments until it is completed. It can also be a shipping incompatibility if the seller is in another country and no delivery option covers the route, or the item already being held by another buyer's pending payment. Messaging the seller usually identifies which one it is."
+    }
+  ]
+}
