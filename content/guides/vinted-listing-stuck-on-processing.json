@@ -1,0 +1,95 @@
+{
+  "title": "Vinted Listing Stuck on “Processing” and Getting Zero Views? Here’s What’s Actually Happening",
+  "intro": "If your Vinted listing is stuck on “Processing” and picking up zero views, the cause is almost always Vinted’s publishing queue — not your phone, your photos or a shadowban. A listing that hasn’t finished processing isn’t in the search index or the feed yet, so nobody else can see it: not people searching the brand filtered to newest, not your saved-search followers, and not even someone who opens your profile from a direct link. Until it clears, the item sits at 0 views and 0 favourites while looking perfectly normal on your own screen. Sellers hit this in bursts, often on the same day across several countries, and the pattern repeats every few weeks. This guide covers how to tell a queue delay from a real restriction, what makes it worse, and what to do while you wait.",
+  "meta_description": "Vinted listing stuck on “Processing” with zero views? Why your item is invisible to everyone else, how long it lasts, what makes it worse, and how to get Vinted to look at it.",
+  "date_published": "2026-11-11",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Stop guessing which listings are actually being seen",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "Processing is a queue, not a review — and that’s the whole confusion",
+      "paragraphs": [
+        "Vinted uses one word for two different situations, which is why sellers end up guessing. “Processing” is the normal publish step: your photos, title and details are being turned into a live listing. “Checking” is a moderation hold: the item has been pulled for review before it can go live. A seller describing the difference in one thread had a black “Checking” banner sit on a cheap sports-brand top for two full days, with the listing impossible to edit or delete the whole time; a later item showed “Processing” instead, and the banner’s own help text said it could take “up to one minute”.",
+        "Normal processing is fast. Sellers consistently describe one to two minutes between posting and the item being visible. When that stretches to twenty minutes, an hour, or several hours, you’re looking at a queue problem on Vinted’s side rather than anything you did. Tapping the banner tells you nothing useful, which is exactly why people start suspecting their account has been quietly restricted.",
+        "The reliable tell is what other people can see. During a queue delay the listing exists in your profile but isn’t published to the index: it doesn’t appear when someone else opens your account, doesn’t come up when they search the brand and sort by newest, and doesn’t show in saved searches. Sellers describe sending their profile link to a friend and the new items simply not being there — while on their own phone everything looks live and normal."
+      ]
+    },
+    {
+      "heading": "How to check in five minutes whether it’s you or the site",
+      "paragraphs": [
+        "Start with the feed, not your listing. Sort a busy category by newest first. If the results stop at items uploaded one to three hours ago no matter how far you scroll, and the home feed won’t refresh, that’s the platform. Sellers reporting the same problem on the same day described exactly this: search frozen at three hours old, saved searches returning nothing new, and the app jumping back to the top of the page when they hit save.",
+        "Second, ask someone else to look. Send your profile link and have them open it in a browser rather than the app. If your new items are missing on their screen but present on yours, you’re in the queue — the listing data exists, it just hasn’t been pushed out.",
+        "Third, read the state of the item itself. “Processing” means wait. “Checking”, or an inbox message about a review, means moderation — the fix is different and covered further down. And if the listing is visible to others but views are merely low rather than flat zero, that’s ordinary reach and freshness, not this issue."
+      ]
+    },
+    {
+      "heading": "Why it goes live and still shows zero views",
+      "paragraphs": [
+        "Two things happen after a long queue. First, a listing that clears during an incident often lands with its launch exposure already spent: the new-listing slot, the initial feed push and the follower notifications fire while the item still isn’t visible, so it arrives with nothing behind it. That’s why sellers report a batch where one item picked up normal traffic while the rest sat on zero, even though all of them were photographed and priced the same way.",
+        "Second, the profile and the search index don’t always recover at the same speed. The item appears on your profile but is missing from brand searches for a while. That gap is what makes people conclude they’ve been shadowbanned — in one thread a seller described messaging support convinced her entire account was gone, when dozens of other people were reporting the same thing that day.",
+        "There is no setting that forces an item into the index. Editing it usually pushes it back to the end of the same queue, so the practical move is to leave it alone and let it land rather than fiddling with it every hour."
+      ]
+    },
+    {
+      "heading": "What makes it worse",
+      "paragraphs": [
+        "Don’t delete and immediately re-upload. Sellers describe doing exactly this in a loop during an incident and ending up with duplicates of the same item once the originals finally published — which then looks like spam and can bring a restriction on top. If you want to relist, wait until the original has visibly been live and indexed for a day or two, delete first, then upload once.",
+        "Don’t bulk-edit prices while the queue is stuck. In several groups, sellers reported knocking prices down across hundreds of listings and every edited item dropping straight back into “processing” and disappearing. Edits go through the same publish pipeline as new listings, so a bulk edit during an incident can take your whole shop offline at once instead of one item.",
+        "Don’t keep reinstalling. Deleting the app, logging out and back in, clearing cache and switching between Wi-Fi and mobile data are the standard first moves, and none of them touch a server-side queue. Nobody in these threads reported a reinstall fixing an item that was genuinely stuck; they reported it clearing on its own hours later. Do the cheap fixes once, then stop."
+      ]
+    },
+    {
+      "heading": "When it isn’t a glitch: the three real restrictions",
+      "paragraphs": [
+        "A temporary uploading restriction looks similar from the inside but has a different signature: you get a message, and nothing publishes at all, rather than one item hanging. Sellers report restrictions landing in the middle of a stuck queue, which makes the two very easy to confuse. If you have a notice in your inbox, work from that notice — it names the restriction and its length.",
+        "New accounts and bursts get throttled. Listing a large batch quickly, especially with recognisable brand names, is a known trigger for a short upload block. If you’ve just pushed twenty items in an hour, treat the delay as a rate limit and slow down rather than re-uploading.",
+        "Branded and designer items can route to review before publishing, which is the “Checking” state rather than a queue. That clears on its own once the check finishes, and the listing can’t be edited while it sits there — so editing attempts just waste time."
+      ]
+    },
+    {
+      "heading": "How to get a human at Vinted to look at it",
+      "paragraphs": [
+        "The contact form only routes you to the right team if you arrive at the end of a help article. Open the Help Centre, pick the closest article — anything about listing or uploading — scroll to the bottom, and use the “Contact us” button there. On the web the same entry point is vinted.com/help/615, where the contact button sits at the end of the page.",
+        "Make the message unarguable. Include the listing titles, the dates and times you posted, the exact wording of the state you’re seeing, and — most useful — a screenshot from a different account showing the items missing from your profile. Support can’t see your screen, and that second-account screenshot is the only evidence that separates “stuck” from “never uploaded”.",
+        "Then stop. Repeated tickets about the same listing get merged or answered with a template, and support can’t push an item through the publishing queue. If the reply is “wait 24 hours”, that isn’t a brush-off — for a queue backlog it is the actual remediation, and it’s what the threads bear out."
+      ]
+    },
+    {
+      "heading": "What to do with the time",
+      "paragraphs": [
+        "Work on the next batch instead of the stuck one: better main photos, measurements, titles using the words buyers actually search. Don’t send offers on listings that aren’t visible yet — the offer lands on an item the buyer can’t open, and it reads as broken rather than tempting.",
+        "If an order comes in while all this is happening, handle it normally: ship inside your window, upload the tracking, and don’t cancel because the app is behaving oddly. A publishing delay affects visibility, not the order flow.",
+        "And if a listing finally clears and still sits on a flat zero after 48 hours, that one item is worth a single clean relist rather than endless edits. Relisting once with better photos is the only reset that reliably works; refreshing the same dead listing is not."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is my Vinted account shadowbanned if my new listings get zero views?",
+      "answer": "Almost certainly not. A shadowban would hit everything at once, including old listings that were getting traffic yesterday. The queue-delay signature is the opposite: older listings keep performing, and only the items posted during the incident are invisible. Prove it by opening your profile from a different account — if the new items aren’t there for them either, it’s the platform, not a penalty on you."
+    },
+    {
+      "question": "How long does “Processing” normally last on Vinted?",
+      "answer": "One to two minutes for a normal listing. During an incident, sellers report anything from twenty minutes to several hours, with some items only appearing the next day. A “Checking” state is different and can run for days — one seller described two full days during which the item couldn’t be edited or deleted."
+    },
+    {
+      "question": "Does deleting and re-uploading fix a listing stuck on Processing?",
+      "answer": "No. Re-uploading puts you at the back of the same queue and risks duplicates of the original once it publishes, which looks like spam and can trigger a restriction. Wait for the original to clear, and only relist if it’s still dead after 48 hours live."
+    },
+    {
+      "question": "Why did my listings get stuck right after I dropped the prices?",
+      "answer": "Because edits go through the same publish pipeline as new listings. Sellers who bulk-edited prices during an incident watched every edited item return to “processing” and drop out of their profile at once. If the queue is already struggling, hold the bulk edits until new listings are publishing normally again."
+    },
+    {
+      "question": "Can buyers still see my other listings while this is happening?",
+      "answer": "Usually yes — items published before the incident stay visible and searchable. What disappears is anything posted or edited during it. Check from another account rather than your own, because your app will show you your own listings regardless of whether they’re indexed."
+    },
+    {
+      "question": "What exactly should I say to Vinted support about a stuck listing?",
+      "answer": "Listing titles, the date and time you posted each one, the exact wording of the state the app shows, and a screenshot taken from a second account showing the items missing from your profile. Send it through the “Contact us” button at the end of a Help Centre article, or vinted.com/help/615 on the web. Then wait — repeated tickets about the same item get merged."
+    }
+  ]
+}
