@@ -1,0 +1,97 @@
+{
+  "title": "Vinted Withdrawal Not Showing in My Bank Account — Why the Money Left But Never Arrived",
+  "intro": "Because Vinted's rule is that a withdrawal can take up to 5 business days to reach your bank, and that clock runs Monday to Friday only, excluding weekends and bank holidays — so a Friday evening withdrawal can legitimately not appear until the following Friday. If more than 5 business days have passed, the usual causes are: your bank is showing the payment under a different name (Vinted Pay, Adyen, Mangopay or Leetchi rather than \"Vinted\"), a name mismatch blocked it, or the payment provider is holding it and Vinted has to trace it manually.",
+  "meta_description": "Vinted balance went down but no money in your bank? Why withdrawals take up to 5 business days, the hidden payment names to search for, and what to attach when Vinted asks for proof.",
+  "date_published": "2026-11-16",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Stop wasting time on listings that never arrive — get alerted the moment genuine items are posted",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What actually happens when you press \"Withdraw to bank account\"",
+      "paragraphs": [
+        "The money doesn't go from Vinted straight to your bank. It goes to Vinted's payment service provider, then from that provider to your bank. Vinted's \"Money withdrawal issues\" page confirms the timeline: up to 5 business days, Monday to Friday, excluding weekends and bank holidays.",
+        "That layered route is why the money can look like it vanished. Your balance drops the moment you confirm, so Vinted's side looks settled; your bank has nothing because the payment is still with the provider. The in-app status isn't live either — people in the threads describe the money landing before the status updated, so the order still looked stuck after the cash arrived.",
+        "Don't confuse this with \"Pending balance\". Pending means the order isn't completed and the money can't be withdrawn at all — Vinted's page on pending balance says funds become available once the order completes, then within 2 days.",
+        "To see where yours is, open Vinted Balance, then History, and pick the year. Vinted says that screen lists each withdrawal with the amount, the date and time it started, the partially hidden destination account, and the date the payment arrived or is expected to arrive. That expected date is the most useful thing on the screen, because it's calculated from the withdrawal date rather than from when you started worrying."
+      ]
+    },
+    {
+      "heading": "Why this hits so many people in the same week",
+      "paragraphs": [
+        "Withdrawals normally land in minutes, which is what sets expectations — the threads are full of \"always comes in around 1-5 mins\". Then one day it doesn't, and the same question gets posted repeatedly within days of each other: \"withdrawal delays?\", \"vinted balance not transferring to bank account\", \"withdrawal taking longer than usual\". Under each one, a row of replies says the same thing — same here, still waiting.",
+        "The delays cluster because they aren't account-specific. When the payment provider has a bad stretch, a batch is affected, which is why several unrelated sellers post in the same week and then it goes quiet. One poster was told there was a problem with the payment provider and the money would come once it was fixed.",
+        "The other version is a permanent block rather than a delay, and it reads differently. The withdrawal fails outright, sits processing indefinitely, or support keeps demanding identity verification. People describe re-verifying ID repeatedly and trying several bank accounts without success. That isn't a queue problem — it's a mismatch between the name on your Vinted Balance and the name on your bank account, and it needs a different fix."
+      ]
+    },
+    {
+      "heading": "Three checks before you contact anyone",
+      "paragraphs": [
+        "Search your statement for the right name. Vinted states the payment may not appear as \"Vinted\" at all — it can show as \"Vinted Pay\", \"Adyen\", \"Mangopay\" or \"Leetchi\". People have spent days convinced money was gone when it sat in their account under a name they didn't recognise. Search the exact amount rather than the merchant name.",
+        "Count business days, not days. Five business days from a Friday afternoon withdrawal can land the following Friday, and bank holidays don't count. This is the most common reason a \"missing\" withdrawal is on time.",
+        "Check whether it failed rather than delayed. Vinted lists the reasons: below the £0.10 minimum, bank details not matching your Vinted Balance, an account number that isn't exactly 8 digits, a sort code that isn't exactly 6 digits, an account blocked by the provider, or an account already linked to another Vinted profile. That last one catches people sharing a bank account with a partner who also sells — Vinted says using the same withdrawal details across multiple accounts causes withdrawals to fail."
+      ]
+    },
+    {
+      "heading": "What to attach when you contact Vinted",
+      "paragraphs": [
+        "Vinted has a dedicated page for this. \"Money withdrawal issues\" says that if the payment hasn't arrived after 5 business days, log in, press \"Contact us\" at the end of that page, state when the withdrawal started, and attach screenshots of your bank statement covering the withdrawal start date to today.",
+        "The statement requirements are where cases go wrong. Vinted asks for your full name matching your Vinted Balance, your account number, your bank's address and code, and the date of the statement. It says you can hide unrelated details and amounts for privacy — so you don't need to hand over everything, just a legible document proving the money isn't there.",
+        "Do it even if it feels pointless. Without a statement dated after the 5 business days, support can only tell you to wait. With it, the case becomes a trace request — and those are the ones escalated to the payment provider. Send it once, in one thread; people who open a fresh ticket daily describe getting the same automated reply."
+      ]
+    },
+    {
+      "heading": "When support asks for something your bank won't provide",
+      "paragraphs": [
+        "This is the specific wall people hit. Escalated missing-withdrawal cases commonly generate a request for a letter from your bank confirming the funds never arrived. Branch banks can sometimes produce one. Digital banks often won't, and say a statement plus an account confirmation letter is the most they issue.",
+        "One poster describes the loop precisely: they supplied a statement, were given a transaction reference and told to contact their bank, the bank said the reference was internal and untraceable, and when that was relayed back Vinted asked for a signed bank letter the digital bank wouldn't write.",
+        "Break the loop in writing instead of repeating yourself. Reply once, in the existing thread: the statement is attached and dated after the 5 business days; the bank has confirmed in writing it cannot issue a signed letter, and here is that confirmation; please treat both as the evidence and escalate for a trace. Attaching the bank's refusal converts \"customer hasn't supplied document\" into \"document not obtainable\" — a different queue.",
+        "If that fails, Vinted's \"Contacts for dispute resolution\" page lists legal@vinted.com for legal or regulatory issues the normal form can't handle. It's a real published address, not a fast lane — people describe long waits and template replies — but for money that has genuinely disappeared it is the documented escalation, and it's where saying you're considering further action stops being an empty threat."
+      ]
+    },
+    {
+      "heading": "What applies pressure, in order",
+      "paragraphs": [
+        "Start with the trace request and the statement, because that's the only route that ends with the provider looking for the money. Then escalate once, with a dated chronology: withdrawal date, the date 5 business days expired, the date you first contacted support, and every date they asked for something new. A timeline is harder to answer with a template than frustration.",
+        "For UK sums worth pursuing, a letter before action and small claims are the standard next step. Outside the UK, consumer bodies are the lever: one commenter describes contacting their national European Consumer Centre, which involved the equivalent body in Lithuania, and reports the money arriving within about 10 days. Vinted is established in Lithuania, which is why that authority keeps coming up. It costs nothing and creates an external reference Vinted's legal team has to answer.",
+        "Most of these cases resolve — late, under a different name, or blocked by a mismatch. The difference between the ones that resolve and the ones that drag is a dated statement and a single thread, rather than repeated messages that reset the clock."
+      ]
+    },
+    {
+      "heading": "How to make the next withdrawal boring",
+      "paragraphs": [
+        "Withdraw more often, in smaller amounts. The people hit hardest let a balance build for months then moved several hundred pounds in one go, which concentrates both the loss and the wait. Weekly withdrawals turn a delay into an inconvenience.",
+        "Keep the name identical. Vinted's page states the name on your Vinted Balance must match the bank account, and if your provider is Vinted Pay a mismatch can block the withdrawal outright. Fix name differences before you need the money, not during a trace.",
+        "Screenshot the History screen the day you withdraw. Vinted's tracking isn't live, so your own record of the start date, expected arrival date and last four digits of the destination account is often the only clean evidence you'll have if a case gets reopened."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "How long should a Vinted withdrawal take to reach my bank?",
+      "answer": "Up to 5 business days, per Vinted's \"Money withdrawal issues\" and \"Withdraw your earnings\" pages. Business days are Monday to Friday and exclude weekends and bank holidays, so a Friday evening withdrawal can take until the following Friday. Most arrive far faster, which is why a delay feels alarming."
+    },
+    {
+      "question": "My Vinted balance went down but there's no money in my bank — where is it?",
+      "answer": "Most likely with Vinted's payment provider, in transit to your bank. Search your statement for \"Vinted Pay\", \"Adyen\", \"Mangopay\" or \"Leetchi\" rather than \"Vinted\", using the exact amount. Then check Vinted Balance > History, which shows the expected arrival date for that withdrawal."
+    },
+    {
+      "question": "Vinted asked for a bank statement — what does it need to show?",
+      "answer": "Your full name matching your Vinted Balance, your account number, your bank's address and code, and the date of the statement, covering the withdrawal start date to today. Vinted says you can hide unrelated details and amounts, so a redacted statement is fine."
+    },
+    {
+      "question": "Can I cancel a withdrawal once I've started it?",
+      "answer": "No. Vinted states withdrawals can't be cancelled once started. If the details were wrong, the payment should bounce back to your Vinted Balance — within 14 calendar days for a closed or non-existent account, or up to 15 business days if the account wasn't yours. Once it's back, correct the details and withdraw again."
+    },
+    {
+      "question": "Why does my withdrawal keep failing instead of just being late?",
+      "answer": "Vinted lists the reasons: amount below £0.10, bank details not matching your Vinted Balance, an account number that isn't exactly 8 digits, a sort code that isn't exactly 6 digits, an account blocked by the payment provider, or an account already linked to another Vinted profile. Confirmation of Payee name checks can also block a payment where names differ."
+    },
+    {
+      "question": "Vinted closed my case and the money is still missing — what next?",
+      "answer": "Reply in the same thread with a dated chronology and the bank's written refusal to provide the letter Vinted requested, then escalate to legal@vinted.com, which Vinted lists on its \"Contacts for dispute resolution\" page for legal or regulatory issues. For UK sums worth pursuing, a letter before action and small claims come next; outside the UK, a national European Consumer Centre can raise it with the Lithuanian authority."
+    }
+  ]
+}
