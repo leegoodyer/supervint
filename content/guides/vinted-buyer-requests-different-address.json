@@ -1,0 +1,103 @@
+{
+  "title": "Vinted Buyer Asked Me to Send to a Different Address — Is It a Scam?",
+  "intro": "No — you cannot change the delivery address on an order that has already been paid for, and you should not post the parcel anywhere other than the address on the label Vinted generated. The buyer has to cancel, update their address in their own settings, and buy the item again. A request to redirect a parcel after payment is one of the most commonly described scam setups in Vinted selling communities: once a parcel goes somewhere other than the order address, the delivery scan no longer proves anything about that order — and the seller holds the loss.",
+  "meta_description": "A Vinted buyer asking you to post to a different address after paying is a classic scam setup — why the label can't be changed and what to do.",
+  "date_published": "2026-11-18",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Never miss the listings worth buying",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "Can a buyer change the delivery address after paying on Vinted?",
+      "paragraphs": [
+        "No. Once an order is placed, the label is generated from the address the buyer had saved at checkout, and there is no seller-side button that rewrites it. Vinted's help page on changing your shipping address is explicit that changes only apply going forward: they are saved for future orders and do not affect any ongoing ones.",
+        "Its page on a wrong delivery address sets out the only supported route before shipping: the buyer tells the seller, the buyer cancels the order, the buyer corrects their address in postage settings, and then rebuys once the seller has re-uploaded the item. There is no version where the seller buys a separate label or writes a new address on the parcel."
+      ]
+    },
+    {
+      "heading": "Why sellers immediately suspect a scam",
+      "paragraphs": [
+        "The pattern in r/vinted threads is consistent: the buyer pays, then messages asking for the parcel to go to a different address — a work address, a friend's house, a \"new place\" — often with some urgency. Sellers who ask about it are told the same thing: it is a known setup, because if you post to an address that is not on the order, the buyer can later report that the item never arrived, and the tracking you relied on does not match.",
+        "In one long-running thread, a seller whose buyer had hundreds of positive reviews still refused to redirect a pair of shoes, and the replies were unanimous that sending to the second address was the one thing not to do. Another spells out the mechanics from the buyer's side: with a redirection, the buyer can say the tracking does not match the address they originally ordered to, and be refunded. A recent reseller thread gives the same answer in one line — Vinted creates the label, so the address is not the seller's to change, and posting outside it means the tracking will not update.",
+        "The loss is asymmetric: a \"not received\" report can suspend the order and hold the payment while you argue about a parcel delivered somewhere Vinted never asked you to send it."
+      ]
+    },
+    {
+      "heading": "Not every address request is a scam",
+      "paragraphs": [
+        "Genuine mistakes happen, and treating every message as fraud makes selling exhausting. Check three things first.",
+        "The label itself. Vinted's help page notes a label can legitimately show a different address or country for international orders forwarded for delivery, and for orders bought with Item Verification or Electronics Verification, which go to a verification hub first. If the order is one of those, that is expected behaviour, not tampering.",
+        "Timing. A question about collection or a different address before buying is a conversation you can simply decline. A request that only appears after the money is committed matches the scam pattern.",
+        "Willingness to cancel and rebuy. Someone who genuinely moved or mistyped a house number will accept the official route because it costs them nothing. Someone who refuses a cancellation and insists the parcel goes to the new address is telling you what they need: a delivery that does not match the order."
+      ]
+    },
+    {
+      "heading": "What to reply — and three things never to do",
+      "paragraphs": [
+        "Keep it short, keep it in the Vinted chat, and make the official route the only option you offer: \"I can only post to the address on the label Vinted generated for this order — I can't change it my side. If the address is wrong, cancel the order, update your address in Settings → Postage, and rebuy once I've re-uploaded the item. Happy to hold it for you.\"",
+        "Never buy a label yourself to send to the new address. The parcel then leaves Vinted's tracked flow entirely, so there is no delivery confirmation tied to the order and nothing to fall back on.",
+        "Never write over the label, hand-write a replacement, or ask the courier to redirect. A label that does not match the order creates exactly the ambiguity the request was designed to create.",
+        "Never move to WhatsApp, text, email, PayPal or a bank transfer to \"sort out the difference\". Vinted's chat is your evidence, and the moment the agreement lives elsewhere you are relying on a channel Vinted cannot verify."
+      ]
+    },
+    {
+      "heading": "The cancel-and-rebuy route, step by step",
+      "paragraphs": [
+        "Both sides can cancel before an order is shipped, and Vinted asks both to inform each other first to avoid automatic negative feedback. Open the conversation, press the information symbol in the top-right corner, choose Cancel order and pick the reason that fits.",
+        "Then the buyer corrects their address in postage settings, you press Re-upload item in the conversation to relist it, and the buyer purchases again. Refunds after cancellation typically land within a few hours to five business days, depending on the payment method.",
+        "Only one home address can be saved per profile, so a buyer wanting a work address has to change it rather than ask you to remember a second. And if the buyer goes quiet after requesting a redirect, do not ship to either address and hope — let the shipping deadline pass or cancel."
+      ]
+    },
+    {
+      "heading": "If you already posted it to the address they gave you",
+      "paragraphs": [
+        "You are not out of options, but this becomes an evidence fight rather than a policy one. Gather the message where the buyer asked for the different address, the label you used, the tracking showing where it went, and any proof of delivery — Vinted's guidance notes proof of delivery may show who received the parcel, and carriers usually publish it on their site or send it by email.",
+        "Report through the order rather than in the abstract. If the buyer has opened a claim, answer inside it with that evidence instead of starting a parallel thread; if not, raise the issue yourself from the order so the case is attached to the transaction. If automated replies stall, escalate through Vinted's contact page, and if a real decision goes against you, its dispute-resolution page lists the legal contact route for issues the standard form cannot resolve.",
+        "Expect the argument to turn on one question: was the parcel delivered to the address on the order? If not, don't pretend otherwise — say the buyer requested the change in writing and you followed it in good faith. Some sellers report recovering the money this way; others are told the delivery did not match the order and lose the case. Which one you get tends to depend on how clearly the request is documented."
+      ]
+    },
+    {
+      "heading": "If you're the buyer who gave the wrong address",
+      "paragraphs": [
+        "Do not ask the seller to redirect it. That puts them in the position above and does not fix your order. If it has not shipped, cancel, correct the address in postage settings, and rebuy once the seller re-uploads the item — Vinted's wrong-address page is built around that sequence.",
+        "If it has been sent, press Track parcel. If it went to a different or remote pick-up point, try to collect there; carriers hold parcels for varying periods, sometimes as briefly as two calendar days. A parcel can sometimes be rerouted while still in transit, and the help page says to use Contact us if you cannot collect from the indicated location.",
+        "If tracking says delivered and you cannot find it, report from the order within two days of that status, using I have an issue and giving the correct address plus photos of the parcel and label if you have them. Vinted explains that parcels delivered to the wrong address are often returned to the carrier by the recipient, and once the return is confirmed the order is cancelled and the refund process begins within 14 business days — with the parcel itself potentially taking up to 25 business days to reach the seller. If no refund has arrived after 25 business days, contact Vinted rather than assuming the case is closed."
+      ]
+    },
+    {
+      "heading": "One more variant: when the label itself is wrong",
+      "paragraphs": [
+        "A related complaint appears alongside the address request: the label shows a different town, or a different name and house number, though the buyer never asked for a change. Some buyers report refunds after sending Vinted a screenshot of tracking showing delivery was nowhere near their address; others describe labels that appear edited before printing.",
+        "Before assuming tampering, rule out Vinted's two legitimate explanations — international forwarding and verification-hub orders — and check whether the seller recently sent another parcel to a similar address, since community reports also describe Vinted reusing a label from a previous order. If neither applies, screenshot the order address, the delivery location and the label, and report inside the order within the two-day window. That comparison is what buyers in these threads say actually moved their refund along after automated replies told them to check with neighbours."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can a buyer change the delivery address after buying on Vinted?",
+      "answer": "Not on an order that has already been paid for. Vinted generates the label from the address saved at checkout, and the help centre states that updating your address only affects future orders. The supported fix is to cancel, correct the address in postage settings, and buy the item again after the seller re-uploads it."
+    },
+    {
+      "question": "Is it a scam if a Vinted buyer asks me to send to a different address?",
+      "answer": "It matches a scam pattern sellers describe repeatedly, because a parcel sent to an address that is not on the order produces a delivery scan that does not prove delivery for that order — and the buyer can then report it as not received. It is not proof of fraud on its own: genuine typos and moves happen. The safe test is whether the buyer will cancel and rebuy with the corrected address."
+    },
+    {
+      "question": "What happens if I post to a different address than the label?",
+      "answer": "You lose the link between the delivery confirmation and the order. Sellers who have done it report the buyer claiming non-receipt and Vinted refunding them, leaving the seller without the item or the money. Buying your own label to redirect a parcel does not create a tracked delivery for that order either."
+    },
+    {
+      "question": "Can I just write the new address on the parcel or cover the label?",
+      "answer": "No. A label that does not match the order is exactly the ambiguity the request creates, and it gives you nothing to show Vinted if a claim is opened. Only post with the label Vinted generated for that order."
+    },
+    {
+      "question": "How do I cancel without getting automatic negative feedback?",
+      "answer": "Vinted asks both members to inform each other before cancelling to avoid automatic negative feedback. Agree the cancellation in the chat, then open the conversation, press the information symbol in the top-right corner and choose Cancel order. Afterwards you can press Re-upload item to relist it for the buyer."
+    },
+    {
+      "question": "I already sent it to the address they asked for — can I still get my money?",
+      "answer": "Possibly, but it becomes an evidence case rather than a policy one. Keep the message where the buyer requested the change, the label you used, the tracking and any proof of delivery, answer inside the order claim rather than in a separate thread, and escalate through Vinted's contact route if automated replies stall. Outcomes vary in the threads: some sellers recover the money, others are told the delivery did not match the order."
+    }
+  ]
+}
