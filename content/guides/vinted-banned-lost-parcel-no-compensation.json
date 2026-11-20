@@ -1,0 +1,98 @@
+{
+  "title": "Vinted Banned My Account After a Lost Parcel — and Now Won't Pay Compensation",
+  "intro": "Vinted's published compensation policy does not say a ban cancels a lost-parcel claim: it says sellers can be compensated up to £500 when a parcel sent with a Vinted-generated label is confirmed lost, and it contains no account-status condition. Yet the same story keeps appearing across r/vinted, r/vintedUK and the big Facebook groups: the parcel goes missing, the claim is opened, the account is banned while it is pending, the buyer is refunded — and the seller is told compensation cannot be paid because the account is banned. The refusal is not always final: sellers who were paid describe a written appeal, the claim treated separately from the ban, and escalation to Vinted's legal contact.",
+  "meta_description": "Vinted banned your account while a lost-parcel claim was open and now refuses compensation? What Vinted's own policy says, why the two get tangled, and the escalation steps that have worked.",
+  "date_published": "2026-11-20",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Get alerted the moment genuine listings appear — and stop gambling on parcels you can't afford to lose",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "The pattern people keep describing",
+      "paragraphs": [
+        "The versions differ in detail but not in shape. A seller posts an item, the carrier loses it, the seller waits out Vinted's lost-parcel process, and somewhere in that wait the account is blocked. Then the claim is refused on the grounds of the block.",
+        "Recent examples from the Vinted communities: one seller had two Evri parcels lost after posting in September, waited the 25 days, and was banned the night they uploaded a Primark top — then told compensation would not be paid because the account was banned. Another had three parcels lost in transit that were posted before the block; all three buyers were compensated, the seller was not, and they were left without the items or the money. A third lost a device worth several hundred pounds, was permanently banned for allegedly selling counterfeits while the claim was pending, and was told the ban meant no compensation. A fourth was blocked for \"commercial selling\" over a single jacket, later unblocked, and only received the lost-parcel compensation after instructing Vinted's legal team.",
+        "Buyers hit the same wall from the other side. One buyer's DPD parcel was confirmed lost, they requested a refund, and their account was banned immediately for \"fraudulent activity\" while the funds were released to the seller. Another was refunded after an InPost label mix-up and permanently banned in the same message. What makes it sting is how ordinary the trigger is: people describe bans landing after listing a cheap high-street top or simply asking for a refund they were entitled to."
+      ]
+    },
+    {
+      "heading": "Why a ban and a lost-parcel claim collide",
+      "paragraphs": [
+        "Vinted's lost-parcel process is slow by design. Its help page says to wait up to 25 business days from dispatch if tracking is stuck, and its compensation page warns that investigating a lost parcel \"can take several weeks\". That is a long window in which a separate, automated moderation decision can land.",
+        "When a ban lands mid-claim, two things happen at once. The order is typically cancelled, which refunds the buyer. And the seller's ability to pursue the claim through the normal order screen disappears, because the account is restricted. Users describe being told, in effect, that the claim cannot proceed because the account is banned — even where the ban reason has nothing to do with the parcel.",
+        "The asymmetry is what makes these threads so angry: in the Facebook post where three parcels went missing, all three buyers were made whole and the seller got nothing. From the seller's side that is the worst possible outcome — the item is gone, the buyer has their money back, and the only party still out of pocket is the one who did nothing wrong.",
+        "Several commenters also report a related trap: opening too many parcel issues or support tickets in a short space of time getting read as suspicious activity — which is how users explain bans that arrive right after they start chasing missing parcels."
+      ]
+    },
+    {
+      "heading": "What Vinted's own pages actually say",
+      "paragraphs": [
+        "The compensation page for sellers using integrated labels sets the terms: with a prepaid Vinted-generated label, if the carrier confirms the parcel was lost or damaged, Vinted compensates up to a maximum of £500, and for parcels lost or damaged at the verification hub it pays the full item value. It also says compensation for damage depends on proper packaging, and that investigations can take several weeks. Nothing on that page mentions account status.",
+        "The \"Parcel didn't arrive\" page describes the outcome after the waiting period: the buyer is refunded, and \"the seller may receive compensation on Vinted\". It also says that if the carrier confirms the parcel was lost in transit, you should contact Vinted for next steps. Again, no condition about bans.",
+        "The ban-appeal page is where the two systems meet. It confirms a permanent ban still allows limited account access — contacting Vinted about a possible unban, and withdrawing earnings from your Vinted Balance — while warning that a withdrawal may be refused where the ban involves a fraud risk as determined by the payment provider. It also sets the appeal rules: one appeal only, within six months, and the option to take a moderation dispute to a certified out-of-court settlement body or a national court.",
+        "What is missing is the rule people are being refused under. Vinted does not publish a term saying a ban voids a lost-parcel claim — which is why asking for the specific clause in writing matters."
+      ]
+    },
+    {
+      "heading": "If you're the seller: the escalation ladder",
+      "paragraphs": [
+        "First, appeal the ban properly. Use the appeal link in the moderation message, explain the ordinary activity behind it, and attach evidence that contradicts the reason given — your own photos, receipts, a short history of what you sold. One appeal only, so make it complete.",
+        "Second, separate the two issues in writing. Open a support contact from the Help Centre and state that the claim predates the ban, that the parcel went with a Vinted-generated label, and that the carrier has confirmed the loss. Ask for the claim to be assessed under the compensation policy on its own merits, and for the clause they are relying on to refuse. Keep one thread, with the order number, tracking history, drop-off receipt and carrier confirmation attached.",
+        "Third, escalate. Vinted's dispute-resolution page lists legal@vinted.com for specific legal or regulatory issues. A short, factual email — timeline, order numbers, evidence, the amount claimed, and a clear request — is the step several users describe immediately before getting paid. One seller reported receiving compensation only after a letter before claim; another was paid after involving the legal team. That is not a guarantee, but it is the lever that shows up repeatedly.",
+        "Fourth, use the routes outside Vinted. In the UK, a money claim can be issued online for a straightforward debt. In the EU/EEA, national consumer authorities and the European Consumer Centre exist for this kind of cross-border dispute, and Vinted's own terms point to out-of-court settlement bodies and national courts."
+      ]
+    },
+    {
+      "heading": "If you're the buyer and the ban landed after you reported a lost parcel",
+      "paragraphs": [
+        "Your refund is usually the first thing to move, because cancelling the order releases it automatically. The risk is everything else in flight: orders already paid for, parcels waiting at a pickup point, and reviews you can no longer leave.",
+        "Appeal the ban the same way, and list every open order with its value so the reviewer can see what is at stake. If the order screen is unusable, keep screenshots now — before you lose access — of the order, the tracking and the seller conversation.",
+        "If a paid order never arrives and Vinted will not act because of the block, contact your bank or card provider about a chargeback. In the UK, a credit card purchase over £100 may also fall under Section 75. Vinted asks buyers to contact it before opening a payment dispute, so show that you tried."
+      ]
+    },
+    {
+      "heading": "How to protect the next parcel",
+      "paragraphs": [
+        "Use the Vinted-generated label for anything you cannot afford to lose. The compensation policy applies to integrated labels; if you ship with your own postage, Vinted's page says you have to claim from the carrier directly. Saving a little on postage can cost you the entire item.",
+        "Photograph the packed parcel, keep the drop-off receipt, and screenshot the tracking on the day it is marked shipped. The 25-business-day clock runs from that date, and the receipt separates \"lost in transit\" from \"never sent\".",
+        "Keep proof of value — listing photos, sale price, any receipt — because a compensation claim is a value claim. And screenshot your order history and balance before a restriction lands.",
+        "Finally, do not refund the buyer privately while a lost-parcel claim is open, and do not open a second account to work around a block. Multiple accounts are themselves a permanent-ban reason."
+      ]
+    },
+    {
+      "heading": "The honest bottom line",
+      "paragraphs": [
+        "The outcomes in these threads are not consistent. Some sellers are paid after an appeal; some only after legal escalation; some are still arguing. What is consistent is that the people who get movement treat the ban and the parcel claim as two decisions, put everything in writing, and refuse to accept an automated \"no\" as final.",
+        "The useful sequence is: appeal the ban once, demand the compensation decision in writing with the clause cited, then escalate to the legal contact and, if needed, an external dispute route. Keep the parcel evidence in one folder — tracking, receipt, carrier confirmation, listing screenshots — because every step depends on proving the parcel existed and was sent properly."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can Vinted refuse lost-parcel compensation because my account is banned?",
+      "answer": "Users report being told exactly that, but Vinted's published compensation and \"Parcel didn't arrive\" pages do not mention account status at all. The policy says a seller may be compensated up to £500 for a parcel sent with a Vinted-generated label and confirmed lost. Ask Vinted to quote the clause it is relying on, and ask for the claim to be assessed separately from the ban."
+    },
+    {
+      "question": "How much compensation does Vinted pay for a lost parcel?",
+      "answer": "Vinted's page on compensation with integrated labels states a maximum of £500 for parcels sent with a prepaid Vinted-generated label, and full item value for parcels lost or damaged at the verification hub. Damage claims also require proper packaging. If you used your own postage, Vinted says you must claim from the carrier directly."
+    },
+    {
+      "question": "My buyer was refunded but I wasn't compensated — is that normal?",
+      "answer": "It is a reported pattern when the seller's account is banned mid-claim: the order is cancelled, the buyer is refunded automatically, and the seller is then refused compensation. Sellers describe this with one parcel and with several at once. It is not described anywhere in Vinted's published policy as the intended outcome."
+    },
+    {
+      "question": "Will appealing the ban get my compensation paid?",
+      "answer": "Not automatically. An appeal addresses the moderation decision; the compensation claim is a separate decision. Users who were paid describe doing both — appealing the ban and pressing the lost-parcel claim in writing, then escalating to Vinted's legal contact. Keep the two arguments separate and put both in writing."
+    },
+    {
+      "question": "Can I still contact Vinted and withdraw my balance if I'm permanently banned?",
+      "answer": "Vinted's ban-appeal page says a permanently banned account can still be used for limited actions, including contacting Vinted about an unban and withdrawing earnings from the Vinted Balance. It warns that withdrawals may not be possible where the ban involves a fraud risk as determined by the payment provider."
+    },
+    {
+      "question": "How long does a lost-parcel claim take?",
+      "answer": "Vinted asks buyers to wait up to 25 business days from dispatch if tracking is stuck, and its compensation page says investigations can take several weeks. That long window is precisely why bans and claims collide, so diarise the exact date shown in the order conversation and keep your evidence ready before it arrives."
+    }
+  ]
+}
