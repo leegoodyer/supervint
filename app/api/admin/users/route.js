@@ -16,7 +16,16 @@ export async function GET() {
     return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 });
   }
 
-  const keys = await kv.keys('sv:sub:*');
+  // SCAN instead of KEYS — the sold DB (16k+ sv:sold:* keys) pushed the whole
+  // store past Upstash's key-scan limit, so `KEYS sv:sub:*` now 500s (the same
+  // failure that broke harvest-log). SCAN is cursor-based and non-blocking.
+  const keys = [];
+  let cursor = '0';
+  do {
+    const [nextCursor, batch] = await kv.scan(cursor, { match: 'sv:sub:*', count: 100 });
+    cursor = nextCursor;
+    keys.push(...batch);
+  } while (String(cursor) !== '0');
 
   if (keys.length === 0) {
     return NextResponse.json({ users: [], total: 0 });
