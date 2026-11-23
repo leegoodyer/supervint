@@ -1,0 +1,96 @@
+{
+  "title": "Vinted Sale Completed but Money Still in Pending Balance — Why It Won't Move to Available",
+  "intro": "Vinted's own rule is that once an order is completed — the buyer presses \"Everything is OK\", the 2-day confirmation window passes, or an issue is raised and resolved — the payment moves from \"Pending balance\" to \"Available balance\" within 2 days. So if the order shows as completed and the money is still pending days or weeks later, you're in one of three situations: the order isn't actually completed in Vinted's system, an identity or verification check is silently holding your payouts, or you've been caught in one of Vinted's payment-processing incidents, which sellers describe as batches of completed sales staying pending far beyond the 2-day window while newer, smaller sales clear normally.",
+  "meta_description": "Order completed but your Vinted money is still stuck in pending balance? The 2-day rule, the \"payment processing issues\" banner, the ID check that blocks payouts, and what to send support.",
+  "date_published": "2026-11-23",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Sitting on a stuck balance? Get alerted the moment genuine, fast-selling items are listed",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What \"Pending balance\" actually means — and the two clocks running",
+      "paragraphs": [
+        "When a buyer pays, the money does not go to you. It sits in your Vinted Balance as \"Pending\", held by Vinted's payment service provider until the order is completed. Vinted's Pending balance help page is explicit about why: the provider delays the money reaching the seller, and that delay is what lets Vinted refund a buyer if something goes wrong.",
+        "The first clock is the buyer's. For standard sellers, the buyer has 2 days from the moment Vinted notifies them that the item should have been delivered to press \"Everything is OK\" or \"I have an issue\". For Pro sellers, that window is 14 days, and the order completes automatically if nothing is reported.",
+        "The second clock is yours. \"As soon as the order is completed, you will receive your payment within 2 days\", per the same page. That means a silent buyer on a standard sale should see funds available roughly 2 days after delivery is recorded, and a Pro sale can legitimately take about 16 days from delivery before the money is available. Anything beyond that is not the normal flow — it's one of the faults below."
+      ]
+    },
+    {
+      "heading": "First, work out which of the three problems you actually have",
+      "paragraphs": [
+        "Completed in one screen, processing in another. Open the order itself, not just your balance. Sellers describe sales marked complete in Orders while the balance screen shows nothing for them, and orders labelled \"payment processing\" with a line about funds transferring within two days. If your order still carries that processing label, Vinted has not completed it yet — the payout clock hasn't started, and the fix is to get the order completed, not to chase the payment.",
+        "A verification check with no way to complete it. This is the one that looks like theft and isn't. Vinted states that to use your Available balance you \"might have to pass an identity check, set up biometrics authentication, or verify your phone number\" — a regulatory requirement from its payment provider. Sellers describe a \"verify now\" prompt that opens a \"verification in progress\" screen without ever letting them upload an ID, then withdrawals blocked for days while support says to wait. If your payout is blocked and you never submitted a document, no amount of waiting will clear it.",
+        "A payment-processing incident affecting many accounts at once. Vinted then puts a banner on the balance screen. Sellers quote two versions: \"We're experiencing issues with payment processing at the moment. We kindly ask for your patience while we resolve this.\" and \"Sorry, your earnings might stay in pending balance longer than usual. We're working on it!\" Support replies repeat a line about a \"temporary technical issue with releasing payments\". The signature pattern is a batch of older completed sales stuck while a new, smaller sale clears in minutes — in the same account, on the same day."
+      ]
+    },
+    {
+      "heading": "Why the 2-day rule doesn't get your money back",
+      "paragraphs": [
+        "It's a description of the normal process, not a deadline with a penalty attached — nothing in it triggers compensation, interest, or automatic escalation when it's missed. That's why the same posts repeat: someone reads the 2-day line, waits 2 days, then 5, then two weeks, while support restates the policy back at them.",
+        "The useful part is the trigger. Once a completed order is past 2 days in Pending, you have a legitimate, quotable question to put to support. If the money already reached Available balance and then vanished, that's a [withdrawal trace](/guides/vinted-withdrawal-not-showing-in-bank-account), not a pending-balance problem."
+      ]
+    },
+    {
+      "heading": "What to do, in this order",
+      "paragraphs": [
+        "Screenshot everything before you touch anything. For each affected sale, capture the order status, the completion date, and the Pending balance figure. Sellers in the threads do this deliberately: during a long incident, entries can shift between screens, and a dated screenshot is the only clean record you'll have. One person describes a payment that appeared to clear and then couldn't be found in the wallet at all.",
+        "Check your verification state. In profile settings, confirm your phone number is verified, your ID check isn't sitting half-finished, and biometrics are set up if Vinted has asked. If the app shows \"verification in progress\" but you never submitted anything, say exactly that — it's a different fault from a rejected document.",
+        "Then contact support from the order, not a general form. Vinted's Contact us page says selecting your order from the Help Centre menu attaches all the order details automatically, and that attached context is what makes a payment query traceable. For a problem affecting several orders, use the contact button at the end of the help page and list each order with its date.",
+        "Ask one closed question instead of describing how frustrated you are: \"This order was completed on [date]. The payment has now been in Pending balance longer than the 2 days stated in your Pending balance article. Please confirm whether this is a payment-processing incident or an account-level hold, and give me a case reference.\" That forces a categorised answer. \"Where is my money\" gets a template; a question with two possible answers gets a decision.",
+        "Keep it in one thread. Opening a fresh ticket every day puts you back in the same automated queue — sellers describe identical replies from different agents."
+      ]
+    },
+    {
+      "heading": "When support keeps repeating the template",
+      "paragraphs": [
+        "Build a chronology and put it in writing once: completion date of each order, the date the 2-day window expired, the date you first contacted support, every date they asked for something new, and every date you supplied it. A dated list is much harder to answer with boilerplate than a paragraph of anger.",
+        "Vinted's Contacts for dispute resolution page lists legal@vinted.com for legal or regulatory issues the normal support form can't handle. It's a real published address, but treat it as an escalation, not a shortcut — the same page tells people to contact Vinted first and avoid opening disputes with their payment provider, and a chargeback over a delayed payout usually complicates the case rather than speeding it up.",
+        "If the sum is worth pursuing and you're in the UK, a letter before action followed by small claims is the standard next step once you have a documented chronology and a final refusal. Outside the UK, a national European Consumer Centre can raise it with the relevant authority — Vinted is established in Lithuania, which is why that route keeps appearing in seller threads. Both cost little and create an external reference a template reply can't close."
+      ]
+    },
+    {
+      "heading": "What not to do while the money is stuck",
+      "paragraphs": [
+        "Don't cancel the order to \"release\" the payment. Cancelling is a different action from completing, and on a delivered item it can leave you without the money and without a clean claim to the item. If a buyer is silent, message them once and let the confirmation window run.",
+        "Don't refund the buyer outside the system to make the balance behave. Off-platform refunds aren't linked to the order, and sellers who try to shortcut it end up chasing two problems instead of one.",
+        "Don't hand bank details to anyone who messages you offering to \"release\" a stuck balance. Vinted's help pages say it will never ask for personal information like your email or phone number during a sale — payment problems are handled in the app or through the official help pages.",
+        "And don't assume reinstalling fixes it. A payment hold lives on Vinted's side, not in your app cache. Check your actual Available balance rather than waiting for an email."
+      ]
+    },
+    {
+      "heading": "How long is genuinely too long",
+      "paragraphs": [
+        "Two days after completion is the published norm. If you're past that, open a ticket — it costs nothing and starts your paper trail. Past five days with no explanation, ask directly whether it's an incident or an account hold. Past two weeks of template replies, escalate with the chronology rather than continuing to wait.",
+        "The honest picture from the threads is that most of these resolve, but not on a schedule anyone will give you. Sellers report payments landing after a few extra days, and during the worst stretches, after several weeks — usually with no notification and no status update. That's not reassurance that your case will be quick; it's the reason to keep a dated record and stay in one thread instead of starting over."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "My Vinted order says completed but the payment is still pending — is that normal?",
+      "answer": "For up to 2 days after completion, yes. Vinted's Pending balance page states that once an order is completed, the payment moves to Available balance within 2 days, and that this update isn't instant. Longer than that means something is holding it — an unfinished identity check, an order Vinted hasn't actually completed in its system, or a payment-processing incident."
+    },
+    {
+      "question": "How long can Vinted keep my money in pending balance?",
+      "answer": "Under its published process: 2 days after the order is completed. The order completes when the buyer confirms, 2 days after delivery notification passes for standard sellers, or 14 days after delivery notification for Pro sellers. Sellers do report payments held well beyond those windows during payment-processing incidents, with the money arriving later without any notification."
+    },
+    {
+      "question": "Why did a small sale clear instantly while a large one is stuck?",
+      "answer": "Sellers describe exactly this split during incidents: a new low-value sale lands in Available balance within minutes while older, higher-value completed sales stay pending. Vinted doesn't publish a reason, and it isn't evidence that your account is being targeted. Treat it as a signal that the problem is batch-level, and log both orders in the same support ticket so the contrast is visible."
+    },
+    {
+      "question": "Do Pro sellers wait longer for payment?",
+      "answer": "Yes. Vinted's Pending balance page says buyers from Pro sellers have 14 days from delivery notification to raise an issue, and the order completes automatically after 14 days if nothing is reported. The payment then takes up to 2 more days to reach Available balance — so roughly 16 days from delivery before the money is usable."
+    },
+    {
+      "question": "Vinted says \"we're experiencing issues with payment processing\" — what should I do?",
+      "answer": "Nothing on your side will fix that banner; it's a platform-level hold. Screenshot your completed orders, the dates, and the Pending balance, open one support ticket listing them, and wait for the batch to be released. Check your Available balance directly rather than relying on an email, because sellers report the money arriving with no notification and the order status not updating."
+    },
+    {
+      "question": "Can I get compensation for a late Vinted payout?",
+      "answer": "There's no published compensation, interest, or late-payment remedy in Vinted's payment help pages. Your levers are a documented chronology, a single support thread, escalation to legal@vinted.com for legal or regulatory issues, and — for UK sums worth pursuing — a letter before action and small claims. Keep dated screenshots so any of those routes has evidence behind it."
+    }
+  ]
+}
