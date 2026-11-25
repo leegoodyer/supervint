@@ -1,0 +1,103 @@
+{
+  "title": "Vinted Says Delivered But Tracking Says Returned to Sender — How to Get Your Refund",
+  "intro": "If Vinted has marked your order as delivered while the carrier's own tracking shows the parcel going back to the seller, you can still get a full refund — but only if you report it within 2 calendar days of Vinted's \"should have been delivered\" notification, and only if you use the carrier's tracking as your evidence rather than Vinted's order status. Vinted's refund policy explicitly covers an order that \"couldn't be delivered and is returned to the seller\". The catch is that the notification often says delivered, not returned, so the 2-day clock starts silently and most buyers find out after the order has completed and the money has gone.",
+  "meta_description": "Vinted marked your order delivered but the carrier shows it going back to the seller? You have 2 days to report it, and the carrier tracking is your proof. The exact steps, and what to do if the order already completed.",
+  "date_published": "2026-11-25",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Never miss a deal — and never get caught out",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What is actually happening when Vinted says delivered",
+      "paragraphs": [
+        "Parcels get returned to sender for ordinary reasons: not collected from the locker or shop in time, refused because the packaging was damaged, an address that couldn't be matched, or repeated failed delivery attempts. Vinted's help centre lists all of these, and each one entitles the buyer to a refund.",
+        "The problem is what the app shows. Buyers on r/vinted and r/vintedUK repeatedly describe the same sequence: the carrier's tracking flips to \"returned to sender\", and Vinted's order screen moves forward as though the parcel arrived — asking them to confirm everything is OK, or simply marking the order delivered. One buyer was told the carrier had confirmed delivery while the carrier's own page showed the parcel had gone back. Another had the parcel \"randomly marked as delivered\" after it was already returned.",
+        "So you end up with two systems disagreeing. The carrier knows the parcel is travelling back to the seller. Vinted's status says delivered. Every support reply afterwards will quote the Vinted status back at you, which is why the case has to be built on the carrier's tracking from the first message."
+      ]
+    },
+    {
+      "heading": "The 2-day clock is the entire case",
+      "paragraphs": [
+        "This is the part that decides whether you get your money back. Vinted's Refund Policy says the refund request period starts when Vinted notifies you that the order should have been delivered or seems lost, and that you have 2 calendar days to report an issue. If you don't — or if you confirm you accept the order — the payment is released to the seller and refunds are no longer possible.",
+        "Vinted's \"Package was returned to sender\" help page repeats the warning: contact them within 2 days via \"I have an issue\", or the order completes and the payment is released. Two calendar days means the weekend counts. A notification that lands Friday evening and goes unread until Monday has usually already expired.",
+        "The expensive mistake is pressing \"Everything is OK\" because the app keeps nagging you and you assume the parcel is merely late. That tells Vinted the order arrived. Don't touch it until you've checked the carrier's tracking."
+      ]
+    },
+    {
+      "heading": "Step 1: check the carrier, not the Vinted app",
+      "paragraphs": [
+        "Take the tracking number from the order and open it on the carrier's own site or app — Royal Mail, Evri, Yodel, InPost, DPD, SpeedX, whoever handled it. Look for wording like \"returned to sender\", \"returning to sender\" or \"not collected\".",
+        "Screenshot the full page: tracking number, status, and the timestamp of the last scan. Then screenshot Vinted's version of the same order showing delivered. That pair of images — carrier says returning, Vinted says delivered — is the whole argument, and it's stronger than any paragraph of explanation.",
+        "If the carrier's page is vague, contact them and ask for written confirmation that the parcel is being returned to the sender. Buyers report that this is what turns a stalled automated case into a refund."
+      ]
+    },
+    {
+      "heading": "Step 2: open the issue the same day",
+      "paragraphs": [
+        "Go to the order, press \"I have an issue\", and choose the option that matches reality: you did not receive the parcel. Wording shifts between countries and app versions, so read the list rather than taking the first entry — \"not as described\" is for an item you're physically holding, and it can route you into returning something you never got.",
+        "Put the facts in the first two lines so a reviewer who reads nothing else still gets it: the parcel was not delivered to me, the carrier's tracking shows it is being returned to the seller, and please do not complete this order. Then attach both screenshots.",
+        "Reporting the issue suspends the order, which is the point — Vinted withholds the payment from the seller while the case is open. That pause is what buys you time to get the carrier's confirmation."
+      ]
+    },
+    {
+      "heading": "Step 3: what actually gets it approved",
+      "paragraphs": [
+        "Quote Vinted's own policy back at them. Under \"Order returned to sender\" it states that you are eligible for a refund if the order couldn't be delivered and is returned to the seller. You're asking them to apply their published policy, not for an exception.",
+        "Expect weeks rather than days, and expect the timing to depend on the return scan rather than on whether anyone believes you. Vinted's help page sets out the sequence: once the status updates to \"returning to sender\", the seller marks the parcel received and cancels, and the refund follows. If the seller doesn't confirm within 14 calendar days after the return starts, Vinted asks them and gives 2 days to reply — then cancels and refunds you if they confirm or stay silent.",
+        "Reply in the same thread each time you chase it. Opening fresh tickets tends to put you back into another automated queue."
+      ]
+    },
+    {
+      "heading": "If the order has already completed and the seller has the money",
+      "paragraphs": [
+        "This is the harder version, because Vinted lists \"order already completed\" as not eligible for a refund — once payment is released, the normal route is closed. You are now in escalation rather than support.",
+        "First, ask for a human in the existing thread. Buyers describe nothing but automated-sounding replies until a person picks the case up, so keep it short and factual: order number, tracking number, dates, the carrier's status, and one sentence saying the parcel went back to the seller and never reached you.",
+        "If that goes nowhere, email Vinted's legal team. legal@vinted.com is the address Vinted publishes on its \"Contacts for dispute resolution\" page for legal and regulatory issues normal support can't resolve. Attach the same evidence. You can also raise it with your national consumer protection body, and Vinted's legal pages list the consumer mediator it appoints — our guide to [escalating a Vinted dispute to a regulator](/guides/vinted-eu-regulator-escalation) covers that route.",
+        "A chargeback through your bank is the last resort. Buyers report getting their money back this way after Vinted and the carrier both insisted the parcel was delivered, but Vinted may close your account, so treat it as the nuclear option."
+      ]
+    },
+    {
+      "heading": "If you're the seller and the parcel came back but you were paid",
+      "paragraphs": [
+        "Sellers hit the mirror image of this: the item is returned, the order shows delivered, the confirmation window passes and the money lands in your balance. Don't spend it — if the buyer disputes the order later, that payment can be reversed while you no longer have the item to fall back on.",
+        "The clean fix, if the buyer gets in touch, is to confirm you've received the parcel in the order so Vinted can refund them. That's the documented flow, and it closes the case instead of leaving it dangling. Don't relist the item until the order is genuinely closed.",
+        "Our full seller-side walkthrough of non-collection, suspended orders and compensation is in [what happens when a buyer doesn't collect](/guides/vinted-buyer-didnt-collect-order)."
+      ]
+    },
+    {
+      "heading": "How to stop it happening again",
+      "paragraphs": [
+        "Collect promptly. Vinted's guidance warns that parcels are held for as little as 2-3 days in some cases, and lockers are less forgiving than shops. If you know you'll be away, arrange collection rather than leaving it to the deadline.",
+        "When an order looks slow, check the carrier's app before Vinted — the carrier actually knows where the parcel is and will show a return in progress days before Vinted's status catches up. And check your spam folder for Vinted mail: a notification sitting unread is all it takes to lose a 2-day window."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why does Vinted show my order as delivered when the parcel went back to the seller?",
+      "answer": "Buyers report that Vinted's order status often moves forward to delivered while the carrier's own tracking shows the parcel being returned to the sender. The two systems disagree, and Vinted's status is what its support team sees, which is why you need the carrier's tracking page as evidence."
+    },
+    {
+      "question": "How long do I have to report a parcel that was returned to sender?",
+      "answer": "2 calendar days from the notification that the order should have been delivered or seems lost, according to Vinted's Refund Policy and its return-to-sender help page. Weekends count. If you miss it, or confirm receipt, the order completes and the payment is released to the seller."
+    },
+    {
+      "question": "Which option do I choose under \"I have an issue\"?",
+      "answer": "Choose the option that says you did not receive the parcel. Avoid \"not as described\", which applies to an item you physically have and can route you into a return. The exact wording varies by country and app version, so read the list rather than picking the first entry."
+    },
+    {
+      "question": "Vinted already completed my order and paid the seller — can I still get a refund?",
+      "answer": "Not through the normal refund route, because Vinted lists completed orders as not eligible. You can still escalate: ask for a human review in the existing thread, then email legal@vinted.com with your order number, tracking number, dates and screenshots, and consider your national consumer body. A chargeback is a last resort and may cost you your account."
+    },
+    {
+      "question": "The parcel came back to me as the seller but Vinted already paid me — what happens?",
+      "answer": "Don't spend it. If the buyer disputes the order later, the payment can be reversed and you'll no longer have the item. If they contact you, confirm receipt of the return in the order so Vinted can refund them, and don't relist until the order is closed."
+    },
+    {
+      "question": "Can the refund happen automatically once the parcel is back with the seller?",
+      "answer": "Yes, normally. Once the status updates to \"returning to sender\", the seller marks it received and cancels the order, and Vinted issues the refund. If the seller doesn't confirm within 14 calendar days after the return starts, Vinted asks them and gives them 2 days, then cancels and refunds you if they confirm or don't reply."
+    }
+  ]
+}
