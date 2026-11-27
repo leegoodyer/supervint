@@ -1,0 +1,94 @@
+{
+  "title": "Vinted Charged Me Extra Postage — Why the Parcel Size Was Wrong and How to Fix It",
+  "intro": "If you've just been charged extra at the Post Office, or a buyer says Royal Mail wants a payment before they can have the parcel, the cause is almost always the same: the label's parcel size is smaller than the parcel you packed. Vinted picks a size automatically from the category, item size and brand when you list, and once the buyer has paid you can't change the size or carrier. What you can do depends on whether the parcel has been sent — and one route may get the difference back.",
+  "meta_description": "Charged extra postage on a Vinted parcel? Why the suggested parcel size was wrong, whether Vinted refunds the difference, and what to do before and after posting.",
+  "date_published": "2026-11-27",
+  "author": "Supervint Team",
+  "pillar_page": "/help",
+  "pillar_page_anchor_text": "Visit the Supervint Help Hub",
+  "cta_text": "Get ahead of the scammers — get alerted the moment items are listed",
+  "cta_href": "/#pricing",
+  "body": [
+    {
+      "heading": "What has actually happened to your parcel",
+      "paragraphs": [
+        "Every Vinted label is tied to a size band — small, medium or large — and each carrier sets its own maximum dimensions and weight for that band. When the packed parcel is bigger or heavier than the band on the label, the carrier can charge the difference or refuse the parcel. Sellers describe both. At a Post Office counter the usual outcome is a request to pay the shortfall; at a locker it can be a compartment that simply isn't big enough.",
+        "The other version hits the buyer, not you. Royal Mail can flag a parcel as underpaid in transit and add a \"fee to pay\" charge, which the buyer must settle before delivery or collection. On r/vintedUK, buyers describe cards saying they owe money for a parcel already paid for at checkout. From the buyer's side it looks like a scam; from yours it looks like Vinted sold a label that didn't match the item.",
+        "The threads follow the same shape: a parcel weighing several kilos going out on a label with a much lower weight limit, often because the item defaulted to small. Bundles make it worse — one item's size band gets applied to a combined parcel that is heavier and bulkier than the listing."
+      ]
+    },
+    {
+      "heading": "Why Vinted's suggested size is wrong so often",
+      "paragraphs": [
+        "Vinted's parcel size limits page is explicit that sizes are \"selected automatically based on the details provided (such as the category, item size, brand, and more)\". That is a guess made before anyone has packed anything. For a folded t-shirt it works; for boxed trainers, a coat, a ceramic, a lamp or a bundle of books it is frequently too small — and the seller often doesn't find out until the parcel is sealed.",
+        "The Royal Mail band is the most common trap in the UK, because Royal Mail prices by format as well as weight: a parcel that fits another carrier's small band can still count as a larger Royal Mail parcel if it is box-shaped or too thick. Sellers on r/vintedUK repeatedly describe choosing the size that looked sensible, then being told at the counter that the parcel doesn't match the label.",
+        "There's a second trap after checkout. Vinted's help centre states plainly that once a buyer has paid for shipping, \"the parcel size and carrier cannot be changed\". So the moment the order exists, the label is locked. Everything below is about working within that constraint."
+      ]
+    },
+    {
+      "heading": "If you haven't sent it yet: cancel and let the buyer rebuy",
+      "paragraphs": [
+        "This is the only clean fix, and it is the one Vinted describes. Its help article on changing parcel size at the drop-off point says that if you haven't sent the item, you can agree with the buyer to cancel the order and let them repurchase. When you re-upload, select the correct size — or ask the buyer to choose a carrier whose limits fit the parcel.",
+        "Two things matter here. First, talk to the buyer before cancelling: a cancellation out of nowhere damages trust and can cost you the sale. A short message explaining that the parcel is over the label's limit and you need to relist it at the right size is usually enough; most buyers would rather rebuy than be handed a fee to pay. Second, don't send it with a different carrier to get around the problem. Vinted warns that a parcel sent by a different carrier or method automatically cancels the order and refunds the buyer — leaving you out of pocket.",
+        "If the buyer has already paid and you can't reach an agreement, cancel rather than ship a parcel you know is underpaid. A cancelled order is a lost sale; an underpaid parcel can become a refused delivery, a fee charged to the buyer, a lost item and a negative review."
+      ]
+    },
+    {
+      "heading": "If you're standing at the counter right now",
+      "paragraphs": [
+        "At a parcel shop or Post Office, Vinted's guidance is to hand the parcel over as normal and let the carrier change the size on its side. The staff scan or measure it and charge the difference if one is due. Ask for the receipt and check what you actually paid — that receipt is the evidence you'll need to claim the extra back.",
+        "Some carriers are more relaxed. Vinted notes that some may let you use a larger parcel size at no extra cost, which is why the same mistake produces a charge for one seller and nothing at all for another. That is what makes these threads confusing: two people make the same error and only one gets billed."
+      ]
+    },
+    {
+      "heading": "Can you get the extra postage back from Vinted?",
+      "paragraphs": [
+        "Sometimes — but only in a narrow set of circumstances, and it depends on who chose the size. Vinted's parcel size limits page says that for Royal Mail, if the size was automatically selected by Vinted and Royal Mail charged you extra, Vinted may be able to compensate you, and directs you to the button at the end of the page so it can review the case. The same page adds the crucial limit: if you selected the wrong size yourself, Vinted usually can't compensate you for the extra Royal Mail fees.",
+        "The drop-off article is more generous in its wording. It says that if the actual parcel is bigger than the autoselected size and you were charged extra, press \"Contact us\" at the bottom of that page, send the receipt, and Vinted will \"make sure you receive compensation for this charge\". Sellers report mixed results in practice, which is why the distinction between an auto-selected size and one you picked yourself matters when you write the message. Say which applies, attach the receipt, and include the order number.",
+        "If you have already sent it and paid the extra, Vinted says it can't refund the cost because the money went to the shipping provider, and suggests reaching a mutual agreement with the buyer. That is unsatisfying but accurate — and it is why the pre-send check is worth doing."
+      ]
+    },
+    {
+      "heading": "If the buyer is the one being charged",
+      "paragraphs": [
+        "A buyer who gets a fee-to-pay card often assumes they are being scammed, and the conversation can go badly quickly. Get ahead of it: message them first, explain that the size band was too small for the packed parcel, apologise, and agree how to cover the difference. Vinted's advice is a mutual agreement between the two of you, so keep the tone cooperative and keep everything in the Vinted chat.",
+        "Be aware of the downstream risk. If the buyer refuses to pay, the parcel can be returned to sender and the order can end up cancelled and refunded — you lose the sale, the postage and possibly the item's condition after a second trip through the network. A buyer who feels tricked is also far more likely to leave negative feedback, and a review accusing you of underpaying postage is hard to remove because the underlying facts are true.",
+        "The cheapest resolution is usually to cover the difference yourself and ask the buyer to confirm once it arrives. It stings, but less than a refused parcel plus a lost sale."
+      ]
+    },
+    {
+      "heading": "How to stop it happening on the next sale",
+      "paragraphs": [
+        "Measure the packed parcel, not the item. Vinted's guidance is to measure the item's longest, widest and highest points, choose packaging about the same size, then measure again once it is sealed. Weigh it too: a kitchen scale turns the size guess into a decision. If the packed parcel is close to a band's weight limit, go up a band rather than gambling on the carrier not checking.",
+        "For bundles, weigh everything together before accepting the offer and check which size gets applied. For boxed or bulky items, consider turning Royal Mail off in your postage settings if its format rules keep catching you out; sellers shipping boxed trainers and ceramics often find another carrier easier to work with.",
+        "Finally, photograph the packed parcel with the label attached and keep the drop-off receipt until the order is completed. If a charge is disputed later, those two images settle what was handed over faster than a long message to support."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I change the parcel size after the buyer has paid?",
+      "answer": "No. Vinted's help centre says that once a buyer checks out and pays for shipping, the parcel size and carrier cannot be changed. If you haven't sent it, the route Vinted describes is to agree with the buyer to cancel the order and let them repurchase after you relist with the correct size."
+    },
+    {
+      "question": "Will Vinted refund the extra postage I was charged?",
+      "answer": "It depends on who chose the size. For Royal Mail, Vinted says it may compensate you if the size was automatically selected by Vinted and Royal Mail charged you extra — contact them via the button at the end of the parcel size limits help page with your receipt. If you selected the wrong size yourself, Vinted says it usually can't compensate you for the extra fees."
+    },
+    {
+      "question": "What happens if I just send it anyway?",
+      "answer": "The carrier may charge you the difference at the counter, refuse the parcel, or raise a fee-to-pay charge against the buyer. Sellers describe all three. A buyer who refuses to pay can end up with the parcel returned to you, and the order can be cancelled and refunded — so the \"just send it\" option often costs more than cancelling and relisting."
+    },
+    {
+      "question": "The Post Office says my parcel is too big for the label — can they upgrade it?",
+      "answer": "At a staffed parcel shop or Post Office, Vinted's guidance is to hand the parcel over as normal and let the shipping provider change the size on their side. You may be asked to pay the difference, so keep the receipt. At a locker, select a larger compartment on the screen and don't close the door until prompted."
+    },
+    {
+      "question": "Do Vinted's small, medium and large sizes mean the same thing at every carrier?",
+      "answer": "No. Each carrier has its own maximum dimensions and weight for each band, and Vinted publishes them in a per-carrier limits table. A parcel that fits one carrier's small band can exceed another's, which is why the exact limits shown in your order matter more than the label \"small\" or \"medium\"."
+    },
+    {
+      "question": "The buyer has been asked to pay a fee before delivery — what should I do?",
+      "answer": "Message them before they assume it's a scam: explain that the parcel exceeded the label's size band, apologise, and agree to cover the difference. Vinted's own advice when extra postage has already been paid is to reach a mutual agreement with the buyer. Keep the conversation in the Vinted chat and keep the drop-off receipt."
+    }
+  ]
+}
